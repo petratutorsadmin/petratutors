@@ -1,0 +1,182 @@
+.header {
+    padding: var(--space-xl) 0 var(--space-md);
+    background-color: var(--c-sand);
+}
+
+.benefitsBanner {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    padding: var(--space-md);
+    background-color: var(--c-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-top: calc(-1 * var(--space-xl));
+    margin-bottom: var(--space-xl);
+    position: relative;
+    z-index: 10;
+    border: 1px solid var(--c-border);
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: var(--c-navy);
+}
+
+.checkIcon {
+    color: var(--c-accent);
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.pricingCard {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid var(--c-border);
+    box-shadow: none;
+    padding: 2.5rem 1.5rem 1.5rem;
+}
+
+.pricingCard:hover {
+    border-color: var(--c-accent);
+    box-shadow: var(--shadow-md);
+}
+
+.popular {
+    border-color: var(--c-navy);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-8px);
+}
+
+.popular:hover {
+    transform: translateY(-12px);
+    border-color: var(--c-navy);
+}
+
+.popularBadge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    padding: 0.35rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.cardHeader {
+    margin-bottom: var(--space-md);
+}
+
+.description {
+    color: var(--c-text-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    min-height: 60px;
+}
+
+.priceContainer {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.fromLabel {
+    font-size: 0.9rem;
+    color: var(--c-text-light);
+}
+
+.price {
+    font-size: 2.5rem;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--c-navy);
+}
+
+.perHour {
+    color: var(--c-text-light);
+}
+
+.featuresList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: var(--space-lg);
+    flex: 1;
+}
+
+.featuresList li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--c-text);
+}
+
+.btn {
+    width: 100%;
+    margin-top: auto;
+}
+
+.noticeBox {
+    display: flex;
+    gap: 1rem;
+    background-color: rgba(229, 184, 11, 0.1);
+    border: 1px solid rgba(229, 184, 11, 0.3);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.infoIcon {
+    color: var(--c-accent);
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .pricingGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .benefitsBanner {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .pricingGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-4px);
+    }
+}

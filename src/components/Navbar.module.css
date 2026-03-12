@@ -1,0 +1,130 @@
+.navbar {
+    background-color: var(--c-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-brand);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--c-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.logoImage {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+}
+
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLink {
+    font-weight: 500;
+    color: var(--c-text);
+    transition: color 0.2s;
+}
+
+.navLink:hover {
+    color: var(--c-navy);
+}
+
+.navCta {
+    padding: 0.5rem 1.25rem;
+}
+
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--c-navy);
+    cursor: pointer;
+}
+
+.mobileNav {
+    display: none;
+    background-color: var(--c-white);
+    border-top: 1px solid var(--c-border);
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    box-shadow: var(--shadow-md);
+}
+
+.mobileNavLink {
+    display: block;
+    padding: 1rem 0;
+    font-weight: 500;
+    border-bottom: 1px solid var(--c-border);
+    color: var(--c-text);
+}
+
+.mobileNavCta {
+    margin: 1.5rem 0;
+    display: flex;
+    width: 100%;
+}
+
+.langToggle {
+    background: transparent;
+    border: 1px solid var(--c-border);
+    color: var(--c-navy);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.langToggle:hover {
+    background: var(--c-sand);
+    border-color: var(--c-navy);
+}
+
+.langToggleMobile {
+    background: transparent;
+    border: none;
+    color: var(--c-navy);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .mobileToggle {
+        display: block;
+    }
+
+    .mobileNav {
+        display: block;
+    }
+}

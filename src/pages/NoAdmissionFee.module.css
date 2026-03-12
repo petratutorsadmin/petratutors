@@ -1,0 +1,86 @@
+.header {
+    padding: var(--space-xl) 0 var(--space-lg);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.introBlock {
+    max-width: 800px;
+    margin: 0 auto var(--space-xl);
+}
+
+.comparisonGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-lg);
+    align-items: center;
+    margin-bottom: var(--space-xl);
+}
+
+.competitorCard {
+    background-color: rgba(232, 228, 221, 0.4);
+    padding: var(--space-xl);
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.petraCard {
+    background-color: var(--c-white);
+    padding: var(--space-xl);
+    border: 2px solid var(--c-accent);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.badList,
+.goodList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.badList li,
+.goodList li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.badIcon {
+    color: #DC2626;
+    /* Warning Red */
+}
+
+.goodIcon {
+    color: #10B981;
+    /* Success Green */
+}
+
+.benefitsSection {
+    margin-top: calc(var(--space-xl) * 1.5);
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.benefitItem {
+    text-align: center;
+    padding: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+    .comparisonGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .petraCard {
+        transform: none;
+    }
+
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+}
