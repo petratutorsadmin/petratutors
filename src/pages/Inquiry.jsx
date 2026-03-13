@@ -16,7 +16,7 @@ export default function Inquiry() {
                     <p className="text-large" style={{ color: 'var(--c-text-light)', marginBottom: '2rem' }}>
                         {t('inquiry.success_desc')}
                     </p>
-                    <button className="btn btn-primary" onClick={() => window.location.reload()}>{t('inquiry.another')}</button>
+                    <button className="btn btn-primary" onClick={() => window.location.href = '/inquiry'}>{t('inquiry.another')}</button>
                 </div>
             </div>
         );
@@ -62,8 +62,8 @@ export default function Inquiry() {
                                 <input type="text" id="contact" name="contact" required placeholder={t('inquiry.contact_ph')} />
                             </div>
                             <div className={styles.formGroup}>
-                                <label htmlFor="country">{t('inquiry.country')}</label>
-                                <input type="text" id="country" name="country" required placeholder={t('inquiry.country_ph')} />
+                                <label htmlFor="location">{t('inquiry.location')}</label>
+                                <input type="text" id="location" name="location" required placeholder={t('inquiry.location_ph')} />
                             </div>
                         </div>
 
