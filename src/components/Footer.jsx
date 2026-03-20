@@ -31,7 +31,7 @@ export default function Footer() {
                 <div className={styles.contactCol}>
                     <h4 className={styles.colTitle}>{t('footer.contact')}</h4>
                     <Link to="/inquiry" className={styles.link}>{t('footer.inquiry')}</Link>
-                    <a href="mailto:petratutorsadmin@gmail.com" className={styles.link}><Mail size={16} /> petratutorsadmin@gmail.com</a>
+                    <a href="mailto:admin@petratutors.com" className={styles.link}><Mail size={16} /> admin@petratutors.com</a>
                     <div className={styles.social}>
                         <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
                         <a href="#" aria-label="Twitter"><Twitter size={20} /></a>
