@@ -1,20 +1,18 @@
 import { Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from '@formspree/react';
-import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import styles from './Inquiry.module.css';
 
 export default function Inquiry() {
     const { t } = useTranslation();
     const [state, handleSubmit] = useForm("mzdjdvqz");
-    const navigate = useNavigate();
 
     useEffect(() => {
         if (state.succeeded) {
-            navigate('/thank-you');
+            window.location.href = '/thank-you';
         }
-    }, [state.succeeded, navigate]);
+    }, [state.succeeded]);
 
     return (
         <div className="section container">
