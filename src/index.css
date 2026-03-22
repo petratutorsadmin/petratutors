@@ -149,6 +149,9 @@ img {
   .section {
     padding: var(--space-lg) 0;
   }
+  .container {
+    padding: 0 1.5rem;
+  }
 }
 
 .text-center {
