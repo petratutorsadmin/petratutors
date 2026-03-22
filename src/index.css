@@ -110,16 +110,26 @@ img {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --space-md: 1.25rem;
+    --space-lg: 2.5rem;
+    --space-xl: 3.5rem;
+  }
+
   .text-h1 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   .text-h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .text-h3 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+  }
+
+  .text-large {
+    font-size: 1.1rem;
   }
 }
 
