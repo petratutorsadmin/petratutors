@@ -275,6 +275,27 @@
         gap: 1.5rem;
     }
 
+    .header {
+        padding: var(--space-lg) 0 var(--space-md);
+    }
+
+    .cardHeader {
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        min-height: auto;
+    }
+
+    .reinforcement {
+        margin-bottom: 1rem;
+        padding-bottom: 0.75rem;
+    }
+
+    .featuresList {
+        margin-bottom: var(--space-md);
+    }
+
     .pricingCard {
         padding: 2rem 1.5rem;
     }
@@ -294,6 +315,10 @@
 
     .groupFeatures {
         padding: 1.5rem;
+    }
+
+    .decisionHelper {
+        margin-bottom: var(--space-lg);
     }
 
     .decisionGrid {
