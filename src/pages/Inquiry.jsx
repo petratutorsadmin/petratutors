@@ -1,26 +1,20 @@
-import { Send, CheckCircle } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useForm } from '@formspree/react';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import styles from './Inquiry.module.css';
 
 export default function Inquiry() {
     const { t } = useTranslation();
     const [state, handleSubmit] = useForm("mzdjdvqz");
+    const navigate = useNavigate();
 
-    if (state.succeeded) {
-        return (
-            <div className={`section container ${styles.successContainer}`}>
-                <div className={`glass-card ${styles.successCard} animate-on-scroll`}>
-                    <CheckCircle size={64} className={styles.successIcon} />
-                    <h1 className="text-h2" style={{ marginBottom: '1rem', color: 'var(--c-navy)' }}>{t('inquiry.success_title')}</h1>
-                    <p className="text-large" style={{ color: 'var(--c-text-light)', marginBottom: '2rem' }}>
-                        {t('inquiry.success_desc')}
-                    </p>
-                    <button className="btn btn-primary" onClick={() => window.location.href = '/inquiry'}>{t('inquiry.another')}</button>
-                </div>
-            </div>
-        );
-    }
+    useEffect(() => {
+        if (state.succeeded) {
+            navigate('/thank-you');
+        }
+    }, [state.succeeded, navigate]);
 
     return (
         <div className="section container">
