@@ -70,7 +70,7 @@
 }
 
 .tutorImage {
-    height: 240px;
+    aspect-ratio: 1 / 1;
     background-color: var(--c-stone);
     display: flex;
     align-items: center;
