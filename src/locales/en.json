@@ -218,5 +218,11 @@
     "success_desc": "Thank you for reaching out to Petra Tutors. Our tutoring success team will review your inquiry and reply shortly with the next steps in our matching process.",
     "another": "Submit Another Inquiry",
     "reassurance": "We will review your inquiry and get in touch with the next steps."
+  },
+  "popup": {
+    "title": "Your First Lesson is Free",
+    "desc": "Book a free 30-minute trial lesson with one of our international tutors. No commitment, no fees — just learning.",
+    "cta": "Book Your Free Trial →",
+    "dismiss": "Maybe later"
   }
 }
