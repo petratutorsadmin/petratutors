@@ -7,6 +7,32 @@ import styles from './Tutors.module.css';
 // New Dataset
 const TUTORS = [
     {
+        id: 'tutor-4',
+        name: 'Yutaka Takaku',
+        university: 'Keio University, Economics',
+        subjects: ['English', 'Economics', 'Academic writing', 'International school support', 'Interview preparation'],
+        targetAges: ['High school', 'University', 'Adults'],
+        languages: ['English', 'Japanese'],
+        intro: 'Co-Founder & COO/CFO of Petra Tutors focusing on international academic tutoring and cross-cultural education.',
+        strengths: ['Cross-cultural Education', 'Mentorship'],
+        format: ['Online', 'In-Person'],
+        role: 'Founder',
+        image: '/images/tutors/tutor-4.png'
+    },
+    {
+        id: 'tutor-5',
+        name: 'Riku Ishida',
+        university: 'Keio University, PEARL (Economics)',
+        subjects: ['English', 'Japanese', 'IELTS', 'Eiken', 'Academic Writing', 'Speaking & Presentation', 'University preparation', 'Language tutoring for children'],
+        targetAges: ['Children', 'Elementary', 'Junior high', 'High school', 'University', 'Adults'],
+        languages: ['English', 'Japanese'],
+        intro: 'Co-Founder & CEO/CMO of Petra Tutors. Educated at international schools in London and Dublin, with 5+ years overseas. Experienced in tutoring 70+ students across English exams (IELTS 7.0, Eiken Pre-1), academic English, Japanese language, and group instruction.',
+        strengths: ['Exam Prep (IELTS/Eiken)', 'International Curricula', 'College Consulting'],
+        format: ['Online', 'In-Person'],
+        role: 'Founder',
+        image: '/images/tutors/tutor-5.png'
+    },
+    {
         id: 'tutor-1',
         name: 'Frandonna Kegan Yongparte',
         university: 'Keio University, Economics',
@@ -41,32 +67,6 @@ const TUTORS = [
         strengths: ['Academic Writing', 'IB Curriculum'],
         format: ['Online'],
         image: null
-    },
-    {
-        id: 'tutor-4',
-        name: 'Yutaka Takaku',
-        university: 'Keio University, Economics',
-        subjects: ['English', 'Economics', 'Academic writing', 'International school support', 'Interview preparation'],
-        targetAges: ['High school', 'University', 'Adults'],
-        languages: ['English', 'Japanese'],
-        intro: 'Co-Founder & COO/CFO of Petra Tutors focusing on international academic tutoring and cross-cultural education.',
-        strengths: ['Cross-cultural Education', 'Mentorship'],
-        format: ['Online', 'In-Person'],
-        role: 'Founder',
-        image: '/images/tutors/tutor-4.png'
-    },
-    {
-        id: 'tutor-5',
-        name: 'Riku Ishida',
-        university: 'Keio University, PEARL (Economics)',
-        subjects: ['English', 'Japanese', 'IELTS', 'Eiken', 'Academic Writing', 'Speaking & Presentation', 'University preparation', 'Language tutoring for children'],
-        targetAges: ['Children', 'Elementary', 'Junior high', 'High school', 'University', 'Adults'],
-        languages: ['English', 'Japanese'],
-        intro: 'Co-Founder & CEO/CMO of Petra Tutors. Educated at international schools in London and Dublin, with 5+ years overseas. Experienced in tutoring 70+ students across English exams (IELTS 7.0, Eiken Pre-1), academic English, Japanese language, and group instruction.',
-        strengths: ['Exam Prep (IELTS/Eiken)', 'International Curricula', 'College Consulting'],
-        format: ['Online', 'In-Person'],
-        role: 'Founder',
-        image: '/images/tutors/tutor-5.png'
     },
     {
         id: 'tutor-6',
