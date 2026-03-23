@@ -61,6 +61,39 @@ const TUTORS = [
         intro: 'Language tutor supporting both young learners and adults in developing communication skills.',
         strengths: ['Language Acquisition', 'ESL'],
         format: ['Online']
+    },
+    {
+        id: 'tutor-6',
+        name: 'Ulemj Batzorig',
+        university: 'Keio University, PEARL (Economics)',
+        subjects: ['English Conversation', 'Academic English', 'University preparation', 'IELTS', 'Eiken', 'TOEIC', 'TOEFL'],
+        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school'],
+        languages: ['English'],
+        intro: 'TESOL-certified economics student at Keio University with a passion for helping students build confidence and excel in English examinations.',
+        strengths: ['Exam Prep', 'TESOL Certified'],
+        format: ['Online', 'In-Person']
+    },
+    {
+        id: 'tutor-7',
+        name: 'Michael MacNamara',
+        university: 'University of Tokyo, PEAK (East Asian Studies)',
+        subjects: ['English Conversation', 'IB subjects', 'GCSE subjects', 'A-Level subjects', 'University preparation', 'IELTS', 'TOEFL', 'Interview preparation'],
+        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school', 'University'],
+        languages: ['English'],
+        intro: 'East Asian Studies student at the University of Tokyo with nearly 4 years of teaching experience, specialising in IB, GCSE, and A-Level curricula.',
+        strengths: ['IB & A-Level', 'Interview Prep'],
+        format: ['Online', 'In-Person']
+    },
+    {
+        id: 'tutor-8',
+        name: 'Minh To',
+        university: 'Keio University, PEARL (Economics)',
+        subjects: ['English Conversation', 'Academic English', 'University preparation', 'Essay writing', 'IELTS', 'TOEIC', 'TOEFL', 'Interview preparation', 'College consulting'],
+        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school'],
+        languages: ['English'],
+        intro: 'Economics student at Keio with extensive college consulting experience, guiding students through applications to top universities abroad.',
+        strengths: ['College Consulting', 'Essay Writing'],
+        format: ['Online', 'In-Person']
     }
 ];
 
