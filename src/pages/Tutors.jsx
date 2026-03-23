@@ -49,7 +49,7 @@ const TUTORS = [
         subjects: ['English', 'Economics', 'Academic writing', 'International school support', 'Interview preparation'],
         targetAges: ['High school', 'University', 'Adults'],
         languages: ['English', 'Japanese'],
-        intro: 'Co-Founder of Petra Tutors focusing on international academic tutoring and cross-cultural education.',
+        intro: 'Co-Founder & COO/CFO of Petra Tutors focusing on international academic tutoring and cross-cultural education.',
         strengths: ['Cross-cultural Education', 'Mentorship'],
         format: ['Online', 'In-Person'],
         role: 'Founder',
@@ -62,10 +62,10 @@ const TUTORS = [
         subjects: ['English', 'Japanese', 'IELTS', 'Eiken', 'Academic Writing', 'Speaking & Presentation', 'University preparation', 'Language tutoring for children'],
         targetAges: ['Children', 'Elementary', 'Junior high', 'High school', 'University', 'Adults'],
         languages: ['English', 'Japanese'],
-        intro: 'Co-Founder & CEO of Petra Tutors. Educated at international schools in London and Dublin, with 5+ years overseas. Experienced in tutoring 70+ students across English exams (IELTS 7.0, Eiken Pre-1), academic English, Japanese language, and group instruction.',
+        intro: 'Co-Founder & CEO/CMO of Petra Tutors. Educated at international schools in London and Dublin, with 5+ years overseas. Experienced in tutoring 70+ students across English exams (IELTS 7.0, Eiken Pre-1), academic English, Japanese language, and group instruction.',
         strengths: ['Exam Prep (IELTS/Eiken)', 'International Curricula', 'College Consulting'],
         format: ['Online', 'In-Person'],
-        role: 'Co-Founder',
+        role: 'Founder',
         image: '/images/tutors/tutor-5.png'
     },
     {
