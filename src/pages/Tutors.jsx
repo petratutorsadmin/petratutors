@@ -108,10 +108,9 @@ const TUTORS = [
 
 export default function Tutors() {
     const { t } = useTranslation();
-    const [filter, setFilter] = useState('All');
-    const [selectedTutor, setSelectedTutor] = useState(null);
-
     const subjectsFilters = [t('tutors.f_all'), 'English', 'Japanese', 'Economics', 'IB', 'Engineering', 'Science'];
+    const [filter, setFilter] = useState(subjectsFilters[0]);
+    const [selectedTutor, setSelectedTutor] = useState(null);
 
     // Map "All" translated string back to actual matching logic
     const isAll = filter === t('tutors.f_all');
