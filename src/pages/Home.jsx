@@ -38,8 +38,7 @@ export default function Home() {
                             </p>
                         </div>
                         <div className={styles.aboutVisual}>
-                            <div className={styles.decorativeShape1}></div>
-                            <div className={styles.decorativeShape2}></div>
+                            <img src="/images/home/about.jpg" alt="Tutor and student" className={styles.aboutImage} />
                         </div>
                     </div>
                 </div>

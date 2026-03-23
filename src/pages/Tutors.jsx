@@ -15,7 +15,8 @@ const TUTORS = [
         languages: ['English'],
         intro: 'Economics student at Keio University with experience helping professionals improve English communication for work.',
         strengths: ['Exam Prep', 'Interviewing'],
-        format: ['Online', 'In-Person']
+        format: ['Online', 'In-Person'],
+        image: null
     },
     {
         id: 'tutor-2',
@@ -26,7 +27,8 @@ const TUTORS = [
         languages: ['English', 'Japanese'],
         intro: 'Mechanical engineering student at TU Eindhoven with experience mentoring mathematics and international curriculum subjects.',
         strengths: ['Mathematics', 'Science'],
-        format: ['Online']
+        format: ['Online'],
+        image: '/images/tutors/tutor-2.png'
     },
     {
         id: 'tutor-3',
@@ -37,7 +39,8 @@ const TUTORS = [
         languages: ['English'],
         intro: 'Economics and finance student at HKU supporting IB students and academic writing development.',
         strengths: ['Academic Writing', 'IB Curriculum'],
-        format: ['Online']
+        format: ['Online'],
+        image: null
     },
     {
         id: 'tutor-4',
@@ -49,7 +52,8 @@ const TUTORS = [
         intro: 'Founder of Petra Tutors focusing on international academic tutoring and cross-cultural education.',
         strengths: ['Cross-cultural Education', 'Mentorship'],
         format: ['Online', 'In-Person'],
-        role: 'Founder'
+        role: 'Founder',
+        image: '/images/tutors/tutor-4.png'
     },
     {
         id: 'tutor-5',
@@ -60,7 +64,8 @@ const TUTORS = [
         languages: ['English', 'Japanese'],
         intro: 'Language tutor supporting both young learners and adults in developing communication skills.',
         strengths: ['Language Acquisition', 'ESL'],
-        format: ['Online']
+        format: ['Online'],
+        image: '/images/tutors/tutor-5.png'
     },
     {
         id: 'tutor-6',
@@ -71,7 +76,8 @@ const TUTORS = [
         languages: ['English'],
         intro: 'TESOL-certified economics student at Keio University with a passion for helping students build confidence and excel in English examinations.',
         strengths: ['Exam Prep', 'TESOL Certified'],
-        format: ['Online', 'In-Person']
+        format: ['Online', 'In-Person'],
+        image: '/images/tutors/tutor-6.png'
     },
     {
         id: 'tutor-7',
@@ -82,7 +88,8 @@ const TUTORS = [
         languages: ['English'],
         intro: 'East Asian Studies student at the University of Tokyo with nearly 4 years of teaching experience, specialising in IB, GCSE, and A-Level curricula.',
         strengths: ['IB & A-Level', 'Interview Prep'],
-        format: ['Online', 'In-Person']
+        format: ['Online', 'In-Person'],
+        image: null
     },
     {
         id: 'tutor-8',
@@ -93,7 +100,8 @@ const TUTORS = [
         languages: ['English'],
         intro: 'Economics student at Keio with extensive college consulting experience, guiding students through applications to top universities abroad.',
         strengths: ['College Consulting', 'Essay Writing'],
-        format: ['Online', 'In-Person']
+        format: ['Online', 'In-Person'],
+        image: null
     }
 ];
 
@@ -149,9 +157,13 @@ export default function Tutors() {
                     {filteredTutors.map((tutor, idx) => (
                         <div key={tutor.id} className={`glass-card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${idx * 0.1}s` }}>
                             <div className={styles.tutorImage}>
-                                <div className={styles.avatarPlaceholder}>
-                                    {tutor.name.charAt(0)}
-                                </div>
+                                {tutor.image ? (
+                                    <img src={tutor.image} alt={tutor.name} className={styles.avatarImage} />
+                                ) : (
+                                    <div className={styles.avatarPlaceholder}>
+                                        {tutor.name.charAt(0)}
+                                    </div>
+                                )}
                             </div>
                             <div className={styles.tutorInfo}>
                                 <div className={styles.tutorHeader}>
@@ -202,9 +214,13 @@ export default function Tutors() {
 
                         <div className={styles.modalScroll}>
                             <div className={styles.modalHeader}>
-                                <div className={styles.modalAvatarPlaceholder}>
-                                    {selectedTutor.name.charAt(0)}
-                                </div>
+                                {selectedTutor.image ? (
+                                    <img src={selectedTutor.image} alt={selectedTutor.name} className={styles.modalAvatarImage} />
+                                ) : (
+                                    <div className={styles.modalAvatarPlaceholder}>
+                                        {selectedTutor.name.charAt(0)}
+                                    </div>
+                                )}
                                 <div>
                                     <h2 className="text-h2">
                                         {selectedTutor.name}

@@ -57,7 +57,7 @@ export default function Programs() {
                             <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
                         </div>
                         <div className={styles.programVisual}>
-                            <div className={`${styles.visualPlaceholder} glass-card`} />
+                            <img src="/images/programs/language.jpg" alt="Language Mastery" className={styles.programImage} />
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@ export default function Programs() {
                             <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
                         </div>
                         <div className={styles.programVisual}>
-                            <div className={`${styles.visualPlaceholder} glass-card`} />
+                            <img src="/images/programs/exam.jpg" alt="Exam & Admissions" className={styles.programImage} />
                         </div>
                     </div>
 
@@ -89,7 +89,7 @@ export default function Programs() {
                             <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
                         </div>
                         <div className={styles.programVisual}>
-                            <div className={`${styles.visualPlaceholder} glass-card`} />
+                            <img src="/images/programs/international.jpg" alt="International Curricula" className={styles.programImage} />
                         </div>
                     </div>
 
