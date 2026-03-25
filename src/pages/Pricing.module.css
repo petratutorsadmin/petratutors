@@ -3,9 +3,10 @@
     background-color: var(--c-sand);
 }
 
-.benefitsBanner {
+.trustBar {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: var(--space-xl);
     padding: var(--space-md);
     background-color: var(--c-white);
@@ -18,7 +19,7 @@
     border: 1px solid var(--c-border);
 }
 
-.benefit {
+.trustItem {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -26,24 +27,13 @@
     color: var(--c-navy);
 }
 
-.checkIcon {
-    color: var(--c-accent);
-}
-
 .pricingGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: var(--space-md);
-    margin-bottom: var(--space-xl);
-}
-
-.cardTier {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--c-accent);
-    margin-bottom: 0.25rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    margin-bottom: var(--space-lg);
+    align-items: center; /* Important for scaling items to have space */
+    padding: 2rem 0;
 }
 
 .pricingCard {
@@ -52,23 +42,34 @@
     position: relative;
     border: 1px solid var(--c-border);
     box-shadow: none;
-    padding: 2.5rem 1.5rem 1.5rem;
+    padding: 2.5rem 1.5rem 1.75rem;
+    background: var(--c-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+/* Subtle Price Progression */
+.pricingCard:nth-child(1) { background-color: #fdfdfd; }
+.pricingCard:nth-child(2) { background-color: #fafafa; }
+.pricingCard:nth-child(4) { background-color: #f5f5f5; border-color: rgba(0,0,0,0.1); }
 
 .pricingCard:hover {
     border-color: var(--c-accent);
     box-shadow: var(--shadow-md);
+    z-index: 10;
 }
 
 .popular {
     border-color: var(--c-navy);
-    box-shadow: var(--shadow-md);
-    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(10, 20, 40, 0.12);
+    transform: scale(1.1);
+    background: linear-gradient(to bottom, #ffffff, #fffdf5) !important;
+    z-index: 5;
+    border-width: 2px;
 }
 
 .popular:hover {
-    transform: translateY(-12px);
-    border-color: var(--c-navy);
+    transform: scale(1.12) translateY(-4px);
+    box-shadow: 0 30px 60px rgba(10, 20, 40, 0.15);
 }
 
 .popularBadge {
@@ -78,41 +79,63 @@
     transform: translate(-50%, -50%);
     background-color: var(--c-navy);
     color: var(--c-white);
-    padding: 0.35rem 1.25rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 100px;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.85rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
     z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .cardHeader {
     margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.cardTier {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-accent);
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nudge {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--c-accent);
+    margin-top: 0.25rem;
 }
 
 .description {
     color: var(--c-text-light);
     font-size: 0.9rem;
     margin-top: 0.5rem;
-    min-height: 60px;
+    line-height: 1.4;
+    min-height: 2.8rem;
 }
 
 .priceContainer {
     display: flex;
     align-items: baseline;
+    justify-content: center;
     gap: 0.25rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--c-border);
 }
 
 .fromLabel {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--c-text-light);
 }
 
 .price {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-family: var(--font-serif);
     font-weight: 600;
     color: var(--c-navy);
@@ -120,15 +143,7 @@
 
 .perHour {
     color: var(--c-text-light);
-}
-
-.reinforcement {
-    font-size: 0.85rem;
-    color: var(--c-text-light);
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--c-border);
+    font-size: 0.9rem;
 }
 
 .featuresList {
@@ -136,7 +151,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
     flex: 1;
 }
 
@@ -148,23 +163,125 @@
     color: var(--c-text);
 }
 
-.btn {
-    width: 100%;
-    margin-top: auto;
+.checkIcon {
+    color: var(--c-accent);
+    flex-shrink: 0;
 }
 
+.btn {
+    width: 100%;
+}
+
+.ctaWrapper {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.safetyNote {
+    font-size: 0.8rem;
+    color: var(--c-navy);
+    font-weight: 600;
+    opacity: 0.9;
+    text-align: center;
+}
+
+.popular .safetyNote {
+    color: var(--c-accent);
+}
+
+.frictionReduction {
+    font-size: 0.75rem;
+    color: var(--c-text-light);
+    opacity: 0.7;
+    margin-top: 0.25rem;
+}
+
+/* Micro Copy */
+.microCopy {
+    margin-bottom: var(--space-xl);
+    color: var(--c-text-light);
+    font-size: 0.9rem;
+}
+
+.microHighlight {
+    font-weight: 600;
+    color: var(--c-navy);
+    margin-top: 0.25rem;
+}
+
+/* Continuity Section */
+.continuitySection {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem;
+    background-color: var(--c-sand);
+    border: 1px solid var(--c-border);
+    margin-bottom: var(--space-xl);
+}
+
+.continuityContent {
+    flex: 1;
+}
+
+.continuityText {
+    color: var(--c-text-light);
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+.continuityGrid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.continuityItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--c-white);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--c-border);
+    font-size: 1rem;
+}
+
+.cDot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--c-border);
+    border-radius: 50%;
+}
+
+.cHighlight {
+    border-color: var(--c-accent);
+    background-color: #fffdf5;
+}
+
+.cHighlight .cDot {
+    background-color: var(--c-accent);
+}
+
+/* Group Section */
 .groupSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
     padding: 3rem;
-    background-color: var(--c-sand);
-    border: 1px solid var(--c-border);
+    background-color: var(--c-navy);
+    color: var(--c-white);
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-xl);
-    position: relative;
-    overflow: hidden;
+}
+
+.groupSection h2 {
+    color: var(--c-white);
 }
 
 .groupBadge {
@@ -173,7 +290,7 @@
     color: var(--c-white);
     padding: 0.25rem 1rem;
     border-radius: 100px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -185,7 +302,7 @@
 }
 
 .groupDesc {
-    color: var(--c-text-light);
+    opacity: 0.8;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     max-width: 500px;
@@ -197,136 +314,130 @@
     gap: 0.25rem;
 }
 
-.groupFeatures {
-    flex: 0 0 350px;
-    background: var(--c-white);
-    padding: 2rem;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
+.groupPriceContainer .price {
+    color: var(--c-accent);
 }
 
+.groupPriceContainer .fromLabel,
+.groupPriceContainer .perHour {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.groupFeatures {
+    flex: 0 0 350px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.groupFeatures .featuresList li {
+    color: var(--c-white);
+}
+
+/* Decision Helper */
 .decisionHelper {
     margin-bottom: var(--space-xl);
+    padding: 4rem 0;
 }
 
 .decisionGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
+    gap: var(--space-lg);
+    max-width: 900px;
+    margin: 2rem auto 0;
 }
 
 .decisionCard {
-    padding: 2rem;
+    padding: 2.5rem;
     text-align: center;
-    box-shadow: none;
     background: var(--c-white);
-    border-radius: var(--radius-md);
     border: 1px solid var(--c-border);
-    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.decisionCard:hover {
-    transform: translateY(-4px);
-    border-color: var(--c-accent);
-}
-
+/* Notice Box */
 .noticeBox {
     display: flex;
-    gap: 1rem;
-    background-color: rgba(229, 184, 11, 0.1);
-    border: 1px solid rgba(229, 184, 11, 0.3);
-    padding: var(--space-md);
-    border-radius: var(--radius-md);
+    gap: 1.5rem;
+    background-color: var(--c-sand);
+    border: 1px solid var(--c-border);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
     align-items: flex-start;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 0 auto 4rem;
 }
 
 .infoIcon {
     color: var(--c-accent);
     flex-shrink: 0;
+    margin-top: 0.25rem;
 }
 
-@media (max-width: 1024px) {
+/* Final Urgency */
+.finalUrgency {
+    background-color: var(--c-stone);
+    padding: 5rem 2rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.finalCtas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
     .pricingGrid {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .groupSection {
+    .continuitySection {
         flex-direction: column;
         align-items: stretch;
+        padding: 2rem;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .groupSection {
+        flex-direction: column;
         padding: 2rem;
     }
     
     .groupFeatures {
         flex: auto;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .benefitsBanner {
-        flex-direction: column;
-        gap: 0.75rem;
-        align-items: flex-start;
+    .trustBar {
+        gap: 1rem;
+        justify-content: flex-start;
     }
 
     .pricingGrid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .header {
-        padding: var(--space-lg) 0 var(--space-md);
-    }
-
-    .cardHeader {
-        margin-bottom: 1rem;
-    }
-
-    .description {
-        min-height: auto;
-    }
-
-    .reinforcement {
-        margin-bottom: 1rem;
-        padding-bottom: 0.75rem;
-    }
-
-    .featuresList {
-        margin-bottom: var(--space-md);
-    }
-
-    .pricingCard {
-        padding: 2rem 1.5rem;
-    }
-
-    .popular {
-        transform: none;
-    }
-
-    .popular:hover {
-        transform: translateY(-4px);
-    }
-    
-    .groupSection {
-        padding: 2rem 1.5rem;
-        gap: 1.5rem;
-    }
-
-    .groupFeatures {
-        padding: 1.5rem;
-    }
-
-    .decisionHelper {
-        margin-bottom: var(--space-lg);
     }
 
     .decisionGrid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
-    .decisionCard {
+    .finalCtas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .continuitySection,
+    .groupSection,
+    .noticeBox {
         padding: 2rem 1.5rem;
     }
 }

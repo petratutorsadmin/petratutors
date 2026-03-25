@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Check, Info } from 'lucide-react';
+import { Check, Info, ArrowRight, ShieldCheck, Clock, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Pricing.module.css';
 
@@ -8,49 +8,26 @@ export default function Pricing() {
 
     const plans = [
         {
-            title: t('pricing.p_adv_title'),
-            badge: t('pricing.p_adv_badge'),
-            description: t('pricing.p_adv_desc'),
-            price: t('pricing.p_adv_price'),
-            reinf: t('pricing.p_adv_reinf'),
-            features: [t('pricing.p_adv_f1'), t('pricing.p_adv_f2'), t('pricing.p_adv_f3')],
-            cta: t('pricing.p_adv_cta'),
+            key: 'p_lang',
             popular: false
         },
         {
-            title: t('pricing.p_acad_title'),
-            badge: t('pricing.p_acad_badge'),
-            description: t('pricing.p_acad_desc'),
-            price: t('pricing.p_acad_price'),
-            reinf: t('pricing.p_acad_reinf'),
-            features: [t('pricing.p_acad_f1'), t('pricing.p_acad_f2'), t('pricing.p_acad_f3')],
-            cta: t('pricing.p_acad_cta'),
+            key: 'p_exam',
+            popular: false
+        },
+        {
+            key: 'p_acad',
             popular: true
         },
         {
-            title: t('pricing.p_lang_title'),
-            badge: t('pricing.p_lang_badge'),
-            description: t('pricing.p_lang_desc'),
-            price: t('pricing.p_lang_price'),
-            reinf: t('pricing.p_lang_reinf'),
-            features: [t('pricing.p_lang_f1'), t('pricing.p_lang_f2'), t('pricing.p_lang_f3')],
-            cta: t('pricing.p_lang_cta'),
-            popular: false
-        },
-        {
-            title: t('pricing.p_prem_title'),
-            badge: t('pricing.p_prem_badge'),
-            description: t('pricing.p_prem_desc'),
-            price: t('pricing.p_prem_price'),
-            reinf: t('pricing.p_prem_reinf'),
-            features: [t('pricing.p_prem_f1'), t('pricing.p_prem_f2'), t('pricing.p_prem_f3')],
-            cta: t('pricing.p_prem_cta'),
+            key: 'p_adv',
             popular: false
         }
     ];
 
     return (
         <>
+            {/* 1. HERO Section */}
             <div className={`${styles.header} glass-panel`}>
                 <div className="container text-center animate-on-scroll">
                     <h1 className="text-h1" style={{ marginBottom: '1rem' }}>{t('pricing.title')}</h1>
@@ -61,53 +38,81 @@ export default function Pricing() {
             </div>
 
             <div className="section container">
-                <div className={`${styles.benefitsBanner} glass-card animate-on-scroll`} style={{ animationDelay: '0.1s' }}>
-                    <div className={styles.benefit}>
-                        <Check className={styles.checkIcon} /> {t('pricing.b1')}
-                    </div>
-                    <div className={styles.benefit}>
-                        <Check className={styles.checkIcon} /> {t('pricing.b2')}
-                    </div>
-                    <div className={styles.benefit}>
-                        <Check className={styles.checkIcon} /> {t('pricing.b3')}
-                    </div>
-                    <div className={styles.benefit}>
-                        <Check className={styles.checkIcon} /> {t('pricing.b4')}
-                    </div>
+                {/* 2. TRUST BAR */}
+                <div className={`${styles.trustBar} animate-on-scroll`}>
+                    <div className={styles.trustItem}><ShieldCheck size={20} /> {t('pricing.b1')}</div>
+                    <div className={styles.trustItem}><Check size={20} /> {t('pricing.b2')}</div>
+                    <div className={styles.trustItem}><Zap size={20} /> {t('pricing.b3')}</div>
+                    <div className={styles.trustItem}><Clock size={20} /> {t('pricing.b4')}</div>
                 </div>
 
+                {/* 3. MAIN PRICING CARDS */}
                 <div className={styles.pricingGrid}>
                     {plans.map((plan, index) => (
-                        <div key={index} className={`glass-card ${styles.pricingCard} ${plan.popular ? styles.popular : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.1 + 0.2}s` }}>
-                            {plan.popular && <div className={styles.popularBadge}>{plan.badge}</div>}
+                        <div key={index} className={`glass-card ${styles.pricingCard} ${plan.popular ? styles.popular : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.1}s` }}>
+                            {plan.popular && <div className={styles.popularBadge}>{t(`pricing.${plan.key}_badge`)}</div>}
                             <div className={styles.cardHeader}>
                                 <div className={styles.cardTier}>{t('pricing.1on1')}</div>
-                                <h3 className="text-h3">{plan.title}</h3>
-                                <p className={styles.description}>{plan.description}</p>
+                                <h3 className="text-h3">{t(`pricing.${plan.key}_title`)}</h3>
+                                <div className={styles.nudge}>{t(`pricing.${plan.key}_nudge`)}</div>
+                                <p className={styles.description}>{t(`pricing.${plan.key}_desc`)}</p>
                             </div>
 
                             <div className={styles.priceContainer}>
-                                {plan.price !== 'Custom Pricing' && plan.price !== '要相談' && <span className={styles.fromLabel}>{t('pricing.from')}</span>}
-                                <span className={styles.price}>{plan.price}</span>
-                                {plan.price !== 'Custom Pricing' && plan.price !== '要相談' && <span className={styles.perHour}>{t('pricing.per_hour')}</span>}
+                                <span className={styles.fromLabel}>{t('pricing.from')}</span>
+                                <span className={styles.price}>{t(`pricing.${plan.key}_price`)}</span>
+                                <span className={styles.perHour}>{t('pricing.per_hour')}</span>
                             </div>
-                            
-                            <div className={styles.reinforcement}>{plan.reinf}</div>
 
                             <ul className={styles.featuresList}>
-                                {plan.features.map((feature, i) => (
-                                    <li key={i}><Check size={16} className={styles.checkIcon} /> {feature}</li>
-                                ))}
+                                <li><Check size={16} className={styles.checkIcon} /> {t(`pricing.${plan.key}_f1`)}</li>
+                                <li><Check size={16} className={styles.checkIcon} /> {t(`pricing.${plan.key}_f2`)}</li>
+                                <li><Check size={16} className={styles.checkIcon} /> {t(`pricing.${plan.key}_f3`)}</li>
                             </ul>
 
-                            <Link to="/inquiry" className={`btn ${plan.popular ? 'btn-primary' : 'btn-secondary'} ${styles.btn}`}>
-                                {plan.cta}
-                            </Link>
+                            <div className={styles.ctaWrapper}>
+                                {t(`pricing.${plan.key}_note`) && t(`pricing.${plan.key}_note`) !== `pricing.${plan.key}_note` && (
+                                    <div className={styles.safetyNote}>{t(`pricing.${plan.key}_note`)}</div>
+                                )}
+                                <Link to="/inquiry" className={`btn ${plan.popular ? 'btn-primary' : 'btn-secondary'} ${styles.btn}`}>
+                                    {t(`pricing.${plan.key}_cta`)}
+                                </Link>
+                                <div className={styles.frictionReduction}>{t('pricing.friction_reduction')}</div>
+                            </div>
                         </div>
                     ))}
                 </div>
 
-                <div className={`${styles.groupSection} glass-card animate-on-scroll`}>
+                {/* 4. MICRO COPY */}
+                <div className={`${styles.microCopy} text-center animate-on-scroll`}>
+                    <p>{t('pricing.micro_copy_1')}</p>
+                    <p className={styles.microHighlight}>{t('pricing.micro_copy_2')}</p>
+                </div>
+
+                {/* 5. CONTINUITY / MONTHLY LOGIC */}
+                <div className={`${styles.continuitySection} glass-card animate-on-scroll`}>
+                    <div className={styles.continuityContent}>
+                        <h2 className="text-h2">{t('pricing.continuity_title')}</h2>
+                        <p className={styles.continuityText}>{t('pricing.continuity_body')}</p>
+                    </div>
+                    <div className={styles.continuityGrid}>
+                        <div className={styles.continuityItem}>
+                            <div className={styles.cDot}></div>
+                            <span>{t('pricing.continuity_item_1')}</span>
+                        </div>
+                        <div className={styles.continuityItem}>
+                            <div className={styles.cDot}></div>
+                            <span>{t('pricing.continuity_item_2')}</span>
+                        </div>
+                        <div className={`${styles.continuityItem} ${styles.cHighlight}`}>
+                            <div className={styles.cDot}></div>
+                            <strong>{t('pricing.continuity_item_3')}</strong>
+                        </div>
+                    </div>
+                </div>
+
+                {/* 6. GROUP SECTION */}
+                <div className={`${styles.groupSection} animate-on-scroll`}>
                     <div className={styles.groupContent}>
                         <div className={styles.groupBadge}>{t('pricing.g_badge')}</div>
                         <h2 className="text-h2" style={{ marginBottom: '0.5rem' }}>{t('pricing.g_title')}</h2>
@@ -124,14 +129,18 @@ export default function Pricing() {
                             <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f2')}</li>
                             <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f3')}</li>
                         </ul>
-                        <Link to="/inquiry" className="btn btn-primary" style={{ marginTop: '1rem' }}>
+                        <Link to="/inquiry" className="btn" style={{ marginTop: '1rem', backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>
                             {t('pricing.g_cta')}
                         </Link>
                     </div>
                 </div>
 
-                <div className={`${styles.decisionHelper} animate-on-scroll`}>
-                    <h3 className="text-h2 text-center" style={{ marginBottom: '2rem' }}>{t('pricing.dec_title')}</h3>
+                {/* 7. DECISION SUPPORT */}
+                <div className={`${styles.decisionHelper} animate-on-scroll text-center`}>
+                    <h3 className="text-h2" style={{ marginBottom: '1rem' }}>{t('pricing.dec_title')}</h3>
+                    <p className="text-large" style={{ color: 'var(--c-text-light)', marginBottom: '2rem' }}>
+                        {t('pricing.dec_subtitle')}
+                    </p>
                     <div className={styles.decisionGrid}>
                         <div className={`glass-card ${styles.decisionCard}`}>
                             <h4 className="text-h4" style={{ color: 'var(--c-navy)', marginBottom: '0.5rem' }}>{t('pricing.dec_l_title')}</h4>
@@ -144,16 +153,28 @@ export default function Pricing() {
                     </div>
                 </div>
 
-                <div className={`${styles.noticeBox} animate-on-scroll`} style={{ animationDelay: '0.2s', marginTop: '3rem' }}>
+                {/* 8. NOTICE BOX */}
+                <div className={`${styles.noticeBox} animate-on-scroll`} style={{ animationDelay: '0.2s', marginTop: '4rem' }}>
                     <Info size={24} className={styles.infoIcon} />
                     <div>
                         <h4 className="text-h4" style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>{t('pricing.note_title')}</h4>
                         <p style={{ color: 'var(--c-text-light)' }}>
                             {t('pricing.note_desc')}
                         </p>
-                        <div style={{ marginTop: '1rem' }}>
-                            <Link to="/no-admission-fee" className="btn btn-secondary">{t('pricing.no_fee_link')}</Link>
+                        <div style={{ marginTop: '1.5rem' }}>
+                            <Link to="/inquiry" className="btn btn-primary">{t('home.final_cta', 'Reserve in 30s')}</Link>
                         </div>
+                    </div>
+                </div>
+
+                {/* 9. FINAL CTA (URGENCY) */}
+                <div className={`${styles.finalUrgency} text-center animate-on-scroll`}>
+                    <h2 className="text-h2">{t('home.final_title')}</h2>
+                    <div className={styles.finalCtas}>
+                        <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
+                        <a href={t('nav.line_url')} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+                            {t('nav.line_cta')}
+                        </a>
                     </div>
                 </div>
 

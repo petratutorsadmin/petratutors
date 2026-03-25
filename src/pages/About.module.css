@@ -3,6 +3,18 @@
     border-bottom: 1px solid var(--c-border);
 }
 
+.founderBlock {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border-top: 4px solid var(--c-accent);
+}
+
+.founderContent {
+    max-width: 800px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

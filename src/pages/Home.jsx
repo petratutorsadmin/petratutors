@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe2, BookOpen, GraduationCap, Users } from 'lucide-react';
+import { ArrowRight, Globe2, BookOpen, GraduationCap, Users, CheckCircle, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Home.module.css';
+import ComparisonSection from '../components/ComparisonSection';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -21,6 +22,22 @@ export default function Home() {
                         <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
                         <Link to="/programs" className="btn btn-secondary">{t('home.cta_secondary')}</Link>
                     </div>
+                    <p className={styles.scarcityNote}>{t('home.scarcity_note')}</p>
+                </div>
+            </section>
+
+            {/* Match Guarantee Strip */}
+            <section className={styles.matchGuarantee}>
+                <div className="container">
+                    <div className={`${styles.matchGrid} animate-on-scroll`}>
+                        <div className={styles.matchIcon}>
+                            <CheckCircle size={40} />
+                        </div>
+                        <div className={styles.matchText}>
+                            <h2 className="text-h4" style={{ marginBottom: '0.25rem' }}>{t('home.match_guarantee_title')}</h2>
+                            <p style={{ fontSize: '1rem', color: 'var(--c-text-light)' }}>{t('home.match_guarantee_body')}</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -37,20 +54,20 @@ export default function Home() {
                             <div className={styles.statLabel}>{t('home.trust_stats_2')}</div>
                         </div>
                         <div className={`${styles.statItem} animate-on-scroll`} style={{ animationDelay: '0.3s' }}>
-                            <div className={styles.statValue}>Keio & Top Uni</div>
+                            <div className={`${styles.statValue} ${styles.authorityStat}`}>{t('home.trust_stats_3_value')}</div>
                             <div className={styles.statLabel}>{t('home.trust_stats_3')}</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* About Section */}
+            {/* Core Value Section (About) */}
             <section className={`section ${styles.about}`}>
                 <div className="container">
                     <div className={`${styles.aboutGrid} animate-on-scroll`}>
                         <div className={styles.aboutContent}>
                             <h2 className="text-h2">{t('home.about_title')}</h2>
-                            <p className="text-body" style={{ marginBottom: '1rem' }}>
+                            <p className="text-body" style={{ marginBottom: '1.5rem', fontSize: '1.2rem', fontWeight: '500' }}>
                                 {t('home.about_p1')}
                             </p>
                             <p className="text-body">
@@ -63,6 +80,24 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* Perfect Match Section */}
+            <section className={`section ${styles.perfectMatch}`}>
+                <div className="container">
+                    <h2 className="text-h2 text-center animate-on-scroll" style={{ marginBottom: '3rem' }}>{t('home.support_title')}</h2>
+                    <div className={styles.matchCards}>
+                        {[1, 2, 3, 4, 5].map((i) => (
+                            <div key={i} className={`glass-card ${styles.matchCard} animate-on-scroll`} style={{ animationDelay: `${i * 0.1}s` }}>
+                                <CheckCircle className={styles.matchCheck} size={20} />
+                                <span>{t(`home.support_${i}`)}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Comparison Table */}
+            <ComparisonSection />
 
             {/* Program Highlights */}
             <section className={`section ${styles.programs}`}>
@@ -100,20 +135,6 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Who We Support */}
-            <section className={`section ${styles.support}`}>
-                <div className="container text-center">
-                    <h2 className="text-h2 animate-on-scroll" style={{ marginBottom: 'var(--space-md)' }}>{t('home.support_title')}</h2>
-                    <div className={`${styles.supportGrid} animate-on-scroll`}>
-                        {[t('home.support_1'), t('home.support_2'), t('home.support_3'), t('home.support_4'), t('home.support_5')].map((group) => (
-                            <div key={group} className={styles.supportBadge}>
-                                {group}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* How it works */}
             <section className={`section ${styles.howItWorks}`}>
                 <div className="container">
@@ -133,26 +154,24 @@ export default function Home() {
                             <div className={styles.stepNumber}>3</div>
                             <h3 className="text-h4">{t('home.step3_title')}</h3>
                             <p>{t('home.step3_desc')}</p>
+                            <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--c-text-light)' }}>
+                                {t('home.match_guarantee_body')}
+                            </p>
                         </div>
-                    </div>
-                    <div className="text-center" style={{ marginTop: '3rem' }}>
-                        <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
                     </div>
                 </div>
             </section>
 
-            {/* Trust & Pricing Snapshot */}
+            {/* Snapshot */}
             <section className={`section ${styles.snapshot}`}>
                 <div className="container">
                     <div className={styles.snapshotGrid}>
                         <div className={`glass-card ${styles.trustCard} animate-on-scroll`}>
-                            <h2 className="text-h3" style={{ marginBottom: '1.5rem' }}>{t('home.trust_title')}</h2>
-                            <ul className={styles.trustList}>
-                                <li><Users size={20} className={styles.trustIcon} /> {t('home.trust_1')}</li>
-                                <li><Globe2 size={20} className={styles.trustIcon} /> {t('home.trust_2')}</li>
-                                <li><BookOpen size={20} className={styles.trustIcon} /> {t('home.trust_3')}</li>
-                                <li><ArrowRight size={20} className={styles.trustIcon} /> {t('home.trust_4')}</li>
-                            </ul>
+                            <h2 className="text-h3" style={{ marginBottom: '1.5rem' }}>{t('home.match_guarantee_title')}</h2>
+                            <p className="text-body" style={{ marginBottom: '2rem' }}>{t('home.match_guarantee_body')}</p>
+                            <div className={styles.noFeeBadge}>
+                                <Check size={20} /> {t('home.comp_4_petra')}
+                            </div>
                         </div>
                         <div className={`glass-card ${styles.pricingCard} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
                             <h2 className="text-h3" style={{ marginBottom: '0.5rem' }}>{t('home.pricing_title')}</h2>
@@ -162,15 +181,16 @@ export default function Home() {
                                     <span>{t('home.price_lang')}</span>
                                     <div>
                                         <span style={{ fontSize: '0.9rem' }}>{t('home.from')}</span>
-                                        <strong>3,500</strong>
+                                        <strong style={{ fontSize: '1.5rem' }}>3,500</strong>
                                         <span style={{ fontSize: '0.9rem' }}>{t('home.per_hr')}</span>
+                                        <div style={{ fontSize: '0.8rem', opacity: 0.8 }}>{t('home.price_lang_avg')}</div>
                                     </div>
                                 </div>
                                 <div className={styles.priceItem}>
                                     <span>{t('home.price_acad')}</span>
                                     <div>
                                         <span style={{ fontSize: '0.9rem' }}>{t('home.from')}</span>
-                                        <strong>5,000</strong>
+                                        <strong style={{ fontSize: '1.5rem' }}>7,000</strong>
                                         <span style={{ fontSize: '0.9rem' }}>{t('home.per_hr')}</span>
                                     </div>
                                 </div>
@@ -178,7 +198,7 @@ export default function Home() {
                                     <span>{t('home.price_adv')}</span>
                                     <div>
                                         <span style={{ fontSize: '0.9rem' }}>{t('home.from')}</span>
-                                        <strong>7,000</strong>
+                                        <strong style={{ fontSize: '1.5rem' }}>10,000</strong>
                                         <span style={{ fontSize: '0.9rem' }}>{t('home.per_hr')}</span>
                                     </div>
                                 </div>
@@ -196,9 +216,15 @@ export default function Home() {
                     <p className="text-large" style={{ marginBottom: 'var(--space-md)', color: 'rgba(255,255,255,0.9)', maxWidth: '600px', margin: '0 auto 2rem' }}>
                         {t('home.final_desc')}
                     </p>
-                    <Link to="/inquiry" className="btn btn-primary" style={{ backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>{t('home.final_cta')}</Link>
+                    <div className={styles.finalCtas}>
+                        <Link to="/inquiry" className="btn btn-primary" style={{ backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>{t('home.final_cta')}</Link>
+                        <a href="https://line.me" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
+                            {t('nav.line_cta')}
+                        </a>
+                    </div>
                 </div>
             </section>
+
         </>
     );
 }

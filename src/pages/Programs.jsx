@@ -52,7 +52,8 @@ export default function Programs() {
                             </div>
                             <h2 className="text-h2" style={{ marginBottom: '1.5rem' }}>{t('home.prog_lang_title')}</h2>
                             <div className={styles.programDetails}>
-                                <p style={{ color: 'var(--c-text-light)' }}>{t('home.prog_lang_desc')}</p>
+                                <p style={{ color: 'var(--c-text-light)', marginBottom: '1rem' }}>{t('home.prog_lang_desc')}</p>
+                                <p style={{ color: 'var(--c-navy)', fontWeight: 500, fontSize: '0.95rem' }}>{t('home.prog_lang_ex')}</p>
                             </div>
                             <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
                         </div>
@@ -68,7 +69,8 @@ export default function Programs() {
                             </div>
                             <h2 className="text-h2" style={{ marginBottom: '1.5rem' }}>{t('home.prog_exam_title')}</h2>
                             <div className={styles.programDetails}>
-                                <p style={{ color: 'var(--c-text-light)' }}>{t('home.prog_exam_desc')}</p>
+                                <p style={{ color: 'var(--c-text-light)', marginBottom: '1rem' }}>{t('home.prog_exam_desc')}</p>
+                                <p style={{ color: 'var(--c-navy)', fontWeight: 500, fontSize: '0.95rem' }}>{t('home.prog_exam_ex')}</p>
                             </div>
                             <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
                         </div>
@@ -84,7 +86,8 @@ export default function Programs() {
                             </div>
                             <h2 className="text-h2" style={{ marginBottom: '1.5rem' }}>{t('home.prog_intl_title')}</h2>
                             <div className={styles.programDetails}>
-                                <p style={{ color: 'var(--c-text-light)' }}>{t('home.prog_intl_desc')}</p>
+                                <p style={{ color: 'var(--c-text-light)', marginBottom: '1rem' }}>{t('home.prog_intl_desc')}</p>
+                                <p style={{ color: 'var(--c-navy)', fontWeight: 500, fontSize: '0.95rem' }}>{t('home.prog_intl_ex')}</p>
                             </div>
                             <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
                         </div>

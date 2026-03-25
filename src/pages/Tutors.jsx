@@ -13,8 +13,11 @@ const TUTORS = [
         subjects: ['English', 'Economics', 'Academic writing', 'International school support', 'Interview preparation'],
         targetAges: ['High school', 'University', 'Adults'],
         languages: ['English', 'Japanese'],
-        intro: 'Co-Founder & COO/CFO of Petra Tutors focusing on international academic tutoring and cross-cultural education.',
-        strengths: ['Cross-cultural Education', 'Mentorship'],
+        intro: 'I specialize in guiding international and returnee students through the complex transitions of cross-cultural education. My teaching style focuses on building long-term academic confidence rather than short-term memorization, preparing students for rigorous university environments.',
+        strengths: ['Cross-cultural Mentorship', 'Interview & Application Strategy', 'Critical Thinking & Writing'],
+        idealMatch: 'Ambitious students targeting top-tier universities who need holistic mentorship beyond just subject knowledge.',
+        successCase: 'Mentored a returnee student from the US to successfully admit into Keio PEARL with a refined statement of purpose and interview strategy.',
+        lessonStyle: 'Interactive and strategic, focusing on the "Why" behind the content to develop lifelong academic skills.',
         format: ['Online', 'In-Person'],
         role: 'Founder',
         image: '/images/tutors/tutor-4.png'
@@ -26,8 +29,11 @@ const TUTORS = [
         subjects: ['English', 'Japanese', 'IELTS', 'Eiken', 'Academic Writing', 'Speaking & Presentation', 'University preparation', 'Language tutoring for children'],
         targetAges: ['Children', 'Elementary', 'Junior high', 'High school', 'University', 'Adults'],
         languages: ['English', 'Japanese'],
-        intro: 'Co-Founder & CEO/CMO of Petra Tutors. Educated at international schools in London and Dublin, with 5+ years overseas. Experienced in tutoring 70+ students across English exams (IELTS, Eiken), academic English, Japanese language, and group instruction.',
-        strengths: ['Exam Prep (IELTS/Eiken)', 'International Curricula', 'College Consulting'],
+        intro: 'Having navigated the British, Irish, and Japanese education systems, I understand the immense pressure students face. I have successfully mentored over 70 students, focusing on strategic exam preparation (IELTS, Eiken) and personalized academic coaching that unlocks each student\'s unique potential.',
+        strengths: ['Strategic Exam Coaching (IELTS/Eiken)', 'International Curricula Navigation', 'University Admissions Mentoring'],
+        idealMatch: 'Students feeling overwhelmed by IELTS/Eiken or international school transitions who need a compassionate and strategic coach.',
+        successCase: 'Improved a junior high student\'s IELTS score from 5.5 to 7.0 in 4 months through targeted speaking and writing drills.',
+        lessonStyle: 'Encouraging and result-oriented, breaking down large goals into manageable, high-impact milestones.',
         format: ['Online', 'In-Person'],
         role: 'Founder',
         image: '/images/tutors/tutor-5.png'
@@ -39,8 +45,11 @@ const TUTORS = [
         subjects: ['GCSE subjects', 'Japanese language', 'A-Level subjects'],
         targetAges: ['Junior high', 'High school'],
         languages: ['English', 'Japanese'],
-        intro: 'Mechanical engineering student at TU Eindhoven with experience mentoring mathematics and international curriculum subjects.',
-        strengths: ['Mathematics', 'Science'],
+        intro: 'As a mechanical engineering student in Europe, I bring an analytical and structured approach to STEM tutoring. I break down complex mathematical and scientific concepts into digestible, relatable steps, making challenging international curricula (GCSE, A-Level) highly accessible for my students.',
+        strengths: ['Analytical Problem Solving', 'GCSE/A-Level Math & Science', 'Structured Conceptual Learning'],
+        idealMatch: 'STEM students struggling with complex GCSE/A-Level concepts who value a clear, logical, and engineering-minded approach.',
+        successCase: 'Helping several students transition from failing grades to passing A-Level Mathematics with a focus on problem-solving frameworks.',
+        lessonStyle: 'Logical and step-by-step, ensuring foundational understanding before moving to advanced applications.',
         format: ['Online'],
         image: '/images/tutors/tutor-2.png'
     },
@@ -51,8 +60,11 @@ const TUTORS = [
         subjects: ['English Conversation', 'Academic English', 'University preparation', 'IELTS', 'Eiken', 'TOEIC', 'TOEFL'],
         targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school'],
         languages: ['English'],
-        intro: 'TESOL-certified economics student at Keio University with a passion for helping students build confidence and excel in English examinations.',
-        strengths: ['Exam Prep', 'TESOL Certified'],
+        intro: 'Holding a TESOL certification, I combine professional language pedagogy with a deeply empathetic mentoring style. My goal is to transform English from a daunting hurdle into a natural tool for expression, helping students excel in TOEIC, TOEFL, and IELTS while building genuine conversational confidence.',
+        strengths: ['Empathetic Language Coaching', 'TESOL-Certified Pedagogy', 'Confidence Building in Speaking'],
+        idealMatch: 'Younger learners or students with "English anxiety" who need a supportive environment to build base confidence and testing skills.',
+        successCase: 'Increased a student\'s TOEIC score by 150 points while simultaneously improving their willingness to speak up in class.',
+        lessonStyle: 'Dynamic and communicative, using professional TESOL techniques to make learning engaging and low-stress.',
         format: ['Online', 'In-Person'],
         image: '/images/tutors/tutor-6.png'
     }
@@ -109,13 +121,7 @@ export default function Tutors() {
                     {filteredTutors.map((tutor, idx) => (
                         <div key={tutor.id} className={`glass-card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${idx * 0.1}s` }}>
                             <div className={styles.tutorImage}>
-                                {tutor.image ? (
-                                    <img src={tutor.image} alt={tutor.name} className={styles.avatarImage} />
-                                ) : (
-                                    <div className={styles.avatarPlaceholder}>
-                                        {tutor.name.charAt(0)}
-                                    </div>
-                                )}
+                                <img src={tutor.image} alt={tutor.name} className={styles.avatarImage} />
                             </div>
                             <div className={styles.tutorInfo}>
                                 <div className={styles.tutorHeader}>
@@ -166,13 +172,7 @@ export default function Tutors() {
 
                         <div className={styles.modalScroll}>
                             <div className={styles.modalHeader}>
-                                {selectedTutor.image ? (
-                                    <img src={selectedTutor.image} alt={selectedTutor.name} className={styles.modalAvatarImage} />
-                                ) : (
-                                    <div className={styles.modalAvatarPlaceholder}>
-                                        {selectedTutor.name.charAt(0)}
-                                    </div>
-                                )}
+                                <img src={selectedTutor.image} alt={selectedTutor.name} className={styles.modalAvatarImage} />
                                 <div>
                                     <h2 className="text-h2">
                                         {selectedTutor.name}
@@ -184,10 +184,29 @@ export default function Tutors() {
                                 </div>
                             </div>
 
+                            <p className={styles.scarcityDisclaimer}>
+                                {t('tutors.scarcity_disclaimer')}
+                            </p>
+
                             <div className={styles.modalBody}>
                                 <div className={styles.modalSection}>
                                     <h3 className="text-h4">{t('tutors.about_me')}</h3>
                                     <p>{selectedTutor.intro}</p>
+                                </div>
+
+                                <div className={styles.highlightSections}>
+                                    <div className={`${styles.highlightCard} glass-panel`}>
+                                        <h3 className="text-h5">{t('tutors.ideal_match')}</h3>
+                                        <p>{selectedTutor.idealMatch}</p>
+                                    </div>
+                                    <div className={`${styles.highlightCard} glass-panel`}>
+                                        <h3 className="text-h5">{t('tutors.success_case')}</h3>
+                                        <p>{selectedTutor.successCase}</p>
+                                    </div>
+                                    <div className={`${styles.highlightCard} glass-panel`}>
+                                        <h3 className="text-h5">{t('tutors.lesson_style')}</h3>
+                                        <p>{selectedTutor.lessonStyle}</p>
+                                    </div>
                                 </div>
 
                                 <div className={styles.modalGrid}>

@@ -1,0 +1,83 @@
+.comparison {
+    background-color: var(--c-white);
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    background-color: var(--c-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--c-border);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.table th, .table td {
+    padding: 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.featureCol {
+    width: 25%;
+}
+
+.petraCol {
+    width: 40%;
+    background-color: var(--c-navy);
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.othersCol {
+    width: 35%;
+    background-color: var(--c-sand);
+    color: var(--c-text-light);
+    text-align: center;
+}
+
+.featureLabel {
+    font-weight: 600;
+    color: var(--c-navy);
+}
+
+.petraValue {
+    background-color: rgba(10, 31, 64, 0.02);
+    font-weight: 500;
+}
+
+.othersValue {
+    color: var(--c-text-light);
+}
+
+.valueContent {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.checkIcon {
+    color: #10b981;
+    flex-shrink: 0;
+}
+
+.xIcon {
+    color: #ef4444;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .petraCol, .othersCol {
+        font-size: 1rem;
+    }
+}

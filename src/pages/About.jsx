@@ -18,7 +18,16 @@ export default function About() {
             </div>
 
             <div className="section container">
-                <div className={styles.grid}>
+                <div className={`${styles.founderBlock} animate-on-scroll`}>
+                    <div className={styles.founderContent}>
+                        <h2 className="text-h2" style={{ marginBottom: '1.5rem', color: 'var(--c-accent)' }}>{t('about.founder_title')}</h2>
+                        <p className="text-body" style={{ marginBottom: '1rem', color: 'rgba(255,255,255,0.9)', fontSize: '1.1rem' }}>{t('about.founder_p1')}</p>
+                        <p className="text-body" style={{ marginBottom: '1rem', color: 'rgba(255,255,255,0.9)', fontSize: '1.1rem' }}>{t('about.founder_p2')}</p>
+                        <p className="text-body" style={{ fontWeight: 500, fontSize: '1.1rem' }}>{t('about.founder_p3')}</p>
+                    </div>
+                </div>
+
+                <div className={styles.grid} style={{ marginTop: 'var(--space-xl)' }}>
 
                     <div className={`glass-card ${styles.card} animate-on-scroll`} style={{ animationDelay: '0.1s' }}>
                         <div className={styles.iconWrapper}>
@@ -38,14 +47,6 @@ export default function About() {
 
                     <div className={`glass-card ${styles.card} animate-on-scroll`} style={{ animationDelay: '0.3s' }}>
                         <div className={styles.iconWrapper}>
-                            <CheckCircle size={32} />
-                        </div>
-                        <h2 className="text-h3">{t('about.s4_title')}</h2>
-                        <p className="text-body mt-2">{t('about.s4_desc')}</p>
-                    </div>
-
-                    <div className={`glass-card ${styles.card} animate-on-scroll`} style={{ animationDelay: '0.4s' }}>
-                        <div className={styles.iconWrapper}>
                             <Star size={32} />
                         </div>
                         <h2 className="text-h3">{t('about.s3_title')}</h2>
@@ -55,6 +56,14 @@ export default function About() {
                             <li>{t('about.s3_3')}</li>
                             <li>{t('about.s3_4')}</li>
                         </ul>
+                    </div>
+
+                    <div className={`glass-card ${styles.card} animate-on-scroll`} style={{ animationDelay: '0.4s' }}>
+                        <div className={styles.iconWrapper}>
+                            <CheckCircle size={32} />
+                        </div>
+                        <h2 className="text-h3">{t('about.s4_title')}</h2>
+                        <p className="text-body mt-2">{t('about.s4_desc')}</p>
                     </div>
 
                 </div>
