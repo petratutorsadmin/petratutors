@@ -9,9 +9,13 @@ import About from './pages/About';
 import NoAdmissionFee from './pages/NoAdmissionFee';
 import ThankYou from './pages/ThankYou';
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="programs" element={<Programs />} />
@@ -23,6 +27,7 @@ function App() {
         <Route path="no-admission-fee" element={<NoAdmissionFee />} />
       </Route>
     </Routes>
+    </>
   );
 }
 

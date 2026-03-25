@@ -63,14 +63,17 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* Mobile Nav */}
-            {isOpen && (
-                <div className={`${styles.mobileNav} glass-panel`}>
-                    <div className="container">
+            {/* Mobile Nav Overlay */}
+            <div className={`${styles.mobileNav} ${isOpen ? styles.mobileNavOpen : ''}`}>
+                <div className={styles.mobileNavContainer}>
+                    <div className={styles.mobileNavLinks}>
                         <Link to="/about" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.about')}</Link>
                         <Link to="/programs" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.programs')}</Link>
                         <Link to="/tutors" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.tutors')}</Link>
                         <Link to="/pricing" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.pricing')}</Link>
+                    </div>
+                    
+                    <div className={styles.mobileExtraSection}>
                         <div className={styles.mobileLangSection}>
                             <Globe size={20} />
                             <div className={styles.pill}>
@@ -91,7 +94,7 @@ export default function Navbar() {
                         <Link to="/inquiry" className={`btn btn-primary ${styles.mobileNavCta}`} onClick={() => setIsOpen(false)}>{t('nav.inquiry')}</Link>
                     </div>
                 </div>
-            )}
+            </div>
             </div>
         </header>
     );

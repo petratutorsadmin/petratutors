@@ -389,6 +389,51 @@
     color: var(--c-white);
 }
 
+/* Trust Stats Section */
+.trustStats {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    padding: var(--space-lg) 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statValue {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--c-accent);
+    font-family: var(--font-serif);
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 3rem;
+    line-height: 1;
+}
+
+.authorityStat {
+    /* Font size removed to match parent .statValue */
+    letter-spacing: -0.02em;
+}
+
+.statLabel {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 0.25rem;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
 
@@ -439,60 +484,53 @@
     .scarcityNote {
         font-size: 0.9rem;
     }
-}
 
-/* Trust Stats Section */
-.trustStats {
-    background-color: var(--c-navy);
-    color: var(--c-white);
-    padding: var(--space-lg) 0;
-}
-
-.statsGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    text-align: center;
-}
-
-.statItem {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.statValue {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--c-accent);
-    font-family: var(--font-serif);
-    white-space: nowrap;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 3rem;
-    line-height: 1;
-}
-
-.authorityStat {
-    /* Font size removed to match parent .statValue */
-    letter-spacing: -0.02em;
-}
-
-.statLabel {
-    font-size: 1rem;
-    font-weight: 500;
-    opacity: 0.9;
-    margin-top: 0.25rem;
-}
-
-@media (max-width: 768px) {
-    .statsGrid {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
+    /* Trust Stats Extension */
+    .trustStats {
+        padding: 2rem 0 !important;
     }
-    
+    .statsGrid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.5rem !important;
+    }
     .statValue {
-        font-size: 2rem;
+        font-size: 1.4rem !important;
+        height: auto !important;
+    }
+    .statLabel {
+        font-size: 0.7rem !important;
+    }
+    .perfectMatch {
+        padding: 2rem 0 !important;
+    }
+    .matchCards {
+        grid-template-columns: 1fr !important;
+        gap: 0.75rem !important;
+    }
+    .matchCard {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.9rem !important;
+    }
+    .programsGrid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 0.4rem !important;
+    }
+    .programCard {
+        padding: 0.75rem 0.4rem !important;
+        border-radius: var(--radius-sm) !important;
+    }
+    .programCard h3 {
+        font-size: 0.75rem !important;
+        margin: 0 !important;
+        line-height: 1.2 !important;
+    }
+    .iconWrapper {
+        width: 28px !important;
+        height: 28px !important;
+        margin-bottom: 0.25rem !important;
+    }
+    .programIcon {
+        width: 14px !important;
+        height: 14px !important;
     }
 }

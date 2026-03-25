@@ -423,7 +423,65 @@
     }
 
     .pricingGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding: 1rem 0;
+    }
+
+    .pricingCard {
+        padding: 1rem 0.75rem;
+        min-height: auto;
+    }
+
+    .popular {
+        transform: scale(1.05);
+        z-index: 2;
+    }
+
+    .popular:hover {
+        transform: scale(1.07);
+    }
+
+    .popularBadge {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.65rem;
+    }
+
+    .cardHeader h3 {
+        font-size: 1.1rem;
+    }
+
+    .nudge {
+        font-size: 0.7rem;
+    }
+
+    .description {
+        display: none; /* Hide for extreme mobile compression */
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .fromLabel, .perHour {
+        font-size: 0.7rem;
+    }
+
+    .featuresList {
+        display: none; /* Hide features in the grid view to keep cards small */
+    }
+
+    .ctaWrapper {
+        gap: 0.25rem;
+    }
+
+    .btn {
+        padding: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .frictionReduction, .safetyNote {
+        display: none; /* Hide micro-copy in grid */
     }
 
     .decisionGrid {

@@ -112,21 +112,21 @@ export default function Home() {
                                 <BookOpen className={styles.programIcon} size={28} />
                             </div>
                             <h3 className="text-h4">{t('home.prog_lang_title')}</h3>
-                            <p>{t('home.prog_lang_desc')}</p>
+                            <p className="mobile-hide">{t('home.prog_lang_desc')}</p>
                         </div>
                         <div className={`glass-card ${styles.programCard} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
                             <div className={styles.iconWrapper}>
                                 <GraduationCap className={styles.programIcon} size={28} />
                             </div>
                             <h3 className="text-h4">{t('home.prog_exam_title')}</h3>
-                            <p>{t('home.prog_exam_desc')}</p>
+                            <p className="mobile-hide">{t('home.prog_exam_desc')}</p>
                         </div>
                         <div className={`glass-card ${styles.programCard} animate-on-scroll`} style={{ animationDelay: '0.3s' }}>
                             <div className={styles.iconWrapper}>
                                 <Globe2 className={styles.programIcon} size={28} />
                             </div>
                             <h3 className="text-h4">{t('home.prog_intl_title')}</h3>
-                            <p>{t('home.prog_intl_desc')}</p>
+                            <p className="mobile-hide">{t('home.prog_intl_desc')}</p>
                         </div>
                     </div>
                     <div className="text-center" style={{ marginTop: '3rem' }}>
