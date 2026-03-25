@@ -138,6 +138,19 @@ const LandingUniversity = () => {
         </div>
       </section>
 
+      {/* Mid-Page CTA */}
+      <section style={{ padding: '80px 0', textAlign: 'center', backgroundColor: 'rgba(212, 175, 55, 0.04)', borderTop: '1px solid rgba(212,175,55,0.1)', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
+        <div className={styles.wrapper}>
+          <h2 style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '10px', color: 'inherit' }}>
+            まずは無料で学習相談をしてみませんか？
+          </h2>
+          <p style={{ marginBottom: '30px', opacity: 0.8, fontSize: '0.95rem' }}>現状の課題や目標に合わせて、最適なプランをご提案します。</p>
+          <Link to="/inquiry" className={styles.primaryCta} style={{ display: 'inline-block' }}>
+            無料体験・相談を予約する
+          </Link>
+        </div>
+      </section>
+
       {/* Trust / Why Petra */}
       <section className={styles.whySection}>
         <div className={styles.wrapper}>
