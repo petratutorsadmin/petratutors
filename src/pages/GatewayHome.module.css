@@ -13,8 +13,8 @@
         radial-gradient(ellipse at 65% -5%, rgba(100,60,180,0.38) 0%, transparent 58%),
         radial-gradient(ellipse at 5% 95%, rgba(201,168,76,0.1) 0%, transparent 45%),
         var(--c-deep);
-    padding: clamp(6rem, 15vh, 12rem) 0 clamp(4rem, 10vh, 8rem);
-    min-height: 90vh;
+    padding: clamp(3rem, 6vh, 6rem) 0 clamp(4rem, 10vh, 8rem);
+    min-height: calc(100vh - 80px); /* Adjust min-height so it takes up exactly the rest of the screen without getting pushed too far down by align-items center */
     display: flex;
     align-items: center;
     overflow: hidden;
