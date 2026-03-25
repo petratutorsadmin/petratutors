@@ -1,12 +1,30 @@
 import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [showNav, setShowNav] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
     const { t, i18n } = useTranslation();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (typeof window !== 'undefined') {
+                if (window.scrollY > lastScrollY && window.scrollY > 80 && !isOpen) {
+                    setShowNav(false);
+                } else {
+                    setShowNav(true);
+                }
+                setLastScrollY(window.scrollY);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY, isOpen]);
 
     const toggleLanguage = () => {
         const newLang = i18n.language === 'en' ? 'ja' : 'en';
@@ -14,7 +32,7 @@ export default function Navbar() {
     };
 
     return (
-        <header className={styles.navbarWrapper}>
+        <header className={`${styles.navbarWrapper} ${!showNav ? styles.navbarHidden : ''}`}>
             <div className={styles.urgencyBar}>
                 <div className="container">
                     {t('home.urgency_bar')}

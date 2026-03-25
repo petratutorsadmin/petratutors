@@ -54,11 +54,14 @@ export default function Programs() {
     return (
         <>
             <div className={styles.header}>
-                <div className="container animate-on-scroll">
+                <div className="container animate-on-scroll" style={{ position: 'relative' }}>
                     <h1 className={styles.title}>{t('programs.title')}</h1>
-                    <p className={styles.subtitle}>
+                    <p className={styles.subtitle} style={{ marginBottom: '3rem' }}>
                         {t('programs.subtitle')}
                     </p>
+                    <div className={styles.scrollIndicator}>
+                        <div className={styles.scrollDot} />
+                    </div>
                 </div>
             </div>
 
@@ -77,8 +80,10 @@ export default function Programs() {
                                 </div>
                                 <h2 className={styles.cardTitle}>{t(prog.labelKey)}</h2>
                                 <p className={styles.cardDesc}>{t(prog.subKey)}</p>
-                                <div className={styles.cardAction}>
-                                    詳細を見る <ArrowRight size={16} />
+                                <div className={styles.cardActionWrapper}>
+                                    <div className="btn btn-outline" style={{ width: '100%', justifyContent: 'center', pointerEvents: 'none' }}>
+                                        詳細を見る <ArrowRight size={16} />
+                                    </div>
                                 </div>
                             </Link>
                         ))}
