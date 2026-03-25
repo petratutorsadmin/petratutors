@@ -1,113 +1,100 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Languages, GraduationCap, Globe2, PenTool, Briefcase } from 'lucide-react';
+import { BookOpen, Languages, GraduationCap, Globe2, PenTool, Briefcase, ArrowRight, Sparkles } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Programs.module.css';
 
 export default function Programs() {
     const { t } = useTranslation();
 
-    const programs = [
+    const PROGRAMS = [
         {
-            id: 'japanese',
-            icon: <Languages size={32} />,
-            title_key: 'prog_lang_title',
-            desc_key: 'prog_lang_desc'
+            id: 'ielts',
+            to: '/ielts',
+            icon: <PenTool size={28} />,
+            labelKey: 'gateway.choice_ielts_label',
+            subKey: 'gateway.choice_ielts_sub'
         },
         {
-            id: 'exam',
-            icon: <GraduationCap size={32} />,
-            title_key: 'prog_exam_title',
-            desc_key: 'prog_exam_desc'
+            id: 'ib',
+            to: '/ib',
+            icon: <Globe2 size={28} />,
+            labelKey: 'gateway.choice_ib_label',
+            subKey: 'gateway.choice_ib_sub'
         },
         {
-            id: 'international',
-            icon: <Globe2 size={32} />,
-            title_key: 'prog_intl_title',
-            desc_key: 'prog_intl_desc'
+            id: 'foundation',
+            to: '/foundation',
+            icon: <BookOpen size={28} />,
+            labelKey: 'gateway.choice_foundation_label',
+            subKey: 'gateway.choice_foundation_sub'
+        },
+        {
+            id: 'kids',
+            to: '/kids',
+            icon: <Sparkles size={28} />,
+            labelKey: 'gateway.choice_kids_label',
+            subKey: 'gateway.choice_kids_sub'
+        },
+        {
+            id: 'uni',
+            to: '/university',
+            icon: <GraduationCap size={28} />,
+            labelKey: 'gateway.choice_uni_label',
+            subKey: 'gateway.choice_uni_sub'
+        },
+        {
+            id: 'biz',
+            to: '/business',
+            icon: <Briefcase size={28} />,
+            labelKey: 'gateway.choice_biz_label',
+            subKey: 'gateway.choice_biz_sub'
         }
     ];
 
     return (
         <>
-            <div className={`${styles.header} glass-panel`}>
-                <div className="container text-center animate-on-scroll">
-                    <h1 className="text-h1" style={{ marginBottom: '1rem', color: 'var(--c-navy)' }}>{t('programs.title')}</h1>
-                    <p className="text-large" style={{ color: 'var(--c-text-light)', maxWidth: '700px', margin: '0 auto' }}>
+            <div className={styles.header}>
+                <div className="container animate-on-scroll">
+                    <h1 className={styles.title}>{t('programs.title')}</h1>
+                    <p className={styles.subtitle}>
                         {t('programs.subtitle')}
                     </p>
                 </div>
             </div>
 
-            <div className="section container">
-                <div className={styles.programsList}>
-
-                    {/* We simplify the programs list using translation strings from the Home section which already exist,
-              Or we could add more specific ones. Since the original strings are broad, let's render manually or use a refined list. */}
-                    {/* Manually recreating the sections with new glass styling */}
-
-                    <div className={`${styles.programRow} animate-on-scroll`}>
-                        <div className={styles.programContent}>
-                            <div className={styles.iconWrapper}>
-                                <Languages size={32} />
-                            </div>
-                            <h2 className="text-h2" style={{ marginBottom: '1.5rem' }}>{t('home.prog_lang_title')}</h2>
-                            <div className={styles.programDetails}>
-                                <p style={{ color: 'var(--c-text-light)', marginBottom: '1rem' }}>{t('home.prog_lang_desc')}</p>
-                                <p style={{ color: 'var(--c-navy)', fontWeight: 500, fontSize: '0.95rem' }}>{t('home.prog_lang_ex')}</p>
-                            </div>
-                            <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
-                        </div>
-                        <div className={styles.programVisual}>
-                            <img src="/images/programs/language.jpg" alt="Language Mastery" className={styles.programImage} />
-                        </div>
+            <div className={styles.gridSection}>
+                <div className="container">
+                    <div className={styles.programsGrid}>
+                        {PROGRAMS.map((prog, idx) => (
+                            <Link 
+                                key={prog.id} 
+                                to={prog.to} 
+                                className={`${styles.programCard} animate-on-scroll`}
+                                style={{ animationDelay: `${idx * 0.1}s` }}
+                            >
+                                <div className={styles.iconWrapper}>
+                                    {prog.icon}
+                                </div>
+                                <h2 className={styles.cardTitle}>{t(prog.labelKey)}</h2>
+                                <p className={styles.cardDesc}>{t(prog.subKey)}</p>
+                                <div className={styles.cardAction}>
+                                    詳細を見る <ArrowRight size={16} />
+                                </div>
+                            </Link>
+                        ))}
                     </div>
-
-                    <div className={`${styles.programRow} ${styles.reverse} animate-on-scroll`}>
-                        <div className={styles.programContent}>
-                            <div className={styles.iconWrapper}>
-                                <GraduationCap size={32} />
-                            </div>
-                            <h2 className="text-h2" style={{ marginBottom: '1.5rem' }}>{t('home.prog_exam_title')}</h2>
-                            <div className={styles.programDetails}>
-                                <p style={{ color: 'var(--c-text-light)', marginBottom: '1rem' }}>{t('home.prog_exam_desc')}</p>
-                                <p style={{ color: 'var(--c-navy)', fontWeight: 500, fontSize: '0.95rem' }}>{t('home.prog_exam_ex')}</p>
-                            </div>
-                            <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
-                        </div>
-                        <div className={styles.programVisual}>
-                            <img src="/images/programs/exam.jpg" alt="Exam & Admissions" className={styles.programImage} />
-                        </div>
-                    </div>
-
-                    <div className={`${styles.programRow} animate-on-scroll`}>
-                        <div className={styles.programContent}>
-                            <div className={styles.iconWrapper}>
-                                <Globe2 size={32} />
-                            </div>
-                            <h2 className="text-h2" style={{ marginBottom: '1.5rem' }}>{t('home.prog_intl_title')}</h2>
-                            <div className={styles.programDetails}>
-                                <p style={{ color: 'var(--c-text-light)', marginBottom: '1rem' }}>{t('home.prog_intl_desc')}</p>
-                                <p style={{ color: 'var(--c-navy)', fontWeight: 500, fontSize: '0.95rem' }}>{t('home.prog_intl_ex')}</p>
-                            </div>
-                            <Link to="/inquiry" className="btn btn-secondary" style={{ marginTop: '2rem' }}>{t('programs.inquire')}</Link>
-                        </div>
-                        <div className={styles.programVisual}>
-                            <img src="/images/programs/international.jpg" alt="International Curricula" className={styles.programImage} />
-                        </div>
-                    </div>
-
                 </div>
             </div>
 
             <section className={styles.ctaSection}>
-                <div className="container text-center animate-on-scroll">
-                    <h2 className="text-h2" style={{ color: 'var(--c-white)', marginBottom: '1rem' }}>
+                <div className="container animate-on-scroll">
+                    <h2 className={styles.ctaTitle}>
                         {t('programs.custom_title')}
                     </h2>
-                    <p className="text-large" style={{ color: 'rgba(255,255,255,0.8)', marginBottom: '2rem' }}>
+                    <p className={styles.ctaDesc}>
                         {t('programs.custom_desc')}
                     </p>
-                    <Link to="/inquiry" className="btn" style={{ backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>
+                    <Link to="/inquiry" className="btn btn-gold">
                         {t('programs.contact')}
                     </Link>
                 </div>
