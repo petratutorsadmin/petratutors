@@ -1,30 +1,31 @@
 import { Link } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [showNav, setShowNav] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const lastScrollY = useRef(0);
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
         const handleScroll = () => {
             if (typeof window !== 'undefined') {
-                if (window.scrollY > lastScrollY && window.scrollY > 80 && !isOpen) {
+                const currentY = window.scrollY;
+                if (currentY > lastScrollY.current && currentY > 80 && !isOpen) {
                     setShowNav(false);
-                } else {
+                } else if (currentY < lastScrollY.current || currentY <= 80) {
                     setShowNav(true);
                 }
-                setLastScrollY(window.scrollY);
+                lastScrollY.current = currentY;
             }
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY, isOpen]);
+    }, [isOpen]);
 
     const toggleLanguage = () => {
         const newLang = i18n.language === 'en' ? 'ja' : 'en';
