@@ -33,18 +33,6 @@ const TUTORS = [
         image: '/images/tutors/tutor-5.png'
     },
     {
-        id: 'tutor-1',
-        name: 'Frandonna Kegan Yongparte',
-        university: 'Keio University, Economics',
-        subjects: ['English Conversation', 'Academic English', 'University preparation', 'IELTS', 'Eiken', 'TOEIC', 'TOEFL', 'Interview preparation'],
-        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school'],
-        languages: ['English'],
-        intro: 'Economics student at Keio University with experience helping professionals improve English communication for work.',
-        strengths: ['Exam Prep', 'Interviewing'],
-        format: ['Online', 'In-Person'],
-        image: null
-    },
-    {
         id: 'tutor-2',
         name: 'Ronan Daly Inagaki',
         university: 'Eindhoven University of Technology, Mechanical Engineering',
@@ -57,18 +45,6 @@ const TUTORS = [
         image: '/images/tutors/tutor-2.png'
     },
     {
-        id: 'tutor-3',
-        name: 'Cian Alexander Forsyth',
-        university: 'The University of Hong Kong, Economics and Finance',
-        subjects: ['English conversation', 'Academic English', 'IB subjects', 'Essay writing'],
-        targetAges: ['Elementary', 'Junior high', 'High school'],
-        languages: ['English'],
-        intro: 'Economics and finance student at HKU supporting IB students and academic writing development.',
-        strengths: ['Academic Writing', 'IB Curriculum'],
-        format: ['Online'],
-        image: null
-    },
-    {
         id: 'tutor-6',
         name: 'Ulemj Batzorig',
         university: 'Keio University, PEARL (Economics)',
@@ -79,30 +55,6 @@ const TUTORS = [
         strengths: ['Exam Prep', 'TESOL Certified'],
         format: ['Online', 'In-Person'],
         image: '/images/tutors/tutor-6.png'
-    },
-    {
-        id: 'tutor-7',
-        name: 'Michael MacNamara',
-        university: 'University of Tokyo, PEAK (East Asian Studies)',
-        subjects: ['English Conversation', 'IB subjects', 'GCSE subjects', 'A-Level subjects', 'University preparation', 'IELTS', 'TOEFL', 'Interview preparation'],
-        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school', 'University'],
-        languages: ['English'],
-        intro: 'East Asian Studies student at the University of Tokyo with nearly 4 years of teaching experience, specialising in IB, GCSE, and A-Level curricula.',
-        strengths: ['IB & A-Level', 'Interview Prep'],
-        format: ['Online', 'In-Person'],
-        image: null
-    },
-    {
-        id: 'tutor-8',
-        name: 'Minh To',
-        university: 'Keio University, PEARL (Economics)',
-        subjects: ['English Conversation', 'Academic English', 'University preparation', 'Essay writing', 'IELTS', 'TOEIC', 'TOEFL', 'Interview preparation', 'College consulting'],
-        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school'],
-        languages: ['English'],
-        intro: 'Economics student at Keio with extensive college consulting experience, guiding students through applications to top universities abroad.',
-        strengths: ['College Consulting', 'Essay Writing'],
-        format: ['Online', 'In-Person'],
-        image: null
     }
 ];
 

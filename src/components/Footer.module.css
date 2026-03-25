@@ -94,3 +94,15 @@
         gap: var(--space-lg);
     }
 }
+
+.footerCta {
+    background-color: var(--c-accent);
+    color: var(--c-navy);
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.footerCta:hover {
+    background-color: var(--c-white);
+    color: var(--c-navy);
+}

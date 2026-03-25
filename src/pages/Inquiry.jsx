@@ -39,49 +39,19 @@ export default function Inquiry() {
 
                 {/* Form Column */}
                 <div className={`${styles.formCol} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
+                    <div className={styles.formHeader}>
+                        <h2 className="text-h3">Free trial — no commitment</h2>
+                        <p>Complete this quick form to get started.</p>
+                    </div>
                     <form className={`glass-card ${styles.formCard}`} onSubmit={handleSubmit}>
-                        <h3 className="text-h3" style={{ marginBottom: '1.5rem' }}>Contact Information</h3>
-                        <div className={styles.formRow}>
-                            <div className={styles.formGroup}>
-                                <label htmlFor="name">{t('inquiry.name')}</label>
-                                <input type="text" id="name" name="name" required placeholder={t('inquiry.name_ph')} />
-                            </div>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="name">{t('inquiry.name')}</label>
+                            <input type="text" id="name" name="name" required placeholder={t('inquiry.name_ph')} />
                         </div>
 
-                        <div className={styles.formRow}>
-                            <div className={styles.formGroup}>
-                                <label htmlFor="contact">{t('inquiry.contact')}</label>
-                                <input type="text" id="contact" name="contact" required placeholder={t('inquiry.contact_ph')} />
-                            </div>
-                            <div className={styles.formGroup}>
-                                <label htmlFor="location">{t('inquiry.location')}</label>
-                                <input type="text" id="location" name="location" required placeholder={t('inquiry.location_ph')} />
-                            </div>
-                        </div>
-
-                        <h3 className="text-h3" style={{ marginBottom: '1.5rem', marginTop: '2rem' }}>Learning Needs</h3>
-
-                        <div className={styles.formRow}>
-                            <div className={styles.formGroup}>
-                                <label htmlFor="ageGroup">{t('inquiry.age')}</label>
-                                <select id="ageGroup" name="ageGroup" required defaultValue="">
-                                    <option value="" disabled>{t('inquiry.age_ph')}</option>
-                                    <option value="children">{t('inquiry.a1')}</option>
-                                    <option value="teens">{t('inquiry.a2')}</option>
-                                    <option value="university">{t('inquiry.a3')}</option>
-                                    <option value="adults">{t('inquiry.a4')}</option>
-                                </select>
-                            </div>
-                            <div className={styles.formGroup}>
-                                <label htmlFor="frequency">{t('inquiry.freq')}</label>
-                                <select id="frequency" name="frequency" required defaultValue="">
-                                    <option value="" disabled>{t('inquiry.freq_ph')}</option>
-                                    <option value="1x">{t('inquiry.f1')}</option>
-                                    <option value="2x">{t('inquiry.f2')}</option>
-                                    <option value="intensive">{t('inquiry.f3')}</option>
-                                    <option value="flexible">{t('inquiry.f4')}</option>
-                                </select>
-                            </div>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="contact">{t('inquiry.contact')}</label>
+                            <input type="text" id="contact" name="contact" required placeholder={t('inquiry.contact_ph')} />
                         </div>
 
                         <div className={styles.formGroup}>
@@ -94,7 +64,7 @@ export default function Inquiry() {
                             <textarea
                                 id="goal"
                                 name="goal"
-                                rows="4"
+                                rows="5"
                                 required
                                 placeholder={t('inquiry.goal_ph')}
                             ></textarea>

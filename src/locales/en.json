@@ -4,7 +4,7 @@
     "tutors": "Tutors",
     "pricing": "Pricing",
     "about": "About",
-    "inquiry": "Inquiry"
+    "inquiry": "Book Free Trial"
   },
   "footer": {
     "tagline": "International tutoring for ambitious students. Connecting globally minded learners with top-tier educators worldwide.",
@@ -15,12 +15,12 @@
     "pricing": "Pricing",
     "about": "About",
     "contact": "Contact",
-    "inquiry": "Submit Inquiry"
+    "inquiry": "Book Free Trial"
   },
   "home": {
-    "hero_title": "International tutoring for ambitious students",
-    "hero_subtitle": "Personalised tutoring for children, students, and professionals worldwide. Flexible tutoring in Japanese, English, exams, and international curricula.",
-    "cta_primary": "Find Your Tutor",
+    "hero_title": "Top University Tutors for International Curricula",
+    "hero_subtitle": "IB, AP, A-Level & University Prep. 1:1 lessons tailored to your goal.",
+    "cta_primary": "Book Free Trial",
     "cta_secondary": "Explore Programmes",
     "about_title": "A truly international tutoring network",
     "about_p1": "Petra Tutors connects students from all countries with top-tier educators from leading universities worldwide. We believe in personalised, culturally aware education that adapts to each student's unique goals and learning style.",
@@ -61,7 +61,11 @@
     "view_pricing": "View Full Pricing",
     "final_title": "Ready to achieve your goals?",
     "final_desc": "Connect with an international tutor today. We will reply with a recommended tutor and lesson plan.",
-    "final_cta": "Submit Inquiry"
+    "final_cta": "Book Free Trial",
+    "trust_stats_title": "Proven Results",
+    "trust_stats_1": "95% Satisfaction Rate",
+    "trust_stats_2": "+1.0 Avg IELTS Improvement",
+    "trust_stats_3": "Tutors from Keio & Top Universities"
   },
   "about": {
     "title": "About Petra Tutors",
@@ -185,8 +189,8 @@
     "contact": "Contact Us"
   },
   "inquiry": {
-    "title": "Let's start your journey",
-    "subtitle": "Tell us about your learning goals to book your free 30-minute trial lesson. We'll guide you through the next steps to finding the perfect international tutor.",
+    "title": "Book Your Free Trial",
+    "subtitle": "Free trial — no commitment. Tell us about your learning goals to get started.",
     "next_title": "What happens next?",
     "n1": "We review your inquiry and book your 30-min free trial.",
     "n2": "We'll send you a detailed form to confirm your availability and specific needs.",
@@ -213,7 +217,7 @@
     "subject_ph": "Ex. IB History, Business English, AP Maths",
     "goal": "Short Goal / Message",
     "goal_ph": "Briefly describe what you want to achieve or any specific tutor preferences...",
-    "submit": "Submit Inquiry",
+    "submit": "Book Free Trial",
     "success_title": "Inquiry Sent successfully!",
     "success_desc": "Thank you for reaching out to Petra Tutors. Our tutoring success team will review your inquiry and reply shortly with the next steps in our matching process.",
     "another": "Submit Another Inquiry",

@@ -10,6 +10,11 @@
     top: 100px;
 }
 
+.formHeader {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .friendlyNote {
     background-color: var(--c-stone);
     padding: var(--space-md);
@@ -25,14 +30,24 @@
     gap: 0.5rem;
 }
 
-.formCard {
-    padding: var(--space-lg);
+.reassuranceText {
+    margin-top: 1.5rem;
+    font-style: italic;
+    opacity: 0.9;
 }
 
-.formRow {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-md);
+.formHeader h2 {
+    color: var(--c-navy);
+    margin-bottom: 0.5rem;
+}
+
+.formHeader p {
+    color: var(--c-text-light);
+    font-size: 1.1rem;
+}
+
+.formCard {
+    padding: var(--space-lg);
 }
 
 .formGroup {

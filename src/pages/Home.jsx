@@ -24,6 +24,26 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* Trust Stats Section */}
+            <section className={styles.trustStats}>
+                <div className="container">
+                    <div className={styles.statsGrid}>
+                        <div className={`${styles.statItem} animate-on-scroll`} style={{ animationDelay: '0.1s' }}>
+                            <div className={styles.statValue}>95%</div>
+                            <div className={styles.statLabel}>{t('home.trust_stats_1')}</div>
+                        </div>
+                        <div className={`${styles.statItem} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
+                            <div className={styles.statValue}>+1.0</div>
+                            <div className={styles.statLabel}>{t('home.trust_stats_2')}</div>
+                        </div>
+                        <div className={`${styles.statItem} animate-on-scroll`} style={{ animationDelay: '0.3s' }}>
+                            <div className={styles.statValue}>Keio & Top Uni</div>
+                            <div className={styles.statLabel}>{t('home.trust_stats_3')}</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* About Section */}
             <section className={`section ${styles.about}`}>
                 <div className="container">
@@ -74,6 +94,9 @@ export default function Home() {
                             <p>{t('home.prog_intl_desc')}</p>
                         </div>
                     </div>
+                    <div className="text-center" style={{ marginTop: '3rem' }}>
+                        <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
+                    </div>
                 </div>
             </section>
 
@@ -111,6 +134,9 @@ export default function Home() {
                             <h3 className="text-h4">{t('home.step3_title')}</h3>
                             <p>{t('home.step3_desc')}</p>
                         </div>
+                    </div>
+                    <div className="text-center" style={{ marginTop: '3rem' }}>
+                        <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
                     </div>
                 </div>
             </section>

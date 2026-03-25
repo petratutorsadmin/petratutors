@@ -304,3 +304,47 @@
         flex-direction: column;
     }
 }
+
+/* Trust Stats Section */
+.trustStats {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    padding: var(--space-lg) 0;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    text-align: center;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--c-accent);
+    font-family: var(--font-serif);
+}
+
+.statLabel {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .statValue {
+        font-size: 2rem;
+    }
+}

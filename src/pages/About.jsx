@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Star, Target, CheckCircle, Globe2 } from 'lucide-react';
 import styles from './About.module.css';
@@ -58,6 +59,13 @@ export default function About() {
 
                 </div>
             </div>
+
+            <section className={styles.finalCta}>
+                <div className="container text-center animate-on-scroll">
+                    <h2 className="text-h2" style={{ marginBottom: '1.5rem' }}>{t('home.final_title')}</h2>
+                    <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
+                </div>
+            </section>
         </>
     );
 }
