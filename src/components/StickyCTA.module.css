@@ -1,0 +1,48 @@
+.stickyWrapper {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.stickyContainer {
+    display: flex;
+    gap: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.lineLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #06C755;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.65rem;
+    font-weight: 700;
+    min-width: 64px;
+    gap: 2px;
+}
+
+.mainBtn {
+    flex: 1;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(48, 27, 71, 0.15);
+}
+
+@media (max-width: 768px) {
+    .stickyWrapper {
+        display: block;
+    }
+}

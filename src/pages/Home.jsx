@@ -61,8 +61,8 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Core Value Section (About) */}
-            <section className={`section ${styles.about}`}>
+            {/* Core Value Section (About) - Hidden on Mobile for 2-scroll funnel */}
+            <section className={`section ${styles.about} mobile-hide`}>
                 <div className="container">
                     <div className={`${styles.aboutGrid} animate-on-scroll`}>
                         <div className={styles.aboutContent}>

@@ -4,6 +4,8 @@ import Footer from './Footer';
 import WelcomePopup from './WelcomePopup';
 import LineButton from './LineButton';
 
+import StickyCTA from './StickyCTA';
+
 export default function Layout() {
     return (
         <>
@@ -14,6 +16,7 @@ export default function Layout() {
             </main>
             <Footer />
             <LineButton />
+            <StickyCTA />
         </>
     );
 }
