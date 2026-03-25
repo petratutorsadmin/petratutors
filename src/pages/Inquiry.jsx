@@ -50,6 +50,21 @@ export default function Inquiry() {
                                 </button>
                             ))}
                         </div>
+                        <p style={{ fontSize: '0.8rem', color: 'var(--c-text-light)', margin: '1.25rem 0 0.5rem', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+                            {t('inquiry.business_section_label', 'ビジネス英語')}
+                        </p>
+                        <div className={styles.optionGrid}>
+                            {[1, 2, 3, 4].map(id => (
+                                <button 
+                                    key={`biz-${id}`}
+                                    type="button"
+                                    className={`${styles.optionBtn} ${formData.purpose === t(`business.inquiry_purpose_${id}`) ? styles.selected : ''}`}
+                                    onClick={() => handleSelect('purpose', t(`business.inquiry_purpose_${id}`))}
+                                >
+                                    {t(`business.inquiry_purpose_${id}`)}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 );
             case 2:

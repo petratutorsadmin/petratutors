@@ -8,6 +8,7 @@ import Inquiry from './pages/Inquiry';
 import About from './pages/About';
 import NoAdmissionFee from './pages/NoAdmissionFee';
 import ThankYou from './pages/ThankYou';
+import BusinessLanding from './pages/BusinessLanding';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="thank-you" element={<ThankYou />} />
         <Route path="about" element={<About />} />
         <Route path="no-admission-fee" element={<NoAdmissionFee />} />
+        <Route path="business" element={<BusinessLanding />} />
       </Route>
     </Routes>
     </>

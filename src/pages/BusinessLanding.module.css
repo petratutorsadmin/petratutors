@@ -1,0 +1,608 @@
+/* ─── Page Shell ─────────────────────────────────────────────── */
+.page {
+    font-family: var(--font-sans);
+    color: var(--c-text);
+    background-color: var(--c-white);
+}
+
+/* ─── Urgency Bar ─────────────────────────────────────────────── */
+.urgencyBar {
+    background-color: #1a0a2e;
+    color: var(--c-accent);
+    padding: 0.55rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+/* ─── Buttons ─────────────────────────────────────────────────── */
+.btnPrimary {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btnPrimary:hover {
+    background-color: var(--c-navy-light);
+    transform: translateY(-1px);
+}
+
+.btnSecondary {
+    background-color: transparent;
+    color: var(--c-navy);
+    border: 1.5px solid var(--c-navy);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btnSecondary:hover {
+    background-color: rgba(48, 27, 71, 0.05);
+}
+
+.btnLine {
+    background-color: #06c755;
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btnLine:hover {
+    background-color: #05b34e;
+    transform: translateY(-1px);
+}
+
+/* ─── Shared Typography ───────────────────────────────────────── */
+.sectionEyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--c-navy);
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+}
+
+/* ─── 1. HERO ─────────────────────────────────────────────────── */
+.hero {
+    background-color: var(--c-navy);
+    background-image:
+        linear-gradient(135deg, rgba(26, 10, 46, 0.97) 0%, rgba(48, 27, 71, 0.92) 100%),
+        url('/images/home/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--c-white);
+    padding: 5rem 0 4rem;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+}
+
+.heroInner {
+    max-width: 760px;
+}
+
+.heroPill {
+    display: inline-block;
+    background-color: rgba(229, 184, 11, 0.15);
+    color: var(--c-accent);
+    border: 1px solid rgba(229, 184, 11, 0.4);
+    padding: 0.35rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--c-white);
+    margin-bottom: 1.25rem;
+    white-space: pre-line;
+}
+
+.heroSub {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 2.25rem;
+    white-space: pre-line;
+}
+
+.heroCtas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.25rem;
+}
+
+.heroCtas .btn,
+.heroCtas a {
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
+}
+
+.scarcity {
+    font-size: 0.85rem;
+    color: rgba(229, 184, 11, 0.9);
+    font-weight: 600;
+}
+
+/* ─── 2. PAIN POINTS ──────────────────────────────────────────── */
+.painSection {
+    background-color: var(--c-sand);
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.painGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.painCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--c-navy);
+    line-height: 1.5;
+    box-shadow: var(--shadow-sm);
+}
+
+.checkIcon {
+    color: var(--c-accent);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* ─── 3. OUTCOME ──────────────────────────────────────────────── */
+.outcomeSection {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    padding: 4rem 0;
+}
+
+.outcomeInner {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.outcomeStat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    padding-right: 3rem;
+}
+
+.statNum {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--c-accent);
+    line-height: 1;
+}
+
+.statUnit {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+
+.outcomeTitle {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--c-white);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.outcomeSub {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ─── 4. AUTHORITY ────────────────────────────────────────────── */
+.trustSection {
+    background-color: var(--c-white);
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.trustGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.trustCard {
+    text-align: center;
+    padding: 2rem 1rem;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    background: var(--c-sand);
+}
+
+.trustValue {
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.5rem;
+}
+
+.trustLabel {
+    font-size: 0.9rem;
+    color: var(--c-text-light);
+    line-height: 1.4;
+}
+
+.trustNote {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--c-text-light);
+}
+
+/* ─── 5. PRICING ──────────────────────────────────────────────── */
+.pricingSection {
+    background-color: var(--c-sand);
+    padding: 4rem 0;
+}
+
+.pricingSub {
+    color: var(--c-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    margin-top: -0.75rem;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.planCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem 1.75rem;
+    background: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.planCard:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--c-accent);
+}
+
+.planPopular {
+    border-color: var(--c-navy);
+    border-width: 2px;
+    box-shadow: 0 12px 32px rgba(48, 27, 71, 0.12);
+    transform: translateY(-4px);
+}
+
+.planPopular:hover {
+    border-color: var(--c-navy);
+}
+
+.planBadge {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    padding: 0.3rem 1rem;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.planTier {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.planPrice {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.25rem;
+    line-height: 1;
+}
+
+.planFrom {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.planUnit {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--c-text-light);
+}
+
+.planDesc {
+    font-size: 0.9rem;
+    color: var(--c-text-light);
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--c-border);
+    line-height: 1.4;
+}
+
+.planFeatures {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.planFeatures li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--c-text);
+}
+
+.featureCheck {
+    color: var(--c-accent);
+    flex-shrink: 0;
+}
+
+.pricingNote {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--c-text-light);
+}
+
+/* ─── 6. TESTIMONIAL ──────────────────────────────────────────── */
+.testimonialSection {
+    background-color: var(--c-white);
+    padding: 4rem 0;
+    border-top: 1px solid var(--c-border);
+}
+
+.testimonialCard {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: var(--c-sand);
+    border-left: 4px solid var(--c-navy);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.testimonialQuote {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-style: italic;
+    color: var(--c-navy);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.testimonialAuthor {
+    font-size: 0.9rem;
+    color: var(--c-text-light);
+    font-weight: 600;
+}
+
+/* ─── 7. FINAL CTA ────────────────────────────────────────────── */
+.finalCta {
+    background-color: var(--c-navy);
+    padding: 5rem 0;
+    color: var(--c-white);
+}
+
+.finalCtaInner {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.finalScarcity {
+    display: inline-block;
+    background-color: rgba(229, 184, 11, 0.15);
+    color: var(--c-accent);
+    border: 1px solid rgba(229, 184, 11, 0.35);
+    padding: 0.35rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+}
+
+.finalTitle {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--c-white);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.finalSub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.72);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.finalButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.finalButtons .btn,
+.finalButtons a {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+}
+
+.finalNote {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .hero {
+        min-height: calc(100vh - 100px);
+        padding: 3rem 0 2.5rem;
+    }
+
+    .heroTitle {
+        font-size: 2rem;
+    }
+
+    .heroSub {
+        font-size: 0.95rem;
+    }
+
+    .heroCtas {
+        flex-direction: column;
+    }
+
+    .heroCtas .btn,
+    .heroCtas a {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .painGrid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .outcomeInner {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .outcomeStat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+    }
+
+    .trustGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+
+    .trustCard {
+        padding: 1.25rem 0.5rem;
+    }
+
+    .trustValue {
+        font-size: 1.5rem;
+    }
+
+    .trustLabel {
+        font-size: 0.75rem;
+    }
+
+    .pricingGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .planPopular {
+        transform: none;
+    }
+
+    .sectionTitle {
+        font-size: 1.6rem;
+    }
+
+    .testimonialCard {
+        padding: 2rem 1.5rem;
+    }
+
+    .testimonialQuote {
+        font-size: 1.15rem;
+    }
+
+    .finalTitle {
+        font-size: 1.6rem;
+    }
+
+    .finalButtons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .finalButtons .btn,
+    .finalButtons a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .urgencyBar {
+        font-size: 0.72rem;
+        padding: 0.65rem 1rem;
+    }
+}
