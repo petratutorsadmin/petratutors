@@ -11,6 +11,15 @@
     top: 100px;
 }
 
+.pageTitle {
+    margin-bottom: 1rem;
+}
+
+.pageSubtitle {
+    color: var(--c-text-light);
+    margin-bottom: 2rem;
+}
+
 .progressTracker {
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.5);

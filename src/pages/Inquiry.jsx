@@ -132,8 +132,8 @@ export default function Inquiry() {
         <div className="section container">
             <div className={styles.layout}>
                 <div className={`${styles.infoCol} animate-on-scroll`}>
-                    <h1 className="text-h1" style={{ marginBottom: '1rem' }}>{t('inquiry.title')}</h1>
-                    <p className="text-large" style={{ color: 'var(--c-text-light)', marginBottom: '2rem' }}>
+                    <h1 className={`text-h1 ${styles.pageTitle}`}>{t('inquiry.title')}</h1>
+                    <p className={`text-large ${styles.pageSubtitle}`}>
                         {t('inquiry.subtitle')}
                     </p>
 
