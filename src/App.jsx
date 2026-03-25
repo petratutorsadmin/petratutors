@@ -7,6 +7,7 @@ import LandingIB from './pages/LandingIB';
 import LandingIELTS from './pages/LandingIELTS';
 import LandingUniversity from './pages/LandingUniversity';
 import LandingKids from './pages/LandingKids';
+import LandingFoundation from './pages/LandingFoundation';
 
 // Existing pages
 import Home from './pages/Home';
@@ -31,6 +32,7 @@ function App() {
           <Route index element={<GatewayHome />} />
           <Route path="ib" element={<LandingIB />} />
           <Route path="ielts" element={<LandingIELTS />} />
+          <Route path="foundation" element={<LandingFoundation />} />
           <Route path="university" element={<LandingUniversity />} />
           <Route path="kids" element={<LandingKids />} />
           <Route path="business" element={<BusinessLanding />} />

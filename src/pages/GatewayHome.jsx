@@ -7,6 +7,7 @@ import styles from './GatewayHome.module.css';
 const CHOICES = [
     { id: 'ielts', to: '/ielts', labelKey: 'gateway.choice_ielts_label', subKey: 'gateway.choice_ielts_sub' },
     { id: 'ib',    to: '/ib',    labelKey: 'gateway.choice_ib_label',    subKey: 'gateway.choice_ib_sub'    },
+    { id: 'foundation', to: '/foundation', labelKey: 'gateway.choice_foundation_label', subKey: 'gateway.choice_foundation_sub' },
     { id: 'kids',  to: '/kids',  labelKey: 'gateway.choice_kids_label',  subKey: 'gateway.choice_kids_sub'  },
     { id: 'uni',   to: '/university', labelKey: 'gateway.choice_uni_label', subKey: 'gateway.choice_uni_sub' },
     { id: 'biz',   to: '/business',   labelKey: 'gateway.choice_biz_label', subKey: 'gateway.choice_biz_sub' },

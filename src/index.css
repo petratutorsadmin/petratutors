@@ -48,6 +48,7 @@
 
   /* Layout */
   --container-width: 1320px;
+  --hero-height-mobile: 65vh;
 }
 
 /* Reset & Global */
@@ -160,7 +161,7 @@ img {
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--space-lg) 0;
+    padding: clamp(2rem, 5vh, 4rem) 0;
   }
   .container {
     padding: 0 1.5rem;

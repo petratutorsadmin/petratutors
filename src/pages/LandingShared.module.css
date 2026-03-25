@@ -19,6 +19,13 @@
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        min-height: var(--hero-height-mobile);
+        padding: clamp(3rem, 8vh, 5rem) 0;
+    }
+}
+
 .heroInner {
     max-width: 720px;
     position: relative;
@@ -136,6 +143,12 @@
     background: var(--c-cream);
 }
 
+@media (max-width: 768px) {
+    .whySection {
+        padding: 3rem 0;
+    }
+}
+
 .whyGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -190,6 +203,12 @@
         var(--c-deep);
     padding: clamp(5rem, 12vh, 8rem) 0;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .resultsSection {
+        padding: 4rem 0;
+    }
 }
 
 .statsGrid {

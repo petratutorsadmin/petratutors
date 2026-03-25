@@ -20,6 +20,13 @@
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        min-height: var(--hero-height-mobile);
+        padding: clamp(3rem, 10vh, 5rem) 0;
+    }
+}
+
 .heroGradientOverlay {
     position: absolute;
     inset: 0;
@@ -85,7 +92,18 @@
 }
 
 @media (max-width: 600px) {
-    .choiceGrid { grid-template-columns: 1fr; }
+    .choiceGrid { 
+        grid-template-columns: 1fr 1fr; 
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+    }
+    .choiceBtn {
+        padding: 0.8rem 1rem;
+        min-height: 80px;
+    }
+    .choiceBtnSub {
+        display: none; /* Hide subtext on smallest mobiles to save space */
+    }
 }
 
 
@@ -105,19 +123,6 @@
     position: relative;
     overflow: hidden;
     min-height: 100px;
-}
-
-/* 5th button spans both columns */
-.choiceBtn:last-child {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    align-items: center;
-    min-height: auto;
-    padding: 1rem 1.35rem;
-}
-
-.choiceBtn:last-child .choiceBtnArrow {
-    align-self: center;
 }
 
 .choiceBtn::after {
