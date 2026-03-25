@@ -1,56 +1,56 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import styles from './BusinessLanding.module.css';
+import styles from './LandingIB.module.css';
 
-const BusinessLanding = () => {
+const LandingIB = () => {
   const { t } = useTranslation();
 
   const PAIN_POINTS = [
-    t('business.pain_1'),
-    t('business.pain_2'),
-    t('business.pain_3'),
-    t('business.pain_4')
+    t('landing_ib.pain_1'),
+    t('landing_ib.pain_2'),
+    t('landing_ib.pain_3'),
+    t('landing_ib.pain_4')
   ];
 
   const SOLUTIONS = [
     {
-      badge: t('business.s_1_badge'),
-      title: t('business.s_1_title'),
-      desc: t('business.s_1_desc')
+      badge: t('landing_ib.s_1_badge'),
+      title: t('landing_ib.s_1_title'),
+      desc: t('landing_ib.s_1_desc')
     },
     {
-      badge: t('business.s_2_badge'),
-      title: t('business.s_2_title'),
-      desc: t('business.s_2_desc')
+      badge: t('landing_ib.s_2_badge'),
+      title: t('landing_ib.s_2_title'),
+      desc: t('landing_ib.s_2_desc')
     },
     {
-      badge: t('business.s_3_badge'),
-      title: t('business.s_3_title'),
-      desc: t('business.s_3_desc')
+      badge: t('landing_ib.s_3_badge'),
+      title: t('landing_ib.s_3_title'),
+      desc: t('landing_ib.s_3_desc')
     },
     {
-      badge: t('business.s_4_badge'),
-      title: t('business.s_4_title'),
-      desc: t('business.s_4_desc')
+      badge: t('landing_ib.s_4_badge'),
+      title: t('landing_ib.s_4_title'),
+      desc: t('landing_ib.s_4_desc')
     }
   ];
 
   const RESULTS = [
-    { val: t('business.r_1_val'), label: t('business.r_1_label'), note: t('business.r_1_note') },
-    { val: t('business.r_2_val'), label: t('business.r_2_label'), note: t('business.r_2_note') },
-    { val: t('business.r_3_val'), label: t('business.r_3_label'), note: t('business.r_3_note') }
+    { val: t('landing_ib.r_1_val'), label: t('landing_ib.r_1_label'), note: t('landing_ib.r_1_note') },
+    { val: t('landing_ib.r_2_val'), label: t('landing_ib.r_2_label'), note: t('landing_ib.r_2_note') },
+    { val: t('landing_ib.r_3_val'), label: t('landing_ib.r_3_label'), note: t('landing_ib.r_3_note') }
   ];
 
   const TESTIMONIALS = [
-    { quote: t('business.t_1_quote'), name: t('business.t_1_name'), role: t('business.t_1_role') },
-    { quote: t('business.t_2_quote'), name: t('business.t_2_name'), role: t('business.t_2_role') }
+    { quote: t('landing_ib.t_1_quote'), name: t('landing_ib.t_1_name'), role: t('landing_ib.t_1_role') },
+    { quote: t('landing_ib.t_2_quote'), name: t('landing_ib.t_2_name'), role: t('landing_ib.t_2_role') }
   ];
 
   const WHY = [
-    { title: t('business.why_1_title'), desc: t('business.why_1_desc') },
-    { title: t('business.why_2_title'), desc: t('business.why_2_desc') },
-    { title: t('business.why_3_title'), desc: t('business.why_3_desc') }
+    { title: t('landing_ib.why_1_title'), desc: t('landing_ib.why_1_desc') },
+    { title: t('landing_ib.why_2_title'), desc: t('landing_ib.why_2_desc') },
+    { title: t('landing_ib.why_3_title'), desc: t('landing_ib.why_3_desc') }
   ];
 
   return (
@@ -58,31 +58,31 @@ const BusinessLanding = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <span className={styles.eyebrow}>{t('business.hero_eyebrow')}</span>
-          <h1 className={styles.title}>{t('business.hero_title')}</h1>
-          <p className={styles.subtitle}>{t('business.hero_sub')}</p>
+          <span className={styles.eyebrow}>{t('landing_ib.hero_eyebrow')}</span>
+          <h1 className={styles.title}>{t('landing_ib.hero_title')}</h1>
+          <p className={styles.subtitle}>{t('landing_ib.hero_sub')}</p>
           
           <div className={styles.ctaGroup}>
             <Link to="/inquiry" className={styles.primaryCta}>
-              {t('business.hero_cta')}
+              {t('landing_ib.hero_cta')}
             </Link>
             <a href="https://lin.ee/rqf4A0D" className={styles.secondaryCta}>
-              {t('business.hero_line')}
+              {t('landing_ib.hero_line')}
             </a>
           </div>
 
           <div className={styles.trustPills}>
             <div className={styles.pill}>
               <span className={styles.checkIcon}>✓</span>
-              {t('business.trust_1')}
+              {t('landing_ib.trust_1')}
             </div>
             <div className={styles.pill}>
               <span className={styles.checkIcon}>✓</span>
-              {t('business.trust_2')}
+              {t('landing_ib.trust_2')}
             </div>
             <div className={styles.pill}>
               <span className={styles.checkIcon}>✓</span>
-              {t('business.trust_3')}
+              {t('landing_ib.trust_3')}
             </div>
           </div>
 
@@ -102,8 +102,8 @@ const BusinessLanding = () => {
       {/* Pain Points */}
       <section className={styles.painSection}>
         <div className={styles.wrapper}>
-          <span className={styles.sectionEyebrow}>{t('business.pain_eyebrow')}</span>
-          <h2 className={styles.sectionTitle}>{t('business.pain_title')}</h2>
+          <span className={styles.sectionEyebrow}>{t('landing_ib.pain_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_ib.pain_title')}</h2>
           
           <div className={styles.painGrid}>
             {PAIN_POINTS.map((point, i) => (
@@ -115,7 +115,7 @@ const BusinessLanding = () => {
           </div>
           
           <div className={styles.painInsight}>
-            <p>{t('business.pain_note')}</p>
+            <p>{t('landing_ib.pain_note')}</p>
           </div>
         </div>
       </section>
@@ -123,8 +123,8 @@ const BusinessLanding = () => {
       {/* Solution / Approach */}
       <section className={styles.solutionSection}>
         <div className={styles.wrapper}>
-          <span className={styles.sectionEyebrow}>{t('business.solution_eyebrow')}</span>
-          <h2 className={styles.sectionTitle}>{t('business.solution_title')}</h2>
+          <span className={styles.sectionEyebrow}>{t('landing_ib.solution_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_ib.solution_title')}</h2>
           
           <div className={styles.solutionGrid}>
             {SOLUTIONS.map((s, i) => (
@@ -141,9 +141,9 @@ const BusinessLanding = () => {
       {/* Trust / Why Petra */}
       <section className={styles.whySection}>
         <div className={styles.wrapper}>
-          <span className={styles.sectionEyebrow}>{t('business.why_eyebrow')}</span>
-          <h2 className={styles.sectionTitle}>{t('business.why_title')}</h2>
-          <p className={styles.whySub}>{t('business.why_sub')}</p>
+          <span className={styles.sectionEyebrow}>{t('landing_ib.why_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_ib.why_title')}</h2>
+          <p className={styles.whySub}>{t('landing_ib.why_sub')}</p>
           
           <div className={styles.whyGrid}>
             {WHY.map((item, i) => (
@@ -168,11 +168,11 @@ const BusinessLanding = () => {
       {/* Final CTA */}
       <section className={styles.finalCtaSection}>
         <div className={styles.wrapper}>
-          <span className={styles.sectionEyebrow}>{t('business.final_eyebrow')}</span>
-          <h2 className={styles.sectionTitle}>{t('business.final_title')}</h2>
-          <p className={styles.finalSub}>{t('business.final_sub')}</p>
+          <span className={styles.sectionEyebrow}>{t('landing_ib.final_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_ib.final_title')}</h2>
+          <p className={styles.finalSub}>{t('landing_ib.final_sub')}</p>
           <Link to="/inquiry" className={styles.hugeCta}>
-            {t('business.final_cta')}
+            {t('landing_ib.final_cta')}
           </Link>
         </div>
       </section>
@@ -180,4 +180,4 @@ const BusinessLanding = () => {
   );
 };
 
-export default BusinessLanding;
+export default LandingIB;

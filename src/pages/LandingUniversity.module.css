@@ -1,6 +1,6 @@
 .container {
-  background-color: #0c0a1f; /* Deepest business navy */
-  color: #f8fafc;
+  background-color: #0f172a; /* Slightly deeper slate for university elite feel */
+  color: #f1f5f9;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
 }
@@ -11,7 +11,7 @@
 .container h3, 
 .container h4, 
 .container h5 {
-  color: #f8fafc !important;
+  color: #f1f5f9 !important;
 }
 
 .wrapper {
@@ -27,7 +27,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at center, #151233 0%, #0c0a1f 100%);
+  background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
   padding: 120px 20px 80px;
 }
 
@@ -38,7 +38,7 @@
 
 .eyebrow {
   display: block;
-  color: #fbbf24;
+  color: #fbbf24; /* Gold amber */
   letter-spacing: 0.2em;
   font-weight: 600;
   font-size: 14px;
@@ -52,12 +52,12 @@
   line-height: 1.1;
   margin-bottom: 32px;
   letter-spacing: -0.02em;
-  color: #ffffff !important;
+  color: #f8fafc !important; /* Force visibility */
 }
 
 .subtitle {
   font-size: 20px;
-  color: #94a3b8;
+  color: #94a3b8; 
   margin-bottom: 48px;
   max-width: 650px;
   margin-left: auto;
@@ -74,7 +74,7 @@
 
 .primaryCta {
   background-color: #fbbf24;
-  color: #0c0a1f;
+  color: #0f172a;
   padding: 18px 36px;
   border-radius: 8px;
   font-weight: 700;
@@ -133,7 +133,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  background: rgba(21, 18, 51, 0.6);
+  background: rgba(30, 41, 59, 0.6);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(251, 191, 36, 0.2);
   border-radius: 20px;
@@ -173,7 +173,7 @@
 /* Pain Section */
 .painSection {
   padding: 120px 0;
-  background-color: #0c0a1f;
+  background-color: #0f172a;
 }
 
 .sectionEyebrow {
@@ -190,7 +190,7 @@
   font-weight: 700;
   margin-bottom: 60px;
   line-height: 1.2;
-  color: #ffffff !important;
+  color: #f8fafc !important; /* Force visibility */
 }
 
 .painGrid {
@@ -237,7 +237,7 @@
 /* Solution Section */
 .solutionSection {
   padding: 120px 0;
-  background-color: #151233;
+  background-color: #1e293b;
 }
 
 .solutionGrid {
@@ -247,7 +247,7 @@
 }
 
 .solutionCard {
-  background: #0c0a1f;
+  background: #0f172a;
   padding: 40px;
   border-radius: 20px;
   border: 1px solid rgba(251, 191, 36, 0.1);
@@ -256,13 +256,13 @@
 
 .solutionCard:hover {
   transform: translateY(-8px);
-  border-color: rgba(251, 191, 36, 0.3);
+  border-color: rgba(251, 191, 36, 0.35);
 }
 
 .badge {
   display: inline-block;
   background: #fbbf24;
-  color: #0c0a1f;
+  color: #0f172a;
   font-size: 10px;
   font-weight: 800;
   padding: 4px 12px;
@@ -347,7 +347,7 @@
 .finalCtaSection {
   padding: 140px 0;
   text-align: center;
-  background: linear-gradient(to bottom, #0c0a1f, #151233);
+  background: linear-gradient(to bottom, #0f172a, #1e293b);
 }
 
 .finalSub {
@@ -362,7 +362,7 @@
 .hugeCta {
   display: inline-block;
   background-color: #fbbf24;
-  color: #0c0a1f;
+  color: #0f172a;
   padding: 24px 60px;
   border-radius: 12px;
   font-size: 20px;
