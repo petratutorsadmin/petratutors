@@ -281,6 +281,10 @@
         "dismiss": "あとで"
     },
     "business": {
+        "inquiry_purpose_1": "ビジネスミーティング・商談対策",
+        "inquiry_purpose_2": "英文メール・ビジネス文書作成",
+        "inquiry_purpose_3": "海外赴任・海外出張準備",
+        "inquiry_purpose_4": "その他ビジネス英語の基礎固め",
         "hero_eyebrow": "BUSINESS ENGLISH",
         "hero_title": "キャリアに直結する英語力",
         "hero_sub": "会議・メール・クライアント対応。実務経験と高い論理性を持つメンターが、あなたのビジネスの現場を英語で加速させます。",

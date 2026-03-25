@@ -172,7 +172,7 @@
 
 /* Pain Section */
 .painSection {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #1a0b2e;
 }
 
@@ -236,7 +236,7 @@
 
 /* Solution Section */
 .solutionSection {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #24143e;
 }
 
@@ -283,13 +283,13 @@
 
 /* Coverage Section Additions */
 .coverageSection {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #1a0b2e;
 }
 
 /* Why Section */
 .whySection {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #24143e;
 }
 
@@ -319,7 +319,7 @@
 }
 
 .testimonialStrip {
-  margin-top: 100px;
+  margin-top: 60px;
   padding-top: 60px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
@@ -352,7 +352,7 @@
 
 /* Pricing Section Additions */
 .pricingSection {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #1a0b2e;
   text-align: center;
 }
@@ -394,7 +394,7 @@
 
 /* Final CTA */
 .finalCtaSection {
-  padding: 140px 0;
+  padding: 90px 0;
   text-align: center;
   background: linear-gradient(to bottom, #1a0b2e, #2e1a4a);
 }

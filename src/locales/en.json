@@ -280,6 +280,10 @@
     "dismiss": "Maybe later"
   },
     "business": {
+        "inquiry_purpose_1": "Business Meetings & Negotiations",
+        "inquiry_purpose_2": "Emails & Business Writing",
+        "inquiry_purpose_3": "Relocation & Business Trip Prep",
+        "inquiry_purpose_4": "General Business English Foundations",
         "hero_eyebrow": "BUSINESS ENGLISH",
         "hero_title": "English skills that impact your career",
         "hero_sub": "Meetings, emails, client interaction. Mentors with real-world experience and high-level logic accelerate your business performance in English.",

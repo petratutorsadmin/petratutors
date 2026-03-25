@@ -172,7 +172,7 @@
 
 /* Pain Section */
 .painSection {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #0f172a;
 }
 
@@ -236,7 +236,7 @@
 
 /* Solution Section */
 .solutionSection {
-  padding: 120px 0;
+  padding: 80px 0;
   background-color: #1e293b;
 }
 
@@ -283,7 +283,7 @@
 
 /* Why Section */
 .whySection {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 .whySub {
@@ -312,7 +312,7 @@
 }
 
 .testimonialStrip {
-  margin-top: 100px;
+  margin-top: 60px;
   padding-top: 60px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
@@ -345,7 +345,7 @@
 
 /* Final CTA */
 .finalCtaSection {
-  padding: 140px 0;
+  padding: 90px 0;
   text-align: center;
   background: linear-gradient(to bottom, #0f172a, #1e293b);
 }
