@@ -13,7 +13,10 @@
         radial-gradient(ellipse at 65% -5%, rgba(100,60,180,0.38) 0%, transparent 58%),
         radial-gradient(ellipse at 5% 95%, rgba(201,168,76,0.1) 0%, transparent 45%),
         var(--c-deep);
-    padding: 7rem 0 4rem;
+    padding: clamp(6rem, 15vh, 12rem) 0 clamp(4rem, 10vh, 8rem);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -252,7 +255,7 @@
 /* ── PROOF STATS ── */
 .proofSection {
     background: var(--c-deep-mid);
-    padding: 3.5rem 0;
+    padding: clamp(3rem, 8vh, 5rem) 0;
     border-top: 1px solid rgba(255,255,255,0.05);
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
@@ -294,7 +297,7 @@
 /* ── TESTIMONIALS ── */
 .testimonials {
     background: var(--c-deep);
-    padding: 4.5rem 0;
+    padding: clamp(4rem, 10vh, 6rem) 0;
 }
 
 .testimonialsGrid {
@@ -350,7 +353,7 @@
     background:
         radial-gradient(ellipse at 50% 0%, rgba(100,60,180,0.38) 0%, transparent 65%),
         var(--c-deep);
-    padding: 5.5rem 0;
+    padding: clamp(5rem, 15vh, 9.5rem) 0;
     text-align: center;
     border-top: 1px solid rgba(255,255,255,0.05);
 }

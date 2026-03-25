@@ -22,13 +22,13 @@
 
 /* Hero Section */
 .hero {
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: radial-gradient(circle at center, #151233 0%, #0c0a1f 100%);
-  padding: 120px 20px 80px;
+  padding: clamp(6rem, 15vh, 12rem) 20px clamp(4rem, 10vh, 8rem);
 }
 
 .heroContent {
@@ -172,7 +172,7 @@
 
 /* Pain Section */
 .painSection {
-  padding: 120px 0;
+  padding: clamp(5rem, 12vh, 8rem) 0;
   background-color: #0c0a1f;
 }
 
@@ -236,7 +236,7 @@
 
 /* Solution Section */
 .solutionSection {
-  padding: 120px 0;
+  padding: clamp(5rem, 12vh, 8rem) 0;
   background-color: #151233;
 }
 
@@ -283,7 +283,7 @@
 
 /* Why Section */
 .whySection {
-  padding: 120px 0;
+  padding: clamp(5rem, 12vh, 8rem) 0;
 }
 
 .whySub {
@@ -345,7 +345,7 @@
 
 /* Final CTA */
 .finalCtaSection {
-  padding: 140px 0;
+  padding: clamp(6rem, 15vh, 10rem) 0;
   text-align: center;
   background: linear-gradient(to bottom, #0c0a1f, #151233);
 }

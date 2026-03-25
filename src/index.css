@@ -47,7 +47,7 @@
   --shadow-gold: 0 0 0 1px var(--c-gold), 0 8px 32px rgba(201,168,76,0.2);
 
   /* Layout */
-  --container-width: 1200px;
+  --container-width: 1320px;
 }
 
 /* Reset & Global */
@@ -155,7 +155,7 @@ img {
 }
 
 .section {
-  padding: var(--space-xl) 0;
+  padding: clamp(3.5rem, 8vh, 7rem) 0;
 }
 
 @media (max-width: 768px) {
