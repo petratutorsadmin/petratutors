@@ -21,11 +21,13 @@ import ThankYou from './pages/ThankYou';
 import BusinessLanding from './pages/BusinessLanding';
 
 import ScrollToTop from './components/ScrollToTop';
+import ExitIntentPopup from './components/ExitIntentPopup';
 
 function App() {
   return (
     <>
       <ScrollToTop />
+      <ExitIntentPopup />
       <Routes>
         <Route path="/" element={<Layout />}>
           {/* ── New gateway & funnel pages ── */}
