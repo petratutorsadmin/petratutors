@@ -62,6 +62,8 @@ const LandingUniversity = () => {
           <h1 className={styles.title}>{t('landing_uni.hero_title')}</h1>
           <p className={styles.subtitle}>{t('landing_uni.hero_sub')}</p>
           
+          <p className={styles.scarcity}>⚡ {t('landing_uni.hero_scarcity')}</p>
+
           <div className={styles.ctaGroup}>
             <Link to="/inquiry" className={styles.primaryCta}>
               {t('landing_uni.hero_cta')}
@@ -117,6 +119,15 @@ const LandingUniversity = () => {
           <div className={styles.painInsight}>
             <p>{t('landing_uni.pain_note')}</p>
           </div>
+        </div>
+      </section>
+
+      {/* Core Value Bridge */}
+      <section className={styles.coreValueSection}>
+        <div className={styles.wrapper}>
+          <span className={styles.sectionEyebrow}>{t('landing_uni.core_value_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_uni.core_value_title')}</h2>
+          <p className={styles.coreValueSub}>{t('landing_uni.core_value_sub')}</p>
         </div>
       </section>
 
