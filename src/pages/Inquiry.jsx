@@ -1,12 +1,12 @@
 import { Send, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { useForm } from '@formspree/react';
 import { useState, useEffect } from 'react';
 import styles from './Inquiry.module.css';
 
 export default function Inquiry() {
     const { t } = useTranslation();
-    const [state, handleSubmit] = useForm("mzdjdvqz");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSucceeded, setIsSucceeded] = useState(false);
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState({
         purpose: '',
@@ -19,10 +19,39 @@ export default function Inquiry() {
     });
 
     useEffect(() => {
-        if (state.succeeded) {
+        if (isSucceeded) {
             window.location.href = '/thank-you';
         }
-    }, [state.succeeded]);
+    }, [isSucceeded]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "dd9ef5c8-a32d-4016-88e1-d0d31278fd52",
+                    ...formData
+                })
+            });
+            const result = await response.json();
+            if (result.success) {
+                setIsSucceeded(true);
+            } else {
+                console.error("Form submission failed:", result);
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     const handleSelect = (field, value) => {
         setFormData(prev => ({ ...prev, [field]: value }));
@@ -133,8 +162,8 @@ export default function Inquiry() {
                             
                             <div className={styles.formActions}>
                                 <button type="button" onClick={prevStep} className={styles.backLink}>{t('inquiry.back')}</button>
-                                <button type="submit" disabled={state.submitting} className={`btn btn-primary ${styles.submitBtn}`}>
-                                    <Send size={18} /> {state.submitting ? 'Sending...' : t('inquiry.submit')}
+                                <button type="submit" disabled={isSubmitting} className={`btn btn-primary ${styles.submitBtn}`}>
+                                    <Send size={18} /> {isSubmitting ? 'Sending...' : t('inquiry.submit')}
                                 </button>
                             </div>
                         </div>
