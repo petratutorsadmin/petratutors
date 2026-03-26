@@ -37,6 +37,7 @@ export default function Inquiry() {
                 },
                 body: JSON.stringify({
                     access_key: "dd9ef5c8-a32d-4016-88e1-d0d31278fd52",
+                    from_name: "Petra Tutors Website",
                     ...formData
                 })
             });
@@ -139,25 +140,24 @@ export default function Inquiry() {
                     <div className={styles.stepContent}>
                         <h2 className="text-h3">{t('inquiry.final_title')}</h2>
                         <div className={styles.finalForm}>
-                            <input type="hidden" name="purpose" value={formData.purpose} />
-                            <input type="hidden" name="grade" value={formData.grade} />
-                            <input type="hidden" name="frequency" value={formData.frequency} />
+                            {/* Honeypot for spam protection */}
+                            <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
                             
                             <div className={styles.formGroup}>
                                 <label>{t('inquiry.name')}</label>
-                                <input type="text" name="name" required placeholder={t('inquiry.name_ph')} onChange={e => setFormData({...formData, name: e.target.value})} />
+                                <input type="text" name="name" required placeholder={t('inquiry.name_ph')} onChange={e => setFormData(p => ({...p, name: e.target.value}))} />
                             </div>
                             <div className={styles.formGroup}>
                                 <label>{t('inquiry.contact')}</label>
-                                <input type="text" name="contact" required placeholder={t('inquiry.contact_ph')} onChange={e => setFormData({...formData, contact: e.target.value})} />
+                                <input type="text" name="contact" required placeholder={t('inquiry.contact_ph')} onChange={e => setFormData(p => ({...p, contact: e.target.value}))} />
                             </div>
                             <div className={styles.formGroup}>
                                 <label>{t('inquiry.subject')}</label>
-                                <input type="text" name="subject" required placeholder={t('inquiry.subject_ph')} onChange={e => setFormData({...formData, subject: e.target.value})} />
+                                <input type="text" name="subject" required placeholder={t('inquiry.subject_ph')} onChange={e => setFormData(p => ({...p, subject: e.target.value}))} />
                             </div>
                             <div className={styles.formGroup}>
                                 <label>{t('inquiry.goal')}</label>
-                                <textarea name="goal" rows="3" placeholder={t('inquiry.goal_ph')} onChange={e => setFormData({...formData, goal: e.target.value})}></textarea>
+                                <textarea name="goal" rows="3" placeholder={t('inquiry.goal_ph')} onChange={e => setFormData(p => ({...p, goal: e.target.value}))}></textarea>
                             </div>
                             
                             <div className={styles.formActions}>
