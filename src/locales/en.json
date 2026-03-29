@@ -214,7 +214,8 @@
     "1on1": "(1:1)",
     "note_title": "About Our Rates",
     "note_desc": "The rates listed are starting estimates. Final pricing is determined based on the complexity of the subject, student level, and the specific expertise of your mentor. We believe in transparent, value-driven education.",
-    "no_fee_link": "About our No Admission Fee policy →"
+    "no_fee_link": "About our No Admission Fee policy →",
+    "scroll_down": "Scroll down to compare 1-on-1 plans"
   },
   "programs": {
     "title": "Our Programmes",
@@ -346,9 +347,9 @@
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
     "hero_title": "The right learning\nfor your goal.",
-    "hero_sub": "Find your perfect plan in 30 seconds",
+    "hero_sub": "Group lessons from ¥1,500/hr · 1-on-1 from ¥3,000/hr — Find your perfect plan in 30 seconds",
     "choice_label": "What would you like to achieve?",
-    "choice_ielts_label": "Get results in IELTS / Eiken",
+    "choice_ielts_label": "Get results in IELTS / Eiken / TOEIC",
     "choice_ielts_sub": "Fast-track your score",
     "choice_ib_label": "Support school/IB learning",
     "choice_ib_sub": "GPA · A-Level · SAT/ACT · assessments support",
@@ -448,8 +449,8 @@
     "final_cta": "Book Free Trial"
   },
   "landing_ielts": {
-    "hero_eyebrow": "IELTS · EIKEN · TOEFL PREP",
-    "hero_title": "Get definitive results in IELTS & Eiken",
+    "hero_eyebrow": "IELTS · EIKEN · TOEIC · TOEFL PREP",
+    "hero_title": "Get results in IELTS, Eiken & TOEIC",
     "hero_sub": "Analyze why your score is stuck and improve through the shortest route.",
     "hero_cta": "Book Free Trial (30s)",
     "hero_line": "Consult on LINE",

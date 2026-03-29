@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Check, Info, ArrowRight, ShieldCheck, Clock, Zap } from 'lucide-react';
+import { Check, Info, ArrowRight, ShieldCheck, Clock, Zap, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Pricing.module.css';
 
@@ -46,8 +46,47 @@ export default function Pricing() {
                     <div className={styles.trustItem}><Clock size={20} /> {t('pricing.b4')}</div>
                 </div>
 
-                {/* 3. MAIN PRICING CARDS */}
-                <div className={styles.pricingGrid}>
+                {/* SCROLL DOWN PROMPT: Designed as a highly visible primary button so it's not missed */}
+                <div className="text-center animate-on-scroll" style={{ marginBottom: '4rem', marginTop: '1rem' }}>
+                    <a href="#one-on-one-plans" style={{
+                        display: 'inline-flex', alignItems: 'center', gap: '10px', 
+                        padding: '16px 36px', borderRadius: '100px', 
+                        background: 'var(--c-navy)', color: 'white', 
+                        textDecoration: 'none', fontWeight: '700', 
+                        boxShadow: '0 8px 24px rgba(32, 42, 68, 0.25)',
+                        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                        fontSize: '1.05rem', letterSpacing: '0.5px'
+                    }}>
+                        {t('pricing.scroll_down')} <ChevronDown size={20} />
+                    </a>
+                </div>
+
+                {/* 3. GROUP SECTION — moved up for affordability signal */}
+                <div className={`${styles.groupSection} animate-on-scroll`}>
+                    <div className={styles.groupContent}>
+                        <div className={styles.groupBadge}>{t('pricing.g_badge')}</div>
+                        <h2 className="text-h2" style={{ marginBottom: '0.75rem', color: 'var(--c-white)' }}>{t('pricing.g_title')}</h2>
+                        <div className={styles.groupPriceContainer} style={{ marginBottom: '1.25rem' }}>
+                            <span className={styles.fromLabel}>{t('pricing.from')}</span>
+                            <span className={styles.price} style={{ fontSize: '2.5rem', fontWeight: '700' }}>{t('pricing.g_price')}</span>
+                            <span className={styles.perHour}>{t('pricing.per_hour_person')}</span>
+                        </div>
+                        <p className={styles.groupDesc} style={{ margin: 0, fontSize: '1.05rem', lineHeight: '1.6' }}>{t('pricing.g_desc')}</p>
+                    </div>
+                    <div className={styles.groupFeatures}>
+                        <ul className={styles.featuresList}>
+                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f1')}</li>
+                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f2')}</li>
+                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f3')}</li>
+                        </ul>
+                        <Link to="/inquiry" className="btn" style={{ marginTop: '1rem', backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>
+                            {t('pricing.g_cta')}
+                        </Link>
+                    </div>
+                </div>
+
+                {/* 4. MAIN PRICING CARDS — 1-on-1 */}
+                <div className={styles.pricingGrid} id="one-on-one-plans">
                     {plans.map((plan, index) => (
                         <div key={index} className={`glass-card ${styles.pricingCard} ${plan.popular ? styles.popular : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.1}s` }}>
                             {plan.popular && <div className={styles.popularBadge}>{t(`pricing.${plan.key}_badge`)}</div>}
@@ -83,13 +122,13 @@ export default function Pricing() {
                     ))}
                 </div>
 
-                {/* 4. MICRO COPY */}
+                {/* 5. MICRO COPY */}
                 <div className={`${styles.microCopy} text-center animate-on-scroll`}>
                     <p>{t('pricing.micro_copy_1')}</p>
                     <p className={styles.microHighlight}>{t('pricing.micro_copy_2')}</p>
                 </div>
 
-                {/* 5. CONTINUITY / MONTHLY LOGIC */}
+                {/* 6. CONTINUITY / MONTHLY LOGIC */}
                 <div className={`${styles.continuitySection} glass-card animate-on-scroll`}>
                     <div className={styles.continuityContent}>
                         <h2 className="text-h2">{t('pricing.continuity_title')}</h2>
@@ -108,30 +147,6 @@ export default function Pricing() {
                             <div className={styles.cDot}></div>
                             <strong>{t('pricing.continuity_item_3')}</strong>
                         </div>
-                    </div>
-                </div>
-
-                {/* 6. GROUP SECTION */}
-                <div className={`${styles.groupSection} animate-on-scroll`}>
-                    <div className={styles.groupContent}>
-                        <div className={styles.groupBadge}>{t('pricing.g_badge')}</div>
-                        <h2 className="text-h2" style={{ marginBottom: '0.5rem' }}>{t('pricing.g_title')}</h2>
-                        <p className={styles.groupDesc}>{t('pricing.g_desc')}</p>
-                        <div className={styles.groupPriceContainer}>
-                            <span className={styles.fromLabel}>{t('pricing.from')}</span>
-                            <span className={styles.price}>{t('pricing.g_price')}</span>
-                            <span className={styles.perHour}>{t('pricing.per_hour_person')}</span>
-                        </div>
-                    </div>
-                    <div className={styles.groupFeatures}>
-                        <ul className={styles.featuresList}>
-                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f1')}</li>
-                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f2')}</li>
-                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f3')}</li>
-                        </ul>
-                        <Link to="/inquiry" className="btn" style={{ marginTop: '1rem', backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>
-                            {t('pricing.g_cta')}
-                        </Link>
                     </div>
                 </div>
 

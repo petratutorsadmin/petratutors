@@ -34,6 +34,7 @@
     margin-bottom: var(--space-lg);
     align-items: center; /* Important for scaling items to have space */
     padding: 2rem 0;
+    scroll-margin-top: 120px; /* Accounts for fixed header offset when anchor scrolling */
 }
 
 .pricingCard {

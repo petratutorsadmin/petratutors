@@ -214,7 +214,8 @@
         "1on1": "(1:1)",
         "note_title": "料金について",
         "note_desc": "表示価格は目安です。最終的な料金は、具体的なレッスン内容・レベル・マッチングした講師により決定されます。無理な提案は一切行いませんので、まずはお気軽にご相談ください。",
-        "no_fee_link": "「入会金なし」ポリシーについて →"
+        "no_fee_link": "「入会金なし」ポリシーについて →",
+        "scroll_down": "スクロールして1対1プランを比較"
     },
     "programs": {
         "title": "プログラム紹介",
@@ -348,9 +349,9 @@
     "gateway": {
         "hero_eyebrow": "Petra Tutors",
         "hero_title": "あなたの目的に、\n最適な学びを。",
-        "hero_sub": "30秒で、あなたに合った最適なプランをご案内します",
+        "hero_sub": "グループレッスン ¥1,500/時〜 · 個別指導 ¥3,000/時〜 — 30秒で、あなたに合った最適なプランをご案内します",
         "choice_label": "あなたの目的を選択してください",
-        "choice_ielts_label": "英検・IELTSで結果を出したい",
+        "choice_ielts_label": "英検・IELTS・TOEICで結果を出したい",
         "choice_ielts_sub": "スコアアップを最短で",
         "choice_ib_label": "学校・IBの学習をサポートしてほしい",
         "choice_ib_sub": "GPA・内部評価・A-Level・SAT/ACT・課題への伴走",
@@ -450,8 +451,8 @@
         "final_cta": "無料体験を予約"
     },
     "landing_ielts": {
-        "hero_eyebrow": "IELTS · 英検 · TOEFL 対策",
-        "hero_title": "英検・IELTSで確実に結果を出す",
+        "hero_eyebrow": "IELTS · 英検 · TOEIC · TOEFL 対策",
+        "hero_title": "英検・IELTS・TOEICで確実に結果を出す",
         "hero_sub": "スコアが伸びない原因を分析し、最短ルートで改善",
         "hero_cta": "無料体験を予約（30秒）",
         "hero_line": "LINEで相談",
