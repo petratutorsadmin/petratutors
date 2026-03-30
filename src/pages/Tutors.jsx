@@ -67,6 +67,51 @@ const TUTORS = [
         lessonStyle: 'Dynamic and communicative, using professional TESOL techniques to make learning engaging and low-stress.',
         format: ['Online', 'In-Person'],
         image: '/images/tutors/tutor-6.png'
+    },
+    {
+        id: 'tutor-hannah',
+        name: 'Hannah Tuffy',
+        university: 'Sophia University, FLA',
+        subjects: ['English Conversation', 'Academic English', 'Japanese Language'],
+        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school', 'University', 'Adults', 'Seniors'],
+        languages: ['English', 'Japanese'],
+        intro: 'With an educational background in the Irish, American, and Japanese school systems, I bring a diverse and global perspective to my teaching. I teach English and Japanese with a friendly, empathetic approach. I am committed to fostering a nurturing learning environment where students of all ages can feel confident to grow.',
+        strengths: ['Global Perspective', 'Empathetic Approach', 'Custom Lesson Planning'],
+        idealMatch: 'Students of all ages seeking a friendly, multicultural mentor to build confidence in English or Japanese.',
+        successCase: 'Worked as a self-employed Japanese tutor since 2021, successfully creating customized curriculums and modules for diverse learners.',
+        lessonStyle: 'Friendly and nurturing, utilizing custom modules and presentations tailored to the student\'s unique needs.',
+        format: ['Online', 'In-Person'],
+        image: 'https://drive.google.com/uc?export=view&id=1FK6CCk3D7ZvZrMnlWXPygX8voijV14AX'
+    },
+    {
+        id: 'tutor-sara',
+        name: 'Sara Jeshua',
+        university: 'Keio University, Economics',
+        subjects: ['English Conversation', 'Academic English', 'GCSE subjects', 'Essay writing', 'IELTS', 'Eiken', 'TOEIC', 'TOEFL'],
+        targetAges: ['Preschool', 'Elementary', 'Junior high'],
+        languages: ['English', 'Indonesian'],
+        intro: 'I am an international student from Indonesia studying at Keio University. I adapt the way I teach based on each individual because everyone has different strengths and weaknesses. I want my students to gain confidence in using English, both academically and in real life.',
+        strengths: ['Adaptive Teaching', 'IELTS & Qualifications', 'Young Learner Engagement'],
+        idealMatch: 'Young learners (preschool to junior high) or anyone needing highly adaptable, individualized test prep and English foundations.',
+        successCase: 'Currently an English Teacher in a Language School for preschool to elementary students, and successfully taught IELTS online during high school.',
+        lessonStyle: 'Highly adaptable and individualized, focusing on the student\'s unique strengths and weaknesses to build real-world confidence.',
+        format: ['Online', 'In-Person'],
+        image: 'https://drive.google.com/uc?export=view&id=1VdwpX1rMMZ1fXTo1CzvcxIhHNVofuBzh'
+    },
+    {
+        id: 'tutor-cian',
+        name: 'Cian Alexander Forsyth',
+        university: 'The University of Hong Kong, Economics and Finance',
+        subjects: ['English Conversation', 'Academic English', 'IB subjects', 'Essay writing'],
+        targetAges: ['Elementary', 'Junior high', 'High school'],
+        languages: ['English', 'Chinese'],
+        intro: 'Studying Economics and Finance at The University of Hong Kong, I specialize in tutoring IB subjects, English, and Mathematics. I bring a structured and relatable approach to tutoring, shaped by my extensive experience mentoring and assisting students in rigorous international curricula.',
+        strengths: ['IB Curriculum', 'Essay Writing', 'Relatable Mentorship'],
+        idealMatch: 'IB students looking for a relatable peer-mentor to help navigate the rigors of math, English, and essay writing.',
+        successCase: 'Provided ongoing, comprehensive academic support to IB students, successfully guiding them through complex subjects like Mathematics and English.',
+        lessonStyle: 'Relatable and supportive, leveraging peer-level understanding to break down difficult IB concepts.',
+        format: ['Online'],
+        image: '/images/tutors/tutor-cian.jpg'
     }
 ];
 
