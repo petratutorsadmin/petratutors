@@ -81,7 +81,7 @@ const TUTORS = [
         successCase: 'Worked as a self-employed Japanese tutor since 2021, successfully creating customized curriculums and modules for diverse learners.',
         lessonStyle: 'Friendly and nurturing, utilizing custom modules and presentations tailored to the student\'s unique needs.',
         format: ['Online', 'In-Person'],
-        image: 'https://drive.google.com/uc?export=view&id=1FK6CCk3D7ZvZrMnlWXPygX8voijV14AX'
+        image: '/images/tutors/tutor-hannah.jpg'
     },
     {
         id: 'tutor-sara',
@@ -96,7 +96,7 @@ const TUTORS = [
         successCase: 'Currently an English Teacher in a Language School for preschool to elementary students, and successfully taught IELTS online during high school.',
         lessonStyle: 'Highly adaptable and individualized, focusing on the student\'s unique strengths and weaknesses to build real-world confidence.',
         format: ['Online', 'In-Person'],
-        image: 'https://drive.google.com/uc?export=view&id=1VdwpX1rMMZ1fXTo1CzvcxIhHNVofuBzh'
+        image: '/images/tutors/tutor-sara.jpg'
     },
     {
         id: 'tutor-cian',
