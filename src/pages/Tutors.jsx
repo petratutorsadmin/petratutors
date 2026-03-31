@@ -204,6 +204,22 @@ export default function Tutors() {
                             </div>
                         </div>
                     ))}
+                    
+                    {/* "And More" Call to Action Card */}
+                    <div className={`glass-card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${filteredTutors.length * 0.1}s`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '3rem 2rem', border: '1px dashed var(--c-gold)', background: 'rgba(212, 175, 55, 0.03)' }}>
+                        <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'var(--c-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', color: 'var(--c-navy)', boxShadow: '0 4px 12px rgba(212, 175, 55, 0.3)' }}>
+                            <span style={{ fontSize: '2rem', fontWeight: '800', lineHeight: '1' }}>+</span>
+                        </div>
+                        <h3 className="text-h3" style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--c-gold)' }}>
+                            {t('tutors.and_more_title')}
+                        </h3>
+                        <p style={{ color: 'var(--c-text-light)', marginBottom: '2rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                            {t('tutors.and_more_desc')}
+                        </p>
+                        <Link to="/inquiry" className="btn btn-primary" style={{ width: '100%', marginTop: 'auto' }}>
+                            {t('tutors.and_more_cta')}
+                        </Link>
+                    </div>
                 </div>
             </div>
 
