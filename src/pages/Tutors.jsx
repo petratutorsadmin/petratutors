@@ -39,6 +39,21 @@ const TUTORS = [
         image: '/images/tutors/tutor-5.png'
     },
     {
+        id: 'tutor-tina',
+        name: 'Tina Zheng',
+        university: 'Sophia University, Economics',
+        subjects: ['IB English', 'IB Economics', 'Essay Writing', 'TOEFL', 'IELTS', 'SAT', 'MYP'],
+        targetAges: ['Elementary', 'Junior high', 'High school'],
+        languages: ['English', 'Mandarin'],
+        intro: 'Hi! I’m a second-year Economics student at Sophia University, and I tutor IB English, Economics, and essay writing. I’ve been tutoring for almost three years, working with students from young learners to high school.',
+        strengths: ['IB Specialist (English/Economics)', 'Exam Prep (TOEFL/IELTS/SAT)', 'Bilingual Instruction'],
+        idealMatch: 'IB students or those needing rapid improvement before major exams like TOEFL or SAT.',
+        successCase: 'Has mentored a wide range of students from young learners to high schoolers, helping them achieve quick results through practice-focused lessons.',
+        lessonStyle: 'Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content.',
+        format: ['Online', 'In-Person'],
+        image: '/images/tutors/tutor-tina.jpg'
+    },
+    {
         id: 'tutor-2',
         name: 'Ronan Daly Inagaki',
         university: 'Eindhoven University of Technology, Mechanical Engineering',
@@ -158,21 +173,6 @@ const TUTORS = [
         format: ['Online', 'In-Person'],
         image: '/images/tutors/tutor-michael.jpg'
     },
-    {
-        id: 'tutor-tina',
-        name: 'Tina Zheng',
-        university: 'Sophia University, Economics',
-        subjects: ['IB English', 'IB Economics', 'Essay Writing', 'TOEFL', 'IELTS', 'SAT', 'MYP'],
-        targetAges: ['Elementary', 'Junior high', 'High school'],
-        languages: ['English', 'Mandarin'],
-        intro: 'Hi! I’m a second-year Economics student at Sophia University, and I tutor IB English, Economics, and essay writing. I’ve been tutoring for almost three years, working with students from young learners to high school.',
-        strengths: ['IB Specialist (English/Economics)', 'Exam Prep (TOEFL/IELTS/SAT)', 'Bilingual Instruction'],
-        idealMatch: 'IB students or those needing rapid improvement before major exams like TOEFL or SAT.',
-        successCase: 'Has mentored a wide range of students from young learners to high schoolers, helping them achieve quick results through practice-focused lessons.',
-        lessonStyle: 'Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-tina.jpg'
-    }
 ];
 
 export default function Tutors() {
