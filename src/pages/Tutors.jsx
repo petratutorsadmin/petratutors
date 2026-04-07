@@ -129,8 +129,8 @@ const TUTORS = [
         image: '/images/tutors/tutor-toru.jpg'
     },
     {
-        id: 'tutor-ashley',
-        name: 'Ashley Norton',
+        id: 'tutor-maegan',
+        name: 'Maegan Norton',
         university: 'Waseda University, Science and Engineering',
         subjects: ['Physics', 'Chemistry', 'Mathematics', 'English Conversation'],
         targetAges: ['Junior high', 'High school'],
@@ -141,7 +141,7 @@ const TUTORS = [
         successCase: 'Successfully navigated competitive entrance exams for Hibiya High School and is currently majoring in Science and Engineering at Waseda.',
         lessonStyle: 'Supportive and empathetic, leveraging her own experience with difficult exam preparation to help students overcome specific hurdles.',
         format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-ashley.jpg'
+        image: '/images/tutors/tutor-maegan.jpg'
     },
     {
         id: 'tutor-michael',
