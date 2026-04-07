@@ -112,6 +112,66 @@ const TUTORS = [
         lessonStyle: 'Relatable and supportive, leveraging peer-level understanding to break down difficult IB concepts.',
         format: ['Online'],
         image: '/images/tutors/tutor-cian.jpg'
+    },
+    {
+        id: 'tutor-toru',
+        name: 'Toru Hiiragi',
+        university: 'Keio University, Economics',
+        subjects: ['English', 'German', 'Mathematics', 'TOEFL', 'SAT', 'University Application Support', 'High School Application Support'],
+        targetAges: ['Elementary', 'Junior high', 'High school', 'University'],
+        languages: ['English', 'German', 'Japanese'],
+        intro: "Hi, I'm Toru! I'm a tutor based in Tokyo with experience working with students from elementary school all the way through university. I grew up in Germany for the first 15 years of my life before moving to Tokyo for high school, so I bring a genuinely international perspective to my tutoring.",
+        strengths: ['International Perspective (Germany/Japan)', 'SAT/TOEFL expertise', 'Application Strategy (Japan/US)'],
+        idealMatch: 'Students looking for help with math, English, or German, or those navigating complex application processes for high school or university.',
+        successCase: 'Successfully guided students through the process of entering Japanese high schools from abroad and applying to top-tier universities in Japan and the US.',
+        lessonStyle: 'Patient, encouraging, and highly adaptive to each student\'s individual learning style.',
+        format: ['Online', 'In-Person'],
+        image: '/images/tutors/tutor-toru.jpg'
+    },
+    {
+        id: 'tutor-ashley',
+        name: 'Ashley Norton',
+        university: 'Waseda University, Science and Engineering',
+        subjects: ['Physics', 'Chemistry', 'Mathematics', 'English Conversation'],
+        targetAges: ['Junior high', 'High school'],
+        languages: ['Japanese', 'English'],
+        intro: 'ノートン亜朱理と申します。物理、化学、数学、(英会話)を主に指導しております。高校受験、大学受験共に自ら経験していて、共通テストや国立(理系)の試験勉強を実際にしているため、勉強していてつまずきやすい、もしくはわかりにく箇所も理解しているつもりです。',
+        strengths: ['Science & Math Specialist', 'Entrance Exam Strategy', 'Bilingual Support'],
+        idealMatch: 'Science or Math students (Middle/High school) looking for someone who understands typical pitfalls and challenging concepts in the Japanese curriculum.',
+        successCase: 'Successfully navigated competitive entrance exams for Hibiya High School and is currently majoring in Science and Engineering at Waseda.',
+        lessonStyle: 'Supportive and empathetic, leveraging her own experience with difficult exam preparation to help students overcome specific hurdles.',
+        format: ['Online', 'In-Person'],
+        image: '/images/tutors/tutor-ashley.jpg'
+    },
+    {
+        id: 'tutor-michael',
+        name: 'Michael MacNamara',
+        university: 'The University of Tokyo',
+        subjects: ['Economics', 'Mathematics', 'Critical Thinking', 'Essay Writing', 'Problem-Solving'],
+        targetAges: ['Elementary', 'Junior high', 'High school', 'University', 'Adults'],
+        languages: ['English'],
+        intro: 'Currently studying at The University of Tokyo, I tutor Economics and Mathematics at all levels with a friendly and supportive approach. My goal is to create a comfortable environment where students feel confident to learn and ask questions.',
+        strengths: ['Advanced Mathematics & Economics', 'Academic Essay Writing', 'Critical Thinking'],
+        idealMatch: 'Economics students or those looking to sharpen their mathematical and analytical skills with a friendly, high-level tutor.',
+        successCase: 'Has assisted students across various levels in improving their problem-solving and academic writing abilities.',
+        lessonStyle: 'Friendly, supportive, and focused on creating a comfortable environment for asking questions and learning.',
+        format: ['Online', 'In-Person'],
+        image: '/images/tutors/tutor-michael.jpg'
+    },
+    {
+        id: 'tutor-tina',
+        name: 'Tina Zheng',
+        university: 'Sophia University, Economics',
+        subjects: ['IB English', 'IB Economics', 'Essay Writing', 'TOEFL', 'IELTS', 'SAT', 'MYP'],
+        targetAges: ['Elementary', 'Junior high', 'High school'],
+        languages: ['English', 'Mandarin'],
+        intro: 'Hi! I’m a second-year Economics student at Sophia University, and I tutor IB English, Economics, and essay writing. I’ve been tutoring for almost three years, working with students from young learners to high school.',
+        strengths: ['IB Specialist (English/Economics)', 'Exam Prep (TOEFL/IELTS/SAT)', 'Bilingual Instruction'],
+        idealMatch: 'IB students or those needing rapid improvement before major exams like TOEFL or SAT.',
+        successCase: 'Has mentored a wide range of students from young learners to high schoolers, helping them achieve quick results through practice-focused lessons.',
+        lessonStyle: 'Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content.',
+        format: ['Online', 'In-Person'],
+        image: '/images/tutors/tutor-tina.jpg'
     }
 ];
 
