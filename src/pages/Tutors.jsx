@@ -5,189 +5,57 @@ import { useTranslation } from 'react-i18next';
 import styles from './Tutors.module.css';
 
 // New Dataset
-const TUTORS = [
-    {
-        id: 'tutor-4',
-        name: 'Yutaka Takaku',
-        university: 'Keio University, Economics',
-        subjects: ['English', 'Economics', 'Academic writing', 'International school support', 'Interview preparation'],
-        targetAges: ['High school', 'University', 'Adults'],
-        languages: ['English', 'Japanese'],
-        intro: 'I specialize in guiding international and returnee students through the complex transitions of cross-cultural education. My teaching style focuses on building long-term academic confidence rather than short-term memorization, preparing students for rigorous university environments.',
-        strengths: ['Cross-cultural Mentorship', 'Interview & Application Strategy', 'Critical Thinking & Writing'],
-        idealMatch: 'Ambitious students targeting top-tier universities who need holistic mentorship beyond just subject knowledge.',
-        successCase: 'Mentored a returnee student from the US to successfully admit into Keio PEARL with a refined statement of purpose and interview strategy.',
-        lessonStyle: 'Interactive and strategic, focusing on the "Why" behind the content to develop lifelong academic skills.',
-        format: ['Online', 'In-Person'],
-        role: 'Founder',
-        image: '/images/tutors/tutor-4.png'
-    },
-    {
-        id: 'tutor-5',
-        name: 'Riku Ishida',
-        university: 'Keio University, PEARL (Economics)',
-        subjects: ['English', 'Japanese', 'IELTS', 'Eiken', 'Academic Writing', 'Speaking & Presentation', 'University preparation', 'Language tutoring for children'],
-        targetAges: ['Children', 'Elementary', 'Junior high', 'High school', 'University', 'Adults'],
-        languages: ['English', 'Japanese'],
-        intro: 'Having navigated the British, Irish, and Japanese education systems, I understand the immense pressure students face. I have successfully mentored over 70 students, focusing on strategic exam preparation (IELTS, Eiken) and personalized academic coaching that unlocks each student\'s unique potential.',
-        strengths: ['Strategic Exam Coaching (IELTS/Eiken)', 'International Curricula Navigation', 'University Admissions Mentoring'],
-        idealMatch: 'Students feeling overwhelmed by IELTS/Eiken or international school transitions who need a compassionate and strategic coach.',
-        successCase: 'Improved a junior high student\'s IELTS score from 5.5 to 7.0 in 4 months through targeted speaking and writing drills.',
-        lessonStyle: 'Encouraging and result-oriented, breaking down large goals into manageable, high-impact milestones.',
-        format: ['Online', 'In-Person'],
-        role: 'Founder',
-        image: '/images/tutors/tutor-5.png'
-    },
-    {
-        id: 'tutor-tina',
-        name: 'Tina Zheng',
-        university: 'Sophia University, Economics',
-        subjects: ['IB English', 'IB Economics', 'Essay Writing', 'TOEFL', 'IELTS', 'SAT', 'MYP'],
-        targetAges: ['Elementary', 'Junior high', 'High school'],
-        languages: ['English', 'Mandarin'],
-        intro: 'Hi! I’m a second-year Economics student at Sophia University, and I tutor IB English, Economics, and essay writing. I’ve been tutoring for almost three years, working with students from young learners to high school.',
-        strengths: ['IB Specialist (English/Economics)', 'Exam Prep (TOEFL/IELTS/SAT)', 'Bilingual Instruction'],
-        idealMatch: 'IB students or those needing rapid improvement before major exams like TOEFL or SAT.',
-        successCase: 'Has mentored a wide range of students from young learners to high schoolers, helping them achieve quick results through practice-focused lessons.',
-        lessonStyle: 'Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-tina.jpg'
-    },
-    {
-        id: 'tutor-2',
-        name: 'Ronan Daly Inagaki',
-        university: 'Eindhoven University of Technology, Mechanical Engineering',
-        subjects: ['GCSE subjects', 'Japanese language', 'A-Level subjects'],
-        targetAges: ['Junior high', 'High school'],
-        languages: ['English', 'Japanese'],
-        intro: 'As a mechanical engineering student in Europe, I bring an analytical and structured approach to STEM tutoring. I break down complex mathematical and scientific concepts into digestible, relatable steps, making challenging international curricula (GCSE, A-Level) highly accessible for my students.',
-        strengths: ['Analytical Problem Solving', 'GCSE/A-Level Math & Science', 'Structured Conceptual Learning'],
-        idealMatch: 'STEM students struggling with complex GCSE/A-Level concepts who value a clear, logical, and engineering-minded approach.',
-        successCase: 'Helping several students transition from failing grades to passing A-Level Mathematics with a focus on problem-solving frameworks.',
-        lessonStyle: 'Logical and step-by-step, ensuring foundational understanding before moving to advanced applications.',
-        format: ['Online'],
-        image: '/images/tutors/tutor-2.png'
-    },
-    {
-        id: 'tutor-6',
-        name: 'Ulemj Batzorig',
-        university: 'Keio University, PEARL (Economics)',
-        subjects: ['English Conversation', 'Academic English', 'University preparation', 'IELTS', 'Eiken', 'TOEIC', 'TOEFL'],
-        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school'],
-        languages: ['English'],
-        intro: 'Holding a TESOL certification, I combine professional language pedagogy with a deeply empathetic mentoring style. My goal is to transform English from a daunting hurdle into a natural tool for expression, helping students excel in TOEIC, TOEFL, and IELTS while building genuine conversational confidence.',
-        strengths: ['Empathetic Language Coaching', 'TESOL-Certified Pedagogy', 'Confidence Building in Speaking'],
-        idealMatch: 'Younger learners or students with "English anxiety" who need a supportive environment to build base confidence and testing skills.',
-        successCase: 'Increased a student\'s TOEIC score by 150 points while simultaneously improving their willingness to speak up in class.',
-        lessonStyle: 'Dynamic and communicative, using professional TESOL techniques to make learning engaging and low-stress.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-6.png'
-    },
-    {
-        id: 'tutor-hannah',
-        name: 'Hannah Tuffy',
-        university: 'Sophia University, FLA',
-        subjects: ['English Conversation', 'Academic English', 'Japanese Language'],
-        targetAges: ['Preschool', 'Elementary', 'Junior high', 'High school', 'University', 'Adults', 'Seniors'],
-        languages: ['English', 'Japanese'],
-        intro: 'With an educational background in the Irish, American, and Japanese school systems, I bring a diverse and global perspective to my teaching. I teach English and Japanese with a friendly, empathetic approach. I am committed to fostering a nurturing learning environment where students of all ages can feel confident to grow.',
-        strengths: ['Global Perspective', 'Empathetic Approach', 'Custom Lesson Planning'],
-        idealMatch: 'Students of all ages seeking a friendly, multicultural mentor to build confidence in English or Japanese.',
-        successCase: 'Worked as a self-employed Japanese tutor since 2021, successfully creating customized curriculums and modules for diverse learners.',
-        lessonStyle: 'Friendly and nurturing, utilizing custom modules and presentations tailored to the student\'s unique needs.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-hannah.jpg'
-    },
-    {
-        id: 'tutor-sara',
-        name: 'Sara Jeshua',
-        university: 'Keio University, Economics',
-        subjects: ['English Conversation', 'Academic English', 'GCSE subjects', 'Essay writing', 'IELTS', 'Eiken', 'TOEIC', 'TOEFL'],
-        targetAges: ['Preschool', 'Elementary', 'Junior high'],
-        languages: ['English', 'Indonesian'],
-        intro: 'I am an international student from Indonesia studying at Keio University. I adapt the way I teach based on each individual because everyone has different strengths and weaknesses. I want my students to gain confidence in using English, both academically and in real life.',
-        strengths: ['Adaptive Teaching', 'IELTS & Qualifications', 'Young Learner Engagement'],
-        idealMatch: 'Young learners (preschool to junior high) or anyone needing highly adaptable, individualized test prep and English foundations.',
-        successCase: 'Currently an English Teacher in a Language School for preschool to elementary students, and successfully taught IELTS online during high school.',
-        lessonStyle: 'Highly adaptable and individualized, focusing on the student\'s unique strengths and weaknesses to build real-world confidence.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-sara.jpg'
-    },
-    {
-        id: 'tutor-cian',
-        name: 'Cian Alexander Forsyth',
-        university: 'The University of Hong Kong, Economics and Finance',
-        subjects: ['English Conversation', 'Academic English', 'IB subjects', 'Essay writing'],
-        targetAges: ['Elementary', 'Junior high', 'High school'],
-        languages: ['English', 'Chinese'],
-        intro: 'Studying Economics and Finance at The University of Hong Kong, I specialize in tutoring IB subjects, English, and Mathematics. I bring a structured and relatable approach to tutoring, shaped by my extensive experience mentoring and assisting students in rigorous international curricula.',
-        strengths: ['IB Curriculum', 'Essay Writing', 'Relatable Mentorship'],
-        idealMatch: 'IB students looking for a relatable peer-mentor to help navigate the rigors of math, English, and essay writing.',
-        successCase: 'Provided ongoing, comprehensive academic support to IB students, successfully guiding them through complex subjects like Mathematics and English.',
-        lessonStyle: 'Relatable and supportive, leveraging peer-level understanding to break down difficult IB concepts.',
-        format: ['Online'],
-        image: '/images/tutors/tutor-cian.jpg'
-    },
-    {
-        id: 'tutor-toru',
-        name: 'Toru Hiiragi',
-        university: 'Keio University, Economics',
-        subjects: ['English', 'German', 'Mathematics', 'TOEFL', 'SAT', 'University Application Support', 'High School Application Support'],
-        targetAges: ['Elementary', 'Junior high', 'High school', 'University'],
-        languages: ['English', 'German', 'Japanese'],
-        intro: "Hi, I'm Toru! I'm a tutor based in Tokyo with experience working with students from elementary school all the way through university. I grew up in Germany for the first 15 years of my life before moving to Tokyo for high school, so I bring a genuinely international perspective to my tutoring.",
-        strengths: ['International Perspective (Germany/Japan)', 'SAT/TOEFL expertise', 'Application Strategy (Japan/US)'],
-        idealMatch: 'Students looking for help with math, English, or German, or those navigating complex application processes for high school or university.',
-        successCase: 'Successfully guided students through the process of entering Japanese high schools from abroad and applying to top-tier universities in Japan and the US.',
-        lessonStyle: 'Patient, encouraging, and highly adaptive to each student\'s individual learning style.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-toru.jpg'
-    },
-    {
-        id: 'tutor-maegan',
-        name: 'Maegan Norton',
-        university: 'Waseda University, Science and Engineering',
-        subjects: ['Physics', 'Chemistry', 'Mathematics', 'English Conversation'],
-        targetAges: ['Junior high', 'High school'],
-        languages: ['Japanese', 'English'],
-        intro: 'ノートン亜朱理と申します。物理、化学、数学、(英会話)を主に指導しております。高校受験、大学受験共に自ら経験していて、共通テストや国立(理系)の試験勉強を実際にしているため、勉強していてつまずきやすい、もしくはわかりにく箇所も理解しているつもりです。',
-        strengths: ['Science & Math Specialist', 'Entrance Exam Strategy', 'Bilingual Support'],
-        idealMatch: 'Science or Math students (Middle/High school) looking for someone who understands typical pitfalls and challenging concepts in the Japanese curriculum.',
-        successCase: 'Successfully navigated competitive entrance exams for Hibiya High School and is currently majoring in Science and Engineering at Waseda.',
-        lessonStyle: 'Supportive and empathetic, leveraging her own experience with difficult exam preparation to help students overcome specific hurdles.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-maegan.jpg'
-    },
-    {
-        id: 'tutor-michael',
-        name: 'Michael MacNamara',
-        university: 'The University of Tokyo',
-        subjects: ['Economics', 'Mathematics', 'Critical Thinking', 'Essay Writing', 'Problem-Solving'],
-        targetAges: ['Elementary', 'Junior high', 'High school', 'University', 'Adults'],
-        languages: ['English'],
-        intro: 'Currently studying at The University of Tokyo, I tutor Economics and Mathematics at all levels with a friendly and supportive approach. My goal is to create a comfortable environment where students feel confident to learn and ask questions.',
-        strengths: ['Advanced Mathematics & Economics', 'Academic Essay Writing', 'Critical Thinking'],
-        idealMatch: 'Economics students or those looking to sharpen their mathematical and analytical skills with a friendly, high-level tutor.',
-        successCase: 'Has assisted students across various levels in improving their problem-solving and academic writing abilities.',
-        lessonStyle: 'Friendly, supportive, and focused on creating a comfortable environment for asking questions and learning.',
-        format: ['Online', 'In-Person'],
-        image: '/images/tutors/tutor-michael.jpg'
-    },
+const TUTORS_BASE = [
+    { id: 'tutor-4', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-4.png' },
+    { id: 'tutor-5', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-5.png' },
+    { id: 'tutor-tina', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-tina.jpg' },
+    { id: 'tutor-2', format: ['Online'], image: '/images/tutors/tutor-2.png' },
+    { id: 'tutor-6', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-6.png' },
+    { id: 'tutor-hannah', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-hannah.jpg' },
+    { id: 'tutor-sara', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-sara.jpg' },
+    { id: 'tutor-cian', format: ['Online'], image: '/images/tutors/tutor-cian.jpg' },
+    { id: 'tutor-toru', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-toru.jpg' },
+    { id: 'tutor-maegan', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-maegan.jpg' },
+    { id: 'tutor-michael', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-michael.jpg' }
 ];
 
 export default function Tutors() {
     const { t } = useTranslation();
-    const subjectsFilters = [t('tutors.f_all'), 'English', 'Japanese', 'Economics', 'IB', 'Engineering', 'Science'];
+    const subjectsFilters = [
+        t('tutors.f_all'),
+        t('tutors.f_english', { defaultValue: 'English' }),
+        t('tutors.f_japanese', { defaultValue: 'Japanese' }),
+        t('tutors.f_economics', { defaultValue: 'Economics' }),
+        t('tutors.f_ib', { defaultValue: 'IB' }),
+        t('tutors.f_engineering', { defaultValue: 'Engineering' }),
+        t('tutors.f_science', { defaultValue: 'Science' })
+    ];
     const [filter, setFilter] = useState(subjectsFilters[0]);
     const [selectedTutor, setSelectedTutor] = useState(null);
 
     // Map "All" translated string back to actual matching logic
     const isAll = filter === t('tutors.f_all');
 
+    const TUTORS = TUTORS_BASE.map(base => {
+        const profile = t(`tutors.profiles.${base.id}`, { returnObjects: true });
+        const profileObj = typeof profile === 'object' && profile !== null ? profile : {};
+        return { 
+            ...base, 
+            ...profileObj,
+            subjects: profileObj.subjects || [],
+            strengths: profileObj.strengths || [],
+            languages: profileObj.languages || [],
+            targetAges: profileObj.targetAges || [],
+            name: profileObj.name || ''
+        };
+    });
+
     const filteredTutors = TUTORS.filter(tutor => {
         if (isAll) return true;
-        return tutor.subjects.some(s => s.toLowerCase().includes(filter.toLowerCase())) ||
-            tutor.university.toLowerCase().includes(filter.toLowerCase());
+        const subjects = tutor.subjects || [];
+        const university = tutor.university || '';
+        return subjects.some(s => s.toLowerCase().includes(filter.toLowerCase())) ||
+            university.toLowerCase().includes(filter.toLowerCase());
     });
 
     return (

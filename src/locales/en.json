@@ -143,7 +143,350 @@
     "scarcity_disclaimer": "This tutor is in high demand. If they are at capacity, we will match you with a mentor of equal standing.",
     "and_more_title": "And Many More!",
     "and_more_desc": "We have experienced tutors across dozens of other specialties not listed here. Contact us to find your perfect match.",
-    "and_more_cta": "Find Your Perfect Match"
+    "and_more_cta": "Find Your Perfect Match",
+    "profiles": {
+      "tutor-4": {
+        "name": "Yutaka Takaku",
+        "university": "Keio University, Economics",
+        "subjects": [
+          "English",
+          "Economics",
+          "Academic writing",
+          "International school support",
+          "Interview preparation"
+        ],
+        "targetAges": [
+          "High school",
+          "University",
+          "Adults"
+        ],
+        "languages": [
+          "English",
+          "Japanese"
+        ],
+        "intro": "I specialize in guiding international and returnee students through the complex transitions of cross-cultural education. My teaching style focuses on building long-term academic confidence rather than short-term memorization, preparing students for rigorous university environments.",
+        "strengths": [
+          "Cross-cultural Mentorship",
+          "Interview & Application Strategy",
+          "Critical Thinking & Writing"
+        ],
+        "idealMatch": "Ambitious students targeting top-tier universities who need holistic mentorship beyond just subject knowledge.",
+        "successCase": "Mentored a returnee student from the US to successfully admit into Keio PEARL with a refined statement of purpose and interview strategy.",
+        "lessonStyle": "Interactive and strategic, focusing on the \"Why\" behind the content to develop lifelong academic skills.",
+        "role": "Founder"
+      },
+      "tutor-5": {
+        "name": "Riku Ishida",
+        "university": "Keio University, PEARL (Economics)",
+        "subjects": [
+          "English",
+          "Japanese",
+          "IELTS",
+          "Eiken",
+          "Academic Writing",
+          "Speaking & Presentation",
+          "University preparation",
+          "Language tutoring for children"
+        ],
+        "targetAges": [
+          "Children",
+          "Elementary",
+          "Junior high",
+          "High school",
+          "University",
+          "Adults"
+        ],
+        "languages": [
+          "English",
+          "Japanese"
+        ],
+        "intro": "Having navigated the British, Irish, and Japanese education systems, I understand the immense pressure students face. I have successfully mentored over 70 students, focusing on strategic exam preparation (IELTS, Eiken) and personalized academic coaching that unlocks each student's unique potential.",
+        "strengths": [
+          "Strategic Exam Coaching (IELTS/Eiken)",
+          "International Curricula Navigation",
+          "University Admissions Mentoring"
+        ],
+        "idealMatch": "Students feeling overwhelmed by IELTS/Eiken or international school transitions who need a compassionate and strategic coach.",
+        "successCase": "Improved a junior high student's IELTS score from 5.5 to 7.0 in 4 months through targeted speaking and writing drills.",
+        "lessonStyle": "Encouraging and result-oriented, breaking down large goals into manageable, high-impact milestones.",
+        "role": "Founder"
+      },
+      "tutor-tina": {
+        "name": "Tina Zheng",
+        "university": "Sophia University, Economics",
+        "subjects": [
+          "IB English",
+          "IB Economics",
+          "Essay Writing",
+          "TOEFL",
+          "IELTS",
+          "SAT",
+          "MYP"
+        ],
+        "targetAges": [
+          "Elementary",
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English",
+          "Mandarin"
+        ],
+        "intro": "Hi! I’m a second-year Economics student at Sophia University, and I tutor IB English, Economics, and essay writing. I’ve been tutoring for almost three years, working with students from young learners to high school.",
+        "strengths": [
+          "IB Specialist (English/Economics)",
+          "Exam Prep (TOEFL/IELTS/SAT)",
+          "Bilingual Instruction"
+        ],
+        "idealMatch": "IB students or those needing rapid improvement before major exams like TOEFL or SAT.",
+        "successCase": "Has mentored a wide range of students from young learners to high schoolers, helping them achieve quick results through practice-focused lessons.",
+        "lessonStyle": "Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content."
+      },
+      "tutor-2": {
+        "name": "Ronan Daly Inagaki",
+        "university": "Eindhoven University of Technology, Mechanical Engineering",
+        "subjects": [
+          "GCSE subjects",
+          "Japanese language",
+          "A-Level subjects"
+        ],
+        "targetAges": [
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English",
+          "Japanese"
+        ],
+        "intro": "As a mechanical engineering student in Europe, I bring an analytical and structured approach to STEM tutoring. I break down complex mathematical and scientific concepts into digestible, relatable steps, making challenging international curricula (GCSE, A-Level) highly accessible for my students.",
+        "strengths": [
+          "Analytical Problem Solving",
+          "GCSE/A-Level Math & Science",
+          "Structured Conceptual Learning"
+        ],
+        "idealMatch": "STEM students struggling with complex GCSE/A-Level concepts who value a clear, logical, and engineering-minded approach.",
+        "successCase": "Helping several students transition from failing grades to passing A-Level Mathematics with a focus on problem-solving frameworks.",
+        "lessonStyle": "Logical and step-by-step, ensuring foundational understanding before moving to advanced applications."
+      },
+      "tutor-6": {
+        "name": "Ulemj Batzorig",
+        "university": "Keio University, PEARL (Economics)",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "University preparation",
+          "IELTS",
+          "Eiken",
+          "TOEIC",
+          "TOEFL"
+        ],
+        "targetAges": [
+          "Preschool",
+          "Elementary",
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English"
+        ],
+        "intro": "Holding a TESOL certification, I combine professional language pedagogy with a deeply empathetic mentoring style. My goal is to transform English from a daunting hurdle into a natural tool for expression, helping students excel in TOEIC, TOEFL, and IELTS while building genuine conversational confidence.",
+        "strengths": [
+          "Empathetic Language Coaching",
+          "TESOL-Certified Pedagogy",
+          "Confidence Building in Speaking"
+        ],
+        "idealMatch": "Younger learners or students with \"English anxiety\" who need a supportive environment to build base confidence and testing skills.",
+        "successCase": "Increased a student's TOEIC score by 150 points while simultaneously improving their willingness to speak up in class.",
+        "lessonStyle": "Dynamic and communicative, using professional TESOL techniques to make learning engaging and low-stress."
+      },
+      "tutor-hannah": {
+        "name": "Hannah Tuffy",
+        "university": "Sophia University, FLA",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "Japanese Language"
+        ],
+        "targetAges": [
+          "Preschool",
+          "Elementary",
+          "Junior high",
+          "High school",
+          "University",
+          "Adults",
+          "Seniors"
+        ],
+        "languages": [
+          "English",
+          "Japanese"
+        ],
+        "intro": "With an educational background in the Irish, American, and Japanese school systems, I bring a diverse and global perspective to my teaching. I teach English and Japanese with a friendly, empathetic approach. I am committed to fostering a nurturing learning environment where students of all ages can feel confident to grow.",
+        "strengths": [
+          "Global Perspective",
+          "Empathetic Approach",
+          "Custom Lesson Planning"
+        ],
+        "idealMatch": "Students of all ages seeking a friendly, multicultural mentor to build confidence in English or Japanese.",
+        "successCase": "Worked as a self-employed Japanese tutor since 2021, successfully creating customized curriculums and modules for diverse learners.",
+        "lessonStyle": "Friendly and nurturing, utilizing custom modules and presentations tailored to the student's unique needs."
+      },
+      "tutor-sara": {
+        "name": "Sara Jeshua",
+        "university": "Keio University, Economics",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "GCSE subjects",
+          "Essay writing",
+          "IELTS",
+          "Eiken",
+          "TOEIC",
+          "TOEFL"
+        ],
+        "targetAges": [
+          "Preschool",
+          "Elementary",
+          "Junior high"
+        ],
+        "languages": [
+          "English",
+          "Indonesian"
+        ],
+        "intro": "I am an international student from Indonesia studying at Keio University. I adapt the way I teach based on each individual because everyone has different strengths and weaknesses. I want my students to gain confidence in using English, both academically and in real life.",
+        "strengths": [
+          "Adaptive Teaching",
+          "IELTS & Qualifications",
+          "Young Learner Engagement"
+        ],
+        "idealMatch": "Young learners (preschool to junior high) or anyone needing highly adaptable, individualized test prep and English foundations.",
+        "successCase": "Currently an English Teacher in a Language School for preschool to elementary students, and successfully taught IELTS online during high school.",
+        "lessonStyle": "Highly adaptable and individualized, focusing on the student's unique strengths and weaknesses to build real-world confidence."
+      },
+      "tutor-cian": {
+        "name": "Cian Alexander Forsyth",
+        "university": "The University of Hong Kong, Economics and Finance",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "IB subjects",
+          "Essay writing"
+        ],
+        "targetAges": [
+          "Elementary",
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English",
+          "Chinese"
+        ],
+        "intro": "Studying Economics and Finance at The University of Hong Kong, I specialize in tutoring IB subjects, English, and Mathematics. I bring a structured and relatable approach to tutoring, shaped by my extensive experience mentoring and assisting students in rigorous international curricula.",
+        "strengths": [
+          "IB Curriculum",
+          "Essay Writing",
+          "Relatable Mentorship"
+        ],
+        "idealMatch": "IB students looking for a relatable peer-mentor to help navigate the rigors of math, English, and essay writing.",
+        "successCase": "Provided ongoing, comprehensive academic support to IB students, successfully guiding them through complex subjects like Mathematics and English.",
+        "lessonStyle": "Relatable and supportive, leveraging peer-level understanding to break down difficult IB concepts."
+      },
+      "tutor-toru": {
+        "name": "Toru Hiiragi",
+        "university": "Keio University, Economics",
+        "subjects": [
+          "English",
+          "German",
+          "Mathematics",
+          "TOEFL",
+          "SAT",
+          "University Application Support",
+          "High School Application Support"
+        ],
+        "targetAges": [
+          "Elementary",
+          "Junior high",
+          "High school",
+          "University"
+        ],
+        "languages": [
+          "English",
+          "German",
+          "Japanese"
+        ],
+        "intro": "Hi, I'm Toru! I'm a tutor based in Tokyo with experience working with students from elementary school all the way through university. I grew up in Germany for the first 15 years of my life before moving to Tokyo for high school, so I bring a genuinely international perspective to my tutoring.",
+        "strengths": [
+          "International Perspective (Germany/Japan)",
+          "SAT/TOEFL expertise",
+          "Application Strategy (Japan/US)"
+        ],
+        "idealMatch": "Students looking for help with math, English, or German, or those navigating complex application processes for high school or university.",
+        "successCase": "Successfully guided students through the process of entering Japanese high schools from abroad and applying to top-tier universities in Japan and the US.",
+        "lessonStyle": "Patient, encouraging, and highly adaptive to each student's individual learning style."
+      },
+      "tutor-maegan": {
+        "name": "Maegan Norton",
+        "university": "Waseda University, Science and Engineering",
+        "subjects": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "English Conversation"
+        ],
+        "targetAges": [
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "Japanese",
+          "English"
+        ],
+        "intro": "My name is Maegan Norton. I mainly teach Physics, Chemistry, Mathematics, and English Conversation. Having experienced both high school and university entrance exams myself, and preparing for the Common Test and National University (Science) exams, I understand the areas where students tend to stumble or find concepts difficult to grasp.",
+        "strengths": [
+          "Science & Math Specialist",
+          "Entrance Exam Strategy",
+          "Bilingual Support"
+        ],
+        "idealMatch": "Science or Math students (Middle/High school) looking for someone who understands typical pitfalls and challenging concepts in the Japanese curriculum.",
+        "successCase": "Successfully navigated competitive entrance exams for Hibiya High School and is currently majoring in Science and Engineering at Waseda.",
+        "lessonStyle": "Supportive and empathetic, leveraging her own experience with difficult exam preparation to help students overcome specific hurdles."
+      },
+      "tutor-michael": {
+        "name": "Michael MacNamara",
+        "university": "The University of Tokyo",
+        "subjects": [
+          "Economics",
+          "Mathematics",
+          "Critical Thinking",
+          "Essay Writing",
+          "Problem-Solving"
+        ],
+        "targetAges": [
+          "Elementary",
+          "Junior high",
+          "High school",
+          "University",
+          "Adults"
+        ],
+        "languages": [
+          "English"
+        ],
+        "intro": "Currently studying at The University of Tokyo, I tutor Economics and Mathematics at all levels with a friendly and supportive approach. My goal is to create a comfortable environment where students feel confident to learn and ask questions.",
+        "strengths": [
+          "Advanced Mathematics & Economics",
+          "Academic Essay Writing",
+          "Critical Thinking"
+        ],
+        "idealMatch": "Economics students or those looking to sharpen their mathematical and analytical skills with a friendly, high-level tutor.",
+        "successCase": "Has assisted students across various levels in improving their problem-solving and academic writing abilities.",
+        "lessonStyle": "Friendly, supportive, and focused on creating a comfortable environment for asking questions and learning."
+      }
+    },
+    "f_english": "English",
+    "f_japanese": "Japanese",
+    "f_economics": "Economics",
+    "f_ib": "IB",
+    "f_engineering": "Engineering",
+    "f_science": "Science"
   },
   "pricing": {
     "title": "Simple & Flexible Pricing",
@@ -283,70 +626,70 @@
     "cta": "Book Your Free Trial →",
     "dismiss": "Maybe later"
   },
-    "business": {
-        "inquiry_purpose_1": "Business Meetings & Negotiations",
-        "inquiry_purpose_2": "Emails & Business Writing",
-        "inquiry_purpose_3": "Relocation & Business Trip Prep",
-        "inquiry_purpose_4": "General Business English Foundations",
-        "hero_eyebrow": "BUSINESS ENGLISH",
-        "hero_title": "English skills that impact your career",
-        "hero_sub": "Meetings, emails, client interaction. Mentors with real-world experience and high-level logic accelerate your business performance in English.",
-        "hero_cta": "Book Free Trial",
-        "hero_line": "Consult on LINE",
-        "trust_1": "No admission fee",
-        "trust_2": "Workplace-focused",
-        "trust_3": "Professional Tutors",
-        "pain_eyebrow": "STRUGGLING WITH ENGLISH AT WORK?",
-        "pain_title": "English is a tool to accelerate your business. We provide the strategic roadmap to mastery.",
-        "pain_1": "Unable to speak up in meetings (timing and vocabulary gaps)",
-        "pain_2": "Slow email writing (spending too much time finding the right words)",
-        "pain_3": "Anxious about client interaction (lacking the nuance for high-stakes trust)",
-        "pain_4": "Facing promotion or overseas assignment with insufficient fluency",
-        "pain_note": "Just memorizing vocabulary isn't enough. We customize 'ready-to-use' logical structures and professional language tailored to your specific role.",
-        "solution_eyebrow": "THE PETRA APPROACH",
-        "solution_title": "Practical fluency, delivered efficiently.",
-        "s_1_badge": "PRACTICAL",
-        "s_1_title": "Workplace-driven coaching",
-        "s_1_desc": "Bring your actual agendas and presentation materials. We'll refine the logic and language for immediate use.",
-        "s_2_badge": "DELIVERY",
-        "s_2_title": "Meetings & Presentations: Command the room",
-        "s_2_desc": "Master communicative frameworks like PREP to project authority and presence in global professional settings.",
-        "s_3_badge": "WRITING",
-        "s_3_title": "Professional Correspondence",
-        "s_3_desc": "From nuanced word choice to persuasive structure. We teach you how to write emails that drive results.",
-        "s_4_badge": "CONSULTING",
-        "s_4_title": "Professional Business Mentorship",
-        "s_4_desc": "Our mentors are top-tier graduates with real-world experience, providing high-level feedback that understands your business context.",
-        "results_eyebrow": "PROVEN OUTCOMES",
-        "results_title": "Transformation in weeks, not years",
-        "r_1_val": "2-3",
-        "r_1_label": "Months to see change",
-        "r_1_note": "Increased meeting participation",
-        "r_2_val": "100%",
-        "r_2_label": "Practical usability",
-        "r_2_note": "Immediate results",
-        "r_3_val": "1:1",
-        "r_3_label": "Strictly Personalized",
-        "r_3_note": "Your work is the curriculum",
-        "why_eyebrow": "WHY PETRA?",
-        "why_title": "Mentors who succeed. Leading you to do the same.",
-        "why_sub": "Our mentors aren't just teachers; they are peers who've excelled in global environments. They provide more than English-they provide the logic to succeed.",
-        "why_1_title": "Elite Tutors with Real-world Experience",
-        "why_1_desc": "Tutors with high-level logical thinking who understand the nuances of global corporate culture.",
-        "why_2_title": "Your Daily Work is our Textbook",
-        "why_2_desc": "We don't use generic materials. We solve the problems you're facing in your job right now.",
-        "why_3_title": "No Admission fee, results-oriented",
-        "why_3_desc": "Zero initial cost. Start with a free consultation and see why professionals choose Petra.",
-        "t_1_quote": "I was anxious about my presentation, but after mock sessions with my mentor, I delivered my best performance to date.",
-        "t_1_name": "T.Y.",
-        "t_1_role": "Consultant, Tier-1 Global Firm",
-        "t_2_quote": "I used to spend an hour on one email. Now, I have the templates and logic to finish in 15 minutes.",
-        "t_2_name": "M.S.",
-        "t_2_role": "Overseas Sales Manager",
-        "final_eyebrow": "FREE TRIAL",
-        "final_title": "Break the ceiling of your career.",
-        "final_sub": "Identify your professional roadblocks in a 30-minute free session. No admission fee. Immediate matching."
-    },
+  "business": {
+    "inquiry_purpose_1": "Business Meetings & Negotiations",
+    "inquiry_purpose_2": "Emails & Business Writing",
+    "inquiry_purpose_3": "Relocation & Business Trip Prep",
+    "inquiry_purpose_4": "General Business English Foundations",
+    "hero_eyebrow": "BUSINESS ENGLISH",
+    "hero_title": "English skills that impact your career",
+    "hero_sub": "Meetings, emails, client interaction. Mentors with real-world experience and high-level logic accelerate your business performance in English.",
+    "hero_cta": "Book Free Trial",
+    "hero_line": "Consult on LINE",
+    "trust_1": "No admission fee",
+    "trust_2": "Workplace-focused",
+    "trust_3": "Professional Tutors",
+    "pain_eyebrow": "STRUGGLING WITH ENGLISH AT WORK?",
+    "pain_title": "English is a tool to accelerate your business. We provide the strategic roadmap to mastery.",
+    "pain_1": "Unable to speak up in meetings (timing and vocabulary gaps)",
+    "pain_2": "Slow email writing (spending too much time finding the right words)",
+    "pain_3": "Anxious about client interaction (lacking the nuance for high-stakes trust)",
+    "pain_4": "Facing promotion or overseas assignment with insufficient fluency",
+    "pain_note": "Just memorizing vocabulary isn't enough. We customize 'ready-to-use' logical structures and professional language tailored to your specific role.",
+    "solution_eyebrow": "THE PETRA APPROACH",
+    "solution_title": "Practical fluency, delivered efficiently.",
+    "s_1_badge": "PRACTICAL",
+    "s_1_title": "Workplace-driven coaching",
+    "s_1_desc": "Bring your actual agendas and presentation materials. We'll refine the logic and language for immediate use.",
+    "s_2_badge": "DELIVERY",
+    "s_2_title": "Meetings & Presentations: Command the room",
+    "s_2_desc": "Master communicative frameworks like PREP to project authority and presence in global professional settings.",
+    "s_3_badge": "WRITING",
+    "s_3_title": "Professional Correspondence",
+    "s_3_desc": "From nuanced word choice to persuasive structure. We teach you how to write emails that drive results.",
+    "s_4_badge": "CONSULTING",
+    "s_4_title": "Professional Business Mentorship",
+    "s_4_desc": "Our mentors are top-tier graduates with real-world experience, providing high-level feedback that understands your business context.",
+    "results_eyebrow": "PROVEN OUTCOMES",
+    "results_title": "Transformation in weeks, not years",
+    "r_1_val": "2-3",
+    "r_1_label": "Months to see change",
+    "r_1_note": "Increased meeting participation",
+    "r_2_val": "100%",
+    "r_2_label": "Practical usability",
+    "r_2_note": "Immediate results",
+    "r_3_val": "1:1",
+    "r_3_label": "Strictly Personalized",
+    "r_3_note": "Your work is the curriculum",
+    "why_eyebrow": "WHY PETRA?",
+    "why_title": "Mentors who succeed. Leading you to do the same.",
+    "why_sub": "Our mentors aren't just teachers; they are peers who've excelled in global environments. They provide more than English-they provide the logic to succeed.",
+    "why_1_title": "Elite Tutors with Real-world Experience",
+    "why_1_desc": "Tutors with high-level logical thinking who understand the nuances of global corporate culture.",
+    "why_2_title": "Your Daily Work is our Textbook",
+    "why_2_desc": "We don't use generic materials. We solve the problems you're facing in your job right now.",
+    "why_3_title": "No Admission fee, results-oriented",
+    "why_3_desc": "Zero initial cost. Start with a free consultation and see why professionals choose Petra.",
+    "t_1_quote": "I was anxious about my presentation, but after mock sessions with my mentor, I delivered my best performance to date.",
+    "t_1_name": "T.Y.",
+    "t_1_role": "Consultant, Tier-1 Global Firm",
+    "t_2_quote": "I used to spend an hour on one email. Now, I have the templates and logic to finish in 15 minutes.",
+    "t_2_name": "M.S.",
+    "t_2_role": "Overseas Sales Manager",
+    "final_eyebrow": "FREE TRIAL",
+    "final_title": "Break the ceiling of your career.",
+    "final_sub": "Identify your professional roadblocks in a 30-minute free session. No admission fee. Immediate matching."
+  },
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
     "hero_title": "The right learning\nfor your goal.",
@@ -390,7 +733,7 @@
     "final_cta": "Book Free Trial (30s)",
     "final_line": "Chat on LINE"
   },
-    "landing_ib": {
+  "landing_ib": {
     "hero_eyebrow": "IB / AP / A-Level / SAT · ACT / Intl. School Support",
     "hero_title": "Master the IB & international curricula with expert mentors.",
     "hero_sub": "Full support for assignments, Internal Assessments, and exam prep. Mentors who've mastered the IB & international curricula support your child's success.",
@@ -512,71 +855,71 @@
     "final_sub": "A 30-minute session to find out why your score is stuck. No admission fee. Results-oriented coaching.",
     "final_cta": "Reserve Free Trial in 30s"
   },
-    "landing_uni": {
-        "hero_eyebrow": "UNIVERSITY ADMISSIONS",
-        "hero_title": "Get into top universities with a clear strategy.",
-        "hero_sub": "Not just tutoring — 1:1 mentorship from students who have actually been accepted. We help you build a profile, essays, and interview performance that stand out.",
-        "hero_cta": "Book Free Consultation",
-        "hero_line": "Consult on LINE",
-        "hero_scarcity": "Limited consultation slots this week: 15 remaining",
-        "trust_1": "No admission fee",
-        "trust_2": "Fully personalized",
-        "trust_3": "Focused on outcomes",
-        "pain_eyebrow": "THE PROBLEM",
-        "pain_title": "Top university admission is not about grades alone.",
-        "pain_1": "Unsure how to build a strong application strategy",
-        "pain_2": "Struggling to express your 'story' in essays",
-        "pain_3": "Not confident in interviews or how to present yourself",
-        "pain_4": "Overwhelmed by extracurriculars and timelines",
-        "pain_note": "Strong applicants have one thing in common: a clear, well-positioned narrative. We help you build that.",
-        "core_value_eyebrow": "CORE VALUE",
-        "core_value_title": "We turn your experiences into a compelling application strategy.",
-        "core_value_sub": "Not templates. Not generic advice. A structured, personalized approach to maximize your chances.",
-        "solution_eyebrow": "THE PETRA APPROACH",
-        "solution_title": "Four pillars, one outcome: admission.",
-        "s_1_badge": "ESSAY",
-        "s_1_title": "Essay Coaching",
-        "s_1_desc": "We go beyond proofreading. From brainstorming to final drafts, we help you build essays with clear structure, depth, and impact. Essays reviewed by our network of current Stanford, Oxford, and Carnegie Mellon students.",
-        "s_2_badge": "INTERVIEW",
-        "s_2_title": "Interview Preparation",
-        "s_2_desc": "Mock interviews with real feedback. We train your logic, delivery, and presence so you perform confidently under pressure.",
-        "s_3_badge": "ROADMAP",
-        "s_3_title": "Strategic Roadmap",
-        "s_3_desc": "We analyze your profile and target schools, then design a clear plan aligned with what top universities are actually looking for.",
-        "s_4_badge": "MENTORS",
-        "s_4_title": "Elite Mentors",
-        "s_4_desc": "Learn from students who have been accepted. Our mentors come from Stanford, Oxford, Keio PEARL, HKU, and other top programs.",
-        "results_eyebrow": "OUTCOMES",
-        "results_title": "Results that speak for themselves",
-        "r_1_val": "1:1",
-        "r_1_label": "Dedicated mentorship",
-        "r_1_note": "Deeply personal approach",
-        "r_2_val": "100%",
-        "r_2_label": "Personalized strategy",
-        "r_2_note": "No templates, ever",
-        "r_3_val": "Real",
-        "r_3_label": "Admitted mentors",
-        "r_3_note": "Stanford, Oxford, HKU & more",
-        "why_eyebrow": "WHY PETRA",
-        "why_title": "Learn from people who've done it.",
-        "why_sub": "We don't teach theory. We teach what actually works in real admissions.",
-        "why_1_title": "Real knowledge, not theory",
-        "why_1_desc": "Our mentors cleared the same admissions bar you're aiming for. They know what works because they've done it.",
-        "why_2_title": "No templates. Fully personalized.",
-        "why_2_desc": "Every student gets a tailored strategy based on their strengths and goals. We never recycle approaches.",
-        "why_3_title": "Focused on outcomes.",
-        "why_3_desc": "Everything we do is designed to improve your chances of admission. No fluff, no filler.",
-        "t_1_quote": "I didn't know which experience to focus on, but my mentor helped me find a clear direction for my essay.",
-        "t_1_name": "S.H.",
-        "t_1_role": "Admitted to Keio PEARL",
-        "t_2_quote": "The mock interviews were tougher than the real ones, so I felt calm and prepared during the actual interview.",
-        "t_2_name": "M.K.",
-        "t_2_role": "Admitted to HKU",
-        "final_eyebrow": "FREE CONSULTATION",
-        "final_title": "Start with a free consultation.",
-        "final_sub": "We'll help you understand your current profile, identify your strongest positioning, and build a clear application strategy. No admission fee. No pressure.",
-        "final_cta": "Book Free Consultation"
-    },
+  "landing_uni": {
+    "hero_eyebrow": "UNIVERSITY ADMISSIONS",
+    "hero_title": "Get into top universities with a clear strategy.",
+    "hero_sub": "Not just tutoring — 1:1 mentorship from students who have actually been accepted. We help you build a profile, essays, and interview performance that stand out.",
+    "hero_cta": "Book Free Consultation",
+    "hero_line": "Consult on LINE",
+    "hero_scarcity": "Limited consultation slots this week: 15 remaining",
+    "trust_1": "No admission fee",
+    "trust_2": "Fully personalized",
+    "trust_3": "Focused on outcomes",
+    "pain_eyebrow": "THE PROBLEM",
+    "pain_title": "Top university admission is not about grades alone.",
+    "pain_1": "Unsure how to build a strong application strategy",
+    "pain_2": "Struggling to express your 'story' in essays",
+    "pain_3": "Not confident in interviews or how to present yourself",
+    "pain_4": "Overwhelmed by extracurriculars and timelines",
+    "pain_note": "Strong applicants have one thing in common: a clear, well-positioned narrative. We help you build that.",
+    "core_value_eyebrow": "CORE VALUE",
+    "core_value_title": "We turn your experiences into a compelling application strategy.",
+    "core_value_sub": "Not templates. Not generic advice. A structured, personalized approach to maximize your chances.",
+    "solution_eyebrow": "THE PETRA APPROACH",
+    "solution_title": "Four pillars, one outcome: admission.",
+    "s_1_badge": "ESSAY",
+    "s_1_title": "Essay Coaching",
+    "s_1_desc": "We go beyond proofreading. From brainstorming to final drafts, we help you build essays with clear structure, depth, and impact. Essays reviewed by our network of current Stanford, Oxford, and Carnegie Mellon students.",
+    "s_2_badge": "INTERVIEW",
+    "s_2_title": "Interview Preparation",
+    "s_2_desc": "Mock interviews with real feedback. We train your logic, delivery, and presence so you perform confidently under pressure.",
+    "s_3_badge": "ROADMAP",
+    "s_3_title": "Strategic Roadmap",
+    "s_3_desc": "We analyze your profile and target schools, then design a clear plan aligned with what top universities are actually looking for.",
+    "s_4_badge": "MENTORS",
+    "s_4_title": "Elite Mentors",
+    "s_4_desc": "Learn from students who have been accepted. Our mentors come from Stanford, Oxford, Keio PEARL, HKU, and other top programs.",
+    "results_eyebrow": "OUTCOMES",
+    "results_title": "Results that speak for themselves",
+    "r_1_val": "1:1",
+    "r_1_label": "Dedicated mentorship",
+    "r_1_note": "Deeply personal approach",
+    "r_2_val": "100%",
+    "r_2_label": "Personalized strategy",
+    "r_2_note": "No templates, ever",
+    "r_3_val": "Real",
+    "r_3_label": "Admitted mentors",
+    "r_3_note": "Stanford, Oxford, HKU & more",
+    "why_eyebrow": "WHY PETRA",
+    "why_title": "Learn from people who've done it.",
+    "why_sub": "We don't teach theory. We teach what actually works in real admissions.",
+    "why_1_title": "Real knowledge, not theory",
+    "why_1_desc": "Our mentors cleared the same admissions bar you're aiming for. They know what works because they've done it.",
+    "why_2_title": "No templates. Fully personalized.",
+    "why_2_desc": "Every student gets a tailored strategy based on their strengths and goals. We never recycle approaches.",
+    "why_3_title": "Focused on outcomes.",
+    "why_3_desc": "Everything we do is designed to improve your chances of admission. No fluff, no filler.",
+    "t_1_quote": "I didn't know which experience to focus on, but my mentor helped me find a clear direction for my essay.",
+    "t_1_name": "S.H.",
+    "t_1_role": "Admitted to Keio PEARL",
+    "t_2_quote": "The mock interviews were tougher than the real ones, so I felt calm and prepared during the actual interview.",
+    "t_2_name": "M.K.",
+    "t_2_role": "Admitted to HKU",
+    "final_eyebrow": "FREE CONSULTATION",
+    "final_title": "Start with a free consultation.",
+    "final_sub": "We'll help you understand your current profile, identify your strongest positioning, and build a clear application strategy. No admission fee. No pressure.",
+    "final_cta": "Book Free Consultation"
+  },
   "landing_kids": {
     "hero_eyebrow": "FOUNDATION & CONFIDENCE",
     "hero_title": "It's okay to struggle with English.",
