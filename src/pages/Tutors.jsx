@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Monitor, GraduationCap, X, SlidersHorizontal, Languages } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import styles from './Tutors.module.css';
 
 // New Dataset
@@ -60,6 +61,11 @@ export default function Tutors() {
 
     return (
         <>
+            <SEO 
+                title={`${t('tutors.title')} | Petra Tutors`}
+                description={t('tutors.subtitle')}
+                path="/tutors"
+            />
             <div className={`${styles.header} glass-panel`}>
                 <div className="container animate-on-scroll">
                     <h1 className="text-h1" style={{ marginBottom: '1rem' }}>{t('tutors.title')}</h1>

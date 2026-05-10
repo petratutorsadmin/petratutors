@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Star, Target, CheckCircle, Globe2 } from 'lucide-react';
+import SEO from '../components/SEO';
 import styles from './About.module.css';
 
 export default function About() {
@@ -8,6 +9,11 @@ export default function About() {
 
     return (
         <>
+            <SEO 
+                title={`${t('about.title')} | Petra Tutors`}
+                description={t('about.subtitle')}
+                path="/about"
+            />
             <div className={`${styles.header} glass-panel animate-on-scroll`}>
                 <div className="container text-center">
                     <h1 className="text-h1" style={{ marginBottom: '1rem' }}>{t('about.title')}</h1>

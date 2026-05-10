@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 import styles from './GatewayHome.module.css';
 
 // Routes for each choice - labels/subs come from locale
@@ -32,6 +33,11 @@ export default function GatewayHome() {
 
     return (
         <div className={styles.page}>
+            <SEO 
+                title={`${t('gateway.hero_title')} | Petra Tutors`}
+                description={t('gateway.hero_sub')}
+                path="/"
+            />
 
             {/* ─── HERO ─── */}
             <section className={styles.hero}>

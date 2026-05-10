@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import styles from './LandingIB.module.css';
 
 const LandingIB = () => {
@@ -55,6 +56,11 @@ const LandingIB = () => {
 
   return (
     <div className={styles.container}>
+      <SEO 
+        title={`${t('landing_ib.hero_title')} | Petra Tutors`}
+        description={t('landing_ib.hero_sub')}
+        path="/ib"
+      />
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
