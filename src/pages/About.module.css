@@ -68,3 +68,12 @@
         gap: var(--space-lg);
     }
 }
+
+.finalCta {
+    padding: var(--space-2xl, 4rem) 0;
+    background-color: var(--c-sand, #f9f6f0);
+}
+
+.finalCta h2 {
+    color: var(--c-navy);
+}

@@ -48,6 +48,10 @@ export default function Footer() {
             <div className={styles.bottom}>
                 <div className="container">
                     <p>&copy; {new Date().getFullYear()} Petra Tutors. All rights reserved.</p>
+                    <p className={styles.legalText}>
+                        Operated by Petra Education G.K.<br />
+                        （ペトラエデュケーション合同会社）
+                    </p>
                 </div>
             </div>
         </footer>
