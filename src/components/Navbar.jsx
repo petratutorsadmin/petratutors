@@ -42,7 +42,7 @@ export default function Navbar() {
             <div className={`${styles.navbar} glass-panel`}>
             <div className={`container ${styles.navContainer}`}>
                 <Link to="/" className={styles.logo}>
-                    <img src="/logo.png" alt="Petra Tutors" className={styles.logoImage} />
+                    <img src="/logo-optimized.webp" alt="Petra Tutors" width="32" height="32" className={styles.logoImage} />
                     <span>Petra Tutors</span>
                 </Link>
 

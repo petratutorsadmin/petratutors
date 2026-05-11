@@ -11,7 +11,7 @@ export default function Footer() {
             <div className={`container ${styles.footerGrid}`}>
                 <div className={styles.brandCol}>
                     <Link to="/" className={styles.logo}>
-                        <img src="/logo.png" alt="Petra Tutors" className={styles.logoImage} />
+                        <img src="/logo-optimized.webp" alt="Petra Tutors" width="32" height="32" className={styles.logoImage} />
                         <span>Petra Tutors</span>
                     </Link>
                     <p className={styles.brandText}>

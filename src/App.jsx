@@ -1,24 +1,24 @@
 import { Routes, Route } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 import Layout from './components/Layout';
 
-// New gateway & landing pages
-import GatewayHome from './pages/GatewayHome';
-import LandingIB from './pages/LandingIB';
-import LandingIELTS from './pages/LandingIELTS';
-import LandingUniversity from './pages/LandingUniversity';
-import LandingKids from './pages/LandingKids';
-import LandingFoundation from './pages/LandingFoundation';
+// Dynamically import pages for code splitting
+const GatewayHome = lazy(() => import('./pages/GatewayHome'));
+const LandingIB = lazy(() => import('./pages/LandingIB'));
+const LandingIELTS = lazy(() => import('./pages/LandingIELTS'));
+const LandingUniversity = lazy(() => import('./pages/LandingUniversity'));
+const LandingKids = lazy(() => import('./pages/LandingKids'));
+const LandingFoundation = lazy(() => import('./pages/LandingFoundation'));
+const BusinessLanding = lazy(() => import('./pages/BusinessLanding'));
 
-// Existing pages
-import Home from './pages/Home';
-import Programs from './pages/Programs';
-import Tutors from './pages/Tutors';
-import Pricing from './pages/Pricing';
-import Inquiry from './pages/Inquiry';
-import About from './pages/About';
-import NoAdmissionFee from './pages/NoAdmissionFee';
-import ThankYou from './pages/ThankYou';
-import BusinessLanding from './pages/BusinessLanding';
+const Home = lazy(() => import('./pages/Home'));
+const Programs = lazy(() => import('./pages/Programs'));
+const Tutors = lazy(() => import('./pages/Tutors'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Inquiry = lazy(() => import('./pages/Inquiry'));
+const About = lazy(() => import('./pages/About'));
+const NoAdmissionFee = lazy(() => import('./pages/NoAdmissionFee'));
+const ThankYou = lazy(() => import('./pages/ThankYou'));
 
 import ScrollToTop from './components/ScrollToTop';
 import ExitIntentPopup from './components/ExitIntentPopup';
@@ -28,28 +28,30 @@ function App() {
     <>
       <ScrollToTop />
       <ExitIntentPopup />
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          {/* ── New gateway & funnel pages ── */}
-          <Route index element={<GatewayHome />} />
-          <Route path="ib" element={<LandingIB />} />
-          <Route path="ielts" element={<LandingIELTS />} />
-          <Route path="foundation" element={<LandingFoundation />} />
-          <Route path="university" element={<LandingUniversity />} />
-          <Route path="kids" element={<LandingKids />} />
-          <Route path="business" element={<BusinessLanding />} />
+      <Suspense fallback={<div style={{ minHeight: '100vh', backgroundColor: 'var(--c-sand)' }} />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            {/* ── New gateway & funnel pages ── */}
+            <Route index element={<GatewayHome />} />
+            <Route path="ib" element={<LandingIB />} />
+            <Route path="ielts" element={<LandingIELTS />} />
+            <Route path="foundation" element={<LandingFoundation />} />
+            <Route path="university" element={<LandingUniversity />} />
+            <Route path="kids" element={<LandingKids />} />
+            <Route path="business" element={<BusinessLanding />} />
 
-          {/* ── Existing pages (retained) ── */}
-          <Route path="home" element={<Home />} />
-          <Route path="programs" element={<Programs />} />
-          <Route path="tutors" element={<Tutors />} />
-          <Route path="pricing" element={<Pricing />} />
-          <Route path="inquiry" element={<Inquiry />} />
-          <Route path="thank-you" element={<ThankYou />} />
-          <Route path="about" element={<About />} />
-          <Route path="no-admission-fee" element={<NoAdmissionFee />} />
-        </Route>
-      </Routes>
+            {/* ── Existing pages (retained) ── */}
+            <Route path="home" element={<Home />} />
+            <Route path="programs" element={<Programs />} />
+            <Route path="tutors" element={<Tutors />} />
+            <Route path="pricing" element={<Pricing />} />
+            <Route path="inquiry" element={<Inquiry />} />
+            <Route path="thank-you" element={<ThankYou />} />
+            <Route path="about" element={<About />} />
+            <Route path="no-admission-fee" element={<NoAdmissionFee />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </>
   );
 }

@@ -68,8 +68,8 @@ const LandingIELTS = () => {
           <h1 className={styles.title}>{t('landing_ielts.hero_title')}</h1>
           <p className={styles.subtitle}>{t('landing_ielts.hero_sub')}</p>
           
-          <div style={{ marginBottom: '32px', display: 'flex', justifyContent: 'center' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(255,255,255,0.06)', padding: '10px 24px', borderRadius: '100px', fontSize: '0.9rem', color: '#fdfaf3', border: '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)', fontWeight: '400', letterSpacing: '0.5px' }}>
+          <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.06)', padding: '0.5rem 1.5rem', borderRadius: 'var(--radius-pill)', fontSize: '0.9rem', color: '#fdfaf3', border: '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)', fontWeight: '400', letterSpacing: '0.5px' }}>
               <span role="img" aria-label="friends">👥</span> 友達と一緒に受講で ¥1,500/時〜（グループ割）
             </span>
           </div>
@@ -151,12 +151,12 @@ const LandingIELTS = () => {
       </section>
 
       {/* Mid-Page CTA */}
-      <section style={{ padding: '80px 0', textAlign: 'center', backgroundColor: 'rgba(212, 175, 55, 0.04)', borderTop: '1px solid rgba(212,175,55,0.1)', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
+      <section style={{ padding: '5rem 0', textAlign: 'center', backgroundColor: 'rgba(212, 175, 55, 0.04)', borderTop: '1px solid rgba(212,175,55,0.1)', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
         <div className={styles.wrapper}>
-          <h2 style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '10px', color: 'inherit' }}>
+          <h2 style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '1rem', color: 'inherit' }}>
             まずは無料で学習相談をしてみませんか？
           </h2>
-          <p style={{ marginBottom: '30px', opacity: 0.8, fontSize: '0.95rem' }}>現状の課題や目標に合わせて、最適なプランをご提案します。</p>
+          <p style={{ marginBottom: '2rem', opacity: 0.8, fontSize: '0.95rem' }}>現状の課題や目標に合わせて、最適なプランをご提案します。</p>
           
           <Link to="/inquiry" className={styles.primaryCta} style={{ display: 'inline-block' }}>
             無料体験・相談を予約する
