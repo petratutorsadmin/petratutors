@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Layout from './components/Layout';
+import BoutiqueLoader from './components/BoutiqueLoader';
 
 // Dynamically import pages for code splitting
 const GatewayHome = lazy(() => import('./pages/GatewayHome'));
@@ -26,6 +27,7 @@ import ExitIntentPopup from './components/ExitIntentPopup';
 function App() {
   return (
     <>
+      <BoutiqueLoader />
       <ScrollToTop />
       <ExitIntentPopup />
       <Suspense fallback={<div style={{ minHeight: '100vh', backgroundColor: 'var(--c-sand)' }} />}>
