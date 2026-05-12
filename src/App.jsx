@@ -13,7 +13,7 @@ const LandingFoundation = lazy(() => import('./pages/LandingFoundation'));
 const BusinessLanding = lazy(() => import('./pages/BusinessLanding'));
 
 const Home = lazy(() => import('./pages/Home'));
-const Programs = lazy(() => import('./pages/Programs'));
+const ThePetraSystem = lazy(() => import('./pages/ThePetraSystem'));
 const Tutors = lazy(() => import('./pages/Tutors'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Inquiry = lazy(() => import('./pages/Inquiry'));
@@ -44,7 +44,7 @@ function App() {
 
             {/* ── Existing pages (retained) ── */}
             <Route path="home" element={<Home />} />
-            <Route path="programs" element={<Programs />} />
+            <Route path="system" element={<ThePetraSystem />} />
             <Route path="tutors" element={<Tutors />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="inquiry" element={<Inquiry />} />

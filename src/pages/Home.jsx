@@ -20,7 +20,7 @@ export default function Home() {
                     </p>
                     <div className={styles.heroCtas}>
                         <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
-                        <Link to="/programs" className="btn btn-secondary">{t('home.cta_secondary')}</Link>
+                        <Link to="/system" className="btn btn-secondary">{t('home.cta_secondary')}</Link>
                     </div>
                     <p className={styles.scarcityNote}>{t('home.scarcity_note')}</p>
                 </div>
@@ -104,7 +104,7 @@ export default function Home() {
                 <div className="container">
                     <div className={`${styles.sectionHeader} animate-on-scroll`}>
                         <h2 className="text-h2">{t('home.programs_title')}</h2>
-                        <Link to="/programs" className={styles.linkWithIcon}>{t('home.view_all')} <ArrowRight size={16} /></Link>
+                        <Link to="/system" className={styles.linkWithIcon}>{t('home.view_all')} <ArrowRight size={16} /></Link>
                     </div>
                     <div className={styles.programsGrid}>
                         <div className={`glass-card ${styles.programCard} animate-on-scroll`} style={{ animationDelay: '0.1s' }}>

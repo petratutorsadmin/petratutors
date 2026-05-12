@@ -122,11 +122,9 @@ export default function Tutors() {
                                     <GraduationCap size={16} /> {tutor.university}
                                 </p>
 
-                                <p className={styles.tutorIntro}>{tutor.intro}</p>
-
-                                <div className={styles.tutorTags}>
-                                    {tutor.subjects.slice(0, 3).map(s => <span key={s} className={styles.tag}>{s}</span>)}
-                                    {tutor.subjects.length > 3 && <span className={styles.tag}>+{tutor.subjects.length - 3}</span>}
+                                <div className={styles.tutorMatch}>
+                                    <span className={styles.matchLabel}>{t('tutors.ideal_match')}</span>
+                                    <p className={styles.matchText}>{tutor.idealMatch}</p>
                                 </div>
 
                                 <button

@@ -49,7 +49,7 @@ export default function Navbar() {
                 {/* Desktop Nav */}
                 <nav className={styles.desktopNav}>
                     <Link to="/about" className={styles.navLink}>{t('nav.about')}</Link>
-                    <Link to="/programs" className={styles.navLink}>{t('nav.programs')}</Link>
+                    <Link to="/system" className={styles.navLink}>{t('nav.programs')}</Link>
                     <Link to="/tutors" className={styles.navLink}>{t('nav.tutors')}</Link>
                     <Link to="/pricing" className={styles.navLink}>{t('nav.pricing')}</Link>
                     <div className={styles.langSwitcher}>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 <div className={styles.mobileNavContainer}>
                     <div className={styles.mobileNavLinks}>
                         <Link to="/about" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.about')}</Link>
-                        <Link to="/programs" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.programs')}</Link>
+                        <Link to="/system" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.programs')}</Link>
                         <Link to="/tutors" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.tutors')}</Link>
                         <Link to="/pricing" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.pricing')}</Link>
                     </div>

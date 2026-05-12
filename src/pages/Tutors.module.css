@@ -140,29 +140,30 @@
     font-weight: 500;
 }
 
-.tutorIntro {
+.tutorMatch {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.matchLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--c-navy);
+}
+
+.matchText {
     font-size: 0.95rem;
     color: var(--c-text-light);
-    flex: 1;
+    line-height: 1.5;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-    line-clamp: 3;
+    line-clamp: 4;
     overflow: hidden;
-}
-
-.tutorTags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tag {
-    font-size: 0.8rem;
-    padding: 0.25rem 0.75rem;
-    background-color: rgba(48, 27, 71, 0.05);
-    color: var(--c-navy);
-    border-radius: var(--radius-sm);
 }
 
 .roleBadge {

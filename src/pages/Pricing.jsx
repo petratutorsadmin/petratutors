@@ -61,7 +61,7 @@ export default function Pricing() {
                     </a>
                 </div>
 
-                {/* 3. GROUP SECTION — moved up for affordability signal */}
+                {/* 3. GROUP SECTION - moved up for affordability signal */}
                 <div className={`${styles.groupSection} animate-on-scroll`}>
                     <div className={styles.groupContent}>
                         <div className={styles.groupBadge}>{t('pricing.g_badge')}</div>
@@ -85,7 +85,7 @@ export default function Pricing() {
                     </div>
                 </div>
 
-                {/* 4. MAIN PRICING CARDS — 1-on-1 */}
+                {/* 4. MAIN PRICING CARDS - 1-on-1 */}
                 <div className={styles.pricingGrid} id="one-on-one-plans">
                     {plans.map((plan, index) => (
                         <div key={index} className={`glass-card ${styles.pricingCard} ${plan.popular ? styles.popular : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.1}s` }}>
@@ -177,7 +177,7 @@ export default function Pricing() {
                             {t('pricing.note_desc')}
                         </p>
                         <div style={{ marginTop: '1.5rem' }}>
-                            <Link to="/inquiry" className="btn btn-primary">{t('home.final_cta', 'Reserve in 30s')}</Link>
+                            <Link to="/inquiry" className="btn btn-primary">{t('home.final_cta', 'Request Consultation')}</Link>
                         </div>
                     </div>
                 </div>

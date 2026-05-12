@@ -45,7 +45,7 @@ export default function ExitIntentPopup() {
                     <button className={styles.closeBtn} onClick={handleDismiss} aria-label="Close">✕</button>
                     <div className={styles.tag}>Limited Availability</div>
                     <h2 className={styles.headerTitle}>
-                        Before you go —<br />
+                        Before you go -<br />
                         your <span>first lesson is free.</span>
                     </h2>
                 </div>

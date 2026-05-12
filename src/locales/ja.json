@@ -1,6 +1,6 @@
 {
   "nav": {
-    "programs": "プログラム",
+    "programs": "Petraの仕組み",
     "tutors": "講師紹介",
     "pricing": "料金",
     "about": "Petraについて",
@@ -13,7 +13,7 @@
     "explore": "探索",
     "home": "ホーム",
     "about": "Petraについて",
-    "programs": "プログラム",
+    "programs": "Petraの仕組み",
     "tutors": "講師紹介",
     "pricing": "料金",
     "contact": "お問い合わせ",
@@ -21,12 +21,12 @@
     "line_url": "https://lin.ee/rqf4A0D"
   },
   "home": {
-    "urgency_bar": "今週限定｜無料体験レッスン 残り 15 枠 ＋ 学習プラン無料作成（先着 10 名）",
+    "urgency_bar": "メンターマッチングの質を維持するため、ご相談枠には限りがございます。 → 無料相談を申し込む",
     "hero_title": "インター生・帰国子女向け\n海外大・難関大に直結する英語力へ",
     "hero_subtitle": "IELTS +1.0スコアアップ・英検合格・IB/AP学習サポートまで\n慶應PEARL・東大PEAK・海外トップ大の現役講師が\nあなた専用に完全1:1で指導",
-    "cta_primary": "30秒で無料体験を予約",
+    "cta_primary": "無料相談を申し込む",
     "cta_secondary": "自分に合う講師を診断する",
-    "scarcity_note": "※ 人気講師は学期の早い段階で定員に達する傾向があります。お早めの体験予約をおすすめします。",
+    "scarcity_note": "※ レッスンの質を維持するため、メンターの担当人数を制限しております。お早めのご相談をおすすめします。",
     "match_guarantee_title": "100% 相性保証",
     "match_guarantee_body": "万が一講師が合わない場合は、無料で再マッチングいたします。納得のいくまでサポートします。",
     "trust_stats_1": "継続受講率",
@@ -83,9 +83,9 @@
     "from": "¥",
     "per_hr": "〜",
     "price_lang_avg": "（多くの方は ¥4,000〜¥8,000 で受講されています）",
-    "final_title": "今週の無料体験枠は残りわずかです",
-    "final_desc": "30秒で予約完了。LINEでのクイック相談も受け付けています。",
-    "final_cta": "30秒で予約する"
+    "final_title": "ご相談枠には限りがございます",
+    "final_desc": "まずは無料相談から、あなたの目標に向けた第一歩を踏み出しましょう。",
+    "final_cta": "無料相談を申し込む"
   },
   "about": {
     "title": "Petraについて",
@@ -158,20 +158,20 @@
     "filter": "絞り込み",
     "f_all": "すべて",
     "view_profile": "プロフィールを見る",
-    "about_me": "自己紹介",
+    "about_me": "教育に対する視点",
     "subjects": "担当科目",
     "strengths": "強み",
     "languages": "対応言語",
     "ages": "対象年齢",
     "ready": "{{name}}先生のレッスンを受けてみますか？",
-    "request": "無料体験・面談を申し込む",
-    "ideal_match": "理想的な生徒像",
+    "request": "無料相談を申し込む",
+    "ideal_match": "こんな生徒におすすめ",
     "and_more_title": "その他にも多数在籍！",
     "and_more_desc": "記載されていない科目や大学に対応できる講師も多数おります。まずは無料相談であなたに最適な講師をお探しします。",
     "and_more_cta": "最適な講師について相談する",
-    "success_case": "指導実績・成功事例",
-    "lesson_style": "レッスンスタイル",
-    "scarcity_disclaimer": "現在、この講師は非常に人気が高まっています。満席の場合は、同等の実績を持つ別の講師をご提案させていただきます。",
+    "success_case": "生徒の成長と成果",
+    "lesson_style": "メンターシップのアプローチ",
+    "scarcity_disclaimer": "長期的な相性を重視してマッチングを行っています。万が一満席の場合は、同等の専門性を持つ別のメンターをご提案します。",
     "profiles": {
       "tutor-4": {
         "name": "Yutaka Takaku",
@@ -542,7 +542,7 @@
     "p_exam_f3": "スコアアップ実績多数",
     "p_exam_cta": "詳細を見る",
     "p_acad_title": "学習指導（インター校）",
-    "p_acad_badge": "最も選ばれているプラン",
+    "p_acad_badge": "コアプログラム",
     "p_acad_price": "7,000",
     "p_acad_nudge": "最短で成果を出したい方に最適",
     "p_acad_note": "多くのインター生・帰国子女が選択",
@@ -550,7 +550,7 @@
     "p_acad_f1": "IB / AP / A-Level",
     "p_acad_f2": "GPA・学校課題サポート",
     "p_acad_f3": "学習習慣の定着・内部進学サポート",
-    "p_acad_cta": "無料体験を予約",
+    "p_acad_cta": "無料相談を予約",
     "p_adv_title": "最難関大学・専門指導",
     "p_adv_price": "10,000",
     "p_adv_nudge": "トップ校・難関目標向け",
@@ -592,8 +592,8 @@
     "scroll_down": "スクロールして1対1プランを比較"
   },
   "programs": {
-    "title": "プログラム紹介",
-    "subtitle": "専門家によるパーソナライズされた指導。まずは30分間の無料体験レッスンから始めましょう。",
+    "title": "Petra 学習システム",
+    "subtitle": "長期的な成長を支える、構造化されたアカデミック・メンターシップ。",
     "who": "対象となる方",
     "includes": "プログラム内容",
     "inquire": "このプログラムについて問い合わせる",
@@ -723,7 +723,7 @@
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
     "hero_title": "あなたの目的に、\n最適な学びを。",
-    "hero_sub": "グループレッスン ¥1,500/時〜 · 個別指導 ¥3,000/時〜 — 30秒で、あなたに合った最適なプランをご案内します",
+    "hero_sub": "グループレッスン ¥1,500/時〜 · 個別指導 ¥3,000/時〜 - 30秒で、あなたに合った最適なプランをご案内します",
     "choice_label": "あなたの目的を選択してください",
     "choice_ielts_label": "英検・IELTS・TOEICで結果を出したい",
     "choice_ielts_sub": "スコアアップを最短で",
@@ -758,9 +758,9 @@
     "t_3_quote": "2ヶ月で会議での英語への恐怖感がなくなりました。変化が早くて驚いています。",
     "t_3_name": "M.S.",
     "t_3_role": "外資系企業勤務 / ビジネス英語",
-    "final_title": "まずは30分間の無料体験を予約する",
-    "final_sub": "入会金なし。まずは体験レッスンから。成果にコミットします。",
-    "final_cta": "無料体験を予約（30秒）",
+    "final_title": "あなたの目標に向けた第一歩を",
+    "final_sub": "入会金なし。構造化されたアカデミック・メンターシップ。",
+    "final_cta": "無料相談を申し込む",
     "final_line": "LINEで相談"
   },
   "landing_ib": {
