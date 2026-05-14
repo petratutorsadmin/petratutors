@@ -92,6 +92,14 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  /* Image protection — prevent right-click save, drag-to-desktop, and selection */
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  draggable: false;
 }
 
 /* Typography Scale */
