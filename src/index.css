@@ -65,10 +65,16 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--c-text);
   background-color: var(--c-sand);
+  color: var(--c-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Japanese Font Override */
+html[lang="ja"] body {
+  font-family: 'Noto Sans JP', var(--font-sans);
 }
 
 h1,

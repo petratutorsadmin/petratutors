@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Instagram } from 'lucide-react';
+import { Mail, Instagram, MapPin, Phone } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
 
@@ -12,11 +12,21 @@ export default function Footer() {
                 <div className={styles.brandCol}>
                     <Link to="/" className={styles.logo}>
                         <img src="/logo-optimized.webp" alt="Petra Tutors" width="32" height="32" className={styles.logoImage} />
-                        <span>Petra Tutors</span>
+                        <span>{t('nav.petra', 'Petra Tutors')}</span>
                     </Link>
                     <p className={styles.brandText}>
                         {t('footer.tagline')}
                     </p>
+                    <div className={styles.brandDetails}>
+                        <div className={styles.contactItem}>
+                            <MapPin size={14} />
+                            <span>{t('footer.address')}</span>
+                        </div>
+                        <div className={styles.contactItem}>
+                            <Phone size={14} />
+                            <span>{t('footer.phone')}</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div className={styles.linksCol}>
@@ -25,16 +35,16 @@ export default function Footer() {
                     <Link to="/about" className={styles.link}>{t('footer.about')}</Link>
                     <Link to="/tutors" className={styles.link}>{t('footer.tutors')}</Link>
                     <Link to="/pricing" className={styles.link}>{t('footer.pricing')}</Link>
-                    <Link to="/no-admission-fee" className={styles.link}>入会金なし ポリシー</Link>
+                    <Link to="/no-admission-fee" className={styles.link}>{t('footer.policy_no_fee')}</Link>
                 </div>
 
                 <div className={styles.linksCol}>
-                    <h4 className={styles.colTitle}>サービス</h4>
-                    <Link to="/ib" className={styles.link}>IB・インター校</Link>
-                    <Link to="/ielts" className={styles.link}>IELTS・英検対策</Link>
-                    <Link to="/university" className={styles.link}>海外大学進学</Link>
-                    <Link to="/business" className={styles.link}>社会人英語</Link>
-                    <Link to="/kids" className={styles.link}>小学生・基礎英語</Link>
+                    <h4 className={styles.colTitle}>{t('footer.services')}</h4>
+                    <Link to="/ib" className={styles.link}>{t('footer.service_ib')}</Link>
+                    <Link to="/ielts" className={styles.link}>{t('footer.service_ielts')}</Link>
+                    <Link to="/university" className={styles.link}>{t('footer.service_university')}</Link>
+                    <Link to="/business" className={styles.link}>{t('footer.service_business')}</Link>
+                    <Link to="/kids" className={styles.link}>{t('footer.service_kids')}</Link>
                 </div>
 
                 <div className={styles.contactCol}>
@@ -49,8 +59,7 @@ export default function Footer() {
                 <div className="container">
                     <p>&copy; {new Date().getFullYear()} Petra Tutors. All rights reserved.</p>
                     <p className={styles.legalText}>
-                        Operated by Petra Education G.K.<br />
-                        （ペトラエデュケーション合同会社）
+                        {t('footer.legal_info')}
                     </p>
                 </div>
             </div>

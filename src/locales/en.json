@@ -7,7 +7,8 @@
     "about": "About",
     "inquiry": "Book Trial (30s)",
     "line_cta": "Consult on LINE",
-    "line_url": "https://lin.ee/rqf4A0D"
+    "line_url": "https://lin.ee/rqf4A0D",
+    "petra": "Petra Tutors"
   },
   "footer": {
     "tagline": "International tutoring for ambitious students. Connecting globally minded learners with top-tier educators worldwide.",
@@ -20,7 +21,20 @@
     "about": "About",
     "contact": "Contact",
     "inquiry": "Book Free Trial",
-    "line_url": "https://lin.ee/rqf4A0D"
+    "line_url": "https://lin.ee/rqf4A0D",
+    "address_label": "Address",
+    "address": "Sakura Suite Sasazuka, Building B, Room 105, 1 Chome-46-17 Honan, Suginami City, Tokyo 168-0062",
+    "phone_label": "Phone",
+    "phone": "080-3349-5897",
+    "company_name": "Petra Education LLC",
+    "legal_info": "Operated by Petra Education LLC",
+    "policy_no_fee": "No Admission Fee Policy",
+    "services": "Services",
+    "service_ib": "IB / International Schools",
+    "service_ielts": "IELTS / Eiken Prep",
+    "service_university": "Overseas University Admissions",
+    "service_business": "Business English",
+    "service_kids": "Elementary / Foundation"
   },
   "home": {
     "urgency_bar": "Consultation availability is limited to ensure mentor matching quality. → Begin Consultation",
@@ -181,6 +195,8 @@
     "strengths": "Strengths",
     "languages": "Languages",
     "ages": "Target Ages",
+    "format_online": "Online",
+    "format_inperson": "In-Person",
     "ready": "Ready to learn with {{name}}?",
     "request": "Request Consultation",
     "ideal_match": "Best Suited For",
@@ -619,6 +635,24 @@
     "custom_desc": "We can customise a learning plan specifically for your unique goals.",
     "contact": "Contact Us"
   },
+  "system": {
+    "philosophy_title": "More Than Just Tutoring",
+    "philosophy_desc": "Traditional tutoring focuses purely on homework help. Petra is built as a complete academic ecosystem. We combine high-level human mentorship with structured tracking to ensure confidence and long-term growth.",
+    "feat_1_title": "Expert Mentorship",
+    "feat_1_desc": "1:1 guidance from mentors who have successfully navigated international curricula.",
+    "feat_2_title": "Strategic Roadmaps",
+    "feat_2_desc": "Custom learning pathways designed backwards from your ultimate academic goal.",
+    "feat_3_title": "Detailed Reporting",
+    "feat_3_desc": "Post-lesson insights and measurable progress delivered directly to your dashboard.",
+    "lms_eyebrow": "VISIBLE PROGRESS",
+    "lms_title": "Progress you can see and understand",
+    "lms_desc": "Education shouldn't be a black box. Our dedicated portal gives parents and students clear visibility into lesson reports, skill progression, and upcoming academic milestones. Trust is built on transparency.",
+    "guidance_eyebrow": "BEYOND THE LESSON",
+    "guidance_title": "Ongoing Guidance & Support",
+    "guidance_desc": "We support our students beyond scheduled hours. From curated academic libraries to parent consultations and strategy adjustments, our team ensures your educational roadmap is constantly optimized.",
+    "pathways_title": "Educational Pathways",
+    "pathways_desc": "Explore how the Petra System applies to your specific academic goals."
+  },
   "inquiry": {
     "title": "Free Diagnosis & Trial",
     "subtitle": "Find the perfect learning plan and tutor for your goals (takes 30s).",
@@ -739,7 +773,7 @@
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
     "hero_title": "The right learning\nfor your goal.",
-    "hero_sub": "Group lessons from ¥1,500/hr · 1-on-1 from ¥3,000/hr - Find your perfect plan in 30 seconds",
+    "hero_sub": "Find your perfect academic path through expert mentorship tailored to your unique goals.",
     "choice_label": "What would you like to achieve?",
     "choice_ielts_label": "Get results in IELTS / Eiken / TOEIC",
     "choice_ielts_sub": "Fast-track your score",
@@ -1092,5 +1126,23 @@
     "final_title": "An early investment in future success.",
     "final_sub": "Assess your child's current academic status and find the optimal support plan.",
     "final_cta": "Book Free Trial (30s)"
+  },
+  "exit": {
+    "tag": "Limited Availability",
+    "title": "Before you go -<br />your <span>first lesson is free.</span>",
+    "desc": "We match students with elite Tokyo University, UCL, and Keio mentors. Chat with our team in 30 seconds - no commitment, no enrolment fee.",
+    "p1": "Free 30-min trial lesson included",
+    "p2": "No admission or setup fees",
+    "p3": "Matched to your schedule & goals",
+    "cta": "Book My Free Trial →",
+    "dismiss": "No thanks, I'll figure it out on my own"
+  },
+  "landing": {
+    "mid_cta_title": "Why not start with a free consultation?",
+    "mid_cta_desc": "We will propose the best plan according to your current challenges and goals.",
+    "mid_cta_btn": "Book a free trial/consultation"
+  },
+  "seo": {
+    "jsonld_desc": "Petra Tutors is an online tutoring service specializing in IB, IELTS, and international university admissions."
   }
 }

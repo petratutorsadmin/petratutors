@@ -46,51 +46,16 @@ export default function Pricing() {
                     <div className={styles.trustItem}><Clock size={20} /> {t('pricing.b4')}</div>
                 </div>
 
-                {/* SCROLL DOWN PROMPT: Designed as a highly visible primary button so it's not missed */}
-                <div className="text-center animate-on-scroll" style={{ marginBottom: '4rem', marginTop: '1rem' }}>
-                    <a href="#one-on-one-plans" style={{
-                        display: 'inline-flex', alignItems: 'center', gap: '10px', 
-                        padding: '16px 36px', borderRadius: '100px', 
-                        background: 'var(--c-navy)', color: 'white', 
-                        textDecoration: 'none', fontWeight: '700', 
-                        boxShadow: '0 8px 24px rgba(32, 42, 68, 0.25)',
-                        transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                        fontSize: '1.05rem', letterSpacing: '0.5px'
-                    }}>
-                        {t('pricing.scroll_down')} <ChevronDown size={20} />
-                    </a>
-                </div>
 
-                {/* 3. GROUP SECTION - moved up for affordability signal */}
-                <div className={`${styles.groupSection} animate-on-scroll`}>
-                    <div className={styles.groupContent}>
-                        <div className={styles.groupBadge}>{t('pricing.g_badge')}</div>
-                        <h2 className="text-h2" style={{ marginBottom: '0.75rem', color: 'var(--c-white)' }}>{t('pricing.g_title')}</h2>
-                        <div className={styles.groupPriceContainer} style={{ marginBottom: '1.25rem' }}>
-                            <span className={styles.fromLabel}>{t('pricing.from')}</span>
-                            <span className={styles.price} style={{ fontSize: '2.5rem', fontWeight: '700' }}>{t('pricing.g_price')}</span>
-                            <span className={styles.perHour}>{t('pricing.per_hour_person')}</span>
-                        </div>
-                        <p className={styles.groupDesc} style={{ margin: 0, fontSize: '1.05rem', lineHeight: '1.6' }}>{t('pricing.g_desc')}</p>
-                    </div>
-                    <div className={styles.groupFeatures}>
-                        <ul className={styles.featuresList}>
-                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f1')}</li>
-                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f2')}</li>
-                            <li><Check size={16} className={styles.checkIcon} /> {t('pricing.g_f3')}</li>
-                        </ul>
-                        <Link to="/inquiry" className="btn" style={{ marginTop: '1rem', backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>
-                            {t('pricing.g_cta')}
-                        </Link>
-                    </div>
-                </div>
 
                 {/* 4. MAIN PRICING CARDS - 1-on-1 */}
                 <div className={styles.pricingGrid} id="one-on-one-plans">
                     {plans.map((plan, index) => (
                         <div key={index} className={`glass-card ${styles.pricingCard} ${plan.popular ? styles.popular : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.1}s` }}>
                             {plan.popular && <div className={styles.popularBadge}>{t(`pricing.${plan.key}_badge`)}</div>}
+                            
                             <div className={styles.cardHeader}>
+                                {plan.key === 'p_adv' && <div className={styles.topNote}>{t('pricing.p_adv_note')}</div>}
                                 <div className={styles.cardTier}>{t('pricing.1on1')}</div>
                                 <h3 className="text-h3">{t(`pricing.${plan.key}_title`)}</h3>
                                 <div className={styles.nudge}>{t(`pricing.${plan.key}_nudge`)}</div>
@@ -110,8 +75,8 @@ export default function Pricing() {
                             </ul>
 
                             <div className={styles.ctaWrapper}>
-                                {t(`pricing.${plan.key}_note`) && t(`pricing.${plan.key}_note`) !== `pricing.${plan.key}_note` && (
-                                    <div className={styles.safetyNote}>{t(`pricing.${plan.key}_note`)}</div>
+                                {plan.key === 'p_acad' && (
+                                    <div className={styles.safetyNote} style={{ marginBottom: '0.5rem' }}>{t('pricing.p_acad_note')}</div>
                                 )}
                                 <Link to="/inquiry" className={`btn ${plan.popular ? 'btn-primary' : 'btn-secondary'} ${styles.btn}`}>
                                     {t(`pricing.${plan.key}_cta`)}
@@ -150,23 +115,7 @@ export default function Pricing() {
                     </div>
                 </div>
 
-                {/* 7. DECISION SUPPORT */}
-                <div className={`${styles.decisionHelper} animate-on-scroll text-center`}>
-                    <h3 className="text-h2" style={{ marginBottom: '1rem' }}>{t('pricing.dec_title')}</h3>
-                    <p className="text-large" style={{ color: 'var(--c-text-light)', marginBottom: '2rem' }}>
-                        {t('pricing.dec_subtitle')}
-                    </p>
-                    <div className={styles.decisionGrid}>
-                        <div className={`glass-card ${styles.decisionCard}`}>
-                            <h4 className="text-h4" style={{ color: 'var(--c-navy)', marginBottom: '0.5rem' }}>{t('pricing.dec_l_title')}</h4>
-                            <p style={{ color: 'var(--c-text-light)' }}>{t('pricing.dec_l_desc')}</p>
-                        </div>
-                        <div className={`glass-card ${styles.decisionCard}`}>
-                            <h4 className="text-h4" style={{ color: 'var(--c-navy)', marginBottom: '0.5rem' }}>{t('pricing.dec_r_title')}</h4>
-                            <p style={{ color: 'var(--c-text-light)' }}>{t('pricing.dec_r_desc')}</p>
-                        </div>
-                    </div>
-                </div>
+
 
                 {/* 8. NOTICE BOX */}
                 <div className={`${styles.noticeBox} animate-on-scroll`} style={{ animationDelay: '0.2s', marginTop: '4rem' }}>

@@ -112,7 +112,7 @@ export default function Tutors() {
                                         {tutor.format.map(f => (
                                             <span key={f} className={styles.formatBadge}>
                                                 {f.includes('Online') ? <Monitor size={14} /> : <MapPin size={14} />}
-                                                {f}
+                                                {f.includes('Online') ? t('tutors.format_online') : t('tutors.format_inperson')}
                                             </span>
                                         ))}
                                     </div>

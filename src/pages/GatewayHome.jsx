@@ -46,7 +46,6 @@ export default function GatewayHome() {
 
                     <p className={styles.heroEyebrow}>{t('gateway.hero_eyebrow')}</p>
                     <h1 className={styles.heroTitle}>{t('gateway.hero_title')}</h1>
-                    <p className={styles.heroSub}>{t('gateway.hero_sub')}</p>
 
                     {/* ── CHOICE BUTTONS ── */}
                     <p className={styles.choiceLabel}>{t('gateway.choice_label')}</p>

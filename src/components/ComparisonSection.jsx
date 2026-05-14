@@ -25,9 +25,9 @@ export default function ComparisonSection() {
             highlight: true
         },
         {
-            label: t('home.comp_4_label', '初期費用'),
-            petra: t('home.comp_4_petra', '入会金・月会費なし'),
-            others: t('home.comp_4_others', '高額な初期費用'),
+            label: t('home.comp_4_label', 'Initial Fees'),
+            petra: t('home.comp_4_petra', 'No Admission or Monthly Fees'),
+            others: t('home.comp_4_others', 'High upfront & hidden fees'),
             highlight: true
         }
     ];
@@ -44,7 +44,7 @@ export default function ComparisonSection() {
                         <thead>
                             <tr>
                                 <th className={styles.featureCol}></th>
-                                <th className={styles.petraCol}>Petra Tutors</th>
+                                <th className={styles.petraCol}>{t('nav.petra', 'Petra Tutors')}</th>
                                 <th className={styles.othersCol}>{t('home.comp_others_title', 'Traditional Schools')}</th>
                             </tr>
                         </thead>

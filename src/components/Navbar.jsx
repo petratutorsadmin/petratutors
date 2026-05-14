@@ -43,7 +43,7 @@ export default function Navbar() {
             <div className={`container ${styles.navContainer}`}>
                 <Link to="/" className={styles.logo}>
                     <img src="/logo-optimized.webp" alt="Petra Tutors" width="32" height="32" className={styles.logoImage} />
-                    <span>Petra Tutors</span>
+                    <span>{t('nav.petra', 'Petra Tutors')}</span>
                 </Link>
 
                 {/* Desktop Nav */}

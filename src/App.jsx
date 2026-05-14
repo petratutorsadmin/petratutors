@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Layout from './components/Layout';
 import BoutiqueLoader from './components/BoutiqueLoader';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // Dynamically import pages for code splitting
 const GatewayHome = lazy(() => import('./pages/GatewayHome'));
@@ -26,6 +28,12 @@ import ScrollToTop from './components/ScrollToTop';
 import ExitIntentPopup from './components/ExitIntentPopup';
 
 function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <>
       <BoutiqueLoader />

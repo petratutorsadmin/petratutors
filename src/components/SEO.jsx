@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 
 export default function SEO({ title, description, name = 'Petra Tutors', type = 'website', path = '' }) {
+  const { t } = useTranslation();
   const url = `https://www.petratutors.com${path}`;
   
   const jsonLd = {
@@ -9,7 +11,7 @@ export default function SEO({ title, description, name = 'Petra Tutors', type = 
     "name": "Petra Tutors",
     "url": "https://www.petratutors.com",
     "logo": "https://www.petratutors.com/logo.png",
-    "description": "Petra Tutors is an online tutoring service specializing in IB, IELTS, and international university admissions."
+    "description": t('seo.jsonld_desc', 'Petra Tutors is an online tutoring service specializing in IB, IELTS, and international university admissions.')
   };
 
   return (

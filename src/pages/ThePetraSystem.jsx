@@ -3,6 +3,7 @@ import { BookOpen, Globe2, PenTool, Briefcase, ArrowRight, Sparkles, GraduationC
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import styles from './ThePetraSystem.module.css';
+import InteractiveSystemDemo from '../components/InteractiveSystemDemo';
 
 export default function ThePetraSystem() {
     const { t } = useTranslation();
@@ -117,28 +118,7 @@ export default function ThePetraSystem() {
                 <div className="container animate-on-scroll">
                     <div className={styles.lmsGrid}>
                         <div className={styles.lmsVisual}>
-                            {/* Abstract representation of the Portal/LMS */}
-                            <div className={styles.portalMockup}>
-                                <div className={styles.mockupHeader}>
-                                    <div className={styles.mockupAvatar} />
-                                    <div className={styles.mockupLines}>
-                                        <div className={styles.line} style={{ width: '120px' }} />
-                                        <div className={styles.line} style={{ width: '80px', opacity: 0.5 }} />
-                                    </div>
-                                </div>
-                                <div className={styles.mockupBody}>
-                                    <div className={styles.mockupCard}>
-                                        <LineChart size={20} color="var(--c-gold)" />
-                                        <div className={styles.line} style={{ width: '100%', marginTop: '12px' }} />
-                                        <div className={styles.line} style={{ width: '70%', marginTop: '8px' }} />
-                                    </div>
-                                    <div className={styles.mockupCard}>
-                                        <LayoutDashboard size={20} color="var(--c-navy)" />
-                                        <div className={styles.line} style={{ width: '100%', marginTop: '12px' }} />
-                                        <div className={styles.line} style={{ width: '40%', marginTop: '8px' }} />
-                                    </div>
-                                </div>
-                            </div>
+                            <InteractiveSystemDemo />
                         </div>
                         <div className={styles.textContent}>
                             <span className={styles.eyebrow}>{t('system.lms_eyebrow', 'VISIBLE PROGRESS')}</span>
@@ -163,7 +143,7 @@ export default function ThePetraSystem() {
             </section>
 
             {/* PATHWAYS GRID */}
-            <section className={styles.sectionLight} style={{ paddingTop: 0 }}>
+            <section className={styles.sectionLight}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <h2 className={styles.sectionTitle}>{t('system.pathways_title', 'Educational Pathways')}</h2>

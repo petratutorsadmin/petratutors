@@ -43,38 +43,35 @@ export default function ExitIntentPopup() {
             <div className={styles.modal}>
                 <div className={styles.header}>
                     <button className={styles.closeBtn} onClick={handleDismiss} aria-label="Close">✕</button>
-                    <div className={styles.tag}>Limited Availability</div>
-                    <h2 className={styles.headerTitle}>
-                        Before you go -<br />
-                        your <span>first lesson is free.</span>
-                    </h2>
+                    <div className={styles.tag}>{t('exit.tag')}</div>
+                    <h2 className={styles.headerTitle} dangerouslySetInnerHTML={{ __html: t('exit.title') }}></h2>
                 </div>
 
                 <div className={styles.body}>
                     <p className={styles.description}>
-                        We match students with elite Tokyo University, UCL, and Keio mentors. Chat with our team in 30 seconds - no commitment, no enrolment fee.
+                        {t('exit.desc')}
                     </p>
 
                     <div className={styles.perks}>
                         <div className={styles.perk}>
                             <CheckCircle size={18} />
-                            <span>Free 30-min trial lesson included</span>
+                            <span>{t('exit.p1')}</span>
                         </div>
                         <div className={styles.perk}>
                             <CheckCircle size={18} />
-                            <span>No admission or setup fees</span>
+                            <span>{t('exit.p2')}</span>
                         </div>
                         <div className={styles.perk}>
                             <CheckCircle size={18} />
-                            <span>Matched to your schedule & goals</span>
+                            <span>{t('exit.p3')}</span>
                         </div>
                     </div>
 
                     <Link to="/inquiry" className={styles.cta} onClick={handleDismiss}>
-                        Book My Free Trial →
+                        {t('exit.cta')}
                     </Link>
                     <button className={styles.dismiss} onClick={handleDismiss}>
-                        No thanks, I'll figure it out on my own
+                        {t('exit.dismiss')}
                     </button>
                 </div>
             </div>

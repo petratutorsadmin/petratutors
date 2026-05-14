@@ -154,12 +154,12 @@ const LandingIELTS = () => {
       <section style={{ padding: '5rem 0', textAlign: 'center', backgroundColor: 'rgba(212, 175, 55, 0.04)', borderTop: '1px solid rgba(212,175,55,0.1)', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
         <div className={styles.wrapper}>
           <h2 style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '1rem', color: 'inherit' }}>
-            まずは無料で学習相談をしてみませんか？
+            {t('landing.mid_cta_title')}
           </h2>
-          <p style={{ marginBottom: '2rem', opacity: 0.8, fontSize: '0.95rem' }}>現状の課題や目標に合わせて、最適なプランをご提案します。</p>
+          <p style={{ marginBottom: '2rem', opacity: 0.8, fontSize: '0.95rem' }}>{t('landing.mid_cta_desc')}</p>
           
           <Link to="/inquiry" className={styles.primaryCta} style={{ display: 'inline-block' }}>
-            無料体験・相談を予約する
+            {t('landing.mid_cta_btn')}
           </Link>
         </div>
       </section>

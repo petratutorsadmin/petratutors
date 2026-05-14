@@ -1,0 +1,408 @@
+.appFrame {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  height: 420px;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  color: var(--c-navy);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 200px;
+  background: #fafaf9;
+  border-right: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.appIcon {
+  width: 24px;
+  height: 24px;
+  background: var(--c-navy);
+  color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.75rem;
+}
+
+.appName {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sidebarNav {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.navGroup {
+  margin-bottom: 1rem;
+}
+
+.navLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.75rem;
+  display: block;
+}
+
+.sidebarItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.75rem;
+  border: none;
+  background: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #52525b;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebarItem:hover {
+  background: rgba(0,0,0,0.04);
+  color: var(--c-navy);
+}
+
+.sidebarActive {
+  background: rgba(46,26,74,0.08);
+  color: var(--c-navy);
+  font-weight: 600;
+}
+
+.sidebarFooter {
+  padding: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #71717a;
+}
+
+.userDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-gold);
+}
+
+/* Main Area Styles */
+.mainArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.mainHeader {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+.crumbActive {
+  color: var(--c-navy);
+  font-weight: 600;
+}
+
+.contentBody {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.viewContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.viewHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a1a1aa;
+  margin-bottom: 0.5rem;
+}
+
+.viewHeader h4 {
+  margin: 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+/* Compact Insight */
+.compactInsight {
+  padding: 1rem;
+  background: #fafaf9;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 8px;
+}
+
+.compactInsight p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.miniCard {
+  padding: 0.75rem;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.miniLabel {
+  font-size: 0.65rem;
+  color: #a1a1aa;
+  font-weight: 600;
+}
+
+.miniVal {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Diagnostics */
+.skillStack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linearSkillRow {
+  display: grid;
+  grid-template-columns: 80px 1fr 24px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skillMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.skillLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.skillTrend {
+  font-size: 0.6rem;
+  color: #2b8a3e;
+  font-weight: 700;
+}
+
+.linearBar {
+  height: 4px;
+  background: #f4f4f5;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.linearBarFill {
+  height: 100%;
+}
+
+.skillVal {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Records List */
+.linearList {
+  display: flex;
+  flex-direction: column;
+}
+
+.linearListItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f4f4f5;
+}
+
+.linearListItem:last-child {
+  border-bottom: none;
+}
+
+.listMain {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listDate {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #a1a1aa;
+  width: 45px;
+}
+
+.listTopic {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.listMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: #71717a;
+}
+
+.statusBadge {
+  background: #f4f4f5;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Roadmap Flow */
+.roadmapFlow {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.roadmapStep {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.stepCircle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.completed .stepCircle {
+  background: #f4f4f5;
+  color: #a1a1aa;
+}
+
+.current .stepCircle {
+  background: var(--c-navy);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(46,26,74,0.1);
+}
+
+.upcoming .stepCircle {
+  border: 1px dashed #d4d4d8;
+  color: #a1a1aa;
+}
+
+.stepInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.stepStatusText {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #a1a1aa;
+}
+
+.stepLine {
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  width: 2px;
+  height: calc(1.5rem + 12px);
+  background: #f4f4f5;
+}
+
+@media (max-width: 768px) {
+  .appFrame {
+    flex-direction: column;
+    height: auto;
+    max-width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .sidebarNav {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem;
+  }
+  .navGroup {
+    margin: 0;
+    display: flex;
+    gap: 0.25rem;
+  }
+  .navLabel {
+    display: none;
+  }
+  .sidebarItem {
+    white-space: nowrap;
+    padding: 0.4rem 0.6rem;
+  }
+}

@@ -30,6 +30,8 @@
 .heroTitle {
     margin-bottom: var(--space-sm);
     color: var(--c-navy);
+    white-space: pre-line;
+    text-wrap: balance;
 }
 
 .heroSubtitle {
