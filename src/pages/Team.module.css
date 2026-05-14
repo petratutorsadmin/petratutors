@@ -1,0 +1,252 @@
+.pageContainer {
+    width: 100%;
+}
+
+.header {
+    padding: clamp(6rem, 15vh, 8rem) 0 clamp(4rem, 10vh, 6rem);
+    background-color: var(--c-navy);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--c-white);
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.teamPage {
+    padding: clamp(6rem, 12vh, 8rem) 0;
+    /* Deep subtle warm gradient for depth */
+    background: linear-gradient(to bottom, #f7f3ee, #f3efe8);
+}
+
+/* FOUNDERS SECTION */
+.foundersSection {
+    margin-bottom: 8rem;
+}
+
+.foundersGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 960px; /* Tighter layout */
+    margin: 0 auto;
+}
+
+.founderCard {
+    background: var(--c-white);
+    border-radius: 2px; /* Less rounded, more editorial */
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(26, 32, 44, 0.04);
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+/* Asymmetry: push the second card down */
+.founderCard:nth-child(2) {
+    transform: translateY(4rem);
+}
+
+.founderCard:hover {
+    box-shadow: 0 20px 50px rgba(26, 32, 44, 0.08);
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* On hover of second card, maintain offset but lift slightly */
+.founderCard:nth-child(2):hover {
+    transform: translateY(3.5rem);
+}
+
+.founderImageWrapper {
+    width: 100%;
+    aspect-ratio: 3/4; /* Taller images, cinematic crop */
+    overflow: hidden;
+    background-color: var(--c-sand);
+    position: relative;
+}
+
+.founderImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    /* CSS Art Direction to standardize light/color */
+    filter: grayscale(15%) contrast(1.05) sepia(5%);
+    transition: filter 0.4s ease;
+}
+
+.founderCard:hover .founderImage {
+    filter: grayscale(0%) contrast(1.05) sepia(0%);
+}
+
+.founderContent {
+    padding: 3rem 2.5rem;
+    text-align: center;
+}
+
+.founderName {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--c-navy);
+    margin-bottom: 0.5rem;
+}
+
+.founderRole {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-gold);
+    margin-bottom: 2rem;
+}
+
+.goldLine {
+    width: 30px;
+    height: 1px;
+    background-color: var(--c-gold);
+    margin: 0 auto 2rem;
+    opacity: 0.6;
+}
+
+.founderDesc {
+    font-size: 1rem;
+    color: var(--c-text-light);
+    line-height: 1.7;
+    max-width: 85%;
+    margin: 0 auto;
+    opacity: 0.85;
+}
+
+/* DIRECTORS SECTION (Minimalist) */
+.directorsSection {
+    padding-top: 6rem;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.directorsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem 2rem;
+}
+
+.directorCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+}
+
+.directorAvatarWrapper {
+    width: 220px;
+    aspect-ratio: 3/4;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    background-color: var(--c-sand);
+    box-shadow: 0 4px 15px rgba(26, 32, 44, 0.05);
+}
+
+.directorImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Soft filter so faces are clearly visible but still stylized */
+    filter: grayscale(30%) contrast(1.05);
+    transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.directorCard:hover .directorImage {
+    filter: grayscale(0%) contrast(1.05);
+    transform: scale(1.02);
+}
+
+.avatarPlaceholder {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    color: var(--c-white);
+    background: var(--c-navy);
+    letter-spacing: 0.05em;
+}
+
+.directorName {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--c-navy);
+    margin-bottom: 0.3rem;
+}
+
+.directorRole {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--c-accent);
+    margin-bottom: 1.25rem;
+}
+
+.directorDesc {
+    font-size: 1.05rem;
+    color: var(--c-text-light);
+    line-height: 1.6;
+    max-width: 320px;
+    opacity: 0.85;
+}
+
+.finalCta {
+    background-color: var(--c-navy);
+    padding: clamp(5rem, 10vh, 8rem) 0;
+}
+
+@media (max-width: 768px) {
+    .foundersSection {
+        margin-bottom: 4rem;
+    }
+
+    .foundersGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        max-width: 480px;
+    }
+    
+    .founderCard:nth-child(2) {
+        transform: translateY(0); /* Remove asymmetry on mobile */
+    }
+
+    .founderCard:nth-child(2):hover {
+        transform: translateY(-4px);
+    }
+    
+    .founderImageWrapper {
+        aspect-ratio: 4/5;
+    }
+
+    .founderContent {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .directorsSection {
+        padding-top: 4rem;
+    }
+
+    .directorsGrid {
+        gap: 3rem;
+    }
+}

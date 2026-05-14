@@ -15,6 +15,7 @@ const BusinessLanding = lazy(() => import('./pages/BusinessLanding'));
 const Home = lazy(() => import('./pages/Home'));
 const ThePetraSystem = lazy(() => import('./pages/ThePetraSystem'));
 const Tutors = lazy(() => import('./pages/Tutors'));
+const Team = lazy(() => import('./pages/Team'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const Inquiry = lazy(() => import('./pages/Inquiry'));
 const About = lazy(() => import('./pages/About'));
@@ -46,6 +47,7 @@ function App() {
             <Route path="home" element={<Home />} />
             <Route path="system" element={<ThePetraSystem />} />
             <Route path="tutors" element={<Tutors />} />
+            <Route path="team" element={<Team />} />
             <Route path="pricing" element={<Pricing />} />
             <Route path="inquiry" element={<Inquiry />} />
             <Route path="thank-you" element={<ThankYou />} />

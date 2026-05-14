@@ -1,6 +1,7 @@
 {
   "nav": {
     "programs": "How Petra Works",
+    "team": "Our Team",
     "tutors": "Tutors",
     "pricing": "Pricing",
     "about": "About",
@@ -13,6 +14,7 @@
     "explore": "Explore",
     "home": "Home",
     "programs": "How Petra Works",
+    "team": "Our Team",
     "tutors": "Tutors",
     "pricing": "Pricing",
     "about": "About",
@@ -151,6 +153,22 @@
     "c2_2": "Flexible scheduling",  
     "c2_3": "Transparent, simple rates",
     "cta": "View Our Tutors"
+  },
+  "team": {
+    "title": "Academic Leadership",
+    "subtitle": "Meet the team driving Petra's educational philosophy and institutional strategy.",
+    "role_yutaka": "Co-Founder, CFO, and COO",
+    "role_riku": "Co-Founder, CEO, and CMO",
+    "role_gc": "General Counsel",
+    "role_her": "Head of External Relations",
+    "role_hr": "Head of Human Resources",
+    "yutaka_desc": "Co-founded Petra and leads operations, finance, and institutional growth. Oversees end-to-end business functions including revenue management, pricing strategy, and client lifecycle systems. Focused on evolving Petra from a tutor network into a structured, system-driven academic institution with measurable outcomes.",
+    "riku_desc": "Co-founded Petra and leads the organisation as CEO and CMO. Oversees tutor recruitment from leading universities worldwide (including Keio, the University of Hong Kong, LSE, and Maastricht) and drives program design, student onboarding, and marketing strategy. Focused on building a globally connected academic network that places the right mentor with every student.",
+    "mannat_desc": "Advises on corporate governance and international educational compliance, ensuring that Petra’s operational framework aligns with the highest global standards for academic institutions.",
+    "toshie_desc": "Manages institutional partnerships and parent community engagement, building strong collaborative networks between Petra, international schools, and our student families.",
+    "shinto_desc": "Oversees talent acquisition and the professional development of our global mentor network, ensuring that every educator meets Petra's rigorous standards for mentorship capability.",
+    "final_title": "Ready to get started?",
+    "final_cta": "Request Consultation"
   },
   "tutors": {
     "title": "Meet Our Tutors",
