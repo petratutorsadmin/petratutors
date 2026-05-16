@@ -9,9 +9,11 @@ export default function SEO({ title, description, name = 'Petra Tutors', type = 
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "Petra Tutors",
+    "alternateName": ["ペトラエデュケーション", "ペトラエデュケーション合同会社", "Petra Education LLC"],
+    "legalName": "ペトラエデュケーション合同会社",
     "url": "https://www.petratutors.com",
     "logo": "https://www.petratutors.com/logo.png",
-    "description": t('seo.jsonld_desc', 'Petra Tutors is an online tutoring service specializing in IB, IELTS, and international university admissions.')
+    "description": t('seo.jsonld_desc', 'Petra Tutors is an online tutoring service specialising in IB, IELTS, and international university admissions.')
   };
 
   return (
@@ -19,6 +21,7 @@ export default function SEO({ title, description, name = 'Petra Tutors', type = 
       {/* Standard metadata tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content="ペトラエデュケーション合同会社, ペトラエデュケーション, Petra Education LLC, Petra Tutors, Petra Education, International Tutoring, IB Tutoring, IELTS Coaching, Academic Mentorship, Top University Admissions, プレミアム家庭教師, 国際教育, 進学コンサルティング, オンライン家庭教師" />
       <link rel="canonical" href={url} />
       
       {/* Open Graph tags for social media sharing */}
