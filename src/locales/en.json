@@ -10,6 +10,25 @@
     "line_url": "https://lin.ee/rqf4A0D",
     "petra": "Petra Tutors"
   },
+  "hiring": {
+    "title": "Join Our Educator Network",
+    "subtitle_1": "Petra Tutors is looking for thoughtful, academically strong mentors who care deeply about education and student growth.",
+    "subtitle_2": "We work with international and domestic students across Japan and beyond, providing personalised educational support, diagnostics, and mentorship.",
+    "subtitle_3": "If you are passionate about teaching, communication, and long-term student development, we would love to hear from you.",
+    "benefits_title": "Why Teach With Us?",
+    "b1_title": "International Student Network",
+    "b1_desc": "Work with ambitious students pursuing IB, IELTS, international school, and overseas university pathways.",
+    "b2_title": "Flexible & Independent",
+    "b2_desc": "Teach online or in-person with flexible scheduling that works around your studies or career.",
+    "b3_title": "Meaningful Mentorship",
+    "b3_desc": "Go beyond homework help. Build long-term relationships and support students academically and personally.",
+    "b4_title": "Structured Educational Support",
+    "b4_desc": "Access Petra's systems, lesson frameworks, reporting tools, and educational infrastructure.",
+    "b5_title": "High-Calibre Tutor Community",
+    "b5_desc": "Join a network of tutors from leading universities including Keio, Waseda, Todai, HKU, LSE, and more.",
+    "b6_title": "Grow With Petra",
+    "b6_desc": "Help shape a modern education platform focused on personalised learning and human connection."
+  },
   "footer": {
     "tagline": "International tutoring for ambitious students. Connecting globally minded learners with top-tier educators worldwide.",
     "explore": "Explore",
@@ -541,6 +560,67 @@
         "idealMatch": "Economics students or those looking to sharpen their mathematical and analytical skills with a friendly, high-level tutor.",
         "successCase": "Has assisted students across various levels in improving their problem-solving and academic writing abilities.",
         "lessonStyle": "Friendly, supportive, and focused on creating a comfortable environment for asking questions and learning."
+      },
+      "tutor-hazel": {
+        "name": "Hazel (Phu Thit Wai Si)",
+        "university": "Sophia University (Liberal Arts)",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "GCSE Subjects",
+          "Essay & Interview Prep",
+          "History & Biology"
+        ],
+        "targetAges": [
+          "Preschool",
+          "Elementary",
+          "Junior high",
+          "Adults"
+        ],
+        "languages": [
+          "English",
+          "Burmese",
+          "Japanese"
+        ],
+        "intro": "As a Burmese international student studying Liberal Arts at Sophia University, my teaching approach is diverse and global. Having experienced both Singapore and Japan's education systems, I want to provide students with a comfortable environment where they do not feel stressed about making mistakes. I have experience teaching elementary subjects, History, Biology, and English conversation to a wide range of students, from young learners to adults.",
+        "strengths": [
+          "Diverse Global Education",
+          "Conversational & Academic English",
+          "Stress-free Environment"
+        ],
+        "idealMatch": "Students looking for conversational or academic English support, or those preparing for GCSEs with a supportive tutor who prioritizes a comfortable learning space.",
+        "successCase": "Has successfully taught English conversation to adult learners in Japan and mentored students in History and Biology.",
+        "lessonStyle": "Diverse, global, and highly tailored. Focuses on creating a stress-free environment where students aren't afraid to make mistakes."
+      },
+      "tutor-alice": {
+        "name": "Alice Williams",
+        "university": "Interior Design (Gap Year)",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "GCSE / A-Level",
+          "Essay & Interview Prep",
+          "Basic Korean"
+        ],
+        "targetAges": [
+          "Preschool",
+          "Elementary",
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English",
+          "Korean"
+        ],
+        "intro": "Hi! My name is Alice, and I'm currently based in Tokyo taking a gap year before studying Interior Design. I have classroom experience teaching English to primary school students at the British School in Tokyo. I enjoy helping students of all levels become more comfortable with English, particularly British English, whether it's reading, writing or speaking. My teaching style is patient and friendly, as I want to make lessons as enjoyable as possible!",
+        "strengths": [
+          "British English Specialist",
+          "Classroom Teaching Experience",
+          "GCSE & A-Level Prep"
+        ],
+        "idealMatch": "Students seeking to improve their English fluency (especially British English) or those needing targeted help with GCSE/A-Levels, essays, and interviews.",
+        "successCase": "Has strong classroom experience teaching English to primary school students at the British School in Tokyo.",
+        "lessonStyle": "Patient, friendly, and highly adaptable, prioritizing the student's comfort and enjoyment to build confidence in speaking."
       }
     },
     "f_english": "English",

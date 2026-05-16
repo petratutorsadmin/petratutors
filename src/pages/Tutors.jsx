@@ -7,17 +7,19 @@ import styles from './Tutors.module.css';
 
 // New Dataset
 const TUTORS_BASE = [
-    { id: 'tutor-4', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-4.png' },
     { id: 'tutor-5', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-5.png' },
-    { id: 'tutor-tina', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-tina.jpg' },
-    { id: 'tutor-2', format: ['Online'], image: '/images/tutors/tutor-2.png' },
-    { id: 'tutor-6', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-6.png' },
-    { id: 'tutor-hannah', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-hannah.jpg' },
+    { id: 'tutor-4', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-4.png' },
+    { id: 'tutor-michael', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-michael.jpg' },
     { id: 'tutor-sara', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-sara.jpg' },
     { id: 'tutor-cian', format: ['Online'], image: '/images/tutors/tutor-cian.jpg' },
+    { id: 'tutor-tina', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-tina.jpg' },
     { id: 'tutor-toru', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-toru.jpg' },
+    { id: 'tutor-6', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-6.png' },
+    { id: 'tutor-hannah', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-hannah.jpg' },
+    { id: 'tutor-hazel', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-hazel.jpg' },
     { id: 'tutor-maegan', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-maegan.jpg' },
-    { id: 'tutor-michael', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-michael.jpg' }
+    { id: 'tutor-2', format: ['Online'], image: '/images/tutors/tutor-2.png' },
+    { id: 'tutor-alice', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-alice.jpg' }
 ];
 
 export default function Tutors() {
