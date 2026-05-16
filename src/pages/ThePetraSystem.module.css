@@ -320,3 +320,32 @@
     margin-right: auto;
     font-size: 1.05rem;
 }
+
+@media (max-width: 768px) {
+    .header {
+        padding: clamp(4rem, 10vh, 6rem) 0 clamp(2rem, 8vh, 3rem);
+    }
+    .philosophyGrid {
+        gap: 2rem;
+    }
+    .lmsGrid {
+        gap: 2rem;
+    }
+    .featuresList {
+        gap: 1.25rem;
+    }
+    .featureItem {
+        gap: 1rem;
+    }
+    .programCard {
+        padding: 2rem 1.5rem;
+    }
+    .iconWrapper {
+        margin-bottom: 1.5rem;
+        width: 48px;
+        height: 48px;
+    }
+    .sectionTitle, .sectionTitleLight, .ctaTitle {
+        font-size: clamp(1.75rem, 6vw, 2.2rem);
+    }
+}
