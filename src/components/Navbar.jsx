@@ -34,11 +34,6 @@ export default function Navbar() {
 
     return (
         <header className={`${styles.navbarWrapper} ${!showNav ? styles.navbarHidden : ''}`}>
-            <div className={styles.urgencyBar}>
-                <div className="container">
-                    {t('home.urgency_bar')}
-                </div>
-            </div>
             <div className={`${styles.navbar} glass-panel`}>
             <div className={`container ${styles.navContainer}`}>
                 <Link to="/" className={styles.logo}>

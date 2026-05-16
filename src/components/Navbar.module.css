@@ -11,15 +11,6 @@
     }
 }
 
-.urgencyBar {
-    background-color: var(--c-navy);
-    color: var(--c-accent);
-    padding: 0.6rem 0;
-    text-align: center;
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-}
 
 .navbar {
     background-color: var(--c-white);

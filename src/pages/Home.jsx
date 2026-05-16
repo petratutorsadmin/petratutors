@@ -22,7 +22,6 @@ export default function Home() {
                         <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
                         <Link to="/system" className="btn btn-secondary">{t('home.cta_secondary')}</Link>
                     </div>
-                    <p className={styles.scarcityNote}>{t('home.scarcity_note')}</p>
                 </div>
             </section>
 
