@@ -1,31 +1,76 @@
 import { Send, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import styles from './Inquiry.module.css';
 
 export default function Inquiry() {
     const { t } = useTranslation();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSucceeded, setIsSucceeded] = useState(false);
-    const [step, setStep] = useState(1);
-    const [formData, setFormData] = useState({
-        purpose: '',
-        grade: '',
-        frequency: '',
-        name: '',
-        contact: '',
-        subject: '',
-        goal: ''
+    const [emailError, setEmailError] = useState(false);
+    
+    // Initialize state from local storage if available
+    const [step, setStep] = useState(() => {
+        const savedStep = localStorage.getItem('petra_inquiry_step');
+        return savedStep ? parseInt(savedStep, 10) : 1;
     });
+    
+    const [formData, setFormData] = useState(() => {
+        const savedData = localStorage.getItem('petra_inquiry_data');
+        if (savedData) {
+            try {
+                return JSON.parse(savedData);
+            } catch (e) {
+                console.error("Failed to parse saved inquiry data");
+            }
+        }
+        return {
+            purpose: '',
+            grade: '',
+            frequency: '',
+            name: '',
+            email: '',
+            subject: '',
+            goal: ''
+        };
+    });
+
+    // Save to local storage whenever data or step changes
+    useEffect(() => {
+        localStorage.setItem('petra_inquiry_data', JSON.stringify(formData));
+        localStorage.setItem('petra_inquiry_step', step.toString());
+    }, [formData, step]);
 
     useEffect(() => {
         if (isSucceeded) {
+            localStorage.removeItem('petra_inquiry_data');
+            localStorage.removeItem('petra_inquiry_step');
             window.location.href = '/thank-you';
         }
     }, [isSucceeded]);
 
+    const handleEmailChange = (e) => {
+        const value = e.target.value;
+        setFormData(p => ({ ...p, email: value }));
+        
+        // Basic email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (value && !emailRegex.test(value)) {
+            setEmailError(true);
+        } else {
+            setEmailError(false);
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        // Prevent accidental submission via 'Enter' key if fields are invalid
+        if (!formData.name || !formData.email || emailError || !formData.subject || !formData.goal) {
+            return;
+        }
+        
         setIsSubmitting(true);
         
         try {
@@ -113,7 +158,7 @@ export default function Inquiry() {
                                 </button>
                             ))}
                         </div>
-                        <button onClick={prevStep} className={styles.backBtn}><ArrowLeft size={16}/> {t('inquiry.back')}</button>
+                        <button type="button" onClick={prevStep} className={styles.backBtn}><ArrowLeft size={16}/> {t('inquiry.back')}</button>
                     </div>
                 );
             case 3:
@@ -132,7 +177,7 @@ export default function Inquiry() {
                                 </button>
                             ))}
                         </div>
-                        <button onClick={prevStep} className={styles.backBtn}><ArrowLeft size={16}/> {t('inquiry.back')}</button>
+                        <button type="button" onClick={prevStep} className={styles.backBtn}><ArrowLeft size={16}/> {t('inquiry.back')}</button>
                     </div>
                 );
             case 4:
@@ -149,7 +194,18 @@ export default function Inquiry() {
                             </div>
                             <div className={styles.formGroup}>
                                 <label>{t('inquiry.contact')}</label>
-                                <input type="text" name="contact" required placeholder={t('inquiry.contact_ph')} onChange={e => setFormData(p => ({...p, contact: e.target.value}))} />
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    required 
+                                    placeholder={t('inquiry.contact_ph')} 
+                                    value={formData.email}
+                                    onChange={handleEmailChange}
+                                    className={emailError ? styles.inputError : ''}
+                                />
+                                {emailError && (
+                                    <p className={styles.errorText}>{t('inquiry.email_error', 'Please enter a valid email address.')}</p>
+                                )}
                             </div>
                             <div className={styles.formGroup}>
                                 <label>{t('inquiry.subject')}</label>
@@ -157,13 +213,21 @@ export default function Inquiry() {
                             </div>
                             <div className={styles.formGroup}>
                                 <label>{t('inquiry.goal')}</label>
-                                <textarea name="goal" rows="3" placeholder={t('inquiry.goal_ph')} onChange={e => setFormData(p => ({...p, goal: e.target.value}))}></textarea>
+                                <textarea name="goal" rows="3" required placeholder={t('inquiry.goal_ph')} onChange={e => setFormData(p => ({...p, goal: e.target.value}))}></textarea>
                             </div>
+
+                            <p style={{ fontSize: '0.8rem', color: 'var(--c-text-light)', margin: '0.5rem 0' }}>
+                                {t('inquiry.privacy_note', 'We only use this information to match you with the right mentor.')}
+                            </p>
                             
                             <div className={styles.formActions}>
                                 <button type="button" onClick={prevStep} className={styles.backLink}>{t('inquiry.back')}</button>
-                                <button type="submit" disabled={isSubmitting} className={`btn btn-primary ${styles.submitBtn}`}>
-                                    <Send size={18} /> {isSubmitting ? 'Sending...' : t('inquiry.submit')}
+                                <button 
+                                    type="submit" 
+                                    disabled={isSubmitting || !formData.name || !formData.email || emailError || !formData.subject || !formData.goal} 
+                                    className={`btn btn-primary ${styles.submitBtn}`}
+                                >
+                                    <Send size={18} /> {isSubmitting ? 'Sending...' : t('inquiry.submit_descriptive', 'Book My Free Consultation')}
                                 </button>
                             </div>
                         </div>
@@ -181,6 +245,12 @@ export default function Inquiry() {
                         {t('inquiry.subtitle')}
                     </p>
 
+                    {step === 4 && (
+                        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className={styles.delightMsg}>
+                            {t('inquiry.almost_there', "Almost there! You're one step away from your personalized roadmap.")}
+                        </motion.div>
+                    )}
+
                     <div className={`${styles.progressTracker} glass-panel`}>
                         <div className={styles.progressHeader}>
                             <span>{t('inquiry.step_indicator', { current: step, total: 4 })}</span>
@@ -189,6 +259,44 @@ export default function Inquiry() {
                             </div>
                         </div>
                     </div>
+
+                    {step > 1 && (
+                        <div className={styles.selectionSummary}>
+                            <h3 style={{ fontSize: '1rem', color: 'var(--c-navy)', marginBottom: '0.5rem' }}>
+                                {t('inquiry.your_selections', 'Your Selections')}
+                            </h3>
+                            
+                            {formData.purpose && (
+                                <div className={styles.selectionItem}>
+                                    <div>
+                                        <div className={styles.selectionLabel}>Q1</div>
+                                        <div className={styles.selectionValue}>{formData.purpose}</div>
+                                    </div>
+                                    <button onClick={() => setStep(1)} className={styles.editBtn}>{t('inquiry.edit', 'Edit')}</button>
+                                </div>
+                            )}
+                            
+                            {formData.grade && step > 2 && (
+                                <div className={styles.selectionItem}>
+                                    <div>
+                                        <div className={styles.selectionLabel}>Q2</div>
+                                        <div className={styles.selectionValue}>{formData.grade}</div>
+                                    </div>
+                                    <button onClick={() => setStep(2)} className={styles.editBtn}>{t('inquiry.edit', 'Edit')}</button>
+                                </div>
+                            )}
+                            
+                            {formData.frequency && step > 3 && (
+                                <div className={styles.selectionItem}>
+                                    <div>
+                                        <div className={styles.selectionLabel}>Q3</div>
+                                        <div className={styles.selectionValue}>{formData.frequency}</div>
+                                    </div>
+                                    <button onClick={() => setStep(3)} className={styles.editBtn}>{t('inquiry.edit', 'Edit')}</button>
+                                </div>
+                            )}
+                        </div>
+                    )}
 
                     <div className={styles.trustBubbles}>
                         <div className={styles.bubble}>

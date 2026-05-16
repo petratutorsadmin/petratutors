@@ -34,7 +34,7 @@ export default function GatewayHome() {
     return (
         <div className={styles.page}>
             <SEO 
-                title={`${t('gateway.hero_title')} | Petra Tutors`}
+                title="Petra Tutors | ペトラチューターズ - 帰国子女・海外進学・IELTS対策"
                 description={t('gateway.hero_sub')}
                 path="/"
             />

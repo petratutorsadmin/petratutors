@@ -1,4 +1,4 @@
-.lineButton {
+.floatingButton {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
@@ -6,26 +6,29 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: #06C755; /* LINE Official Green */
-    color: white;
+    background-color: var(--c-navy);
+    color: var(--c-sand);
     padding: 0.75rem 1.25rem;
     border-radius: 100px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.lineButton:hover {
+.floatingButton:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 6px 16px rgba(6, 199, 85, 0.4);
+    box-shadow: 0 10px 24px rgba(48, 27, 71, 0.25);
+    background-color: var(--c-navy-light);
 }
 
 .iconWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--c-accent);
 }
 
 .ctaText {
@@ -33,10 +36,10 @@
 }
 
 @media (max-width: 768px) {
-    .lineButton {
+    .floatingButton {
         bottom: 1.5rem;
         right: 1.5rem;
-        padding: 0.6rem 1rem;
+        padding: 0.6rem 1.25rem;
         font-size: 0.85rem;
     }
 }

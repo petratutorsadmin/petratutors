@@ -36,7 +36,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className={styles.grid} style={{ marginTop: 'var(--space-xl)' }}>
+                <div className={styles.grid} style={{ marginTop: 'var(--space-lg)' }}>
 
                     <div className={`glass-card ${styles.card} animate-on-scroll`} style={{ animationDelay: '0.1s' }}>
                         <div className={styles.iconWrapper}>
