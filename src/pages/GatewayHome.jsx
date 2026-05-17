@@ -72,14 +72,16 @@ export default function GatewayHome() {
                         <Link to="/inquiry" className={styles.fallbackCta}>{t('gateway.fallback_cta')}</Link>
                     </div>
 
-                    {/* Trust pills */}
+                    {/* Trust pills marquee */}
                     <div className={styles.trustPills}>
-                        {TRUST_KEYS.map(key => (
-                            <span key={key} className={styles.trustPill}>
-                                <CheckCircle size={13} />
-                                {t(`gateway.${key}`)}
-                            </span>
-                        ))}
+                        <div className={styles.trustPillsTrack}>
+                            {[...TRUST_KEYS, ...TRUST_KEYS].map((key, idx) => (
+                                <span key={`${key}-${idx}`} className={styles.trustPill}>
+                                    <CheckCircle size={13} />
+                                    {t(`gateway.${key}`)}
+                                </span>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
@@ -108,7 +110,7 @@ export default function GatewayHome() {
                     <div className={styles.testimonialsGrid}>
                         {TESTIMONIAL_KEYS.map((t_, i) => (
                             <div key={i} className={styles.testimonialCard}>
-                                <p className={styles.testimonialQuote}>「{t(`gateway.${t_.quote}`)}」</p>
+                                <p className={styles.testimonialQuote}>{t(`gateway.${t_.quote}`)}</p>
                                 <div className={styles.testimonialAuthor}>
                                     <span className={styles.testimonialName}>{t(`gateway.${t_.name}`)}</span>
                                     <span className={styles.testimonialRole}>{t(`gateway.${t_.role}`)}</span>

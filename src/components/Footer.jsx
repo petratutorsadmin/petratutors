@@ -35,6 +35,7 @@ export default function Footer() {
                     <Link to="/about" className={styles.link}>{t('footer.about')}</Link>
                     <Link to="/tutors" className={styles.link}>{t('footer.tutors')}</Link>
                     <Link to="/pricing" className={styles.link}>{t('footer.pricing')}</Link>
+                    <Link to="/hiring" className={styles.link}>{t('footer.hiring', 'Join Our Team')}</Link>
                     <Link to="/no-admission-fee" className={styles.link}>{t('footer.policy_no_fee')}</Link>
                 </div>
 
@@ -49,10 +50,14 @@ export default function Footer() {
 
                 <div className={styles.contactCol}>
                     <h4 className={styles.colTitle}>{t('footer.contact')}</h4>
-                    <a href="mailto:admin@petratutors.com" className={styles.link}><Mail size={16} /> admin@petratutors.com</a>
-                    <div className={styles.social}>
-                        <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={20} /></a>
-                    </div>
+                    <a href="mailto:admin@petratutors.com" className={styles.link}>
+                        <Mail size={16} /> 
+                        <span>admin@petratutors.com</span>
+                    </a>
+                    <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="Instagram">
+                        <Instagram size={16} /> 
+                        <span>petratutors</span>
+                    </a>
                 </div>
             </div>
             <div className={styles.bottom}>

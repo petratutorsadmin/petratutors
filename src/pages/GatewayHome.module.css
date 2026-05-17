@@ -208,24 +208,51 @@
     color: var(--c-gold);
 }
 
-/* ── Trust pills ── */
+/* ── Trust pills marquee ── */
 .trustPills {
+    width: 100%;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.trustPillsTrack {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
+    gap: 2rem;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+    padding: 0.5rem 0;
+}
+
+.trustPillsTrack:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .trustPill {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
+    gap: 0.45rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 100px;
-    padding: 0.28rem 0.7rem;
-    font-size: 0.78rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.82rem;
     color: var(--c-text-on-dark-light);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.trustPill:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
 }
 
 .trustPill svg {
@@ -406,4 +433,5 @@
     .choiceBtnLabel { font-size: 0.93rem; }
     .finalBtn { width: 100%; min-width: unset; }
     .finalButtons { flex-direction: column; }
+    .trustPills { flex-wrap: wrap; }
 }
