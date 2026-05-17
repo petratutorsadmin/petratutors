@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Plane, FileText, RefreshCcw, ArrowRight } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import SEO from '../components/SEO';
+import AboutTimeline from '../components/AboutTimeline';
 import styles from './About.module.css';
 
 export default function About() {
@@ -89,6 +90,8 @@ export default function About() {
                     </div>
                 </div>
             </section>
+
+            <AboutTimeline />
 
             {/* Stage 3: The Absence (Contrast) */}
             <section className={`${styles.narrativeStage} ${styles.darkSection}`}>
@@ -188,11 +191,7 @@ export default function About() {
             {/* Final Conversion Section */}
             <section className={styles.conversionSection}>
                 <div className="container">
-                    <motion.div 
-                        className={styles.conversionCard}
-                        {...fadeInUp}
-                        whileHover={{ scale: 1.01, boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}
-                    >
+                    <div className={styles.conversionCard}>
                         <div className={styles.conversionContent}>
                             <h2 className={styles.conversionTitle}>{t('about.cta_title')}</h2>
                             <p className={styles.conversionDesc}>{t('about.cta_desc')}</p>
@@ -208,7 +207,7 @@ export default function About() {
                                 </Link>
                             </motion.div>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </section>
         </div>
