@@ -76,6 +76,26 @@ body {
 html[lang="ja"] body {
   font-family: 'Noto Sans JP', var(--font-sans);
   line-height: 1.75; /* JP needs slightly more breathing room */
+  font-feature-settings: "palt" 1; /* Beautiful proportional kerning for Japanese characters & punctuation */
+}
+
+/* Japanese Headings Override for Premium Mincho (Serif) Typography */
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] h4,
+html[lang="ja"] h5,
+html[lang="ja"] h6,
+html[lang="ja"] .text-h1,
+html[lang="ja"] .text-h2,
+html[lang="ja"] .text-h3,
+html[lang="ja"] .text-h4,
+html[lang="ja"] [class*="heroTagline"],
+html[lang="ja"] [class*="Title"],
+html[lang="ja"] [class*="title"] {
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, serif;
+  font-feature-settings: "palt" 1;
+  letter-spacing: 0.03em;
 }
 
 h1,

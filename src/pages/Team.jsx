@@ -71,7 +71,8 @@ export default function Team() {
                 </div>
             </div>
 
-            <div className={`section container ${styles.teamPage}`}>
+            <div className={styles.teamPage}>
+                <div className="container">
                 
                 {/* FOUNDERS SECTION */}
                 <div className={styles.foundersSection}>
@@ -112,6 +113,7 @@ export default function Team() {
                     </div>
                 </div>
 
+                </div>
             </div>
 
             <section className={styles.finalCta}>

@@ -57,7 +57,7 @@ export default function About() {
                 <div className="container">
                     <div className={styles.stageHero}>
                         <h2 className={styles.stageTitle}>{t('about.stage1_title')}</h2>
-                        <p className={styles.pacingParagraph} style={{ fontSize: '1.6rem', fontWeight: 500, color: 'var(--c-navy)', lineHeight: 1.4 }}>
+                        <p className={styles.pacingParagraph} style={{ fontSize: '1.25rem', fontWeight: 500, color: 'var(--c-navy)', lineHeight: 1.45 }}>
                             {t('about.stage1_p1')}
                         </p>
                     </div>
@@ -79,8 +79,11 @@ export default function About() {
                 <div className="container">
                     <div className={styles.editorialSplit}>
                         <motion.div className={styles.imagePlaceholder} {...fadeInUp}>
-                            {/* PLACEHOLDER: Image of 'International Academic Mobility' or 'Travel/Airport' */}
-                            <p>[Image: International Academic Mobility]</p>
+                            <img 
+                                src="/images/about/international-academic-mobility.jpg" 
+                                alt={t('about.stage2_title')} 
+                                className={styles.aboutImage}
+                            />
                         </motion.div>
                         <motion.div className={styles.contentBlock} {...fadeInUp} transition={{ delay: 0.2 }}>
                             <h2 className={styles.stageTitle}>{t('about.stage2_title')}</h2>
@@ -99,15 +102,18 @@ export default function About() {
                     <div className={`${styles.editorialSplit} ${styles.reverse}`}>
                         <motion.div className={styles.contentBlock} {...fadeInUp}>
                             <h2 className={styles.stageTitle}>{t('about.stage3_title')}</h2>
-                            <p className={styles.pacingParagraph} style={{ fontSize: '1.4rem', color: 'var(--c-accent)', marginBottom: '2rem' }}>
+                            <p className={styles.pacingParagraph} style={{ fontSize: '1.15rem', color: 'var(--c-accent)', marginBottom: '1.5rem' }}>
                                 {t('about.stage3_p1')}
                             </p>
                             <p className={styles.pacingParagraph}>{t('about.stage3_p2')}</p>
                             <p className={styles.pacingParagraph}>{t('about.stage3_p3')}</p>
                         </motion.div>
                         <motion.div className={styles.imagePlaceholder} {...fadeInUp} transition={{ delay: 0.2 }}>
-                            {/* PLACEHOLDER: Image of 'Rigorous Academia' or 'Studying Hard/Library' */}
-                            <p>[Image: Rigorous Academia]</p>
+                            <img 
+                                src="/images/about/rigorous-academia-focus.jpg" 
+                                alt={t('about.stage3_title')} 
+                                className={styles.aboutImage}
+                            />
                         </motion.div>
                     </div>
                 </div>
@@ -164,8 +170,11 @@ export default function About() {
                 <div className="container">
                     <div className={styles.editorialSplit}>
                         <motion.div className={styles.imagePlaceholder} {...fadeInUp}>
-                            {/* PLACEHOLDER: Image of 'Mentorship Connection' or 'Tutor and Student Smiling' */}
-                            <p>[Image: Mentorship Connection]</p>
+                            <img 
+                                src="/images/about/petra-mentorship-connection.jpg" 
+                                alt={t('about.stage4_title')} 
+                                className={styles.aboutImage}
+                            />
                         </motion.div>
                         <motion.div className={styles.contentBlock} {...fadeInUp} transition={{ delay: 0.2 }}>
                             <h2 className={styles.stageTitle}>{t('about.stage4_title')}</h2>
@@ -182,8 +191,11 @@ export default function About() {
                 <div className="container">
                     <motion.h2 className={styles.taglineText} {...fadeInUp}>{t('about.stage4_tagline')}</motion.h2>
                     <motion.div className={styles.finalVisualPlaceholder} {...fadeInUp} transition={{ delay: 0.3 }}>
-                        {/* PLACEHOLDER: Image of 'Quiet Academic Focus' or 'Premium Wide Aesthetic Shot' */}
-                        <p>[Image: Premium Wide Aesthetic Shot / Quiet Academic Focus]</p>
+                        <img 
+                            src="/images/about/petra-learning-space-landscape.jpg" 
+                            alt={t('about.stage4_tagline')} 
+                            className={styles.aboutImageWide}
+                        />
                     </motion.div>
                 </div>
             </section>
@@ -200,7 +212,7 @@ export default function About() {
                             </div>
                         </div>
                         <div className={styles.conversionActions}>
-                            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                            <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
                                 <Link to="/inquiry" className={styles.conversionBtn}>
                                     <span>{t('about.cta_btn')}</span>
                                     <ArrowRight size={20} />

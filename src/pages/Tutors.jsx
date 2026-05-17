@@ -25,19 +25,18 @@ const TUTORS_BASE = [
 export default function Tutors() {
     const { t } = useTranslation();
     const subjectsFilters = [
-        t('tutors.f_all'),
-        t('tutors.f_english', { defaultValue: 'English' }),
-        t('tutors.f_japanese', { defaultValue: 'Japanese' }),
-        t('tutors.f_economics', { defaultValue: 'Economics' }),
-        t('tutors.f_ib', { defaultValue: 'IB' }),
-        t('tutors.f_engineering', { defaultValue: 'Engineering' }),
-        t('tutors.f_science', { defaultValue: 'Science' })
+        { id: 'all', label: t('tutors.f_all') },
+        { id: 'english', label: t('tutors.f_english', { defaultValue: 'English' }) },
+        { id: 'japanese', label: t('tutors.f_japanese', { defaultValue: 'Japanese' }) },
+        { id: 'economics', label: t('tutors.f_economics', { defaultValue: 'Economics' }) },
+        { id: 'ib', label: t('tutors.f_ib', { defaultValue: 'IB' }) },
+        { id: 'engineering', label: t('tutors.f_engineering', { defaultValue: 'Engineering' }) },
+        { id: 'science', label: t('tutors.f_science', { defaultValue: 'Science' }) }
     ];
-    const [filter, setFilter] = useState(subjectsFilters[0]);
+    const [activeFilterId, setActiveFilterId] = useState('all');
     const [selectedTutor, setSelectedTutor] = useState(null);
 
-    // Map "All" translated string back to actual matching logic
-    const isAll = filter === t('tutors.f_all');
+    const isAll = activeFilterId === 'all';
 
     const TUTORS = TUTORS_BASE.map(base => {
         const profile = t(`tutors.profiles.${base.id}`, { returnObjects: true });
@@ -55,10 +54,12 @@ export default function Tutors() {
 
     const filteredTutors = TUTORS.filter(tutor => {
         if (isAll) return true;
+        const currentFilterObj = subjectsFilters.find(f => f.id === activeFilterId);
+        const matchString = currentFilterObj ? currentFilterObj.label : '';
         const subjects = tutor.subjects || [];
         const university = tutor.university || '';
-        return subjects.some(s => s.toLowerCase().includes(filter.toLowerCase())) ||
-            university.toLowerCase().includes(filter.toLowerCase());
+        return subjects.some(s => s.toLowerCase().includes(matchString.toLowerCase())) ||
+            university.toLowerCase().includes(matchString.toLowerCase());
     });
 
     return (
@@ -85,13 +86,13 @@ export default function Tutors() {
                         <span className="text-h4">{t('tutors.filter')}</span>
                     </div>
                     <div className={styles.filterChips}>
-                        {subjectsFilters.map(s => (
+                        {subjectsFilters.map(f => (
                             <button
-                                key={s}
-                                className={`${styles.filterChip} ${filter === s ? styles.active : ''}`}
-                                onClick={() => setFilter(s)}
+                                key={f.id}
+                                className={`${styles.filterChip} ${activeFilterId === f.id ? styles.active : ''}`}
+                                onClick={() => setActiveFilterId(f.id)}
                             >
-                                {s}
+                                {f.label}
                             </button>
                         ))}
                     </div>

@@ -1,5 +1,5 @@
 .header {
-    padding: var(--space-xl) 0 var(--space-md);
+    padding: calc(var(--space-xl) + 0.75rem) 0;
     background-color: var(--c-sand);
 }
 

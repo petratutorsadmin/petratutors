@@ -1,5 +1,5 @@
 .timelineSection {
-    padding: 6rem 0;
+    padding: clamp(3.5rem, 6vh, 4.2rem) 0;
     background-color: var(--c-surface);
     position: relative;
     overflow: hidden;
@@ -7,11 +7,11 @@
 
 .header {
     text-align: center;
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2rem);
     color: var(--c-navy);
     font-weight: 500;
     letter-spacing: -0.02em;
@@ -43,7 +43,7 @@
 .timelineItems {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.1rem;
     position: relative;
     z-index: 2;
 }
@@ -56,9 +56,9 @@
 .dot {
     position: absolute;
     left: -8px;
-    top: 2.5rem;
-    width: 18px;
-    height: 18px;
+    top: 1.8rem;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: var(--c-white);
     border: 4px solid var(--c-accent);
@@ -68,7 +68,7 @@
 
 .content {
     background: var(--c-white);
-    padding: 2.5rem;
+    padding: 1.75rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     border: 1px solid rgba(0, 0, 0, 0.03);
@@ -76,32 +76,32 @@
 }
 
 .content:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
 .year {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-weight: 600;
     color: var(--c-accent);
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     background: rgba(212, 175, 55, 0.1);
-    padding: 0.4rem 1rem;
+    padding: 0.3rem 0.75rem;
     border-radius: 30px;
 }
 
 .itemTitle {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--c-navy);
     font-weight: 500;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.6rem;
 }
 
 .itemDesc {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: var(--c-text-light);
     line-height: 1.6;
     margin: 0;
@@ -124,7 +124,7 @@
     .itemWrapper {
         width: 50%;
         padding-left: 0;
-        margin-bottom: -3rem; /* Interleave effect */
+        margin-bottom: -2.1rem; /* Interleave effect */
     }
     
     .itemWrapper:last-child {
@@ -132,24 +132,24 @@
     }
 
     .itemWrapper:nth-child(odd) {
-        padding-right: 3rem;
+        padding-right: 2.1rem;
         text-align: right;
     }
 
     .itemWrapper:nth-child(even) {
         margin-left: 50%;
-        padding-left: 3rem;
-        margin-top: 6rem;
+        padding-left: 2.1rem;
+        margin-top: 4.2rem;
     }
 
     .dot {
         left: auto;
-        right: -9px;
-        top: 3rem;
+        right: -8px;
+        top: 2.1rem;
     }
 
     .itemWrapper:nth-child(even) .dot {
-        left: -9px;
+        left: -8px;
         right: auto;
     }
 }

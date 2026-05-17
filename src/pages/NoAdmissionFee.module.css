@@ -1,5 +1,5 @@
 .header {
-    padding: var(--space-xl) 0 var(--space-lg);
+    padding: 3.75rem 0;
     border-bottom: 1px solid var(--c-border);
 }
 
