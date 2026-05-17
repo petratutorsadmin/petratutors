@@ -156,65 +156,90 @@ export default function InteractiveSystemDemo() {
   const [activeTab, setActiveTab] = useState("overview");
 
   return (
-    <div className={styles.appFrame}>
-      {/* Sidebar */}
-      <aside className={styles.sidebar}>
-        <div className={styles.sidebarHeader}>
-          <div className={styles.appIcon}>P</div>
-          <span className={styles.appName}>Petra Portal</span>
-        </div>
-        
-        <nav className={styles.sidebarNav}>
-          <div className={styles.navGroup}>
-            <span className={styles.navLabel}>System</span>
-            <SidebarItem 
-              icon={Layout} 
-              label="Overview" 
-              active={activeTab === "overview"} 
-              onClick={() => setActiveTab("overview")} 
-            />
-            <SidebarItem 
-              icon={Target} 
-              label="Diagnostics" 
-              active={activeTab === "diag"} 
-              onClick={() => setActiveTab("diag")} 
-            />
+    <>
+      {/* DESKTOP VERSION */}
+      <div className={`${styles.appFrame} ${styles.desktopOnly}`}>
+        {/* Sidebar */}
+        <aside className={styles.sidebar}>
+          <div className={styles.sidebarHeader}>
+            <div className={styles.appIcon}>P</div>
+            <span className={styles.appName}>Petra Portal</span>
           </div>
           
-          <div className={styles.navGroup}>
-            <span className={styles.navLabel}>Activity</span>
-            <SidebarItem 
-              icon={BookOpen} 
-              label="Records" 
-              active={activeTab === "records"} 
-              onClick={() => setActiveTab("records")} 
-            />
-            <SidebarItem 
-              icon={Milestone} 
-              label="Roadmap" 
-              active={activeTab === "roadmap"} 
-              onClick={() => setActiveTab("roadmap")} 
-            />
+          <nav className={styles.sidebarNav}>
+            <div className={styles.navGroup}>
+              <span className={styles.navLabel}>System</span>
+              <SidebarItem 
+                icon={Layout} 
+                label="Overview" 
+                active={activeTab === "overview"} 
+                onClick={() => setActiveTab("overview")} 
+              />
+              <SidebarItem 
+                icon={Target} 
+                label="Diagnostics" 
+                active={activeTab === "diag"} 
+                onClick={() => setActiveTab("diag")} 
+              />
+            </div>
+            
+            <div className={styles.navGroup}>
+              <span className={styles.navLabel}>Activity</span>
+              <SidebarItem 
+                icon={BookOpen} 
+                label="Records" 
+                active={activeTab === "records"} 
+                onClick={() => setActiveTab("records")} 
+              />
+              <SidebarItem 
+                icon={Milestone} 
+                label="Roadmap" 
+                active={activeTab === "roadmap"} 
+                onClick={() => setActiveTab("roadmap")} 
+              />
+            </div>
+          </nav>
+          
+          <div className={styles.sidebarFooter}>
+            <div className={styles.userDot} />
+            <span>{demoData.student}</span>
           </div>
-        </nav>
-        
-        <div className={styles.sidebarFooter}>
-          <div className={styles.userDot} />
-          <span>{demoData.student}</span>
-        </div>
-      </aside>
+        </aside>
 
-      {/* Main Content */}
-      <main className={styles.mainArea}>
-        <header className={styles.mainHeader}>
-          <div className={styles.breadcrumb}>
-            <span>Portal</span>
-            <ChevronRight size={12} />
-            <span className={styles.crumbActive}>{activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}</span>
+        {/* Main Content */}
+        <main className={styles.mainArea}>
+          <header className={styles.mainHeader}>
+            <div className={styles.breadcrumb}>
+              <span>Portal</span>
+              <ChevronRight size={12} />
+              <span className={styles.crumbActive}>{activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}</span>
+            </div>
+          </header>
+          
+          <div className={styles.contentBody}>
+            <AnimatePresence mode="wait">
+              {activeTab === "overview" && <Overview key="overview" />}
+              {activeTab === "diag" && <Diagnostics key="diag" />}
+              {activeTab === "records" && <Records key="records" />}
+              {activeTab === "roadmap" && <Roadmap key="roadmap" />}
+            </AnimatePresence>
           </div>
+        </main>
+      </div>
+
+      {/* MOBILE VERSION (Simplified Native App Mockup) */}
+      <div className={styles.mobileFrame}>
+        {/* Mobile Header */}
+        <header className={styles.mobileHeader}>
+          <div className={styles.mobileUser}>
+            <div className={styles.userDot} />
+            <span>{demoData.student}</span>
+          </div>
+          <span className={styles.mobileAppName}>Petra Portal</span>
         </header>
-        
-        <div className={styles.contentBody}>
+
+        {/* Mobile Content Area */}
+        <div className={styles.mobileContentBody}>
           <AnimatePresence mode="wait">
             {activeTab === "overview" && <Overview key="overview" />}
             {activeTab === "diag" && <Diagnostics key="diag" />}
@@ -222,7 +247,39 @@ export default function InteractiveSystemDemo() {
             {activeTab === "roadmap" && <Roadmap key="roadmap" />}
           </AnimatePresence>
         </div>
-      </main>
-    </div>
+
+        {/* Mobile Bottom Tab Bar */}
+        <nav className={styles.mobileTabBar}>
+          <button 
+            className={`${styles.tabBarItem} ${activeTab === 'overview' ? styles.tabBarActive : ''}`} 
+            onClick={() => setActiveTab('overview')}
+          >
+            <Layout size={16} />
+            <span>Overview</span>
+          </button>
+          <button 
+            className={`${styles.tabBarItem} ${activeTab === 'diag' ? styles.tabBarActive : ''}`} 
+            onClick={() => setActiveTab('diag')}
+          >
+            <Target size={16} />
+            <span>Diag</span>
+          </button>
+          <button 
+            className={`${styles.tabBarItem} ${activeTab === 'records' ? styles.tabBarActive : ''}`} 
+            onClick={() => setActiveTab('records')}
+          >
+            <BookOpen size={16} />
+            <span>Records</span>
+          </button>
+          <button 
+            className={`${styles.tabBarItem} ${activeTab === 'roadmap' ? styles.tabBarActive : ''}`} 
+            onClick={() => setActiveTab('roadmap')}
+          >
+            <Milestone size={16} />
+            <span>Roadmap</span>
+          </button>
+        </nav>
+      </div>
+    </>
   );
 }
