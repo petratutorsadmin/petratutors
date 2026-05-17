@@ -381,7 +381,9 @@
   .appFrame {
     flex-direction: column;
     height: auto;
+    width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
   }
   .sidebar {
     width: 100%;
@@ -404,5 +406,12 @@
   .sidebarItem {
     white-space: nowrap;
     padding: 0.4rem 0.6rem;
+  }
+  .contentBody {
+    padding: 1rem;
+  }
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 }
