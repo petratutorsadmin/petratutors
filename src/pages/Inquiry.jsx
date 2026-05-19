@@ -247,7 +247,7 @@ export default function Inquiry() {
 
                     {step === 4 && (
                         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className={styles.delightMsg}>
-                            {t('inquiry.almost_there', "Almost there! You're one step away from your personalized roadmap.")}
+                            {t('inquiry.almost_there', "Almost there! You're one step away from your monthly learning plan and skill diagnosis.")}
                         </motion.div>
                     )}
 

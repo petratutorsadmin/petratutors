@@ -13,7 +13,7 @@
   "hiring": {
     "title": "Join Our Educator Network",
     "subtitle_1": "Petra Tutors is looking for thoughtful, academically strong mentors who care deeply about education and student growth.",
-    "subtitle_2": "We work with international and domestic students across Japan and beyond, providing personalised educational support, diagnostics, and mentorship.",
+    "subtitle_2": "We work with international and domestic students across Japan and beyond, providing monthly learning plans, parent-visible progress, and mentorship.",
     "subtitle_3": "If you are passionate about teaching, communication, and long-term student development, we would love to hear from you.",
     "benefits_title": "Why Teach With Us?",
     "b1_title": "International Student Network",
@@ -27,7 +27,7 @@
     "b5_title": "High-Calibre Tutor Community",
     "b5_desc": "Join a network of tutors from leading universities including Keio, Waseda, Todai, HKU, LSE, and more.",
     "b6_title": "Grow With Petra",
-    "b6_desc": "Help shape a modern education platform focused on personalised learning and human connection."
+    "b6_desc": "Help shape a modern education platform focused on skill diagnosis, parent-visible progress, and human connection."
   },
   "footer": {
     "tagline": "International tutoring for ambitious students. Connecting globally minded learners with top-tier educators worldwide.",
@@ -94,7 +94,7 @@
     "comp_1_petra": "Elite University Mentors Only",
     "comp_1_others": "General Student Part-timers",
     "comp_2_label": "Curriculum",
-    "comp_2_petra": "100% Custom Mentorship",
+    "comp_2_petra": "100% Tutor-Student Fit",
     "comp_2_others": "Rigid, fixed materials",
     "comp_3_label": "Approach",
     "comp_3_petra": "Outcome-driven & Practical",
@@ -106,7 +106,7 @@
     "view_pricing": "View Full Pricing",
     "how_title": "Your Journey With Us",
     "step1_title": "Free Diagnosis & Trial",
-    "step1_desc": "Share your goals via our 30s form. Book a free trial and study consultation.",
+    "step1_desc": "Book a free trial and skill diagnosis via our 30s form.",
     "step2_title": "Perfect Mentor Match",
     "step2_desc": "We select a senior mentor perfectly aligned with your academic needs.",
     "step3_title": "Start Achieving",
@@ -151,7 +151,7 @@
     "stage3_title": "The Absence",
     "stage3_p1": "We found that something was missing…",
     "stage3_p2": "Modern tutoring had become increasingly transactional. Large systems focussed on rigid frameworks and standardised teaching, treating students as numbers in a curriculum rather than individuals with unique anxieties and goals.",
-    "stage3_p3": "Even in high-achieving environments, learning often felt strangely impersonal. We realised that academic success shouldn't come at the cost of human connection.",
+    "stage3_p3": "Even in high-achieving environments, learning often felt strangely impersonal. We realised that reaching academic milestones shouldn't come at the cost of human connection.",
     "designed_title": "Designed for International Education",
     "designed_subtitle": "We deeply understand these educational experiences because we lived them ourselves.",
     "cat_ib_title": "IB Students",
@@ -173,7 +173,7 @@
     "cta_title": "Begin with a Free Trial Lesson",
     "cta_desc": "No commitment required. We’ll match you with a mentor who understands your exact academic path.",
     "cta_btn": "Book Your Free Trial",
-    "cta_trust": "✓ No admission fee  ✓ Personalized matching  ✓ Flexible scheduling"
+    "cta_trust": "✓ No admission fee  ✓ Tutor-student fit match  ✓ Flexible scheduling"
   },
   "no_fee": {
     "title": "Transparent Pricing",
@@ -287,7 +287,7 @@
           "English",
           "Japanese"
         ],
-        "intro": "Having navigated the British, Irish, and Japanese education systems, I understand the immense pressure students face. I have successfully mentored over 70 students, focusing on strategic exam preparation (IELTS, Eiken) and personalized academic coaching that unlocks each student's unique potential.",
+        "intro": "Having navigated the British, Irish, and Japanese education systems, I understand the immense pressure students face. I have successfully mentored over 70 students, focusing on strategic exam preparation (IELTS, Eiken) and monthly learning plans combined with detailed student charts to trace progress.",
         "strengths": [
           "Strategic Exam Coaching (IELTS/Eiken)",
           "International Curricula Navigation",
@@ -326,7 +326,7 @@
           "Bilingual Instruction"
         ],
         "idealMatch": "IB students or those needing rapid improvement before major exams like TOEFL or SAT.",
-        "successCase": "Has mentored a wide range of students from young learners to high schoolers, helping them achieve quick results through practice-focused lessons.",
+        "successCase": "Has mentored a wide range of students from young learners to high schoolers, helping them reach key milestones through practice-focused lessons.",
         "lessonStyle": "Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content."
       },
       "tutor-2": {
@@ -376,7 +376,7 @@
         "languages": [
           "English"
         ],
-        "intro": "Holding a TESOL certification, I combine professional language pedagogy with a deeply empathetic mentoring style. My goal is to transform English from a daunting hurdle into a natural tool for expression, helping students excel in TOEIC, TOEFL, and IELTS while building genuine conversational confidence.",
+        "intro": "Holding a TESOL certification, I combine professional language pedagogy with a deeply empathetic mentoring style. My goal is to guide English from a daunting hurdle into a natural tool for expression, using skill diagnosis to help students excel in TOEIC, TOEFL, and IELTS while building genuine conversational confidence.",
         "strengths": [
           "Empathetic Language Coaching",
           "TESOL-Certified Pedagogy",
@@ -414,8 +414,8 @@
           "Custom Lesson Planning"
         ],
         "idealMatch": "Students of all ages seeking a friendly, multicultural mentor to build confidence in English or Japanese.",
-        "successCase": "Worked as a self-employed Japanese tutor since 2021, successfully creating customized curriculums and modules for diverse learners.",
-        "lessonStyle": "Friendly and nurturing, utilizing custom modules and presentations tailored to the student's unique needs."
+        "successCase": "Worked as a self-employed Japanese tutor since 2021, successfully using skill diagnosis and monthly learning plans to guide diverse learners.",
+        "lessonStyle": "Friendly and nurturing, utilizing custom modules and presentations designed around the student's monthly learning plan."
       },
       "tutor-sara": {
         "name": "Sara Jeshua",
@@ -447,7 +447,7 @@
         ],
         "idealMatch": "Young learners (preschool to junior high) or anyone needing highly adaptable, individualized test prep and English foundations.",
         "successCase": "Currently an English Teacher in a Language School for preschool to elementary students, and successfully taught IELTS online during high school.",
-        "lessonStyle": "Highly adaptable and individualized, focusing on the student's unique strengths and weaknesses to build real-world confidence."
+        "lessonStyle": "Highly adaptable and driven by ongoing skill diagnosis, focusing on the student's unique strengths and weaknesses to build real-world confidence."
       },
       "tutor-cian": {
         "name": "Cian Alexander Forsyth",
@@ -596,7 +596,7 @@
         ],
         "idealMatch": "Students looking for conversational or academic English support, or those preparing for GCSEs with a supportive tutor who prioritizes a comfortable learning space.",
         "successCase": "Has successfully taught English conversation to adult learners in Japan and mentored students in History and Biology.",
-        "lessonStyle": "Diverse, global, and highly tailored. Focuses on creating a stress-free environment where students aren't afraid to make mistakes."
+        "lessonStyle": "Diverse, global, and guided by a monthly learning plan. Focuses on creating a stress-free environment where students aren't afraid to make mistakes."
       },
       "tutor-alice": {
         "name": "Alice Williams",
@@ -638,7 +638,7 @@
   },
   "pricing": {
     "title": "Simple & Flexible Pricing",
-    "subtitle": "Discover the ideal plan for your goals. Start with a free trial lesson to discuss your pathway.",
+    "subtitle": "Discover the ideal plan for your exam-specific milestones. Start with a free trial lesson and initial skill diagnosis.",
     "b1": "No admission fees",
     "b2": "Fully 1:1 sessions",
     "b3": "Flexible plan design",
@@ -683,7 +683,7 @@
     "friction_reduction": "No admission fees • Flexible anytime",
     "micro_copy_1": "*Rates vary by subject, level, and tutor",
     "micro_copy_2": "Most students invest between ¥4,000-¥8,000 per hour",
-    "continuity_title": "Optimising for Long-term Success",
+    "continuity_title": "Optimising for Long-term Milestones & Progress",
     "continuity_body": "Consistency is key to academic growth. We offer more efficient plan designs and pricing for students committed to regular, long-term learning.",
     "continuity_item_1": "Ad-hoc (Flexible sessions)",
     "continuity_item_2": "Weekly (Most common)",
@@ -697,7 +697,7 @@
     "g_f3": "Peer learning environment",
     "g_cta": "View Group Info",
     "dec_title": "Not sure which pathway is right?",
-    "dec_subtitle": "Book a free trial. We'll design a custom pathway and match you with the perfect mentor.",
+    "dec_subtitle": "Book a free trial. We'll design a monthly learning plan and ensure a perfect tutor-student fit.",
     "dec_l_title": "1:1 Lessons",
     "dec_l_desc": "Fastest route to your goal. Focused fully on your needs.",
     "dec_r_title": "Group Lessons",
@@ -718,7 +718,7 @@
     "includes": "What's included?",
     "inquire": "Inquire about this programme",
     "custom_title": "Don't see exactly what you need?",
-    "custom_desc": "We can customise a learning plan specifically for your unique goals.",
+    "custom_desc": "We can design a monthly learning plan specifically for your exam-specific milestones.",
     "contact": "Contact Us"
   },
   "system": {
@@ -737,11 +737,11 @@
     "guidance_title": "Ongoing Guidance & Support",
     "guidance_desc": "We support our students beyond scheduled hours. From curated academic libraries to parent consultations and strategy adjustments, our team ensures your educational roadmap is constantly optimized.",
     "pathways_title": "Educational Pathways",
-    "pathways_desc": "Explore how the Petra System applies to your specific academic goals."
+    "pathways_desc": "Explore how the Petra System applies to your exam-specific milestones."
   },
   "inquiry": {
     "title": "Free Diagnosis & Trial",
-    "subtitle": "Find the perfect learning plan and tutor for your goals (takes 30s).",
+    "subtitle": "Find the perfect monthly learning plan and tutor-student fit (takes 30s).",
     "step_indicator": "Step {{current}} of {{total}}",
     "next": "Next",
     "back": "Back",
@@ -766,12 +766,12 @@
     "location_ph": "Ex. Tokyo, Japan",
     "subject": "Main Subject of Interest",
     "subject_ph": "Ex. IELTS, IB Math, Essay Support",
-    "goal": "Tell us about your specific goals",
+    "goal": "Tell us about your specific milestones",
     "goal_ph": "Briefly describe what you'd like to achieve...",
     "submit": "Book Free Trial",
     "submit_descriptive": "Book My Free Consultation",
     "privacy_note": "We only use this information to match you with the right mentor. Your privacy is our priority.",
-    "almost_there": "Almost there! You're one step away from your personalized roadmap.",
+    "almost_there": "Almost there! You're one step away from your monthly learning plan and skill diagnosis.",
     "email_error": "Please enter a valid email address.",
     "your_selections": "Your Selections",
     "edit": "Edit",
@@ -822,7 +822,7 @@
     "pain_2": "Slow email writing (spending too much time finding the right words)",
     "pain_3": "Anxious about client interaction (lacking the nuance for high-stakes trust)",
     "pain_4": "Facing promotion or overseas assignment with insufficient fluency",
-    "pain_note": "Just memorizing vocabulary isn't enough. We customize 'ready-to-use' logical structures and professional language tailored to your specific role.",
+    "pain_note": "Just memorizing vocabulary isn't enough. We customize 'ready-to-use' logical structures and professional language focused on your specific role's milestones.",
     "solution_eyebrow": "THE PETRA APPROACH",
     "solution_title": "Practical fluency, delivered efficiently.",
     "s_1_badge": "PRACTICAL",
@@ -838,7 +838,7 @@
     "s_4_title": "Professional Business Mentorship",
     "s_4_desc": "Our mentors are top-tier graduates with real-world experience, providing high-level feedback that understands your business context.",
     "results_eyebrow": "PROVEN OUTCOMES",
-    "results_title": "Transformation in weeks, not years",
+    "results_title": "Measurable progress in weeks, not years",
     "r_1_val": "2-3",
     "r_1_label": "Months to see change",
     "r_1_note": "Increased meeting participation",
@@ -846,7 +846,7 @@
     "r_2_label": "Practical usability",
     "r_2_note": "Immediate results",
     "r_3_val": "1:1",
-    "r_3_label": "Strictly Personalized",
+    "r_3_label": "Monthly Learning Plan",
     "r_3_note": "Your work is the curriculum",
     "why_eyebrow": "WHY PETRA?",
     "why_title": "Mentors who succeed. Leading you to do the same.",
@@ -870,7 +870,7 @@
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
     "hero_title": "The right learning\nfor your goal.",
-    "hero_sub": "Find your perfect academic path through expert mentorship tailored to your unique goals.",
+    "hero_sub": "Find your perfect academic path through relatable mentors matched for student-tutor fit and monthly learning plans.",
     "choice_label": "What would you like to achieve?",
     "choice_ielts_label": "Get results in IELTS / Eiken / TOEIC",
     "choice_ielts_sub": "Fast-track your score",
@@ -913,7 +913,7 @@
   "landing_ib": {
     "hero_eyebrow": "IB / AP / A-Level / SAT · ACT / Intl. School Support",
     "hero_title": "Master the IB & international curricula with expert mentors.",
-    "hero_sub": "Full support for assignments, Internal Assessments, and exam prep. Mentors who've mastered the IB & international curricula support your child's success.",
+    "hero_sub": "Full support for assignments, Internal Assessments, and exam prep. Mentors who've mastered the IB & international curricula guide your child to exam-specific milestones.",
     "hero_cta": "Book Free Trial (30s)",
     "hero_line": "Consult on LINE",
     "trust_1": "No admission fee",
@@ -939,7 +939,7 @@
     "s_3_desc": "We deconstruct the scoring rubrics for IAs, EEs, and TOK, providing strategic guidance on research and structure.",
     "s_4_badge": "STRATEGIC",
     "s_4_title": "Long-term academic strategy",
-    "s_4_desc": "From overcoming weak subjects to deepening interests, we build a personalized roadmap for your child's academic journey.",
+    "s_4_desc": "From overcoming weak subjects to deepening interests, we construct a monthly learning plan with parent-visible progress.",
     "results_eyebrow": "PROOF OF TRUST",
     "results_title": "Elite support for ambitious families",
     "r_1_val": "95%",
@@ -949,7 +949,7 @@
     "r_3_val": "Top-Tier",
     "r_3_label": "Elite Mentors",
     "r_1_note": "Trusted by parents",
-    "r_2_note": "Personalized pacing",
+    "r_2_note": "Student chart tracking",
     "r_3_note": "IB/AP Grad tutors",
     "why_eyebrow": "WHY PETRA?",
     "why_title": "Mentors who've walked the path and succeeded.",
@@ -960,7 +960,7 @@
     "why_2_desc": "Our mentors from Keio, UTokyo, and top overseas universities bring high-level logical thinking and study habits to every session.",
     "why_3_title": "The most efficient path",
     "why_3_desc": "No generic templates. We tailor every lesson to your child's specific teacher, school handouts, and current level of understanding.",
-    "t_1_quote": "We were struggling with the IA structure, but the mentor provided clear, strategic guidance that transformed my child's confidence and quality of work.",
+    "t_1_quote": "We were struggling with the IA structure, but the mentor provided clear, strategic guidance and detailed after-lesson reports that built my child's confidence and quality of work.",
     "t_1_name": "A.T.",
     "t_1_role": "Parent of Int'l School Student",
     "t_2_quote": "My daughter was struggling with her subjects, but the mentor didn't just teach the material - they taught her how to manage her overall study plan.",
@@ -1023,8 +1023,8 @@
     "why_sub": "We don't just teach methods; we teach from experience. Our tutors know what examiners want and how the test trends are moving.",
     "why_1_title": "Top-tier & Overseas University Tutors",
     "why_1_desc": "Only tutors with IELTS 7.5+ or Eiken Grade 1. Learn from those who have conquered the test themselves.",
-    "why_2_title": "Tailored Curriculum",
-    "why_2_desc": "We design your curriculum from scratch based on your current score, target, and weaknesses.",
+    "why_2_title": "Monthly Learning Plan",
+    "why_2_desc": "We design your monthly learning plan based on an initial skill diagnosis, targeting your exact score gaps.",
     "why_3_title": "Test-Experienced Experts",
     "why_3_desc": "Tutors with actual test experience know how to get points and what the grading criteria really look like.",
     "final_eyebrow": "FREE TRIAL",
@@ -1040,7 +1040,7 @@
     "hero_line": "Consult on LINE",
     "hero_scarcity": "Limited consultation slots this week: 15 remaining",
     "trust_1": "No admission fee",
-    "trust_2": "Fully personalized",
+    "trust_2": "Tutor-student fit match",
     "trust_3": "Focused on outcomes",
     "pain_eyebrow": "THE PROBLEM",
     "pain_title": "Top university admission is not about grades alone.",
@@ -1051,7 +1051,7 @@
     "pain_note": "Strong applicants have one thing in common: a clear, well-positioned narrative. We help you build that.",
     "core_value_eyebrow": "CORE VALUE",
     "core_value_title": "We turn your experiences into a compelling application strategy.",
-    "core_value_sub": "Not templates. Not generic advice. A structured, personalized approach to maximize your chances.",
+    "core_value_sub": "Not templates. Not generic advice. A structured monthly learning plan combined with detailed student charts to maximize your chances.",
     "solution_eyebrow": "THE PETRA APPROACH",
     "solution_title": "Four pillars, one outcome: admission.",
     "s_1_badge": "ESSAY",
@@ -1072,7 +1072,7 @@
     "r_1_label": "Dedicated mentorship",
     "r_1_note": "Deeply personal approach",
     "r_2_val": "100%",
-    "r_2_label": "Personalized strategy",
+    "r_2_label": "Monthly learning plan",
     "r_2_note": "No templates, ever",
     "r_3_val": "Real",
     "r_3_label": "Admitted mentors",
@@ -1082,8 +1082,8 @@
     "why_sub": "We don't teach theory. We teach what actually works in real admissions.",
     "why_1_title": "Real knowledge, not theory",
     "why_1_desc": "Our mentors cleared the same admissions bar you're aiming for. They know what works because they've done it.",
-    "why_2_title": "No templates. Fully personalized.",
-    "why_2_desc": "Every student gets a tailored strategy based on their strengths and goals. We never recycle approaches.",
+    "why_2_title": "No templates. Month-by-month plans.",
+    "why_2_desc": "Every student gets a monthly learning plan and student chart based on their initial skill diagnosis.",
     "why_3_title": "Focused on outcomes.",
     "why_3_desc": "Everything we do is designed to improve your chances of admission. No fluff, no filler.",
     "t_1_quote": "I didn't know which experience to focus on, but my mentor helped me find a clear direction for my essay.",
@@ -1100,7 +1100,7 @@
   "landing_kids": {
     "hero_eyebrow": "FOUNDATION & CONFIDENCE",
     "hero_title": "It's okay to struggle with English.",
-    "hero_sub": "We build a strong foundation, step by step, with care. Transforming 'I can't' into confidence through personalized mentoring.",
+    "hero_sub": "We build a strong foundation, step by step, with care. Moving from 'I can't' to confidence through monthly learning plans and tutor-student fit.",
     "hero_cta": "Book Free Trial (30s)",
     "hero_line": "Consult on LINE",
     "trust_1": "No admission fee",
@@ -1117,7 +1117,7 @@
     "solution_title": "From foundation to mastery",
     "s_1_badge": "ADAPTIVE",
     "s_1_title": "1:1 Private Mentoring",
-    "s_1_desc": "Every student's barrier is unique. We create a custom roadmap that fills in the gaps at your specific pace.",
+    "s_1_desc": "Every student's barrier is unique. We conduct a skill diagnosis to design a monthly learning plan that fills in the gaps.",
     "s_2_badge": "PACE",
     "s_2_title": "Gentle, Adaptive Pacing",
     "s_2_desc": "We never move on until a concept is fully understood. No pressure, just patient and strategic guidance.",
@@ -1155,13 +1155,13 @@
     "t_2_role": "Int'l School Student",
     "final_eyebrow": "FREE TRIAL",
     "final_title": "Start rebuilding confidence today.",
-    "final_sub": "A 30-minute free trial to identify your foundation gaps. No admission fee. Transform 'I can't' into 'I can'.",
+    "final_sub": "A 30-minute free trial with skill diagnosis. No admission fee. Move from 'I can't' to 'I can' with parent-visible progress.",
     "final_cta": "Reserve Free Trial in 30s"
   },
   "landing_foundation": {
     "hero_eyebrow": "EARLY ACADEMIC SUPPORT",
     "hero_title": "Solidify your child's international school foundation early on.",
-    "hero_sub": "Private tutoring tailored for IB PYP, Key Stage, and Early MYP",
+    "hero_sub": "Private tutoring with monthly learning plans for IB PYP, Key Stage, and Early MYP",
     "hero_cta": "Book Free Trial",
     "hero_line": "Consult on LINE",
     "trust_1": "No admission fee",
@@ -1187,7 +1187,7 @@
     "s_3_desc": "We guide them so they can eventually solve problems independently.",
     "s_4_badge": "THINKING",
     "s_4_title": "Foundation for Critical Thinking",
-    "s_4_desc": "Building the ability to form and express opinions for future success.",
+    "s_4_desc": "Building the ability to form and express opinions to reach future milestones.",
     "coverage_eyebrow": "CURRICULUM COVERAGE",
     "coverage_title": "Comprehensive Support for Major Curricula",
     "coverage_sub": "Providing support to adapt to world-class educational systems from an early age.",
@@ -1217,10 +1217,10 @@
     "why_1_desc": "Instructors who have conquered advanced studies act as inspiring role models.",
     "why_2_title": "International Curriculum Experience",
     "why_2_desc": "Having been through IB themselves, they know exactly what's needed.",
-    "why_3_title": "Personalized & Long-Term Design",
+    "why_3_title": "Monthly Learning Plans & Long-Term Progress",
     "why_3_desc": "Cultivating independent study skills that will hold up in demanding environments.",
     "final_eyebrow": "FREE TRIAL",
-    "final_title": "An early investment in future success.",
+    "final_title": "An early investment in long-term academic milestones.",
     "final_sub": "Assess your child's current academic status and find the optimal support plan.",
     "final_cta": "Book Free Trial (30s)"
   },
@@ -1230,13 +1230,13 @@
     "desc": "We match students with elite Tokyo University, UCL, and Keio mentors. Chat with our team in 30 seconds - no commitment, no enrolment fee.",
     "p1": "Free 30-min trial lesson included",
     "p2": "No admission or setup fees",
-    "p3": "Matched to your schedule & goals",
+    "p3": "Matched for perfect student-tutor fit and schedule",
     "cta": "Book My Free Trial →",
     "dismiss": "No thanks, I'll figure it out on my own"
   },
   "landing": {
     "mid_cta_title": "Why not start with a free consultation?",
-    "mid_cta_desc": "We will propose the best plan according to your current challenges and goals.",
+    "mid_cta_desc": "We will propose the best monthly learning plan according to your current challenges and exam-specific milestones.",
     "mid_cta_btn": "Book a free trial/consultation"
   },
   "seo": {
