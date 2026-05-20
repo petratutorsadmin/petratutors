@@ -1,6 +1,41 @@
-.hero {
-    padding: var(--space-xl) 0;
-    border-bottom: 1px solid var(--c-border);
+.pageRoot {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--c-white);
+}
+
+.progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--c-accent);
+    transform-origin: 0%;
+    z-index: 1000;
+}
+
+.header {
+    padding: clamp(4.2rem, 8.4vh, 7rem) 0;
+    position: relative;
+    z-index: 1;
+}
+
+.heroTagline {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 800;
+    color: var(--c-navy);
+    line-height: 1.1;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--c-text-light);
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.65;
 }
 
 .heroActions {
@@ -8,104 +43,491 @@
     justify-content: center;
     gap: var(--space-md);
     flex-wrap: wrap;
-    margin-top: var(--space-md);
 }
 
-.visionBlock {
-    max-width: 900px;
-    margin: 0 auto;
+/* Buttons are inherited globally from index.css for linear consistency */
+
+.narrativeStage {
+    padding: clamp(3.9rem, 7.8vh, 4.9rem) 0;
+    background-color: var(--c-sand);
+    border-top: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-border);
 }
 
-.visionCard {
-    padding: var(--space-xl) var(--space-lg);
-    text-align: center;
-    border-color: rgba(48, 27, 71, 0.08);
-}
-
-.iconContainer {
-    display: inline-flex;
+.editorialSplit {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: clamp(2.5rem, 5vh, 4.9rem);
     align-items: center;
-    justify-content: center;
-    width: 72px;
-    height: 72px;
-    background-color: rgba(229, 184, 11, 0.1);
-    color: var(--c-accent);
+}
+
+/* Simulated Browser Frame */
+.browserFrame {
+    width: 100%;
+    background-color: #f0ede8;
     border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.browserHeader {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: #e4dec9;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.windowButtons {
+    display: flex;
+    gap: 6px;
+}
+
+.dotRed, .dotYellow, .dotGreen {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.dotRed { background-color: #ff5f56; }
+.dotYellow { background-color: #ffbd2e; }
+.dotGreen { background-color: #27c93f; }
+
+.urlBar {
+    margin: 0 auto;
+    font-size: 0.72rem;
+    color: var(--c-text-light);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 0.2rem 2.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: var(--font-sans);
+    letter-spacing: 0.02em;
+}
+
+.browserContent {
+    background-color: #fbf9f4;
+    overflow-y: auto;
+    max-height: 480px;
+}
+
+/* Interactive Newspaper Layout */
+.newspaperContainer {
+    padding: 1.5rem;
+    color: var(--c-navy);
+    font-family: var(--font-serif);
+}
+
+.newspaperHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.6rem;
+}
+
+.npMenu {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.menuIcon {
+    font-size: 0.8rem;
+}
+
+.npLogo {
+    font-size: 1.95rem;
+    font-weight: 700;
+    font-family: var(--font-serif);
+    color: #3b1d4a; /* Precise purple brand tone */
+    letter-spacing: -0.01em;
+}
+
+.npUser {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.npEmail {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    color: var(--c-text-light);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.npLogoutBtn {
+    font-family: var(--font-sans);
+    font-size: 0.62rem;
+    font-weight: 700;
+    background: transparent;
+    border: 1px solid var(--c-navy);
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.npLogoutBtn:hover {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+}
+
+.newspaperDateBar {
+    border-top: 1px solid var(--c-navy);
+    border-bottom: 1px solid var(--c-navy);
+    padding: 0.3rem 0;
+    text-align: center;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    font-family: var(--font-sans);
+    margin-bottom: 1.25rem;
+}
+
+.newspaperBody {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 1.5rem;
+}
+
+.mainColumn {
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    padding-right: 1.25rem;
+}
+
+.articleEyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #c5a059;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.articleTitle {
+    font-size: 1.5rem;
+    line-height: 1.15;
+    font-weight: 900;
+    margin-bottom: 0.4rem;
+    color: var(--c-navy);
+    text-transform: uppercase;
+}
+
+.articleByline {
+    font-family: var(--font-sans);
+    font-size: 0.55rem;
+    color: var(--c-text-light);
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 0.35rem;
+}
+
+.articleText p {
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: #2b2b2b;
+    margin-bottom: 0.75rem;
+    text-align: justify;
+}
+
+.dropCap {
+    font-size: 2.2rem;
+    float: left;
+    line-height: 0.85;
+    padding-right: 4px;
+    color: #c5a059;
+    font-weight: bold;
+}
+
+.pullQuote {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.6rem 0;
+    text-align: center;
+    font-style: italic;
+    color: #c5a059;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+}
+
+.sidebarColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.printBox {
+    border: 2px solid #c5a059;
+    padding: 0.85rem;
+    text-align: center;
+}
+
+.sidebarEyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.58rem;
+    font-weight: 700;
+    color: #c5a059;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.printTitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+    color: var(--c-navy);
+    font-weight: bold;
+}
+
+.printDesc {
+    font-size: 0.68rem;
+    line-height: 1.4;
+    color: var(--c-text-light);
+    margin-bottom: 0.6rem;
+}
+
+.comingSoonBtn {
+    font-family: var(--font-sans);
+    font-size: 0.58rem;
+    font-weight: 700;
+    border: 1px solid #c5a059;
+    padding: 0.2rem 0.65rem;
+    color: #c5a059;
+    display: inline-block;
+    border-radius: var(--radius-sm);
+}
+
+.notesBox {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.85rem;
+}
+
+.noteItem {
+    margin-top: 0.4rem;
+}
+
+.noteTag {
+    font-family: var(--font-sans);
+    font-size: 0.55rem;
+    font-weight: 700;
+    color: #c5a059;
+    display: block;
+}
+
+.noteTitle {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    font-weight: 700;
+    margin: 0.2rem 0;
+    color: var(--c-navy);
+}
+
+.noteAuthor {
+    font-size: 0.62rem;
+    font-style: italic;
+    color: var(--c-text-light);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.noteExcerpt {
+    font-size: 0.68rem;
+    line-height: 1.45;
+    color: var(--c-text-light);
+}
+
+.contentBlock {
+    max-width: 500px;
+}
+
+.stageTitle {
+    color: var(--c-accent);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
     margin-bottom: var(--space-md);
+    font-weight: 600;
+    display: block;
+}
+
+.anchorLine {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--c-navy);
+    margin-bottom: var(--space-lg);
+    line-height: 1.4;
+}
+
+.pacingParagraph {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--c-text-light);
+}
+
+.progressionSection,
+.benefitsSection {
+    padding: clamp(4rem, 8vh, 6rem) 0;
+}
+
+.sectionHeading {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    color: var(--c-navy);
+    text-align: center;
+    margin-bottom: clamp(3rem, 6vh, 4.5rem);
 }
 
 .stepsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-lg);
-    margin-top: var(--space-md);
+    gap: var(--space-xl);
 }
 
-.stepCard {
-    padding: var(--space-xl) var(--space-md) var(--space-lg);
+.stepItem {
+    border-top: 1px solid var(--c-border);
+    padding-top: var(--space-lg);
     position: relative;
-    overflow: hidden;
-    height: 100%;
 }
 
 .stepNum {
     font-family: var(--font-serif);
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     line-height: 1;
-    color: rgba(48, 27, 71, 0.06);
-    position: absolute;
-    top: 10px;
-    right: 15px;
+    color: var(--c-gold);
     font-weight: 700;
-    user-select: none;
+    margin-bottom: 0.75rem;
+}
+
+.stepTitle {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--c-navy);
+    margin-bottom: var(--space-sm);
+}
+
+.stepDesc {
+    font-size: 0.975rem;
+    color: var(--c-text-light);
+    line-height: 1.6;
 }
 
 .benefitsGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-md);
+    gap: var(--space-xl);
 }
 
-.benefitCard {
-    padding: var(--space-lg);
-    border-top: 3px solid var(--c-accent);
-    height: 100%;
+.benefitItem {
+    border-left: 2px solid var(--c-accent);
+    padding-left: var(--space-lg);
 }
 
-.benefitIcon {
+.benefitTitle {
+    font-family: var(--font-serif);
+    font-size: 1.45rem;
     color: var(--c-navy);
+    margin-bottom: var(--space-sm);
 }
 
-.ctaBox {
-    padding: var(--space-xl) var(--space-lg);
-    border-radius: var(--radius-xl);
-    border: 1px solid var(--c-border);
-    max-width: 960px;
+.benefitDesc {
+    font-size: 0.975rem;
+    color: var(--c-text-light);
+    line-height: 1.6;
+}
+
+.conversionSection {
+    padding: clamp(3.9rem, 7.8vh, 4.9rem) 0;
+    background-color: var(--c-navy);
+}
+
+.conversionCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: clamp(2.5rem, 5vh, 3.15rem) clamp(3.5rem, 7vh, 4.9rem);
+    border-radius: var(--radius-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-xl);
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.ctaActions {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-md);
-    flex-wrap: wrap;
+.conversionContent {
+    flex: 1;
 }
 
-@media (max-width: 900px) {
+.conversionTitle {
+    font-size: 1.8rem;
+    color: var(--c-white);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.conversionDesc {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+}
+
+.conversionBtn {
+    background-color: var(--c-accent);
+    color: var(--c-navy);
+    padding: 0.85rem 1.8rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1.02rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 992px) {
+    .editorialSplit {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .browserContent {
+        max-height: 380px;
+    }
+
+    .newspaperBody {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .mainColumn {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding-bottom: 1.25rem;
+    }
+
     .stepsGrid,
     .benefitsGrid {
         grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
-    
-    .hero {
-        padding: var(--space-lg) 0;
-    }
-    
-    .visionCard {
-        padding: var(--space-lg) var(--space-md);
-    }
-    
-    .ctaBox {
-        padding: var(--space-lg) var(--space-md);
+
+    .conversionCard {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--space-xl);
     }
 }

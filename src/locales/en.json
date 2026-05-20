@@ -1245,14 +1245,14 @@
     "jsonld_desc": "Petra Tutors is an online tutoring service specializing in IB, IELTS, and international university admissions."
   },
   "keystone": {
-    "eyebrow": "Student Publication",
+    "eyebrow": "Official Publication",
     "title": "The Keystone",
     "subtitle": "A digital newspaper for ambitious young minds. Write, refine, and get published.",
     "hero_cta_explore": "Visit The Keystone",
     "hero_cta_start": "Start Writing with a Mentor",
     "vision_title": "A Platform for Young Thinkers",
     "vision_text_1": "At Petra Tutors, we believe that education should go beyond exams and structured classes. We want students to find their voice, think critically about the world, and share their ideas.",
-    "vision_text_2": "The Keystone is our official student-led digital publication. It provides an exclusive opportunity for students to write academic essays, research papers, and opinion pieces under the guidance of elite editors and mentors, and have their work published for a global audience.",
+    "vision_text_2": "The Keystone is our official digital publication. It provides an exclusive opportunity for students to write academic essays, research papers, and opinion pieces under the guidance of elite editors and mentors, and have their work published for a global audience.",
     "how_title": "From Draft to Published Article",
     "step1_num": "01",
     "step1_title": "Choose Your Topic",
