@@ -28,7 +28,7 @@ export default function Pricing() {
     return (
         <>
             {/* 1. HERO Section */}
-            <div className={`${styles.header} glass-panel`}>
+            <div className={styles.header}>
                 <div className="container text-center animate-on-scroll">
                     <h1 className="text-h1" style={{ marginBottom: '1rem' }}>{t('pricing.title')}</h1>
                     <p className="text-large" style={{ color: 'var(--c-text-light)', maxWidth: '600px', margin: '0 auto' }}>
@@ -51,7 +51,7 @@ export default function Pricing() {
                 {/* 4. MAIN PRICING CARDS - 1-on-1 */}
                 <div className={styles.pricingGrid} id="one-on-one-plans">
                     {plans.map((plan, index) => (
-                        <div key={index} className={`glass-card ${styles.pricingCard} ${plan.popular ? styles.popular : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.1}s` }}>
+                        <div key={index} className={`card ${styles.pricingCard} ${plan.popular ? styles.popular : ''} animate-on-scroll`} style={{ animationDelay: `${index * 0.1}s` }}>
                             {plan.popular && <div className={styles.popularBadge}>{t(`pricing.${plan.key}_badge`)}</div>}
                             
                             <div className={styles.cardHeader}>
@@ -94,7 +94,7 @@ export default function Pricing() {
                 </div>
 
                 {/* 6. CONTINUITY / MONTHLY LOGIC */}
-                <div className={`${styles.continuitySection} glass-card animate-on-scroll`}>
+                <div className={`${styles.continuitySection} card animate-on-scroll`}>
                     <div className={styles.continuityContent}>
                         <h2 className="text-h2">{t('pricing.continuity_title')}</h2>
                         <p className={styles.continuityText}>{t('pricing.continuity_body')}</p>

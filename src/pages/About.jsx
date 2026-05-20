@@ -36,9 +36,6 @@ export default function About() {
                 path="/about"
             />
 
-            {/* Reading Progress Bar */}
-            <motion.div className={styles.progressBar} style={{ scaleX, position: 'fixed', top: 0, left: 0, right: 0, height: '3px', background: 'var(--c-accent)', transformOrigin: '0%', zIndex: 1000 }} />
-
             {/* Stage 1: Hero & Identity */}
             <div className={styles.header}>
                 <div className="container">
@@ -146,15 +143,10 @@ export default function About() {
                                 key={item.key} 
                                 className={styles.identityItem}
                                 variants={fadeInUp}
-                                whileHover={{ y: -8, rotateZ: idx % 2 === 0 ? 1 : -1, backgroundColor: 'rgba(255, 255, 255, 0.8)', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}
-                                transition={{ type: "spring", stiffness: 400, damping: 25 }}
                             >
-                                <motion.div 
-                                    className={styles.glyph}
-                                    whileHover={{ scale: 1.1, backgroundColor: 'var(--c-accent)', color: 'var(--c-navy)' }}
-                                >
+                                <div className={styles.glyph}>
                                     {item.glyph}
-                                </motion.div>
+                                </div>
                                 <div className={styles.identityContent}>
                                     <h3 className={styles.identityTitle}>{t(`about.cat_${item.key}_title`)}</h3>
                                     <p className={styles.identityDesc}>{t(`about.cat_${item.key}_desc`)}</p>
@@ -212,12 +204,10 @@ export default function About() {
                             </div>
                         </div>
                         <div className={styles.conversionActions}>
-                            <motion.div whileHover={{ scale: 1.015 }} whileTap={{ scale: 0.985 }}>
-                                <Link to="/inquiry" className={styles.conversionBtn}>
-                                    <span>{t('about.cta_btn')}</span>
-                                    <ArrowRight size={20} />
-                                </Link>
-                            </motion.div>
+                            <Link to="/inquiry" className={styles.conversionBtn}>
+                                <span>{t('about.cta_btn')}</span>
+                                <ArrowRight size={20} />
+                            </Link>
                         </div>
                     </div>
                 </div>

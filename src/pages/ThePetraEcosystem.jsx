@@ -1,17 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-    LineChart, 
-    BookOpen, 
-    Users, 
-    Compass, 
-    FileText, 
-    Activity, 
-    Sparkles, 
-    CheckCircle2, 
-    ArrowRight, 
-    GraduationCap, 
+import {
+    LineChart,
+    BookOpen,
+    Users,
+    Compass,
+    FileText,
+    Activity,
+    Sparkles,
+    CheckCircle2,
+    ArrowRight,
+    GraduationCap,
     Lock,
     Send,
     RefreshCw,
@@ -94,7 +94,7 @@ export default function ThePetraEcosystem() {
         if (!userQuestion.trim()) return;
         const currentMentor = activeMentor;
         const textToSend = userQuestion;
-        
+
         // Add user message
         setChatMessages(prev => ({
             ...prev,
@@ -214,7 +214,7 @@ export default function ThePetraEcosystem() {
 
     return (
         <div className={styles.pageRoot}>
-            <SEO 
+            <SEO
                 title={`The Petra Ecosystem | ${t('nav.petra', 'Petra Tutors')}`}
                 description={t('ecosystem.subtitle')}
                 path="/ecosystem"
@@ -238,14 +238,14 @@ export default function ThePetraEcosystem() {
             <section className={styles.splitStageSection}>
                 <div className="container">
                     <div className={styles.splitStageLayout}>
-                        
+
                         {/* LEFT PANE: Animated SVG Biosphere Tree */}
                         <div className={styles.treePaneCard}>
                             <div className={styles.treePaneHeader}>
                                 <span className={styles.paneIndicator}>Interactive Biosphere Map</span>
                                 <h3 className={styles.treeTitle}>Petra Growth Tree</h3>
                             </div>
-                            
+
                             <div className={styles.svgWrapper}>
                                 <svg viewBox="0 0 800 600" className={styles.ecosystemSvg}>
                                     <defs>
@@ -266,20 +266,20 @@ export default function ThePetraEcosystem() {
 
                                     {/* Horizon & Soil Layer (Philosophy) */}
                                     <rect x="0" y="480" width="800" height="120" fill="#fcfbf7" />
-                                    
+
                                     {/* Layered soil background with organic wavy shapes */}
                                     <path d="M 0 480 Q 200 465 400 480 T 800 480 L 800 600 L 0 600 Z" fill="#edebe0" opacity="0.5" />
-                                    
+
                                     <g className={`${styles.soilGroup} ${activeNode === 'manifesto' ? styles.activeSoilGroup : ''}`} onClick={() => setActiveNode('manifesto')}>
-                                        <path 
-                                            d="M 0 488 Q 220 472 400 488 T 800 488 L 800 600 L 0 600 Z" 
-                                            fill="#f5f2e9" 
+                                        <path
+                                            d="M 0 488 Q 220 472 400 488 T 800 488 L 800 600 L 0 600 Z"
+                                            fill="#f5f2e9"
                                             className={styles.soilPath}
                                         />
                                         {/* Background capsule pill for visibility */}
                                         <rect x="175" y="520" width="130" height="24" rx="12" fill="#7c2d12" className={styles.labelBadge} />
                                         <text x="240" y="536" className={styles.elementLabelLight} textAnchor="middle">PHILOSOPHY</text>
-                                        
+
                                         {/* Invisible massive click hotspot */}
                                         <path d="M 0,480 L 320,480 L 320,600 L 0,600 Z" className={styles.clickOverlay} />
                                     </g>
@@ -290,15 +290,15 @@ export default function ThePetraEcosystem() {
                                         <path d="M 380,480 C 350,510 320,540 270,575 L 275,581 C 325,546 355,516 385,480 Z" fill="#334155" opacity="0.8" />
                                         <path d="M 420,480 C 450,510 480,540 530,575 L 525,581 C 475,546 445,516 415,480 Z" fill="#334155" opacity="0.8" />
                                         <path d="M 395,480 C 395,515 405,550 415,595 L 409,595 C 399,550 389,515 389,480 Z" fill="#1e293b" />
-                                        
+
                                         {/* Root branching details */}
                                         <path d="M 310,545 Q 280,560 250,565" stroke="#334155" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.5" />
                                         <path d="M 490,545 Q 520,560 550,565" stroke="#334155" strokeWidth="2.5" fill="none" strokeLinecap="round" opacity="0.5" />
-                                        
+
                                         {/* Background capsule pill for visibility */}
                                         <rect x="325" y="545" width="170" height="24" rx="12" fill="#1e293b" className={styles.labelBadge} />
                                         <text x="410" y="561" className={styles.elementLabelLight} textAnchor="middle">SUPPORT NETWORK</text>
-                                        
+
                                         {/* Invisible massive click hotspot covering the roots */}
                                         <circle cx="410" cy="545" r="70" className={styles.clickOverlay} />
                                     </g>
@@ -306,30 +306,30 @@ export default function ThePetraEcosystem() {
                                     {/* Main Trunk Layer (Lesson Flow) */}
                                     <g className={`${styles.trunkGroup} ${activeNode === 'flow' ? styles.activeTrunk : ''}`} onClick={() => setActiveNode('flow')}>
                                         {/* Tapered curved organic trunk */}
-                                        <path 
-                                            d="M 370,480 C 375,410 380,340 388,280 L 412,280 C 420,340 425,410 430,480 Z" 
-                                            fill="url(#trunkGrad)" 
+                                        <path
+                                            d="M 370,480 C 375,410 380,340 388,280 L 412,280 C 420,340 425,410 430,480 Z"
+                                            fill="url(#trunkGrad)"
                                         />
                                         {/* Wood texture bark lines */}
                                         <path d="M 382,480 C 388,410 392,340 396,280" stroke="#7c2d12" strokeWidth="1.5" fill="none" opacity="0.25" />
                                         <path d="M 418,480 C 412,410 408,340 404,280" stroke="#7c2d12" strokeWidth="1.5" fill="none" opacity="0.25" />
                                         <path d="M 400,480 C 400,410 400,340 400,280" stroke="#7c2d12" strokeWidth="1" fill="none" opacity="0.15" />
-                                        
+
                                         {/* Glowing energy pathway */}
-                                        <path 
-                                            d="M 400,480 C 400,410 400,340 400,280" 
-                                            stroke="#f59e0b" 
-                                            strokeWidth="3.5" 
-                                            fill="none" 
-                                            strokeLinecap="round" 
+                                        <path
+                                            d="M 400,480 C 400,410 400,340 400,280"
+                                            stroke="#f59e0b"
+                                            strokeWidth="3.5"
+                                            fill="none"
+                                            strokeLinecap="round"
                                             strokeDasharray="6 8"
                                             className={styles.sapFlowLine}
                                         />
-                                        
+
                                         {/* Background capsule pill for visibility */}
                                         <rect x="335" y="365" width="130" height="24" rx="12" fill="#7c2d12" className={styles.labelBadge} />
                                         <text x="400" y="381" className={styles.elementLabelLight} textAnchor="middle">LESSON FLOW</text>
-                                        
+
                                         {/* Invisible massive click hotspot covering the trunk height */}
                                         <path d="M 360,280 L 440,280 L 440,480 L 360,480 Z" className={styles.clickOverlay} />
                                     </g>
@@ -341,7 +341,7 @@ export default function ThePetraEcosystem() {
                                     {/* Constellation Star Pathways */}
                                     <g className={`${styles.starsHotspot} ${activeNode === 'pathways' ? styles.activeStars : ''}`} onClick={() => setActiveNode('pathways')}>
                                         <path d="M 520,60 L 560,85 L 600,70 L 630,100" stroke="#d97706" strokeWidth="2.2" strokeDasharray="4 4" fill="none" opacity="0.85" />
-                                        
+
                                         {/* Glowing star clusters */}
                                         <g transform="translate(520, 60)">
                                             <circle cx="0" cy="0" r="8" fill="#d97706" opacity="0.3" className={styles.pulsingStar} />
@@ -363,11 +363,11 @@ export default function ThePetraEcosystem() {
                                             <path d="M -10,0 L 10,0 M 0,-10 L 0,10" stroke="#d97706" strokeWidth="3" />
                                             <circle cx="0" cy="0" r="5" fill="#fff" />
                                         </g>
-                                        
+
                                         {/* Background capsule pill for visibility */}
                                         <rect x="535" y="120" width="110" height="24" rx="12" fill="#7c2d12" className={styles.labelBadge} />
                                         <text x="590" y="136" className={styles.elementLabelLight} textAnchor="middle">PATHWAYS</text>
-                                        
+
                                         {/* Invisible massive click hotspot covering the constellation */}
                                         <circle cx="580" cy="80" r="65" className={styles.clickOverlay} />
                                     </g>
@@ -375,7 +375,7 @@ export default function ThePetraEcosystem() {
                                     {/* The Sun (The Keystone) */}
                                     <g className={`${styles.sunHotspot} ${activeNode === 'keystone' ? styles.activeSun : ''}`} onClick={() => setActiveNode('keystone')}>
                                         <circle cx="400" cy="90" r="80" fill="url(#sunGlow)" />
-                                        
+
                                         {/* Radial celestial rays */}
                                         <g opacity="0.4">
                                             <line x1="400" y1="40" x2="400" y2="140" stroke="#d97706" strokeWidth="1.5" strokeDasharray="3 3" />
@@ -383,14 +383,14 @@ export default function ThePetraEcosystem() {
                                             <line x1="365" y1="55" x2="435" y2="125" stroke="#d97706" strokeWidth="1.5" strokeDasharray="3 3" />
                                             <line x1="365" y1="125" x2="435" y2="55" stroke="#d97706" strokeWidth="1.5" strokeDasharray="3 3" />
                                         </g>
-                                        
+
                                         <circle cx="400" cy="90" r="38" fill="#fff" opacity="0.95" className={styles.sunCore} />
                                         <circle cx="400" cy="90" r="30" fill="url(#sunGlow)" opacity="0.85" />
-                                        
+
                                         {/* Background capsule pill for visibility */}
                                         <rect x="335" y="145" width="130" height="24" rx="12" fill="#7c2d12" className={styles.labelBadge} />
                                         <text x="400" y="161" className={styles.elementLabelLight} textAnchor="middle">THE KEYSTONE</text>
-                                        
+
                                         {/* Invisible massive click hotspot */}
                                         <circle cx="400" cy="90" r="80" className={styles.clickOverlay} />
                                     </g>
@@ -400,16 +400,16 @@ export default function ThePetraEcosystem() {
                                         <path d="M180,190 C120,165 90,215 130,255 C170,295 220,245 180,190 Z" fill="#312e81" fillOpacity="0.85" />
                                         <path d="M210,210 C150,180 120,230 160,270 C200,310 250,260 210,210 Z" fill="#4f46e5" fillOpacity="0.95" />
                                         <path d="M225,195 C175,170 155,210 185,240 C215,270 255,235 225,195 Z" fill="#818cf8" fillOpacity="0.8" />
-                                        
+
                                         {/* Leaf veins */}
                                         <path d="M 210,210 Q 180,240 160,270" stroke="#c7d2fe" strokeWidth="1.5" fill="none" opacity="0.6" />
                                         <path d="M 188,228 Q 170,225 158,228" stroke="#c7d2fe" strokeWidth="1" fill="none" opacity="0.5" />
                                         <path d="M 178,242 Q 165,245 155,250" stroke="#c7d2fe" strokeWidth="1" fill="none" opacity="0.5" />
-                                        
+
                                         {/* Background capsule pill for visibility */}
                                         <rect x="105" y="260" width="150" height="24" rx="12" fill="#1e1b4b" className={styles.labelBadge} />
                                         <text x="180" y="276" className={styles.elementLabelLight} textAnchor="middle">LEARNING CHART</text>
-                                        
+
                                         {/* Invisible massive click hotspot */}
                                         <circle cx="180" cy="230" r="70" className={styles.clickOverlay} />
                                     </g>
@@ -419,16 +419,16 @@ export default function ThePetraEcosystem() {
                                         <path d="M560,190 C500,165 470,215 510,255 C550,295 600,245 560,190 Z" fill="#0c4a6e" fillOpacity="0.85" />
                                         <path d="M590,210 C650,180 680,230 640,270 C600,310 550,260 590,210 Z" fill="#0284c7" fillOpacity="0.95" />
                                         <path d="M605,195 C555,170 535,210 565,240 C595,270 635,235 605,195 Z" fill="#38bdf8" fillOpacity="0.8" />
-                                        
+
                                         {/* Leaf veins */}
                                         <path d="M 590,210 Q 620,240 640,270" stroke="#bae6fd" strokeWidth="1.5" fill="none" opacity="0.6" />
                                         <path d="M 612,228 Q 630,225 642,228" stroke="#bae6fd" strokeWidth="1" fill="none" opacity="0.5" />
                                         <path d="M 622,242 Q 635,245 645,250" stroke="#bae6fd" strokeWidth="1" fill="none" opacity="0.5" />
-                                        
+
                                         {/* Background capsule pill for visibility */}
                                         <rect x="570" y="260" width="100" height="24" rx="12" fill="#082f49" className={styles.labelBadge} />
                                         <text x="620" y="276" className={styles.elementLabelLight} textAnchor="middle">LIBRARY</text>
-                                        
+
                                         {/* Invisible massive click hotspot */}
                                         <circle cx="600" cy="230" r="70" className={styles.clickOverlay} />
                                     </g>
@@ -458,7 +458,7 @@ export default function ThePetraEcosystem() {
                         {/* RIGHT PANE: Interactive Active Simulator Control Center */}
                         <div className={styles.simulatorPaneCard}>
                             <AnimatePresence mode="wait">
-                                
+
                                 {/* 1. Learning Chart Simulator */}
                                 {activeNode === 'chart' && (
                                     <motion.div key="chart" className={styles.simWrapper} {...fadeInUp}>
@@ -497,7 +497,7 @@ export default function ThePetraEcosystem() {
                                                             setFlippedFlashcard(false);
                                                         }}
                                                     >
-                                                        <span>0{idx+1}</span>
+                                                        <span>0{idx + 1}</span>
                                                         <span className={styles.hBtnLabel}>{step}</span>
                                                     </button>
                                                 ))}
@@ -508,9 +508,9 @@ export default function ThePetraEcosystem() {
                                                 <div className={styles.flowStepSimulatorBox}>
                                                     <h5>Stage 1: Active Recall Flashcards</h5>
                                                     <p className={styles.simDescription}>Tap the card to perform a 3D flip and reveal definitions & academic example sentences.</p>
-                                                    
+
                                                     <div className={styles.flashcardCarousel}>
-                                                        <div 
+                                                        <div
                                                             className={`${styles.card3D} ${flippedFlashcard ? styles.card3DFlipped : ''}`}
                                                             onClick={() => setFlippedFlashcard(!flippedFlashcard)}
                                                         >
@@ -528,7 +528,7 @@ export default function ThePetraEcosystem() {
                                                         </div>
 
                                                         <div className={styles.carouselControls}>
-                                                            <button 
+                                                            <button
                                                                 className={styles.carouselBtn}
                                                                 onClick={(e) => {
                                                                     e.stopPropagation();
@@ -538,7 +538,7 @@ export default function ThePetraEcosystem() {
                                                             >
                                                                 Prev Word
                                                             </button>
-                                                            <button 
+                                                            <button
                                                                 className={styles.carouselBtn}
                                                                 onClick={(e) => {
                                                                     e.stopPropagation();
@@ -564,14 +564,14 @@ export default function ThePetraEcosystem() {
                                                     <div className={styles.polisherWorkspace}>
                                                         <div className={styles.inputBlock}>
                                                             <label>Draft Input (Colloquial Text)</label>
-                                                            <textarea 
-                                                                value={rawText} 
+                                                            <textarea
+                                                                value={rawText}
                                                                 onChange={(e) => setRawText(e.target.value)}
                                                                 className={styles.rawTextArea}
                                                             />
                                                         </div>
 
-                                                        <button 
+                                                        <button
                                                             className={styles.polishActionBtn}
                                                             onClick={handleUpgradeStyle}
                                                             disabled={isPolishing}
@@ -590,7 +590,7 @@ export default function ThePetraEcosystem() {
                                                         </button>
 
                                                         {polishedText && (
-                                                            <motion.div 
+                                                            <motion.div
                                                                 className={styles.polishedOutputBlock}
                                                                 initial={{ opacity: 0, y: 5 }}
                                                                 animate={{ opacity: 1, y: 0 }}
@@ -715,7 +715,7 @@ export default function ThePetraEcosystem() {
                                                             <div className={styles.reviewCommentCallout}>
                                                                 <span className={styles.commentEditor}>Clara S. (Editor Feedback):</span>
                                                                 <p>"The prose lacks lexical sophistication. Upgrade the phrasing to sound more authoritative."</p>
-                                                                <button 
+                                                                <button
                                                                     className={styles.applyResolveBtn}
                                                                     onClick={() => handleResolveEdit(activePitch)}
                                                                     disabled={isResolving}
@@ -754,7 +754,7 @@ export default function ThePetraEcosystem() {
                                             <div className={styles.chatMessengerWorkspace}>
                                                 <div className={styles.messengerSidemenu}>
                                                     {['mentor', 'tutor', 'advisor'].map(roleKey => (
-                                                        <button 
+                                                        <button
                                                             key={roleKey}
                                                             className={`${styles.messengerContactBtn} ${activeMentor === roleKey ? styles.activeContact : ''}`}
                                                             onClick={() => setActiveMentor(roleKey)}
@@ -768,8 +768,8 @@ export default function ThePetraEcosystem() {
                                                 <div className={styles.chatViewportWindow}>
                                                     <div className={styles.chatMessagesContainer}>
                                                         {chatMessages[activeMentor].map((msg, idx) => (
-                                                            <div 
-                                                                key={idx} 
+                                                            <div
+                                                                key={idx}
                                                                 className={`${styles.chatMessageBubble} ${msg.sender === 'user' ? styles.userBubble : styles.mentorBubble}`}
                                                             >
                                                                 <p>{msg.text}</p>
@@ -785,14 +785,14 @@ export default function ThePetraEcosystem() {
                                                     </div>
 
                                                     <div className={styles.chatInputFooter}>
-                                                        <input 
-                                                            type="text" 
+                                                        <input
+                                                            type="text"
                                                             placeholder="Ask your tutor a question..."
                                                             value={userQuestion}
                                                             onChange={(e) => setUserQuestion(e.target.value)}
                                                             onKeyDown={(e) => { if (e.key === 'Enter') handleSendMessage(); }}
                                                         />
-                                                        <button 
+                                                        <button
                                                             className={styles.chatSendBtn}
                                                             onClick={handleSendMessage}
                                                             disabled={!userQuestion.trim()}
@@ -871,7 +871,7 @@ export default function ThePetraEcosystem() {
                                                     const isActive = activeLibraryCat === catKey;
                                                     return (
                                                         <div key={catKey} className={styles.drawerContainer}>
-                                                            <button 
+                                                            <button
                                                                 className={`${styles.drawerHandleBtn} ${isActive ? styles.drawerOpen : ''}`}
                                                                 onClick={() => setActiveLibraryCat(catKey)}
                                                             >
@@ -880,7 +880,7 @@ export default function ThePetraEcosystem() {
                                                             </button>
 
                                                             {isActive && (
-                                                                <motion.div 
+                                                                <motion.div
                                                                     className={styles.drawerInteriorContent}
                                                                     initial={{ height: 0, opacity: 0 }}
                                                                     animate={{ height: 'auto', opacity: 1 }}
@@ -929,8 +929,8 @@ export default function ThePetraEcosystem() {
                                                 ].map(card => {
                                                     const isFlipped = manifestoFlipped[card.id];
                                                     return (
-                                                        <div 
-                                                            key={card.id} 
+                                                        <div
+                                                            key={card.id}
                                                             className={`${styles.manifesto3DCard} ${isFlipped ? styles.manifestoFlipped : ''}`}
                                                             onClick={() => toggleManifesto(card.id)}
                                                         >

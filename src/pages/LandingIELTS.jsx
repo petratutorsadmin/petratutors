@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { Check, X, Users } from 'lucide-react';
 import SEO from '../components/SEO';
 import styles from './LandingIELTS.module.css';
 
@@ -68,9 +69,9 @@ const LandingIELTS = () => {
           <h1 className={styles.title}>{t('landing_ielts.hero_title')}</h1>
           <p className={styles.subtitle}>{t('landing_ielts.hero_sub')}</p>
           
-          <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(255,255,255,0.06)', padding: '0.5rem 1.5rem', borderRadius: 'var(--radius-pill)', fontSize: '0.9rem', color: '#fdfaf3', border: '1px solid rgba(255,255,255,0.15)', backdropFilter: 'blur(8px)', fontWeight: '400', letterSpacing: '0.5px' }}>
-              <span role="img" aria-label="friends">👥</span> 友達と一緒に受講で ¥1,500/時〜（グループ割）
+          <div className={styles.groupDiscountContainer}>
+            <span className={styles.groupDiscount}>
+              <Users size={16} /> 友達と一緒に受講で ¥1,500/時〜（グループ割）
             </span>
           </div>
           
@@ -85,20 +86,20 @@ const LandingIELTS = () => {
 
           <div className={styles.trustPills}>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('landing_ielts.trust_1')}
             </div>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('landing_ielts.trust_2')}
             </div>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('landing_ielts.trust_3')}
             </div>
           </div>
 
-          {/* Results Strip - Now Above the Fold (as requested) */}
+          {/* Results Strip */}
           <div className={styles.heroResults}>
             {RESULTS.map((res, i) => (
               <div key={i} className={styles.heroResultItem}>
@@ -120,7 +121,7 @@ const LandingIELTS = () => {
           <div className={styles.painGrid}>
             {PAIN_POINTS.map((point, i) => (
               <div key={i} className={styles.painCard}>
-                <div className={styles.iconX}>✕</div>
+                <X className={styles.iconX} size={16} />
                 <p>{point}</p>
               </div>
             ))}

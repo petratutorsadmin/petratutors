@@ -37,7 +37,7 @@ const AboutTimeline = () => {
     return (
         <section className={styles.timelineSection}>
             <div className="container">
-                <motion.div 
+                <motion.div
                     className={styles.header}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ const AboutTimeline = () => {
 
                 <div className={styles.timelineContainer}>
                     <div className={styles.verticalLine}>
-                        <motion.div 
+                        <motion.div
                             className={styles.progressLine}
                             initial={{ height: 0 }}
                             whileInView={{ height: '100%' }}
@@ -63,14 +63,14 @@ const AboutTimeline = () => {
                             const isEven = index % 2 !== 0;
                             return (
                                 <div key={index} className={styles.itemWrapper}>
-                                    <motion.div 
+                                    <motion.div
                                         className={styles.dot}
                                         initial={{ scale: 0, opacity: 0 }}
                                         whileInView={{ scale: 1, opacity: 1 }}
                                         viewport={{ once: true, margin: "-100px" }}
                                         transition={{ duration: 0.4, delay: index * 0.2 + 0.2 }}
                                     />
-                                    <motion.div 
+                                    <motion.div
                                         className={styles.content}
                                         initial={{ opacity: 0, x: isEven ? 30 : -30, y: 20 }}
                                         whileInView={{ opacity: 1, x: 0, y: 0 }}

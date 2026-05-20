@@ -35,17 +35,17 @@
   --space-2xl: 7rem; /* 112px */
 
   /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
+  --radius-sm: 12px;
+  --radius-md: 12px;
   --radius-lg: 16px;
-  --radius-xl: 24px;
+  --radius-xl: 16px;
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(48, 27, 71, 0.04);
-  --shadow-md: 0 8px 24px rgba(48, 27, 71, 0.06);
-  --shadow-lg: 0 16px 40px rgba(48, 27, 71, 0.08);
-  --shadow-gold: 0 0 0 1px var(--c-gold), 0 8px 32px rgba(201,168,76,0.15);
+  --shadow-sm: 0 1px 3px rgba(48, 27, 71, 0.05);
+  --shadow-md: 0 4px 12px rgba(48, 27, 71, 0.05);
+  --shadow-lg: 0 8px 24px rgba(48, 27, 71, 0.05);
+  --shadow-gold: none;
 
   /* Layout */
   --container-width: 1200px; /* Slightly narrower for better readability */
@@ -67,7 +67,7 @@ body {
   font-family: var(--font-sans);
   background-color: var(--c-sand);
   color: var(--c-text);
-  line-height: 1.65;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -75,8 +75,9 @@ body {
 /* Japanese Font Override */
 html[lang="ja"] body {
   font-family: 'Noto Sans JP', var(--font-sans);
-  line-height: 1.75; /* JP needs slightly more breathing room */
+  line-height: 1.8; /* JP needs slightly more breathing room */
   font-feature-settings: "palt" 1; /* Beautiful proportional kerning for Japanese characters & punctuation */
+  letter-spacing: 0.03em;
 }
 
 /* Japanese Headings Override for Premium Mincho (Serif) Typography */
@@ -95,7 +96,7 @@ html[lang="ja"] [class*="Title"],
 html[lang="ja"] [class*="title"] {
   font-family: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, serif;
   font-feature-settings: "palt" 1;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
 }
 
 h1,
@@ -107,7 +108,7 @@ h6 {
   font-family: var(--font-serif);
   color: var(--c-navy);
   font-weight: 500;
-  line-height: 1.1; /* Tighter headings for premium editorial feel */
+  line-height: 1.25; /* Relaxed for multi-line editorial headers */
   letter-spacing: -0.01em;
 }
 
@@ -193,12 +194,12 @@ img {
 }
 
 .section {
-  padding: clamp(2.5rem, 6vh, 5rem) 0;
+  padding: clamp(3.5rem, 8vh, 6.5rem) 0;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: clamp(1.5rem, 4vh, 3rem) 0;
+    padding: clamp(2rem, 5vh, 4rem) 0;
   }
   .container {
     padding: 0 1.5rem;
@@ -220,7 +221,7 @@ img {
   font-weight: 500;
   font-size: 1.05rem; /* Slightly larger text */
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   border: none;
   text-decoration: none;
 }
@@ -228,24 +229,22 @@ img {
 .btn-primary {
   background-color: var(--c-navy);
   color: var(--c-white);
-  box-shadow: 0 4px 12px rgba(48, 27, 71, 0.15); /* Premium shadow */
+  box-shadow: none;
 }
 
 .btn-primary:hover {
   background-color: var(--c-navy-light);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(48, 27, 71, 0.2);
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--c-text);
-  border: 1px solid rgba(0,0,0,0.15); /* Softer border so it doesn't fight the primary button */
+  border: 1px solid var(--c-border);
 }
 
 .btn-secondary:hover {
-  background-color: rgba(0,0,0,0.02);
-  border-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.03);
+  border-color: var(--c-text-light);
 }
 
 /* Cards */
@@ -253,37 +252,31 @@ img {
   background: var(--c-white);
   border-radius: var(--radius-lg);
   padding: var(--space-md);
+  border: 1px solid var(--c-border);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.2s ease;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(48, 27, 71, 0.35);
 }
 
-/* Glassmorphism Utilities */
+/* Glassmorphism Utilities - Overhauled to Solid, Structured design */
 .glass-card {
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: var(--c-white);
+  border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 32px rgba(48, 27, 71, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease;
 }
 
 .glass-card:hover {
-  background: rgba(255, 255, 255, 0.85);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(48, 27, 71, 0.08);
+  border-color: rgba(48, 27, 71, 0.35);
 }
 
 .glass-panel {
-  background: rgba(245, 241, 235, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--c-white);
+  border-bottom: 1px solid var(--c-border);
 }
 
 /* Animations */

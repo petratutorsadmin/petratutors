@@ -86,7 +86,7 @@ export default function Home() {
                     <h2 className="text-h2 text-center animate-on-scroll" style={{ marginBottom: '3rem' }}>{t('home.support_title')}</h2>
                     <div className={styles.matchCards}>
                         {[1, 2, 3, 4, 5].map((i) => (
-                            <div key={i} className={`glass-card ${styles.matchCard} animate-on-scroll`} style={{ animationDelay: `${i * 0.1}s` }}>
+                            <div key={i} className={`${styles.matchCard} animate-on-scroll`} style={{ animationDelay: `${i * 0.1}s` }}>
                                 <CheckCircle className={styles.matchCheck} size={20} />
                                 <span>{t(`home.support_${i}`)}</span>
                             </div>
@@ -106,26 +106,32 @@ export default function Home() {
                         <Link to="/ecosystem" className={styles.linkWithIcon}>{t('home.view_all')} <ArrowRight size={16} /></Link>
                     </div>
                     <div className={styles.programsGrid}>
-                        <div className={`glass-card ${styles.programCard} animate-on-scroll`} style={{ animationDelay: '0.1s' }}>
-                            <div className={styles.iconWrapper}>
-                                <BookOpen className={styles.programIcon} size={28} />
+                        <div className={`${styles.programRow} animate-on-scroll`} style={{ animationDelay: '0.1s' }}>
+                            <div className={styles.programMain}>
+                                <div className={styles.iconWrapper}>
+                                    <BookOpen className={styles.programIcon} size={24} />
+                                </div>
+                                <h3 className="text-h3" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)' }}>{t('home.prog_lang_title')}</h3>
                             </div>
-                            <h3 className="text-h4">{t('home.prog_lang_title')}</h3>
-                            <p className="mobile-hide">{t('home.prog_lang_desc')}</p>
+                            <p className={styles.programText}>{t('home.prog_lang_desc')}</p>
                         </div>
-                        <div className={`glass-card ${styles.programCard} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
-                            <div className={styles.iconWrapper}>
-                                <GraduationCap className={styles.programIcon} size={28} />
+                        <div className={`${styles.programRow} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
+                            <div className={styles.programMain}>
+                                <div className={styles.iconWrapper}>
+                                    <GraduationCap className={styles.programIcon} size={24} />
+                                </div>
+                                <h3 className="text-h3" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)' }}>{t('home.prog_exam_title')}</h3>
                             </div>
-                            <h3 className="text-h4">{t('home.prog_exam_title')}</h3>
-                            <p className="mobile-hide">{t('home.prog_exam_desc')}</p>
+                            <p className={styles.programText}>{t('home.prog_exam_desc')}</p>
                         </div>
-                        <div className={`glass-card ${styles.programCard} animate-on-scroll`} style={{ animationDelay: '0.3s' }}>
-                            <div className={styles.iconWrapper}>
-                                <Globe2 className={styles.programIcon} size={28} />
+                        <div className={`${styles.programRow} animate-on-scroll`} style={{ animationDelay: '0.3s' }}>
+                            <div className={styles.programMain}>
+                                <div className={styles.iconWrapper}>
+                                    <Globe2 className={styles.programIcon} size={24} />
+                                </div>
+                                <h3 className="text-h3" style={{ fontSize: '1.5rem', fontFamily: 'var(--font-serif)' }}>{t('home.prog_intl_title')}</h3>
                             </div>
-                            <h3 className="text-h4">{t('home.prog_intl_title')}</h3>
-                            <p className="mobile-hide">{t('home.prog_intl_desc')}</p>
+                            <p className={styles.programText}>{t('home.prog_intl_desc')}</p>
                         </div>
                     </div>
                     <div className="text-center" style={{ marginTop: '3rem' }}>
@@ -165,14 +171,14 @@ export default function Home() {
             <section className={`section ${styles.snapshot}`}>
                 <div className="container">
                     <div className={styles.snapshotGrid}>
-                        <div className={`glass-card ${styles.trustCard} animate-on-scroll`}>
+                        <div className={`card ${styles.trustCard} animate-on-scroll`}>
                             <h2 className="text-h3" style={{ marginBottom: '1.5rem' }}>{t('home.match_guarantee_title')}</h2>
                             <p className="text-body" style={{ marginBottom: '2rem' }}>{t('home.match_guarantee_body')}</p>
                             <div className={styles.noFeeBadge}>
                                 <Check size={20} /> {t('home.comp_4_petra')}
                             </div>
                         </div>
-                        <div className={`glass-card ${styles.pricingCard} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
+                        <div className={`card ${styles.pricingCard} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
                             <h2 className="text-h3" style={{ marginBottom: '0.5rem' }}>{t('home.pricing_title')}</h2>
                             <p className={styles.pricingSub}>{t('home.pricing_sub')}</p>
                             <div className={styles.priceItems}>

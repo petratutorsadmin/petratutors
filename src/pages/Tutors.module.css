@@ -273,11 +273,11 @@
 }
 
 .scarcityDisclaimer {
-    background-color: #fff9db;
-    border: 1px solid #ffec99;
-    color: #f08c00;
+    background-color: var(--c-stone);
+    border: 1px solid var(--c-border);
+    color: var(--c-navy);
     padding: 1rem;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -292,8 +292,9 @@
 
 .highlightCard {
     padding: 1.5rem;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     background-color: var(--c-sand);
+    border: 1px solid var(--c-border);
 }
 
 .highlightCard h3 {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { Check, X } from 'lucide-react';
 import styles from './BusinessLanding.module.css';
 
 const BusinessLanding = () => {
@@ -73,15 +74,15 @@ const BusinessLanding = () => {
 
           <div className={styles.trustPills}>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('business.trust_1')}
             </div>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('business.trust_2')}
             </div>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('business.trust_3')}
             </div>
           </div>
@@ -108,7 +109,7 @@ const BusinessLanding = () => {
           <div className={styles.painGrid}>
             {PAIN_POINTS.map((point, i) => (
               <div key={i} className={styles.painCard}>
-                <div className={styles.iconX}>✕</div>
+                <X className={styles.iconX} size={16} />
                 <p>{point}</p>
               </div>
             ))}

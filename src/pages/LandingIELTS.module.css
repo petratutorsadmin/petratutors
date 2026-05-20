@@ -20,6 +20,26 @@
   padding: 0 40px;
 }
 
+.groupDiscountContainer {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.groupDiscount {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  color: #fdfaf3;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
 /* Hero Section */
 .hero {
   min-height: 85vh;
@@ -77,15 +97,14 @@
   background-color: #d4af37;
   color: #1a0b2e;
   padding: 18px 36px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   font-weight: 700;
   text-decoration: none;
-  transition: transform 0.2s, background-color 0.2s;
+  transition: background-color 0.2s;
   box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
 }
 
 .primaryCta:hover {
-  transform: translateY(-2px);
   background-color: #e5c05b;
 }
 
@@ -94,7 +113,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
   padding: 18px 36px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   font-weight: 600;
   text-decoration: none;
   transition: background-color 0.2s;
@@ -113,12 +132,12 @@
 }
 
 .pill {
-  background: rgba(255, 255, 255, 0.08); /* Slightly darker bg for better contrast */
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 8px 16px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   font-size: 13px;
-  color: #ffffff; /* pure white for contrast */
+  color: #ffffff;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -134,10 +153,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  background: rgba(46, 26, 74, 0.7); /* Darker for text legibility */
-  backdrop-filter: blur(10px);
+  background: #25143e;
   border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   padding: 30px;
   margin-top: 40px;
   max-width: 800px;
@@ -204,7 +222,7 @@
 .painCard {
   background: rgba(255, 255, 255, 0.04);
   padding: 40px;
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: flex-start;
@@ -228,7 +246,7 @@
   background: rgba(212, 175, 55, 0.1);
   border-left: 4px solid #d4af37;
   padding: 40px;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
   max-width: 800px;
   color: #ffffff;
   line-height: 1.6;
@@ -249,13 +267,12 @@
 .solutionCard {
   background: #1a0b2e;
   padding: 48px;
-  border-radius: 20px;
+  border-radius: var(--radius-lg);
   border: 1px solid rgba(212, 175, 55, 0.15);
-  transition: transform 0.3s;
+  transition: border-color 0.3s;
 }
 
 .solutionCard:hover {
-  transform: translateY(-8px);
   border-color: rgba(212, 175, 55, 0.4);
 }
 
@@ -266,7 +283,7 @@
   font-size: 10px;
   font-weight: 800;
   padding: 4px 12px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   margin-bottom: 24px;
 }
 
@@ -360,16 +377,16 @@
   background-color: #d4af37;
   color: #1a0b2e;
   padding: 24px 60px;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
   font-size: 20px;
   font-weight: 800;
   text-decoration: none;
-  transition: transform 0.2s;
+  transition: background-color 0.2s;
   box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
 }
 
 .hugeCta:hover {
-  transform: scale(1.05);
+  background-color: #e5c05b;
 }
 
 @media (max-width: 768px) {

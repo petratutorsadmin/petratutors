@@ -45,32 +45,22 @@
     box-shadow: none;
     padding: 2.5rem 1.5rem 1.75rem;
     background: var(--c-white);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-/* Subtle Price Progression */
-.pricingCard:nth-child(1) { background-color: #fdfdfd; }
-.pricingCard:nth-child(2) { background-color: #fafafa; }
-.pricingCard:nth-child(4) { background-color: #f5f5f5; border-color: rgba(0,0,0,0.1); }
-
 .pricingCard:hover {
-    border-color: var(--c-accent);
-    box-shadow: var(--shadow-md);
-    z-index: 10;
+    border-color: rgba(48, 27, 71, 0.35);
 }
 
 .popular {
     border-color: var(--c-navy);
-    box-shadow: 0 20px 40px rgba(10, 20, 40, 0.12);
-    transform: scale(1.1);
-    background: linear-gradient(to bottom, #ffffff, #fffdf5) !important;
+    background: var(--c-white) !important;
     z-index: 5;
     border-width: 2px;
 }
 
 .popular:hover {
-    transform: scale(1.12) translateY(-4px);
-    box-shadow: 0 30px 60px rgba(10, 20, 40, 0.15);
+    border-color: var(--c-navy-light);
 }
 
 .popularBadge {
@@ -80,15 +70,14 @@
     transform: translate(-50%, -50%);
     background-color: var(--c-navy);
     color: var(--c-white);
-    padding: 0.5rem 1.5rem;
-    border-radius: 100px;
-    font-size: 0.85rem;
+    padding: 0.35rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     white-space: nowrap;
     z-index: 10;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .cardHeader {
@@ -442,12 +431,12 @@
     }
 
     .popular {
-        transform: scale(1.05);
+        transform: none;
         z-index: 2;
     }
 
     .popular:hover {
-        transform: scale(1.07);
+        border-color: var(--c-navy-light);
     }
 
     .popularBadge {

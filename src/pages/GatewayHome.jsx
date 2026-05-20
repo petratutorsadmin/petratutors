@@ -72,16 +72,14 @@ export default function GatewayHome() {
                         <Link to="/inquiry" className={styles.fallbackCta}>{t('gateway.fallback_cta')}</Link>
                     </div>
 
-                    {/* Trust pills marquee */}
+                    {/* Static Trust Badges */}
                     <div className={styles.trustPills}>
-                        <div className={styles.trustPillsTrack}>
-                            {[...TRUST_KEYS, ...TRUST_KEYS].map((key, idx) => (
-                                <span key={`${key}-${idx}`} className={styles.trustPill}>
-                                    <CheckCircle size={13} />
-                                    {t(`gateway.${key}`)}
-                                </span>
-                            ))}
-                        </div>
+                        {TRUST_KEYS.map((key) => (
+                            <span key={key} className={styles.trustPill}>
+                                <CheckCircle size={13} />
+                                {t(`gateway.${key}`)}
+                            </span>
+                        ))}
                     </div>
                 </div>
 

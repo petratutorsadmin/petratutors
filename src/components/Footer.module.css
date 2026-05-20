@@ -1,5 +1,5 @@
 .footer {
-    background: radial-gradient(circle at top right, var(--c-navy-light) 0%, var(--c-navy) 50%, var(--c-deep) 100%);
+    background: var(--c-deep);
     color: var(--c-sand);
     padding-top: var(--space-xl);
     border-top: 1px solid rgba(255,255,255,0.05);

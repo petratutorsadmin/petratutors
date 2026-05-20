@@ -69,7 +69,7 @@ export default function Tutors() {
                 description={t('tutors.subtitle')}
                 path="/tutors"
             />
-            <div className={`${styles.header} glass-panel`}>
+            <div className={styles.header}>
                 <div className="container animate-on-scroll">
                     <h1 className="text-h1" style={{ marginBottom: '1rem' }}>{t('tutors.title')}</h1>
                     <p className="text-large" style={{ color: 'var(--c-text-light)', maxWidth: '600px' }}>
@@ -101,7 +101,7 @@ export default function Tutors() {
                 {/* Tutors Grid */}
                 <div className={styles.tutorsGrid}>
                     {filteredTutors.map((tutor, idx) => (
-                        <div key={tutor.id} className={`glass-card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${idx * 0.1}s` }}>
+                        <div key={tutor.id} className={`card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${idx * 0.1}s` }}>
                             <div className={styles.tutorImage}>
                                 <img src={tutor.image} alt={tutor.name} className={styles.avatarImage} />
                             </div>
@@ -141,11 +141,11 @@ export default function Tutors() {
                     ))}
                     
                     {/* "And More" Call to Action Card */}
-                    <div className={`glass-card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${filteredTutors.length * 0.1}s`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '3rem 2rem', border: '1px dashed var(--c-gold)', background: 'rgba(212, 175, 55, 0.03)' }}>
-                        <div style={{ width: '64px', height: '64px', borderRadius: '50%', background: 'var(--c-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', color: 'var(--c-navy)', boxShadow: '0 4px 12px rgba(212, 175, 55, 0.3)' }}>
-                            <span style={{ fontSize: '2rem', fontWeight: '800', lineHeight: '1' }}>+</span>
+                    <div className={`card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${filteredTutors.length * 0.1}s`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '3rem 2rem', border: '1px dashed var(--c-border)', background: 'var(--c-sand)' }}>
+                        <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--c-navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', color: 'var(--c-white)' }}>
+                            <span style={{ fontSize: '1.5rem', fontWeight: '800', lineHeight: '1' }}>+</span>
                         </div>
-                        <h3 className="text-h3" style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--c-gold)' }}>
+                        <h3 className="text-h3" style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--c-navy)' }}>
                             {t('tutors.and_more_title')}
                         </h3>
                         <p style={{ color: 'var(--c-text-light)', marginBottom: '2rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
@@ -161,7 +161,7 @@ export default function Tutors() {
             {/* Expanded Profile Modal */}
             {selectedTutor && (
                 <div className={styles.modalOverlay} onClick={() => setSelectedTutor(null)}>
-                    <div className={`glass-card ${styles.modalContent}`} onClick={e => e.stopPropagation()}>
+                    <div className={`card ${styles.modalContent}`} onClick={e => e.stopPropagation()}>
                         <button className={styles.closeBtn} onClick={() => setSelectedTutor(null)}>
                             <X size={24} />
                         </button>
@@ -191,15 +191,15 @@ export default function Tutors() {
                                 </div>
 
                                 <div className={styles.highlightSections}>
-                                    <div className={`${styles.highlightCard} glass-panel`}>
+                                    <div className={`${styles.highlightCard} card`}>
                                         <h3 className="text-h5">{t('tutors.ideal_match')}</h3>
                                         <p>{selectedTutor.idealMatch}</p>
                                     </div>
-                                    <div className={`${styles.highlightCard} glass-panel`}>
+                                    <div className={`${styles.highlightCard} card`}>
                                         <h3 className="text-h5">{t('tutors.success_case')}</h3>
                                         <p>{selectedTutor.successCase}</p>
                                     </div>
-                                    <div className={`${styles.highlightCard} glass-panel`}>
+                                    <div className={`${styles.highlightCard} card`}>
                                         <h3 className="text-h5">{t('tutors.lesson_style')}</h3>
                                         <p>{selectedTutor.lessonStyle}</p>
                                     </div>
@@ -233,7 +233,7 @@ export default function Tutors() {
                                     </div>
                                 </div>
 
-                                <div className={`${styles.modalCta} glass-panel`}>
+                                <div className={`${styles.modalCta} card`}>
                                     <p className="text-large" style={{ marginBottom: '1rem' }}>{t('tutors.ready', { name: selectedTutor.name.split(' ')[0] })}</p>
                                     <Link to="/inquiry" className="btn btn-primary" style={{ width: '100%' }}>{t('tutors.request')}</Link>
                                 </div>

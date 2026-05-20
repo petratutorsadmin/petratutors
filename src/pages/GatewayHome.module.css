@@ -117,36 +117,19 @@
     padding: 1.25rem 1.4rem 1.15rem;
     background: rgba(255,255,255,0.055);
     border: 1px solid rgba(255,255,255,0.1);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-sm);
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
     animation: fadeInUp 0.45s ease both;
     position: relative;
     overflow: hidden;
     min-height: 100px;
 }
 
-.choiceBtn::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--c-gold), transparent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
-}
-
 .choiceBtn:hover {
     background: rgba(255,255,255,0.09);
-    border-color: rgba(201,168,76,0.5);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 28px rgba(201,168,76,0.12);
-}
-
-.choiceBtn:hover::after {
-    transform: scaleX(1);
+    border-color: rgba(255,255,255,0.3);
 }
 
 .choiceBtn:hover .choiceBtnArrow {
@@ -208,30 +191,13 @@
     color: var(--c-gold);
 }
 
-/* ── Trust pills marquee ── */
+/* ── Trust badges ── */
 .trustPills {
-    width: 100%;
-    overflow: hidden;
-    margin: 1.5rem 0;
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-}
-
-.trustPillsTrack {
     display: flex;
-    gap: 2rem;
-    width: max-content;
-    animation: marquee 40s linear infinite;
-    padding: 0.5rem 0;
-}
-
-.trustPillsTrack:hover {
-    animation-play-state: paused;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1.5rem 0;
 }
 
 .trustPill {
@@ -240,19 +206,12 @@
     gap: 0.45rem;
     background: rgba(255,255,255,0.04);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 100px;
+    border-radius: var(--radius-sm);
     padding: 0.4rem 1rem;
     font-size: 0.82rem;
     color: var(--c-text-on-dark-light);
     white-space: nowrap;
     flex-shrink: 0;
-    transition: all 0.3s ease;
-}
-
-.trustPill:hover {
-    background: rgba(255,255,255,0.08);
-    border-color: rgba(255,255,255,0.2);
-    transform: translateY(-2px);
 }
 
 .trustPill svg {
@@ -423,7 +382,7 @@
     min-width: 200px;
     padding: 0.85rem 1.75rem;
     font-size: 0.97rem;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
 }
 
 /* ── MOBILE ── */

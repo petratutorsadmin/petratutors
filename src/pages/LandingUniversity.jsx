@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { Check, X, Zap } from 'lucide-react';
 import styles from './LandingUniversity.module.css';
 
 const LandingUniversity = () => {
@@ -62,7 +63,9 @@ const LandingUniversity = () => {
           <h1 className={styles.title}>{t('landing_uni.hero_title')}</h1>
           <p className={styles.subtitle}>{t('landing_uni.hero_sub')}</p>
           
-          <p className={styles.scarcity}>⚡ {t('landing_uni.hero_scarcity')}</p>
+          <p className={styles.scarcity}>
+            <Zap className={styles.scarcityIcon} size={14} /> {t('landing_uni.hero_scarcity')}
+          </p>
 
           <div className={styles.ctaGroup}>
             <Link to="/inquiry" className={styles.primaryCta}>
@@ -75,15 +78,15 @@ const LandingUniversity = () => {
 
           <div className={styles.trustPills}>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('landing_uni.trust_1')}
             </div>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('landing_uni.trust_2')}
             </div>
             <div className={styles.pill}>
-              <span className={styles.checkIcon}>✓</span>
+              <Check className={styles.checkIcon} size={16} />
               {t('landing_uni.trust_3')}
             </div>
           </div>
@@ -110,7 +113,7 @@ const LandingUniversity = () => {
           <div className={styles.painGrid}>
             {PAIN_POINTS.map((point, i) => (
               <div key={i} className={styles.painCard}>
-                <div className={styles.iconX}>✕</div>
+                <X className={styles.iconX} size={16} />
                 <p>{point}</p>
               </div>
             ))}
