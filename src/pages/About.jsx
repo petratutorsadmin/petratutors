@@ -44,9 +44,9 @@ export default function About() {
                 <div className="container">
                     <motion.h1 
                         className={styles.heroTagline}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
                     >
                         {t('about.subtitle')}
                     </motion.h1>

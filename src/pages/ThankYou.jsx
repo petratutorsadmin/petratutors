@@ -25,7 +25,7 @@ export default function ThankYou() {
                         <span className={styles.stepSub}>View profiles of our expert tutors from top global universities.</span>
                     </Link>
                     
-                    <Link to="/system" className={styles.stepCard}>
+                    <Link to="/ecosystem" className={styles.stepCard}>
                         <BookOpen size={24} className={styles.stepIcon} />
                         <span className={styles.stepTitle}>Explore Programmes</span>
                         <span className={styles.stepSub}>Learn more about our structured curricula and exam preparation.</span>

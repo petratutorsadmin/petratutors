@@ -9,7 +9,8 @@
     "line_cta": "Consult on LINE",
     "line_url": "https://lin.ee/rqf4A0D",
     "petra": "Petra Tutors",
-    "publication": "The Keystone"
+    "publication": "The Keystone",
+    "ecosystem": "Ecosystem"
   },
   "hiring": {
     "title": "Join Our Educator Network",
@@ -51,6 +52,7 @@
     "legal_info": "Operated by Petra Education LLC",
     "policy_no_fee": "No Admission Fee Policy",
     "publication": "The Keystone",
+    "ecosystem": "Ecosystem",
     "services": "Services",
     "service_ib": "IB / International Schools",
     "service_ielts": "IELTS / Eiken Prep",
@@ -1273,5 +1275,12 @@
     "cta_title": "Ready to share your voice?",
     "cta_desc": "Whether you have a fully formed draft or just an initial idea, our mentors can guide you through the research, drafting, and publication process.",
     "cta_btn_inquiry": "Consult with a Mentor"
+  },
+  "ecosystem": {
+    "title": "The Petra Ecosystem",
+    "subtitle": "An interconnected educational world designed for long-term growth, intellectual exploration, and global transition.",
+    "parent_toggle_label": "Perspective View",
+    "student_view": "Student Perspective",
+    "parent_view": "Parent Perspective"
   }
 }

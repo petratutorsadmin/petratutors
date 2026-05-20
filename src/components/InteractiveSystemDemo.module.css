@@ -4,9 +4,9 @@
   border-radius: 12px;
   border: 1px solid rgba(0,0,0,0.08);
   box-shadow: 0 12px 30px rgba(0,0,0,0.05);
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
-  height: 420px;
+  height: 480px;
   overflow: hidden;
   font-family: var(--font-sans);
   color: var(--c-navy);
@@ -14,7 +14,7 @@
 
 /* Sidebar Styles */
 .sidebar {
-  width: 200px;
+  width: 150px;
   background: #fafaf9;
   border-right: 1px solid rgba(0,0,0,0.06);
   display: flex;
@@ -381,7 +381,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .desktopOnly {
     display: none !important;
   }
@@ -578,5 +578,374 @@
     left: 9px;
     top: 20px;
     height: calc(0.85rem + 10px);
+  }
+
+  .diagGrid,
+  .recordsLayout,
+  .roadmapLayout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Interactive Features Styling */
+.checklistSection {
+  margin-top: 0.5rem;
+}
+
+.sectionHeading {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #a1a1aa;
+}
+
+.checklistGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.8rem;
+  background: #fafaf9;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.checkItem:hover {
+  background: rgba(0,0,0,0.02);
+  border-color: rgba(0,0,0,0.08);
+}
+
+.checkItemDone {
+  background: rgba(46,26,74,0.03);
+  border-color: rgba(46,26,74,0.1);
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #a1a1aa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--c-navy);
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.checkboxChecked {
+  border-color: var(--c-navy);
+  background: var(--c-navy);
+  color: #fff;
+}
+
+.taskText {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--c-navy);
+  flex: 1;
+}
+
+.taskReward {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--c-gold);
+}
+
+.tabIntro {
+  font-size: 0.75rem;
+  color: #71717a;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.diagGrid,
+.recordsLayout,
+.roadmapLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .diagGrid,
+  .recordsLayout,
+  .roadmapLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+}
+
+/* Button overrides for interactivity */
+.linearSkillRow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.linearSkillRow:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+.skillRowActive {
+  background: rgba(46,26,74,0.06) !important;
+}
+
+.feedbackDetailCard {
+  padding: 1rem;
+  background: #fafaf9;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 120px;
+}
+
+.feedbackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 0.5rem;
+}
+
+.feedbackTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--c-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.feedbackScore {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--c-gold);
+}
+
+.feedbackText {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #52525b;
+  margin: 0;
+  font-weight: 500;
+}
+
+.linearListItem {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.linearListItem:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+.recordItemActive {
+  background: rgba(46,26,74,0.06) !important;
+}
+
+.recordDetailView {
+  padding: 1rem;
+  background: #fafaf9;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.recordDetailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 0.4rem;
+}
+
+.recordDetailHeader h5 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--c-navy);
+}
+
+.tutorName {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #71717a;
+}
+
+.feedbackSection,
+.homeworkSection,
+.vocabSection {
+  font-size: 0.7rem;
+  color: #52525b;
+}
+
+.feedbackSection strong,
+.homeworkSection strong,
+.vocabSection strong {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.feedbackSection p,
+.homeworkSection p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.vocabTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.vocabTag {
+  font-size: 0.65rem;
+  background: rgba(46,26,74,0.05);
+  color: var(--c-navy);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.roadmapStep {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.roadmapStep:hover {
+  background: rgba(0,0,0,0.03);
+}
+
+.stepActive {
+  background: rgba(46,26,74,0.06) !important;
+}
+
+.phaseDetailCard {
+  padding: 1rem;
+  background: #fafaf9;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phaseDetailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 0.4rem;
+}
+
+.phaseDetailHeader h5 {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--c-navy);
+}
+
+.phaseTimeline {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--c-gold);
+}
+
+.phaseDesc {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: #52525b;
+  font-weight: 500;
+}
+
+.milestonesList {
+  font-size: 0.75rem;
+}
+
+.milestonesList strong {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #a1a1aa;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.milestonesList ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.milestonesList li {
+  font-size: 0.75rem;
+  color: #52525b;
+  font-weight: 500;
+}
+
+.overviewLayoutGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 800px) {
+  .overviewLayoutGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
   }
 }

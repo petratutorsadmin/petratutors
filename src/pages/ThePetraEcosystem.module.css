@@ -1,0 +1,1428 @@
+.pageRoot {
+    position: relative;
+    background-color: var(--c-white);
+    min-height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.heroSection {
+    padding: clamp(3rem, 6vh, 5rem) 0 2rem;
+    position: relative;
+    background-color: var(--c-white);
+    border-bottom: 1px solid var(--c-border);
+}
+
+.heroTitle {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    color: var(--c-navy);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+    font-size: 1.1rem;
+    color: var(--c-text-light);
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+/* Hide Mobile Node Selector on Desktop by default */
+.mobileNodeSelector {
+    display: none;
+}
+
+/* Split Stage */
+.splitStageSection {
+    padding: 2.5rem 0;
+}
+
+.splitStageLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+/* Card Bases */
+.treePaneCard {
+    background-color: var(--c-sand);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.simulatorPaneCard {
+    background-color: var(--c-sand);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    min-height: 620px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.treePaneHeader {
+    margin-bottom: 1.5rem;
+}
+
+.paneIndicator {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--c-accent);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.treeTitle {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--c-navy);
+    font-weight: 700;
+}
+
+/* SVG Stage */
+.svgWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ecosystemSvg {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    overflow: visible;
+}
+
+/* SVG Elements */
+.soilGroup {
+    cursor: pointer;
+}
+
+.soilPath {
+    transition: fill 0.35s ease;
+}
+
+.soilGroup:hover .soilPath {
+    fill: #efede3;
+}
+
+.activeSoilGroup .soilPath {
+    fill: #eae6da;
+    stroke: var(--c-gold);
+    stroke-width: 1px;
+}
+
+.activeSoilGroup text {
+    fill: var(--c-gold) !important;
+}
+
+.sapFlowLine {
+    stroke-dashoffset: 0;
+    animation: flowLines 18s linear infinite;
+}
+
+@keyframes flowLines {
+    to { stroke-dashoffset: 100; }
+}
+
+.sunHotspot,
+.starsHotspot,
+.leafGroupLeft,
+.leafGroupRight,
+.trunkHotspot,
+.rootsHotspot,
+.soilHotspot,
+.rootsGroup,
+.trunkGroup {
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sunHotspot:hover,
+.starsHotspot:hover,
+.leafGroupLeft:hover,
+.leafGroupRight:hover,
+.trunkHotspot:hover,
+.rootsHotspot:hover,
+.soilHotspot:hover {
+    opacity: 0.95;
+    filter: drop-shadow(0 6px 12px rgba(15, 23, 42, 0.08));
+}
+
+.sunCore {
+    fill: #fed7aa;
+    transition: fill 0.3s ease;
+}
+
+.activeSun .sunCore {
+    fill: #ff9f1c;
+    filter: url(#activeNodeGlow);
+}
+
+.pulsingStar {
+    animation: starPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes starPulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    100% { transform: scale(1.15); opacity: 1; }
+}
+
+.activeStars circle {
+    fill: #b45309;
+    filter: url(#activeNodeGlow);
+}
+
+.activeStars text {
+    fill: #b45309 !important;
+}
+
+.activeSun text {
+    fill: #d97706 !important;
+}
+
+.activeLeavesLeft path {
+    fill: #4338ca;
+}
+
+.activeLeavesLeft text {
+    fill: #4338ca !important;
+}
+
+.activeLeavesRight path {
+    fill: #0369a1;
+}
+
+.activeLeavesRight text {
+    fill: #0369a1 !important;
+}
+
+.activeRoots path {
+    stroke: var(--c-gold);
+    stroke-width: 6px;
+    opacity: 0.9;
+}
+
+.activeRoots text {
+    fill: var(--c-gold) !important;
+}
+
+.activeTrunk path:first-child {
+    stroke: var(--c-gold);
+}
+
+.activeTrunk text {
+    fill: var(--c-gold) !important;
+}
+
+.elementLabel {
+    font-size: 0.72rem;
+    font-weight: 700;
+    fill: var(--c-navy);
+    letter-spacing: 0.05em;
+    font-family: var(--font-sans);
+    transition: fill 0.3s ease;
+}
+
+.elementLabelDark {
+    font-size: 0.72rem;
+    font-weight: 700;
+    fill: var(--c-navy);
+    letter-spacing: 0.05em;
+    font-family: var(--font-sans);
+    transition: fill 0.3s ease;
+}
+
+.elementLabelLight {
+    font-size: 0.7rem;
+    font-weight: 800;
+    fill: var(--c-white);
+    letter-spacing: 0.08em;
+    font-family: var(--font-sans);
+    pointer-events: none;
+    transition: fill 0.3s ease;
+}
+
+.clickOverlay {
+    fill: transparent !important;
+    stroke: transparent !important;
+    pointer-events: all !important;
+    cursor: pointer !important;
+}
+
+.labelBadge {
+    pointer-events: none;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.soilGroup:hover .labelBadge,
+.activeSoilGroup .labelBadge {
+    fill: var(--c-navy) !important;
+    opacity: 1;
+}
+
+.rootsGroup:hover .labelBadge,
+.activeRoots .labelBadge {
+    fill: var(--c-navy) !important;
+    opacity: 1;
+}
+
+.trunkGroup:hover .labelBadge,
+.activeTrunk .labelBadge {
+    fill: var(--c-navy) !important;
+    opacity: 1;
+}
+
+.starsHotspot:hover .labelBadge,
+.activeStars .labelBadge {
+    fill: var(--c-navy) !important;
+    opacity: 1;
+}
+
+.sunHotspot:hover .labelBadge,
+.activeSun .labelBadge {
+    fill: var(--c-navy) !important;
+    opacity: 1;
+}
+
+.leafGroupLeft:hover .labelBadge,
+.activeLeavesLeft .labelBadge {
+    fill: var(--c-navy) !important;
+    opacity: 1;
+}
+
+.leafGroupRight:hover .labelBadge,
+.activeLeavesRight .labelBadge {
+    fill: var(--c-navy) !important;
+    opacity: 1;
+}
+
+/* RIGHT PANE: Simulator styles */
+.simWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.simHeader {
+    border-bottom: 1px solid var(--c-border);
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.simTitleRow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.simTitleRow h4 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--c-navy);
+}
+
+.simViewTag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--c-accent);
+    background-color: rgba(99, 102, 241, 0.08);
+    padding: 0.25rem 0.6rem;
+    border-radius: 100px;
+}
+
+.simBody {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.simDescription {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--c-text-light);
+}
+
+/* --- 1. Learning Chart Simulator --- */
+.chartWidgetGrid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+    align-items: start;
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.chartLeftCol {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.chartRightCol {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.metricRow {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: var(--c-white);
+    padding: 1.25rem;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+}
+
+.progressRingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.circularSvg {
+    transform: rotate(-90deg);
+}
+
+.circleBg {
+    fill: none;
+    stroke: var(--c-sand);
+    stroke-width: 8;
+}
+
+.circleFill {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.circleText {
+    font-size: 1.15rem;
+    font-weight: 800;
+    fill: var(--c-navy);
+    font-family: var(--font-sans);
+    transform: rotate(90deg);
+    transform-origin: center;
+}
+
+.ringLabel {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--c-text-light);
+    text-transform: uppercase;
+}
+
+.skillsMicroTabs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.skillBtnGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.skillMiniBtn {
+    background-color: var(--c-sand);
+    border: 1px solid var(--c-border);
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--c-navy);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.activeSkillMini {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    border-color: var(--c-navy);
+}
+
+.skillFeedbackBubble {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    background-color: #fcfbf6;
+    padding: 0.75rem;
+    border-left: 2px solid var(--c-accent);
+    border-radius: var(--radius-sm);
+    color: var(--c-text);
+}
+
+.interactiveChecklistSection h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.75rem;
+}
+
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.checkItemRow {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.checkItemRow:hover {
+    border-color: var(--c-gold);
+}
+
+.checkItemCompleted {
+    opacity: 0.65;
+    background-color: #f3fcf4;
+    border-color: #d1fae5;
+}
+
+.checkItemCompleted span {
+    text-decoration: line-through;
+}
+
+.scoreWeight {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-accent);
+}
+
+/* Parent view dashboard */
+.parentStatsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.statMetricCard {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    padding: 1.25rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.statLabel {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--c-text-light);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.statVal {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--c-navy);
+}
+
+.parentHistoryTimeline h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 1rem;
+}
+
+.timelineItemLine {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+
+.timelinePoint {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--c-accent);
+    border: 2px solid var(--c-white);
+    margin-top: 3px;
+    z-index: 1;
+}
+
+.timelineContent {
+    flex: 1;
+}
+
+.timelineDate {
+    font-size: 0.7rem;
+    color: var(--c-text-light);
+}
+
+.timelineContent h6 {
+    font-size: 0.95rem;
+    color: var(--c-navy);
+    font-weight: 700;
+    margin: 0.15rem 0 0.4rem;
+}
+
+.timelineContent p {
+    font-size: 0.85rem;
+    color: var(--c-text-light);
+    line-height: 1.45;
+}
+
+/* --- 2. Lesson Flow Simulator --- */
+.flowStagesHorizontal {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.25rem;
+    border-bottom: 1px solid var(--c-border);
+    padding-bottom: 0.75rem;
+}
+
+.flowHorizontalBtn {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+
+.flowHorizontalBtn span:first-child {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--c-text-light);
+}
+
+.hBtnLabel {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--c-text-light);
+}
+
+.activeFlowHBtn span:first-child {
+    color: var(--c-accent);
+}
+
+.activeFlowHBtn .hBtnLabel {
+    color: var(--c-navy);
+}
+
+.flowStepSimulatorBox {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.flowStepSimulatorBox h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-navy);
+}
+
+/* Flashcard 3D structure */
+.flashcardCarousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    perspective: 1000px;
+    width: 100%;
+}
+
+.card3D {
+    width: 100%;
+    max-width: 320px;
+    height: 190px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.card3DFlipped {
+    transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.cardFront {
+    background-color: var(--c-sand);
+    border: 2px solid #c5a059;
+}
+
+.cardBack {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    transform: rotateY(180deg);
+}
+
+.cardWord {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--c-navy);
+}
+
+.cardType {
+    font-size: 0.72rem;
+    color: var(--c-text-light);
+    margin-top: 0.25rem;
+}
+
+.tapToFlip {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #c5a059;
+    margin-top: 1.5rem;
+}
+
+.cardDefTitle {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--c-gold);
+    margin-bottom: 0.25rem;
+}
+
+.cardDefText {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.cardExampleLabel {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--c-gold);
+    opacity: 0.8;
+}
+
+.cardExampleText {
+    font-size: 0.78rem;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.carouselControls {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.carouselBtn {
+    background-color: var(--c-sand);
+    border: 1px solid var(--c-border);
+    padding: 0.45rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    cursor: pointer;
+}
+
+/* Polisher Workspace */
+.polisherWorkspace {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.inputBlock label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-text-light);
+}
+
+.rawTextArea {
+    width: 100%;
+    height: 70px;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    resize: none;
+    font-family: inherit;
+}
+
+.polishActionBtn {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.spinIcon {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.polishedOutputBlock {
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #10b981;
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.outputLabel {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #10b981;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.outputText {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--c-navy);
+    font-weight: 600;
+}
+
+.flowStepFallbackBox {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+}
+
+.flowStepFallbackBox h6 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.35rem;
+}
+
+.flowStepFallbackBox p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--c-text-light);
+}
+
+/* --- 3. Keystone Simulator --- */
+.keystoneMiniSplit {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.25rem;
+}
+
+.keystonePitchesVertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.miniPitchBtn {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    padding: 0.6rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    text-align: left;
+}
+
+.activeMiniPitch {
+    border-color: #8b5cf6;
+    background-color: rgba(139, 92, 246, 0.05);
+}
+
+.miniPitchBtn h6 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-navy);
+}
+
+.miniPitchStatus {
+    font-size: 0.62rem;
+    color: var(--c-text-light);
+}
+
+.editorialPaperCard {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.editorialPaperHeader h5 {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--c-navy);
+}
+
+.paperAuthor {
+    font-size: 0.7rem;
+    font-style: italic;
+    color: var(--c-text-light);
+}
+
+.editorialTextWorkspace {
+    border-top: 1px solid var(--c-border);
+    padding-top: 1rem;
+}
+
+.draftProse {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #e53e3e;
+    background-color: #fff5f5;
+    padding: 0.5rem;
+    display: block;
+}
+
+.finalProse {
+    font-family: var(--font-serif);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #2f855a;
+    background-color: #f0fff4;
+    padding: 0.5rem;
+    display: block;
+}
+
+.reviewCommentCallout {
+    margin-top: 1rem;
+    background-color: var(--c-sand);
+    border-left: 3px solid #8b5cf6;
+    padding: 0.85rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.commentEditor {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #8b5cf6;
+}
+
+.reviewCommentCallout p {
+    font-size: 0.82rem;
+    color: var(--c-text);
+    margin: 0.25rem 0 0.75rem;
+}
+
+.applyResolveBtn {
+    background-color: #8b5cf6;
+    color: var(--c-white);
+    border: none;
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.resolvedSuccessBadge {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: #10b981;
+    font-weight: 700;
+}
+
+/* --- 4. Support Network Simulator --- */
+.chatMessengerWorkspace {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1.25rem;
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 340px;
+}
+
+.messengerSidemenu {
+    background-color: var(--c-sand);
+    border-right: 1px solid var(--c-border);
+    display: flex;
+    flex-direction: column;
+}
+
+.messengerContactBtn {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--c-border);
+    padding: 0.85rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.activeContact {
+    background-color: var(--c-white);
+}
+
+.messengerContactBtn h6 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-navy);
+}
+
+.messengerContactBtn span {
+    font-size: 0.65rem;
+    color: #10b981;
+}
+
+.chatViewportWindow {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chatMessagesContainer {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.chatMessageBubble {
+    max-width: 80%;
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.mentorBubble {
+    background-color: var(--c-sand);
+    color: var(--c-navy);
+    align-self: flex-start;
+}
+
+.userBubble {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    align-self: flex-end;
+}
+
+.typingIndicatorBubble {
+    align-self: flex-start;
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.5rem;
+    background-color: var(--c-sand);
+    border-radius: var(--radius-sm);
+}
+
+.typingIndicatorBubble .dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--c-text-light);
+    border-radius: 50%;
+    animation: bounce 1.4s infinite alternate;
+}
+
+.typingIndicatorBubble .dot:nth-child(2) { animation-delay: 0.2s; }
+.typingIndicatorBubble .dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    to { transform: translateY(-4px); }
+}
+
+.chatInputFooter {
+    border-top: 1px solid var(--c-border);
+    padding: 0.6rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chatInputFooter input {
+    flex: 1;
+    border: 1px solid var(--c-border);
+    padding: 0.45rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+}
+
+.chatSendBtn {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    border: none;
+    padding: 0 0.85rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+/* --- 5. Pathways --- */
+.pathwayTabsFlex {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pathwayPillBtn {
+    background: transparent;
+    border: 1px solid var(--c-border);
+    padding: 0.4rem 0.85rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--c-text-light);
+    cursor: pointer;
+}
+
+.activePathwayPill {
+    background-color: var(--c-navy);
+    color: var(--c-white);
+    border-color: var(--c-navy);
+}
+
+.pathwayMilestonesPanel h5 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.75rem;
+}
+
+.milestonesVerticalList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.pathwayMilestoneCard {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+}
+
+.milestoneGradePill {
+    background-color: rgba(197, 160, 89, 0.1);
+    color: #c5a059;
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 0.75rem;
+    align-self: flex-start;
+}
+
+.milestoneDetails h6 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.2rem;
+}
+
+.milestoneDetails p {
+    font-size: 0.8rem;
+    color: var(--c-text-light);
+    line-height: 1.45;
+}
+
+/* --- 6. Academic Library categories --- */
+.libraryDrawersStage {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.drawerContainer {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.drawerHandleBtn {
+    width: 100%;
+    background-color: var(--c-sand);
+    border: none;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--c-navy);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.drawerHandleMetal {
+    width: 25px;
+    height: 8px;
+    background-color: #a0aec0;
+    border-radius: 4px;
+    border: 1px solid #718096;
+}
+
+.drawerOpen {
+    border-bottom: 1px solid var(--c-border);
+}
+
+.drawerInteriorContent {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.libraryItemRow {
+    border-bottom: 1px dashed var(--c-border);
+    padding-bottom: 0.6rem;
+}
+
+.libraryItemRow:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.libraryItemRow h6 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--c-navy);
+}
+
+.libraryItemRow p {
+    font-size: 0.78rem;
+    color: var(--c-text-light);
+    margin: 0.15rem 0 0.35rem;
+}
+
+.lockBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.65rem;
+    color: var(--c-text-light);
+}
+
+/* --- 7. Philosophy Manifesto cards --- */
+.manifestoCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    perspective: 800px;
+}
+
+.manifesto3DCard {
+    position: relative;
+    height: 120px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.manifestoFlipped {
+    transform: rotateY(180deg);
+}
+
+.manifestoFront,
+.manifestoBack {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.manifestoFront {
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-left: 3px solid #ec4899;
+}
+
+.manifestoFront h5 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-navy);
+}
+
+.manifestoTapMsg {
+    font-size: 0.65rem;
+    color: #ec4899;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+
+.manifestoBack {
+    background-color: #ec4899;
+    color: var(--c-white);
+    transform: rotateY(180deg);
+}
+
+.manifestoBack p {
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.parentSectionDivider {
+    height: 1px;
+    background-color: var(--c-border);
+    margin: 1.5rem 0;
+    opacity: 0.6;
+}
+
+.parentStatsHorizontalBanner {
+    display: flex;
+    gap: 1rem;
+    background-color: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.statBannerItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.statBannerLabel {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--c-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statBannerVal {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--c-navy);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+
+    .ecosystemSvg {
+        display: none;
+    }
+
+    .mobileNodeSelector {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .mobileNodeBtn {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.85rem 1rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--c-border);
+        border-left: 4px solid var(--node-color);
+        background-color: var(--c-white);
+        color: var(--c-navy);
+        font-weight: 700;
+        font-size: 0.85rem;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .activeMobileNodeBtn {
+        background-color: var(--c-white);
+        box-shadow: var(--shadow-sm);
+        border-color: var(--c-navy);
+    }
+
+    .manifestoCardsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .keystoneMiniSplit {
+        grid-template-columns: 1fr;
+    }
+
+    .chartWidgetGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .metricRow {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}

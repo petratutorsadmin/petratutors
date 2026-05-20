@@ -47,25 +47,25 @@ export default function Keystone() {
                     <motion.span 
                         className="eyebrow" 
                         style={{ marginBottom: '1.5rem', display: 'inline-block' }}
-                        initial={{ opacity: 0, y: 10 }}
+                        initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
                     >
                         {t('keystone.eyebrow', 'Official Publication')}
                     </motion.span>
                     <motion.h1 
                         className={styles.heroTagline}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1], delay: 0.05 }}
                     >
                         {t('keystone.title', 'The Keystone')}
                     </motion.h1>
                     <motion.p 
                         className={styles.heroSubtitle}
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
+                        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1], delay: 0.1 }}
                     >
                         {t('keystone.subtitle')}
                     </motion.p>

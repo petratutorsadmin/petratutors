@@ -11,7 +11,7 @@ export default function Layout() {
     return (
         <>
             <Navbar />
-            <main key={`${location.pathname}-${i18n.language}`}>
+            <main key={`${location.pathname}-${i18n.language}`} className="page-fade-in">
                 <Outlet />
             </main>
             <Footer />

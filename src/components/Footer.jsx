@@ -40,6 +40,9 @@ export default function Footer() {
                     <Link to="/keystone" className={styles.link}>
                         {t('footer.publication', 'The Keystone')}
                     </Link>
+                    <Link to="/ecosystem" className={styles.link}>
+                        {t('footer.ecosystem', 'Ecosystem')}
+                    </Link>
                 </div>
 
                 <div className={styles.linksCol}>

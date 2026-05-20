@@ -9,7 +9,8 @@
     "line_cta": "LINEで相談（即返信）",
     "line_url": "https://lin.ee/rqf4A0D",
     "petra": "Petra Tutors",
-    "publication": "The Keystone"
+    "publication": "The Keystone",
+    "ecosystem": "エコシステム"
   },
   "hiring": {
     "title": "チューター募集",
@@ -50,6 +51,7 @@
     "legal_info": "運営：ペトラエデュケーション合同会社",
     "policy_no_fee": "入会金なし ポリシー",
     "publication": "The Keystone",
+    "ecosystem": "エコシステム",
     "services": "サービス",
     "service_ib": "IB・インター校",
     "service_ielts": "IELTS・英検対策",
@@ -1269,5 +1271,12 @@
     "cta_title": "あなたの声を、世界に届けよう",
     "cta_desc": "書きたいテーマが決まっている方も、まずはアイデア出しから始めたい方も、Petraのメンターがリサーチから執筆、掲載まで並走します。",
     "cta_btn_inquiry": "体験レッスン・相談を予約"
+  },
+  "ecosystem": {
+    "title": "Petra のエコシステム",
+    "subtitle": "長期的な成長、知的好奇心の探求、そしてグローバルな挑戦のために設計された、有機的につながる教育の世界。",
+    "parent_toggle_label": "ビューの切り替え",
+    "student_view": "生徒視点",
+    "parent_view": "保護者視点"
   }
 }

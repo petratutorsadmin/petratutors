@@ -15,7 +15,6 @@ const LandingFoundation = lazy(() => import('./pages/LandingFoundation'));
 const BusinessLanding = lazy(() => import('./pages/BusinessLanding'));
 
 const Home = lazy(() => import('./pages/Home'));
-const ThePetraSystem = lazy(() => import('./pages/ThePetraSystem'));
 const Tutors = lazy(() => import('./pages/Tutors'));
 const Team = lazy(() => import('./pages/Team'));
 const Pricing = lazy(() => import('./pages/Pricing'));
@@ -25,6 +24,7 @@ const NoAdmissionFee = lazy(() => import('./pages/NoAdmissionFee'));
 const ThankYou = lazy(() => import('./pages/ThankYou'));
 const Hiring = lazy(() => import('./pages/Hiring'));
 const Keystone = lazy(() => import('./pages/Keystone'));
+const ThePetraEcosystem = lazy(() => import('./pages/ThePetraEcosystem'));
 
 import ScrollToTop from './components/ScrollToTop';
 import ExitIntentPopup from './components/ExitIntentPopup';
@@ -55,7 +55,7 @@ function App() {
 
             {/* ── Existing pages (retained) ── */}
             <Route path="home" element={<Home />} />
-            <Route path="system" element={<ThePetraSystem />} />
+            <Route path="system" element={<ThePetraEcosystem />} />
             <Route path="tutors" element={<Tutors />} />
             <Route path="team" element={<Team />} />
             <Route path="pricing" element={<Pricing />} />
@@ -65,6 +65,7 @@ function App() {
             <Route path="no-admission-fee" element={<NoAdmissionFee />} />
             <Route path="hiring" element={<Hiring />} />
             <Route path="keystone" element={<Keystone />} />
+            <Route path="ecosystem" element={<ThePetraEcosystem />} />
           </Route>
         </Routes>
       </Suspense>

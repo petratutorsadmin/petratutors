@@ -389,3 +389,18 @@ main {
   transform: translateY(-3px);
 }
 
+/* Standard Unified Page Fade-In Transition */
+.page-fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: pageFadeIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes pageFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
