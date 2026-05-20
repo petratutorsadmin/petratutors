@@ -23,7 +23,7 @@
     "b2_title": "Flexible & Independent",
     "b2_desc": "Teach online or in-person with flexible scheduling that works around your studies or career.",
     "b3_title": "Meaningful Mentorship",
-    "b3_desc": "Go beyond homework help. Build long-term relationships and support students academically and personally.",
+    "b3_desc": "Go beyond just helping homework. Build long-term relationships and support students academically and personally.",
     "b4_title": "Structured Educational Support",
     "b4_desc": "Access Petra's systems, lesson frameworks, reporting tools, and educational infrastructure.",
     "b5_title": "High-Calibre Tutor Community",
@@ -32,7 +32,7 @@
     "b6_desc": "Help shape a modern education platform focused on skill diagnosis, parent-visible progress, and human connection."
   },
   "footer": {
-    "tagline": "International tutoring for ambitious students. Connecting globally minded learners with top-tier educators worldwide.",
+    "tagline": "International tutoring for ambitious students. Connecting educators with global minded learners.",
     "explore": "Explore",
     "home": "Home",
     "programs": "How Petra Works",
@@ -61,10 +61,10 @@
     "service_kids": "Elementary / Foundation"
   },
   "home": {
-    "urgency_bar": "Consultation availability is limited to ensure mentor matching quality. → Begin Consultation",
+    "urgency_bar": "Consultation availability is limited to ensure mentor matching quality. Book a consultation now!",
     "hero_title": "For International & Returnee Students\nDirect Pathway to Top Global Universities",
     "hero_subtitle": "From IELTS +1.0 to IB/AP Support.\n1:1 relatable mentorship from elite mentors at\nKeio PEARL, Todai PEAK, and Top Global Universities.",
-    "cta_primary": "Begin Consultation",
+    "cta_primary": "Book a Consultation",
     "cta_secondary": "Diagnose My Mentor Match",
     "scarcity_note": "Note: We maintain limited mentor availability to preserve lesson quality. Early consultation is recommended.",
     "match_guarantee_title": "100% Match Guarantee",
@@ -102,7 +102,7 @@
     "comp_2_others": "Rigid, fixed materials",
     "comp_3_label": "Approach",
     "comp_3_petra": "Outcome-driven & Practical",
-    "comp_3_others": "Rote memorization focus",
+    "comp_3_others": "Rote memorisation focus",
     "comp_4_label": "Fees",
     "comp_4_petra": "No Admission or Monthly Fees",
     "comp_4_others": "High upfront & hidden fees",
@@ -193,7 +193,7 @@
     "c1_3": "Complex cancellation policies",
     "card2_title": "Petra Tutors",
     "c2_1": "No admission fee",
-    "c2_2": "Flexible scheduling",  
+    "c2_2": "Flexible scheduling",
     "c2_3": "Transparent, simple rates",
     "cta": "View Our Tutors"
   },
