@@ -1,0 +1,111 @@
+.hero {
+    padding: var(--space-xl) 0;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.heroActions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
+}
+
+.visionBlock {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.visionCard {
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+    border-color: rgba(48, 27, 71, 0.08);
+}
+
+.iconContainer {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    background-color: rgba(229, 184, 11, 0.1);
+    color: var(--c-accent);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+}
+
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-md);
+}
+
+.stepCard {
+    padding: var(--space-xl) var(--space-md) var(--space-lg);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.stepNum {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    line-height: 1;
+    color: rgba(48, 27, 71, 0.06);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-weight: 700;
+    user-select: none;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.benefitCard {
+    padding: var(--space-lg);
+    border-top: 3px solid var(--c-accent);
+    height: 100%;
+}
+
+.benefitIcon {
+    color: var(--c-navy);
+}
+
+.ctaBox {
+    padding: var(--space-xl) var(--space-lg);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--c-border);
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.ctaActions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+    .stepsGrid,
+    .benefitsGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: var(--space-lg) 0;
+    }
+    
+    .visionCard {
+        padding: var(--space-lg) var(--space-md);
+    }
+    
+    .ctaBox {
+        padding: var(--space-lg) var(--space-md);
+    }
+}

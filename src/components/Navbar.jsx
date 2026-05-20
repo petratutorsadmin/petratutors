@@ -48,6 +48,9 @@ export default function Navbar() {
                     <Link to="/system" className={styles.navLink}>{t('nav.programs')}</Link>
                     <Link to="/tutors" className={styles.navLink}>{t('nav.tutors')}</Link>
                     <Link to="/pricing" className={styles.navLink}>{t('nav.pricing')}</Link>
+                    <Link to="/keystone" className={styles.navLink}>
+                        {t('nav.publication', 'The Keystone')}
+                    </Link>
                     <div className={styles.langSwitcher}>
                         <Globe size={18} className={styles.globeIcon} />
                         <div className={styles.pill}>
@@ -86,6 +89,9 @@ export default function Navbar() {
                         <Link to="/system" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.programs')}</Link>
                         <Link to="/tutors" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.tutors')}</Link>
                         <Link to="/pricing" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.pricing')}</Link>
+                        <Link to="/keystone" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>
+                            {t('nav.publication', 'The Keystone')}
+                        </Link>
                     </div>
                     
                     <div className={styles.mobileExtraSection}>

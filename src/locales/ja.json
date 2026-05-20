@@ -8,7 +8,8 @@
     "inquiry": "無料体験を予約（30秒）",
     "line_cta": "LINEで相談（即返信）",
     "line_url": "https://lin.ee/rqf4A0D",
-    "petra": "Petra Tutors"
+    "petra": "Petra Tutors",
+    "publication": "The Keystone"
   },
   "hiring": {
     "title": "チューター募集",
@@ -48,6 +49,7 @@
     "company_name": "ペトラエデュケーション合同会社",
     "legal_info": "運営：ペトラエデュケーション合同会社",
     "policy_no_fee": "入会金なし ポリシー",
+    "publication": "The Keystone",
     "services": "サービス",
     "service_ib": "IB・インター校",
     "service_ielts": "IELTS・英検対策",
@@ -1237,5 +1239,35 @@
   },
   "seo": {
     "jsonld_desc": "Petra Tutorsは、IB、IELTS、海外大学進学を専門とするオンライン家庭教師サービスです。"
+  },
+  "keystone": {
+    "eyebrow": "学生メディア・掲載制度",
+    "title": "The Keystone 掲載制度",
+    "subtitle": "エッセイを執筆・推敲し、オンライン・デジタル新聞に掲載。グローバルに意見を発信する、学生向けメディア。",
+    "hero_cta_explore": "The Keystone を見る",
+    "hero_cta_start": "メンターと執筆を始める",
+    "vision_title": "若き思考家たちのためのプラットフォーム",
+    "vision_text_1": "Petra Tutorsでは、教育は単なる試験対策や決められた授業の枠を超えるものであるべきだと信じています。生徒たちが自分の声を見つけ、世界についてクリティカルに考え、アイデアを共有できる場を提供したいと考えています。",
+    "vision_text_2": "「The Keystone」は、Petraの公式学生向けデジタルメディアです。生徒が自ら関心のあるテーマについてエッセイや学術的ペーパーを執筆し、難関大出身の優秀な編集者・メンターからの1対1のフィードバックを経て、実際にオンライン新聞に掲載・発信される貴重な機会を提供しています。",
+    "how_title": "執筆から掲載までのプロセス",
+    "step1_num": "01",
+    "step1_title": "テーマの選定",
+    "step1_desc": "経済学、国際関係論、文学、歴史、科学など、あなたが最も情熱を持っている分野からテーマを選びます。",
+    "step2_num": "02",
+    "step2_title": "執筆・推敲（フィードバック）",
+    "step2_desc": "アイビーリーグや難関大出身のメンターによる1対1の編集指導を受け、論理構成、説得力、英語表現を磨き上げます。",
+    "step3_num": "03",
+    "step3_title": "メディア掲載",
+    "step3_desc": "完成した記事は readthekeystone.com に掲載され、大学受験（IB、慶應PEARL、東大PEAK、海外大）でも強力にアピールできる実績ポートフォリオとなります。",
+    "benefits_title": "The Keystone で執筆するメリット",
+    "benefit1_title": "大学受験での強力な実績",
+    "benefit1_desc": "自身の知的好奇心や高度な思考・執筆力を対外的に証明する、最高峰のポートフォリオを作成できます。",
+    "benefit2_title": "大学レベルの学術的ライティング力",
+    "benefit2_desc": "リサーチ方法、論理的な主張の組み立て、推敲のプロセスなど、大学以降も役立つ一生ものの執筆スキルが身につきます。",
+    "benefit3_title": "世界に向けた発信力",
+    "benefit3_desc": "デジタルメディアを通じて、世界中の読者に自分の視点を届け、志の高い学生ライターのコミュニティに参加できます。",
+    "cta_title": "あなたの声を、世界に届けよう",
+    "cta_desc": "書きたいテーマが決まっている方も、まずはアイデア出しから始めたい方も、Petraのメンターがリサーチから執筆、掲載まで並走します。",
+    "cta_btn_inquiry": "体験レッスン・相談を予約"
   }
 }

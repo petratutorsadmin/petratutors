@@ -8,7 +8,8 @@
     "inquiry": "Book Trial (30s)",
     "line_cta": "Consult on LINE",
     "line_url": "https://lin.ee/rqf4A0D",
-    "petra": "Petra Tutors"
+    "petra": "Petra Tutors",
+    "publication": "The Keystone"
   },
   "hiring": {
     "title": "Join Our Educator Network",
@@ -49,6 +50,7 @@
     "company_name": "Petra Education LLC",
     "legal_info": "Operated by Petra Education LLC",
     "policy_no_fee": "No Admission Fee Policy",
+    "publication": "The Keystone",
     "services": "Services",
     "service_ib": "IB / International Schools",
     "service_ielts": "IELTS / Eiken Prep",
@@ -1241,5 +1243,35 @@
   },
   "seo": {
     "jsonld_desc": "Petra Tutors is an online tutoring service specializing in IB, IELTS, and international university admissions."
+  },
+  "keystone": {
+    "eyebrow": "Student Publication",
+    "title": "The Keystone",
+    "subtitle": "A digital newspaper for ambitious young minds. Write, refine, and get published.",
+    "hero_cta_explore": "Visit The Keystone",
+    "hero_cta_start": "Start Writing with a Mentor",
+    "vision_title": "A Platform for Young Thinkers",
+    "vision_text_1": "At Petra Tutors, we believe that education should go beyond exams and structured classes. We want students to find their voice, think critically about the world, and share their ideas.",
+    "vision_text_2": "The Keystone is our official student-led digital publication. It provides an exclusive opportunity for students to write academic essays, research papers, and opinion pieces under the guidance of elite editors and mentors, and have their work published for a global audience.",
+    "how_title": "From Draft to Published Article",
+    "step1_num": "01",
+    "step1_title": "Choose Your Topic",
+    "step1_desc": "Work on a subject you are passionate about, whether it is Economics, International Relations, Literature, History, or Science.",
+    "step2_num": "02",
+    "step2_title": "Write & Refine",
+    "step2_desc": "Receive 1-on-1 editorial feedback from Ivy League and top-tier university mentors to polish your structure, rhetoric, and style.",
+    "step3_num": "03",
+    "step3_title": "Get Published",
+    "step3_desc": "Your final article is published on readthekeystone.com, creating a permanent academic portfolio for university admissions.",
+    "benefits_title": "Why Write for The Keystone?",
+    "benefit1_title": "Build a Standout Portfolio",
+    "benefit1_desc": "Showcase intellectual curiosity and advanced writing skills on your college applications (IB, PEARL, PEAK, Ivy League, Oxbridge).",
+    "benefit2_title": "University-Level Rigor",
+    "benefit2_desc": "Learn how to conduct research, formulate arguments, and edit like a college scholar under direct editor guidance.",
+    "benefit3_title": "Global Voice",
+    "benefit3_desc": "Share your perspective with readers worldwide and join a community of ambitious student writers.",
+    "cta_title": "Ready to share your voice?",
+    "cta_desc": "Whether you have a fully formed draft or just an initial idea, our mentors can guide you through the research, drafting, and publication process.",
+    "cta_btn_inquiry": "Consult with a Mentor"
   }
 }

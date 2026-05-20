@@ -69,7 +69,7 @@
 
 .founderImageWrapper {
     width: 100%;
-    aspect-ratio: 1/1; /* Square crop — less imposing */
+    aspect-ratio: 1/1; /* Square crop - less imposing */
     overflow: hidden;
     background-color: var(--c-sand);
     position: relative;

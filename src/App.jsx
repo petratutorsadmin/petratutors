@@ -24,6 +24,7 @@ const About = lazy(() => import('./pages/About'));
 const NoAdmissionFee = lazy(() => import('./pages/NoAdmissionFee'));
 const ThankYou = lazy(() => import('./pages/ThankYou'));
 const Hiring = lazy(() => import('./pages/Hiring'));
+const Keystone = lazy(() => import('./pages/Keystone'));
 
 import ScrollToTop from './components/ScrollToTop';
 import ExitIntentPopup from './components/ExitIntentPopup';
@@ -63,6 +64,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="no-admission-fee" element={<NoAdmissionFee />} />
             <Route path="hiring" element={<Hiring />} />
+            <Route path="keystone" element={<Keystone />} />
           </Route>
         </Routes>
       </Suspense>
