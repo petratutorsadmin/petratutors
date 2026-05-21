@@ -25,6 +25,7 @@ const ThankYou = lazy(() => import('./pages/ThankYou'));
 const Hiring = lazy(() => import('./pages/Hiring'));
 const Keystone = lazy(() => import('./pages/Keystone'));
 const ThePetraEcosystem = lazy(() => import('./pages/ThePetraEcosystem'));
+const TutorDivisions = lazy(() => import('./pages/TutorDivisions'));
 
 import ScrollToTop from './components/ScrollToTop';
 import ExitIntentPopup from './components/ExitIntentPopup';
@@ -66,6 +67,7 @@ function App() {
             <Route path="hiring" element={<Hiring />} />
             <Route path="keystone" element={<Keystone />} />
             <Route path="ecosystem" element={<ThePetraEcosystem />} />
+            <Route path="apply/divisions" element={<TutorDivisions />} />
           </Route>
         </Routes>
       </Suspense>

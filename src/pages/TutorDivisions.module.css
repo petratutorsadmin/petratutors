@@ -1,0 +1,436 @@
+/* Gate/Passcode Screen */
+.gateWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-sand);
+  color: var(--c-navy);
+  padding: var(--space-lg);
+}
+
+.gateCard {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem var(--space-md);
+  text-align: center;
+}
+
+.gateTitle {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 500;
+  color: var(--c-navy);
+  margin-bottom: 1rem;
+}
+
+.gateSubtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--c-text-light);
+  margin-bottom: 2rem;
+}
+
+.gateForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.gateInput {
+  width: 100%;
+  padding: 14px 18px;
+  background-color: var(--c-white);
+  border: 1px solid var(--c-navy);
+  border-radius: 0; /* Sharp corners */
+  color: var(--c-navy);
+  font-size: 1rem;
+  font-family: var(--font-sans);
+  text-align: center;
+  transition: border-color 0.2s ease;
+}
+
+.gateInput:focus {
+  outline: none;
+  border-color: var(--c-accent);
+}
+
+.gateButton {
+  background-color: var(--c-navy);
+  color: var(--c-white);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px;
+  border: none;
+  border-radius: 0; /* Sharp corners */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.gateButton:hover {
+  background-color: var(--c-navy-light);
+}
+
+.gateError {
+  color: #cc0000;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  font-family: var(--font-sans);
+}
+
+/* Authorized Portal Main Layout */
+.portalContainer {
+  background-color: var(--c-sand);
+  color: var(--c-navy);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-2xl);
+  min-height: 100vh;
+}
+
+.controlBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: var(--space-xl);
+}
+
+.badge {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--c-text-light);
+  background-color: var(--c-stone);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.logoutBtn {
+  background: none;
+  border: 1px solid var(--c-border);
+  color: var(--c-text-light);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background-color: var(--c-stone);
+  color: var(--c-navy);
+  border-color: var(--c-navy);
+}
+
+/* Editorial Header */
+.portalHeader {
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.portalTitleText {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 500;
+  color: var(--c-navy);
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+}
+
+.portalSubtitleText {
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--c-text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Quote & Purpose */
+.quoteSection {
+  margin: var(--space-xl) 0;
+  text-align: center;
+}
+
+.pullQuote {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.quoteText {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+  line-height: 1.45;
+  color: var(--c-navy);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Narrative Introduction */
+.introSection {
+  margin-bottom: var(--space-xl);
+}
+
+.introText {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--c-text);
+}
+
+.introText p {
+  margin-bottom: 1.5rem;
+}
+
+.leadParagraph {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--c-navy);
+  margin-bottom: var(--space-md);
+}
+
+/* Divisions Editorial List */
+.divisionsSection {
+  margin-bottom: var(--space-2xl);
+}
+
+.editorialGrid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--c-border);
+}
+
+.divisionItem {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.divHeader {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.divNumber {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: var(--c-accent);
+}
+
+.divTitle {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: var(--c-navy);
+  margin-bottom: 0;
+}
+
+.divBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.divIntro {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--c-navy-light);
+  margin-bottom: 1rem;
+}
+
+.divDesc {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--c-text);
+  margin-bottom: var(--space-lg);
+}
+
+.divColumns {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-md);
+}
+
+.columnTitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-navy-light);
+  border-bottom: 1px solid var(--c-border);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.focusList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.focusList li {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+  color: var(--c-text);
+}
+
+.focusList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--c-accent);
+}
+
+.subBlock {
+  margin-bottom: var(--space-lg);
+}
+
+.subBlock:last-child {
+  margin-bottom: 0;
+}
+
+.subBlockTitle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-navy-light);
+  margin-bottom: var(--space-xs);
+}
+
+.subBlock p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--c-text-light);
+}
+
+/* Closing Important Note */
+.noteSection {
+  margin-bottom: var(--space-xl);
+}
+
+.noteBox {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--c-stone);
+  border-left: 3px solid var(--c-navy);
+  padding: var(--space-lg);
+  border-radius: var(--radius-sm);
+}
+
+.noteTitle {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--c-navy);
+  margin-bottom: 0.75rem;
+}
+
+.noteBox p {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--c-text);
+  margin-bottom: 0.75rem;
+}
+
+.noteBox p:last-child {
+  margin-bottom: 0;
+}
+
+/* Bottom CTA Area */
+.ctaSection {
+  margin-bottom: var(--space-2xl);
+}
+
+.ctaBox {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--c-navy);
+  color: var(--c-sand);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ctaTitle {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--c-white);
+  margin-bottom: 0;
+}
+
+.ctaDesc {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--c-text-on-dark-light);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.ctaActionHint {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--c-accent);
+  border-bottom: 2px solid var(--c-accent);
+  padding-bottom: 4px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaActionHint:hover {
+  color: var(--c-white);
+  border-color: var(--c-white);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .divColumns {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .ctaBox {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .noteBox {
+    padding: var(--space-md);
+  }
+}
