@@ -863,6 +863,35 @@
         "idealMatch": "Students of all ages, from preschoolers to high schoolers, who benefit from a structured, step-by-step approach to Math, Physics, or English.",
         "successCase": "Has over a year of experience tutoring Mathematics to MYP1 students at an International School, successfully managing both one-on-one sessions and classes of 10+ students.",
         "lessonStyle": "Structured and adaptable. I provide custom worksheets suited to each student's individual level, address personal doubts, and use targeted homework to ensure readiness for the next topic."
+      },
+      "tutor-dayun": {
+        "name": "Dayun Suh",
+        "university": "Keio University, PEARL (Economics)",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "University Preparation",
+          "AP Subjects",
+          "English Qualifications (IELTS, Eiken, TOEIC, TOEFL)",
+          "Interview Preparation"
+        ],
+        "targetAges": [
+          "Preschool",
+          "Elementary",
+          "Junior high"
+        ],
+        "languages": [
+          "English"
+        ],
+        "intro": "I am an Economics student in the PEARL program at Keio University. Having regularly helped my younger sister with her studies, I have developed a patient and encouraging approach to teaching. I understand the importance of adapting explanations to match each student's learning style, and I strive to make learning an engaging experience.",
+        "strengths": [
+          "Patient Mentorship",
+          "AP Subjects & Test Prep",
+          "Interview Preparation"
+        ],
+        "idealMatch": "Preschool to junior high students who thrive in a supportive, friendly environment and need help with English, AP subjects, or interview prep.",
+        "successCase": "Has developed strong foundational mentoring skills by regularly guiding and supporting her younger sister's academic progress.",
+        "lessonStyle": "Friendly and highly adaptable, focused on providing a comfortable space where younger students can build their confidence step by step."
       }
     },
     "f_english": "English",
