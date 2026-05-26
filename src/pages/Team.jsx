@@ -47,6 +47,15 @@ const DIRECTORS = [
         image: '/images/tutors/tutor-shinto.jpg',
         objectPosition: 'center 55%',
         initials: 'ST'
+    },
+    {
+        id: 'melody',
+        name: 'Melody Naito',
+        roleKey: 'team.role_marketing_intern',
+        descKey: 'team.melody_desc',
+        image: '/images/tutors/tutor-melody.jpg',
+        objectPosition: 'center 20%',
+        initials: 'MN'
     }
 ];
 

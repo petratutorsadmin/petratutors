@@ -344,13 +344,15 @@
     "role_yutaka": "Co-Founder, CFO, and COO",
     "role_riku": "Co-Founder, CEO, and CMO",
     "role_gc": "General Counsel",
-    "role_her": "Head of External Relations",
-    "role_hr": "Head of Human Resources",
+    "role_her": "Director of External Communications",
+    "role_hr": "Director of Human Resources",
+    "role_marketing_intern": "Marketing Operations Intern",
     "yutaka_desc": "Co-founded Petra and leads operations, finance, and institutional growth. Oversees end-to-end business functions including revenue management, pricing strategy, and client lifecycle systems. Focused on evolving Petra from a tutor network into a structured, system-driven academic institution with measurable outcomes.",
     "riku_desc": "Co-founded Petra and leads the organisation as CEO and CMO. Oversees tutor recruitment from leading universities worldwide (including Keio, the University of Hong Kong, LSE, and Maastricht) and drives program design, student onboarding, and marketing strategy. Focused on building a globally connected academic network that places the right mentor with every student.",
     "mannat_desc": "Advises on corporate governance and international educational compliance, ensuring that Petra’s operational framework aligns with the highest global standards for academic institutions.",
     "toshie_desc": "Manages institutional partnerships and parent community engagement, building strong collaborative networks between Petra, international schools, and our student families.",
     "shinto_desc": "Oversees talent acquisition and the professional development of our global mentor network, ensuring that every educator meets Petra's rigorous standards for mentorship capability.",
+    "melody_desc": "Melody supports Petra’s marketing operations, outreach, and international community engagement initiatives. With experience in marketing communications and strong ties to international school communities, she focuses on student outreach, campaign coordination, and helping Petra expand its global-minded educational network.",
     "final_title": "Ready to get started?",
     "final_cta": "Request Consultation"
   },
@@ -772,6 +774,95 @@
         "idealMatch": "Students seeking to improve their English fluency (especially British English) or those needing targeted help with GCSE/A-Levels, essays, and interviews.",
         "successCase": "Has strong classroom experience teaching English to primary school students at the British School in Tokyo.",
         "lessonStyle": "Patient, friendly, and highly adaptable, prioritizing the student's comfort and enjoyment to build confidence in speaking."
+      },
+      "tutor-melody": {
+        "name": "Melody Naito",
+        "university": "Fordham University, Business Administration, Marketing, and Finance",
+        "subjects": [
+          "Advanced English Communication",
+          "Cross-cultural Understanding",
+          "International Business Communication",
+          "Real-world Conversation Strategies",
+          "IB / University Preparation"
+        ],
+        "targetAges": [
+          "Junior high",
+          "High school",
+          "University",
+          "Adults"
+        ],
+        "languages": [
+          "English",
+          "Japanese"
+        ],
+        "intro": "With extensive experience teaching both online and in-person internationally, I specialize in helping students and professionals develop not only strong English ability, but also the cultural awareness and communication skills necessary to succeed in global environments. My teaching philosophy goes beyond traditional language instruction. I believe that true international communication requires an understanding of cultural differences, communication styles, and interpersonal sensitivity - skills that are increasingly essential in today's interconnected world.",
+        "strengths": [
+          "Cross-cultural Understanding",
+          "International Business Communication",
+          "Global Mindset Development"
+        ],
+        "idealMatch": "International school students, business professionals, and those preparing to study abroad who seek confidence in global communication environments.",
+        "successCase": "Drawing from experience working with students and companies worldwide, my lessons combine advanced English communication, cross-cultural understanding, and real-world conversation strategies.",
+        "lessonStyle": "At Petra, I strongly align with our mentorship-oriented philosophy, emphasizing personalized guidance, human connection, and long-term growth rather than one-size-fits-all education."
+      },
+      "tutor-varna": {
+        "name": "Varna Narayana Iyyappan",
+        "university": "Keio University, Economics",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "IB Subjects",
+          "University Preparation",
+          "English Qualifications (IELTS, Eiken, TOEIC, TOEFL)",
+          "Essay Feedback"
+        ],
+        "targetAges": [
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English"
+        ],
+        "intro": "I am an Economics student at Keio University with a passion for making a meaningful impact on my students' learning journeys. By focusing on helping students deeply understand core concepts, I aim to not only improve their academic performance but also build their long-term confidence.",
+        "strengths": [
+          "IBDP Economics & Business",
+          "University Admissions Support",
+          "Essay Feedback & Refining"
+        ],
+        "idealMatch": "Junior high and high school students who need structured help with IB subjects, university preparation, or English qualifications.",
+        "successCase": "Has over six months of dedicated experience tutoring IBDP Economics and Business Management, alongside providing comprehensive university admissions and essay support.",
+        "lessonStyle": "Patient and concept-driven, focusing on building true comprehension and confidence rather than just memorization."
+      },
+      "tutor-siya": {
+        "name": "Siya Ahuja",
+        "university": "Keio University, PEARL (Economics)",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "IB Subjects",
+          "Mathematics",
+          "Elementary Physics",
+          "Economics"
+        ],
+        "targetAges": [
+          "Preschool",
+          "Elementary",
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English",
+          "Hindi"
+        ],
+        "intro": "I am an Economics student in the PEARL program at Keio University. I am deeply passionate about aiding students in subjects I love, particularly Mathematics and Economics. I believe that by breaking down complex concepts into their simplest forms, we can make challenging content highly digestible and engaging for students of all ages.",
+        "strengths": [
+          "MYP Mathematics",
+          "Concept Simplification",
+          "Customized Worksheets & Drills"
+        ],
+        "idealMatch": "Students of all ages, from preschoolers to high schoolers, who benefit from a structured, step-by-step approach to Math, Physics, or English.",
+        "successCase": "Has over a year of experience tutoring Mathematics to MYP1 students at an International School, successfully managing both one-on-one sessions and classes of 10+ students.",
+        "lessonStyle": "Structured and adaptable. I provide custom worksheets suited to each student's individual level, address personal doubts, and use targeted homework to ensure readiness for the next topic."
       }
     },
     "f_english": "English",

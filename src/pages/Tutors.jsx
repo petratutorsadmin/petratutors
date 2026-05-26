@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import { MapPin, Monitor, GraduationCap, X, SlidersHorizontal, Languages } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -10,6 +11,7 @@ const TUTORS_BASE = [
     { id: 'tutor-5', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-5.png' },
     { id: 'tutor-4', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-4.png' },
     { id: 'tutor-michael', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-michael.jpg' },
+    { id: 'tutor-melody', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-melody.jpg' },
     { id: 'tutor-sara', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-sara.jpg' },
     { id: 'tutor-cian', format: ['Online'], image: '/images/tutors/tutor-cian.jpg' },
     { id: 'tutor-tina', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-tina.jpg' },
@@ -19,7 +21,9 @@ const TUTORS_BASE = [
     { id: 'tutor-hazel', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-hazel.jpg' },
     { id: 'tutor-maegan', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-maegan.jpg' },
     { id: 'tutor-2', format: ['Online'], image: '/images/tutors/tutor-2.png' },
-    { id: 'tutor-alice', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-alice.jpg' }
+    { id: 'tutor-alice', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-alice.jpg' },
+    { id: 'tutor-varna', format: ['Online'], image: '/images/tutors/tutor-varna.jpg' },
+    { id: 'tutor-siya', format: ['Online'], image: '/images/tutors/tutor-siya.jpg' }
 ];
 
 export default function Tutors() {
@@ -159,7 +163,7 @@ export default function Tutors() {
             </div>
 
             {/* Expanded Profile Modal */}
-            {selectedTutor && (
+            {selectedTutor && createPortal(
                 <div className={styles.modalOverlay} onClick={() => setSelectedTutor(null)}>
                     <div className={`card ${styles.modalContent}`} onClick={e => e.stopPropagation()}>
                         <button className={styles.closeBtn} onClick={() => setSelectedTutor(null)}>
@@ -240,7 +244,8 @@ export default function Tutors() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </>
     );
