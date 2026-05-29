@@ -67,6 +67,17 @@ export default function Tutors() {
             university.toLowerCase().includes(matchString.toLowerCase());
     });
 
+    const getFilterCount = (f) => {
+        if (f.id === 'all') return TUTORS.length;
+        const matchString = f.label;
+        return TUTORS.filter(tutor => {
+            const subjects = tutor.subjects || [];
+            const university = tutor.university || '';
+            return subjects.some(s => s.toLowerCase().includes(matchString.toLowerCase())) ||
+                university.toLowerCase().includes(matchString.toLowerCase());
+        }).length;
+    };
+
     return (
         <>
             <SEO 
@@ -97,7 +108,7 @@ export default function Tutors() {
                                 className={`${styles.filterChip} ${activeFilterId === f.id ? styles.active : ''}`}
                                 onClick={() => setActiveFilterId(f.id)}
                             >
-                                {f.label}
+                                {f.label} <span style={{ opacity: 0.7, marginLeft: '0.25rem', fontSize: '0.9em' }}>({getFilterCount(f)})</span>
                             </button>
                         ))}
                     </div>
