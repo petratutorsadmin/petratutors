@@ -805,33 +805,34 @@
         "successCase": "Drawing from experience working with students and companies worldwide, my lessons combine advanced English communication, cross-cultural understanding, and real-world conversation strategies.",
         "lessonStyle": "At Petra, I strongly align with our mentorship-oriented philosophy, emphasizing personalized guidance, human connection, and long-term growth rather than one-size-fits-all education."
       },
-      "tutor-varna": {
-        "name": "Varna Narayana Iyyappan",
-        "university": "Keio University, Economics",
+      "tutor-gia": {
+        "name": "Giatri Maritza Drajat",
+        "university": "Waseda University",
         "subjects": [
-          "English Conversation",
-          "Academic English",
-          "IB Subjects",
-          "University Preparation",
-          "English Qualifications (IELTS, Eiken, TOEIC, TOEFL)",
-          "Essay Feedback"
+          "Conversational English",
+          "University Essay Writing",
+          "Social Studies",
+          "Alberta Curriculum",
+          "IELTS"
         ],
         "targetAges": [
           "Junior high",
-          "High school"
+          "High school",
+          "All ages (flexible)"
         ],
         "languages": [
-          "English"
+          "English",
+          "Indonesian"
         ],
-        "intro": "I am an Economics student at Keio University with a passion for making a meaningful impact on my students' learning journeys. By focusing on helping students deeply understand core concepts, I aim to not only improve their academic performance but also build their long-term confidence.",
+        "intro": "Hi! My name is Gia, and I am currently an undergraduate at Waseda University. Having spent most of my life in international environments, I truly understand the challenges of learning English and how to overcome them. My lessons focus on creating a supportive environment where students can stay focused while achieving their academic goals.",
         "strengths": [
-          "IBDP Economics & Business",
-          "University Admissions Support",
-          "Essay Feedback & Refining"
+          "International Background",
+          "Alberta Curriculum & IELTS",
+          "Flexible & Adaptable Teaching"
         ],
-        "idealMatch": "Junior high and high school students who need structured help with IB subjects, university preparation, or English qualifications.",
-        "successCase": "Has over six months of dedicated experience tutoring IBDP Economics and Business Management, alongside providing comprehensive university admissions and essay support.",
-        "lessonStyle": "Patient and concept-driven, focusing on building true comprehension and confidence rather than just memorization."
+        "idealMatch": "Junior high and high school students looking for conversational English, essay writing support, or social studies tutoring in a highly supportive environment.",
+        "successCase": "Draws on her extensive experience in international environments to help students overcome the specific challenges of learning English.",
+        "lessonStyle": "Highly supportive and flexible. I adapt my teaching style to different ages and levels to ensure students stay focused and reach their goals."
       },
       "tutor-siya": {
         "name": "Siya Ahuja",
