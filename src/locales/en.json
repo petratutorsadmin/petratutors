@@ -5,6 +5,7 @@
     "tutors": "Tutors",
     "pricing": "Pricing",
     "about": "About",
+    "faq": "FAQ",
     "inquiry": "Book Trial (30s)",
     "line_cta": "Consult on LINE",
     "line_url": "https://lin.ee/rqf4A0D",
@@ -1544,5 +1545,105 @@
     "parent_toggle_label": "Perspective View",
     "student_view": "Student Perspective",
     "parent_view": "Parent Perspective"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "q1": {
+      "q": "What makes Petra Tutors different from traditional cram schools (juku)?",
+      "a": [
+        { "type": "p", "text": "Unlike traditional cram schools that teach large groups of students, Petra Tutors provides personalized one-to-one tutoring and mentorship. Every student receives tailored support based on their academic goals, learning style, strengths, and areas for improvement." }
+      ]
+    },
+    "q2": {
+      "q": "What subjects does Petra Tutors offer?",
+      "a": [
+        { "type": "p", "text": "Petra Tutors supports students across a wide range of subjects, including:" },
+        { "type": "ul", "items": ["English Language", "IELTS Preparation", "EIKEN Preparation", "Mathematics", "Science", "Economics", "Business English", "International School Support", "IB (International Baccalaureate)", "University Admissions Guidance"] },
+        { "type": "p", "text": "If you are looking for support in a specific subject, contact us and we'll recommend the most suitable tutor." }
+      ]
+    },
+    "q3": {
+      "q": "Do you offer online tutoring?",
+      "a": [
+        { "type": "p", "text": "Yes. Petra Tutors provides both online and in-person tutoring." },
+        { "type": "p", "text": "Our online lessons allow students across Japan and internationally to work with experienced tutors through flexible scheduling and interactive lessons." }
+      ]
+    },
+    "q4": {
+      "q": "Do you provide in-person tutoring in Tokyo?",
+      "a": [
+        { "type": "p", "text": "Yes. In-person tutoring is available in selected areas of Tokyo and surrounding regions, depending on tutor availability and scheduling." }
+      ]
+    },
+    "q5": {
+      "q": "Can Petra Tutors help international school students?",
+      "a": [
+        { "type": "p", "text": "Absolutely. We regularly support students attending international schools with:" },
+        { "type": "ul", "items": ["IB coursework and exam preparation", "IGCSE subjects", "AP courses", "Academic writing", "English support", "University applications"] },
+        { "type": "p", "text": "Our tutors understand the unique demands of international curricula and admissions processes." }
+      ]
+    },
+    "q6": {
+      "q": "Can Petra Tutors help with IELTS preparation?",
+      "a": [
+        { "type": "p", "text": "Yes. Our IELTS tutors provide structured support for all four sections of the exam:" },
+        { "type": "ul", "items": ["Speaking", "Writing", "Reading", "Listening"] },
+        { "type": "p", "text": "Students receive personalized feedback, exam strategies, and practice materials designed to improve scores efficiently." }
+      ]
+    },
+    "q7": {
+      "q": "Can Petra Tutors help with EIKEN preparation?",
+      "a": [
+        { "type": "p", "text": "Yes. We help students prepare for all stages of EIKEN, including written exams, interviews, speaking practice, vocabulary development, and test-taking strategies." }
+      ]
+    },
+    "q8": {
+      "q": "How are Petra Tutors selected?",
+      "a": [
+        { "type": "p", "text": "We carefully select tutors based on academic excellence, teaching ability, communication skills, and mentorship qualities." },
+        { "type": "p", "text": "Many of our tutors come from leading universities and bring both subject expertise and practical teaching experience." }
+      ]
+    },
+    "q9": {
+      "q": "Do you offer a trial lesson?",
+      "a": [
+        { "type": "p", "text": "Yes. We offer an initial consultation and trial lesson so students and parents can determine whether Petra Tutors is the right fit before making a commitment." }
+      ]
+    },
+    "q10": {
+      "q": "How much does private tutoring cost?",
+      "a": [
+        { "type": "p", "text": "Tutoring fees vary depending on the subject, tutor experience, lesson format, and lesson duration." },
+        { "type": "p", "text": "Please visit our Pricing page or contact us for a personalized recommendation based on your academic goals." }
+      ]
+    },
+    "q11": {
+      "q": "How do you track student progress?",
+      "a": [
+        { "type": "p", "text": "We use structured learning plans, regular feedback, and measurable academic goals to track progress." },
+        { "type": "p", "text": "Students and parents receive ongoing updates to ensure lessons remain focused, effective, and aligned with long-term objectives." }
+      ]
+    },
+    "q12": {
+      "q": "Do you only work with school students?",
+      "a": [
+        { "type": "p", "text": "No. Petra Tutors works with learners of all ages, including:" },
+        { "type": "ul", "items": ["Elementary school students", "Junior high school students", "High school students", "University students", "Adult learners", "Working professionals"] },
+        { "type": "p", "text": "We offer academic, examination, and professional development support." }
+      ]
+    },
+    "q13": {
+      "q": "Are online tutoring lessons effective?",
+      "a": [
+        { "type": "p", "text": "Yes. Research and experience show that one-to-one online tutoring can be highly effective when lessons are personalized and interactive." },
+        { "type": "p", "text": "Many students benefit from greater scheduling flexibility, access to specialized tutors, and focused individual attention." }
+      ]
+    },
+    "q14": {
+      "q": "How can I find the right tutor for my child?",
+      "a": [
+        { "type": "p", "text": "We begin with a consultation to understand the student's academic needs, goals, learning style, and schedule. We then recommend the tutor who is the best fit for those requirements." }
+      ]
+    }
   }
 }

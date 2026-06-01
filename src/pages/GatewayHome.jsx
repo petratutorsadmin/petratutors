@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import SEO from '../components/SEO';
+import FAQ from '../components/FAQ';
 import styles from './GatewayHome.module.css';
 
 // Routes for each choice - labels/subs come from locale
@@ -118,6 +119,9 @@ export default function GatewayHome() {
                     </div>
                 </div>
             </section>
+
+            {/* ─── FAQ ─── */}
+            <FAQ theme="dark" />
 
             {/* ─── FINAL CTA ─── */}
             <section className={styles.finalCta}>

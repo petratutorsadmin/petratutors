@@ -36,6 +36,7 @@ export default function Footer() {
                     <Link to="/tutors" className={styles.link}>{t('footer.tutors')}</Link>
                     <Link to="/pricing" className={styles.link}>{t('footer.pricing')}</Link>
                     <Link to="/hiring" className={styles.link}>{t('footer.hiring', 'Join Our Team')}</Link>
+                    <Link to="/faq" className={styles.link}>{t('nav.faq', 'FAQ')}</Link>
                     <Link to="/no-admission-fee" className={styles.link}>{t('footer.policy_no_fee')}</Link>
                     <Link to="/keystone" className={styles.link}>
                         {t('footer.publication', 'The Keystone')}

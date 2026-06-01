@@ -3,6 +3,7 @@ import { ArrowRight, Globe2, BookOpen, GraduationCap, Users, CheckCircle, Check 
 import { useTranslation } from 'react-i18next';
 import styles from './Home.module.css';
 import ComparisonSection from '../components/ComparisonSection';
+import FAQ from '../components/FAQ';
 
 export default function Home() {
     const { t } = useTranslation();
@@ -213,6 +214,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <FAQ />
 
             {/* Final CTA */}
             <section className={styles.finalCta}>

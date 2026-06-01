@@ -23,6 +23,7 @@ const About = lazy(() => import('./pages/About'));
 const NoAdmissionFee = lazy(() => import('./pages/NoAdmissionFee'));
 const ThankYou = lazy(() => import('./pages/ThankYou'));
 const Hiring = lazy(() => import('./pages/Hiring'));
+const FAQPage = lazy(() => import('./pages/FAQPage'));
 const Keystone = lazy(() => import('./pages/Keystone'));
 const ThePetraEcosystem = lazy(() => import('./pages/ThePetraEcosystem'));
 const TutorDivisions = lazy(() => import('./pages/TutorDivisions'));
@@ -66,6 +67,7 @@ function App() {
             <Route path="about" element={<About />} />
             <Route path="no-admission-fee" element={<NoAdmissionFee />} />
             <Route path="hiring" element={<Hiring />} />
+            <Route path="faq" element={<FAQPage />} />
             <Route path="keystone" element={<Keystone />} />
             <Route path="ecosystem" element={<ThePetraEcosystem />} />
             <Route path="apply/divisions" element={<TutorDivisions />} />
