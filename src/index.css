@@ -35,10 +35,10 @@
   --space-2xl: 7rem; /* 112px */
 
   /* Border Radius */
-  --radius-sm: 12px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 16px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
   --radius-pill: 9999px;
 
   /* Shadows */
@@ -340,9 +340,8 @@ main {
   box-shadow: 0 4px 20px rgba(201,168,76,0.35);
 }
 .btn-gold:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 28px rgba(201,168,76,0.5);
-  filter: brightness(1.05);
+  filter: brightness(1.06);
+  box-shadow: 0 4px 18px rgba(201,168,76,0.45);
 }
 
 /* LINE green button */
@@ -353,7 +352,6 @@ main {
 }
 .btn-line:hover {
   background-color: #04A844;
-  transform: translateY(-1px);
 }
 
 /* Ghost button for dark backgrounds */
@@ -378,8 +376,6 @@ main {
 .dark-card:hover {
   background: rgba(255,255,255,0.1);
   border-color: var(--c-gold);
-  box-shadow: var(--shadow-gold);
-  transform: translateY(-3px);
 }
 
 /* Standard Unified Page Fade-In Transition */

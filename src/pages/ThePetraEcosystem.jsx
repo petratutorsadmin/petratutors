@@ -51,7 +51,7 @@ export default function ThePetraEcosystem() {
         setIsPolishing(true);
         setTimeout(() => {
             setPolishedText(
-                'Adichie’s narrative exposes systemic socio-economic hardships, portraying the paternal figure as a tyrannical domestic authority whose dogmatic control actively oppresses the household.'
+                "Adichie's narrative exposes systemic socio-economic hardships, portraying the paternal figure as a tyrannical domestic authority whose dogmatic control actively oppresses the household."
             );
             setIsPolishing(false);
         }, 1200);
@@ -84,7 +84,7 @@ export default function ThePetraEcosystem() {
             { sender: 'tutor', text: 'Hi! Let me know if you want to review the Math HL Calculus assignment before the trial exam.' }
         ],
         advisor: [
-            { sender: 'advisor', text: 'I noticed some transition issues in your draft essay on post-colonial rhetoric. Let’s clean that up.' }
+            { sender: 'advisor', text: "I noticed some transition issues in your draft essay on post-colonial rhetoric. Let's clean that up." }
         ]
     });
     const [userQuestion, setUserQuestion] = useState('');
@@ -107,9 +107,9 @@ export default function ThePetraEcosystem() {
         setTimeout(() => {
             let responseText = '';
             if (currentMentor === 'mentor') {
-                responseText = 'Excellent question. Focus on structuring the body paragraphs using the synthesis model first. I’ve updated your target checklist!';
+                responseText = "Excellent question. Focus on structuring the body paragraphs using the synthesis model first. I've updated your target checklist!";
             } else if (currentMentor === 'tutor') {
-                responseText = 'That makes sense. We should apply the second derivative test to justify the maximum values. Let’s drill this live tomorrow.';
+                responseText = "That makes sense. We should apply the second derivative test to justify the maximum values. Let's drill this live tomorrow.";
             } else {
                 responseText = 'Nice revision. Changing "bad" to "oppressive" sharpens the tone significantly. I approve this paragraph!';
             }
@@ -160,7 +160,7 @@ export default function ThePetraEcosystem() {
     const pathwayData = {
         'ib-pearl': {
             title: 'IB Diploma ➔ Keio PEARL',
-            desc: 'A pathway designed for high-scoring English-track students targeting Keio University’s flagship Economics program.',
+            desc: "A pathway designed for high-scoring English-track students targeting Keio University's flagship Economics program.",
             milestones: [
                 { grade: 'Grade 10', title: 'Foundational Critical Analysis', detail: 'Developing vocabulary density, reading complex historical texts, and structuring advanced essays.' },
                 { grade: 'Grade 11', title: 'IB Internal Assessment (IA) & Extended Essay (EE) Prep', detail: 'Developing research methodology, learning to frame academic hypotheses, and peer reviews.' },
@@ -207,7 +207,7 @@ export default function ThePetraEcosystem() {
             title: 'IB & Exam Resource Guides',
             items: [
                 { title: 'IB History Paper 2 Prep Guide', detail: 'Authoritative study guides and source evaluation checklists.' },
-                { title: 'UCAS Personal Statement Checklist', detail: 'Crucial do’s and don’ts for UK application statements.' }
+                { title: 'UCAS Personal Statement Checklist', detail: "Crucial do's and don'ts for UK application statements." }
             ]
         }
     };
@@ -224,13 +224,22 @@ export default function ThePetraEcosystem() {
             <div className={styles.heroSection}>
                 <div className="container text-center">
                     <span className="eyebrow" style={{ marginBottom: '1rem', display: 'inline-block' }}>
-                        {t('ecosystem.parent_toggle_label', 'IMMERSIVE INTERACTIVE BIOSPHERE')}
+                        {t('ecosystem.parent_toggle_label')}
                     </span>
-                    <h1 className={styles.heroTitle}>{t('ecosystem.title', 'The Petra Ecosystem')}</h1>
+                    <h1 className={styles.heroTitle}>{t('ecosystem.title')}</h1>
                     <p className={styles.heroSubtitle}>
-                        A living map of our systems. Click elements of the tree to open active interactive simulators and experience Petra’s methods.
+                        {t('ecosystem.hero_subtitle')}
                     </p>
+                </div>
+            </div>
 
+            {/* Growth Tree Explanation */}
+            <div className={styles.growthTreeIntro}>
+                <div className="container">
+                    <div className={styles.growthTreeCard}>
+                        <h2 className={styles.growthTreeTitle}>{t('ecosystem.growth_tree_title')}</h2>
+                        <p className={styles.growthTreeDesc}>{t('ecosystem.growth_tree_desc')}</p>
+                    </div>
                 </div>
             </div>
 
@@ -866,6 +875,11 @@ export default function ThePetraEcosystem() {
                                                 Click cabinet drawers below to pull open sample SOP papers, exam guidelines, and lexical cards.
                                             </p>
 
+                                            <div className={styles.essayDisclosure}>
+                                                <strong>{t('ecosystem.essay_disclosure_title')}</strong>
+                                                <p>{t('ecosystem.essay_disclosure')}</p>
+                                            </div>
+
                                             <div className={styles.libraryDrawersStage}>
                                                 {Object.keys(libraryCategories).map(catKey => {
                                                     const isActive = activeLibraryCat === catKey;
@@ -917,7 +931,7 @@ export default function ThePetraEcosystem() {
 
                                         <div className={styles.simBody}>
                                             <p className={styles.simDescription}>
-                                                Tap the manifesto cards below to flip them and uncover the educational principles behind Petra’s philosophy.
+                                                Tap the manifesto cards below to flip them and uncover the educational principles behind Petra's philosophy.
                                             </p>
 
                                             <div className={styles.manifestoCardsGrid}>

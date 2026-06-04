@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe2, BookOpen, GraduationCap, Users, CheckCircle, Check } from 'lucide-react';
+import { ArrowRight, Globe2, BookOpen, GraduationCap, CheckCircle, Check, Mail, MessageCircle, ClipboardList, UserCheck, TrendingUp } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Home.module.css';
 import ComparisonSection from '../components/ComparisonSection';
@@ -20,8 +20,17 @@ export default function Home() {
                         {t('home.hero_subtitle')}
                     </p>
                     <div className={styles.heroCtas}>
-                        <Link to="/inquiry" className="btn btn-primary">{t('home.cta_primary')}</Link>
+                        <Link to="/inquiry" className="btn btn-gold">{t('home.cta_primary')}</Link>
                         <Link to="/ecosystem" className="btn btn-secondary">{t('home.cta_secondary')}</Link>
+                    </div>
+                    <div className={styles.heroContact}>
+                        <a href="mailto:admin@petratutors.com" className={styles.heroContactLink}>
+                            <Mail size={13} /> admin@petratutors.com
+                        </a>
+                        <span className={styles.heroContactDivider} aria-hidden="true">·</span>
+                        <a href={t('nav.line_url')} target="_blank" rel="noopener noreferrer" className={styles.heroContactLink}>
+                            <MessageCircle size={13} /> {t('nav.line_cta')}
+                        </a>
                     </div>
                 </div>
             </section>
@@ -147,17 +156,26 @@ export default function Home() {
                     <h2 className="text-h2 text-center animate-on-scroll" style={{ marginBottom: 'var(--space-lg)' }}>{t('home.how_title')}</h2>
                     <div className={styles.stepsGrid}>
                         <div className={`${styles.step} animate-on-scroll`} style={{ animationDelay: '0.1s' }}>
-                            <div className={styles.stepNumber}>1</div>
+                            <div className={styles.stepHeader}>
+                                <div className={styles.stepIconWrap}><ClipboardList size={22} /></div>
+                                <div className={styles.stepNumber}>1</div>
+                            </div>
                             <h3 className="text-h4">{t('home.step1_title')}</h3>
                             <p>{t('home.step1_desc')}</p>
                         </div>
                         <div className={`${styles.step} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
-                            <div className={styles.stepNumber}>2</div>
+                            <div className={styles.stepHeader}>
+                                <div className={styles.stepIconWrap}><UserCheck size={22} /></div>
+                                <div className={styles.stepNumber}>2</div>
+                            </div>
                             <h3 className="text-h4">{t('home.step2_title')}</h3>
                             <p>{t('home.step2_desc')}</p>
                         </div>
                         <div className={`${styles.step} animate-on-scroll`} style={{ animationDelay: '0.3s' }}>
-                            <div className={styles.stepNumber}>3</div>
+                            <div className={styles.stepHeader}>
+                                <div className={styles.stepIconWrap}><TrendingUp size={22} /></div>
+                                <div className={styles.stepNumber}>3</div>
+                            </div>
                             <h3 className="text-h4">{t('home.step3_title')}</h3>
                             <p>{t('home.step3_desc')}</p>
                             <p style={{ marginTop: '0.5rem', fontSize: '0.9rem', color: 'var(--c-text-light)' }}>

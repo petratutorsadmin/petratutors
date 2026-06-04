@@ -62,9 +62,9 @@
     border-color: rgba(212, 175, 55, 0.2);
 }
 
-/* On hover of second card, maintain offset but lift slightly */
+/* On hover of second card, maintain the design offset */
 .founderCard:nth-child(2):hover {
-    transform: translateY(3.5rem);
+    transform: translateY(4rem);
 }
 
 .founderImageWrapper {
@@ -146,17 +146,27 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: transparent;
+    background: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem 2.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.directorCard:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(201, 168, 76, 0.3);
 }
 
 .directorAvatarWrapper {
-    width: 220px;
-    aspect-ratio: 3/4;
-    border-radius: 2px;
-    margin-bottom: 1.5rem;
+    width: 180px;
+    aspect-ratio: 1/1;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.25rem;
     overflow: hidden;
     background-color: var(--c-sand);
-    box-shadow: 0 4px 15px rgba(26, 32, 44, 0.05);
+    box-shadow: 0 4px 15px rgba(26, 32, 44, 0.08);
 }
 
 .directorImage {
@@ -170,7 +180,6 @@
 
 .directorCard:hover .directorImage {
     filter: grayscale(0%) contrast(1.05);
-    transform: scale(1.02);
 }
 
 .avatarPlaceholder {
@@ -198,7 +207,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--c-accent);
+    color: #8B6914;
     margin-bottom: 1.25rem;
 }
 
@@ -231,7 +240,7 @@
     }
 
     .founderCard:nth-child(2):hover {
-        transform: translateY(-4px);
+        transform: translateY(0);
     }
     
     .founderImageWrapper {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Instagram, MapPin, Phone } from 'lucide-react';
+import { Mail, Instagram, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
 
@@ -57,13 +57,20 @@ export default function Footer() {
 
                 <div className={styles.contactCol}>
                     <h4 className={styles.colTitle}>{t('footer.contact')}</h4>
+                    <Link to="/inquiry" className={`${styles.link} ${styles.footerCtaBtn}`}>
+                        {t('footer.inquiry', 'Book Free Trial')}
+                    </Link>
+                    <a href={t('nav.line_url')} target="_blank" rel="noopener noreferrer" className={`${styles.link} ${styles.lineBtn}`}>
+                        <MessageCircle size={16} />
+                        <span>{t('nav.line_cta', 'Consult on LINE')}</span>
+                    </a>
                     <a href="mailto:admin@petratutors.com" className={styles.link}>
-                        <Mail size={16} /> 
+                        <Mail size={16} />
                         <span>admin@petratutors.com</span>
                     </a>
                     <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="Instagram">
-                        <Instagram size={16} /> 
-                        <span>petratutors</span>
+                        <Instagram size={16} />
+                        <span>@petratutors</span>
                     </a>
                 </div>
             </div>

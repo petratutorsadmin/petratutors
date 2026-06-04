@@ -56,6 +56,15 @@ const DIRECTORS = [
         image: '/images/tutors/tutor-melody.jpg',
         objectPosition: 'center 20%',
         initials: 'MN'
+    },
+    {
+        id: 'gia',
+        name: 'Giatri Maritza Drajat',
+        roleKey: 'team.role_marketing_intern',
+        descKey: 'team.gia_desc',
+        image: '/images/tutors/tutor-gia.jpg',
+        objectPosition: 'center 20%',
+        initials: 'GD'
     }
 ];
 

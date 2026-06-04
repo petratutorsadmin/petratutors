@@ -71,7 +71,7 @@
 }
 
 .imagePlaceholder:hover .aboutImage {
-    transform: scale(1.03);
+    opacity: 0.96;
 }
 
 .contentBlock {
@@ -79,12 +79,12 @@
 }
 
 .stageTitle {
-    color: var(--c-accent);
+    color: #8B6914;
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     margin-bottom: var(--space-md);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .pacingParagraph {
@@ -134,8 +134,16 @@
     display: flex;
     gap: var(--space-lg);
     padding: var(--space-md);
-    background: rgba(255, 255, 255, 0.4);
+    background: var(--c-white);
     border-radius: var(--radius-md);
+    border: 1px solid var(--c-border);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.identityItem:hover {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(229, 184, 11, 0.3);
 }
 
 .glyph {
@@ -177,8 +185,8 @@
 }
 
 .foundationLine {
-    font-weight: 600;
-    color: var(--c-accent);
+    font-weight: 700;
+    color: #8B6914;
     margin-top: var(--space-lg);
     font-size: 1rem;
     letter-spacing: 0.05em;
@@ -228,7 +236,7 @@
 }
 
 .finalVisualPlaceholder:hover .aboutImageWide {
-    transform: scale(1.02);
+    opacity: 0.96;
 }
 
 /* Conversion Section */

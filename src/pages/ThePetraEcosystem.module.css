@@ -29,6 +29,60 @@
     line-height: 1.6;
 }
 
+/* Essay / Student Work Disclosure */
+.essayDisclosure {
+    background: rgba(229, 184, 11, 0.08);
+    border: 1px solid rgba(229, 184, 11, 0.25);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+    font-size: 0.88rem;
+    color: var(--c-text-light);
+    line-height: 1.6;
+}
+
+.essayDisclosure strong {
+    display: block;
+    color: #8B6914;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.35rem;
+}
+
+/* Growth Tree Introduction Section */
+.growthTreeIntro {
+    background-color: var(--c-sand);
+    border-bottom: 1px solid var(--c-border);
+    padding: 2rem 0;
+}
+
+.growthTreeCard {
+    background: var(--c-white);
+    border: 1px solid var(--c-border);
+    border-left: 4px solid var(--c-accent);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 2rem;
+    max-width: 860px;
+    margin: 0 auto;
+    box-shadow: var(--shadow-sm);
+}
+
+.growthTreeTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    margin-bottom: 0.6rem;
+    font-family: var(--font-sans);
+}
+
+.growthTreeDesc {
+    font-size: 1rem;
+    color: var(--c-text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
 /* Hide Mobile Node Selector on Desktop by default */
 .mobileNodeSelector {
     display: none;

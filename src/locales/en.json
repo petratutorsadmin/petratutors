@@ -354,6 +354,7 @@
     "toshie_desc": "Manages institutional partnerships and parent community engagement, building strong collaborative networks between Petra, international schools, and our student families.",
     "shinto_desc": "Oversees talent acquisition and the professional development of our global mentor network, ensuring that every educator meets Petra's rigorous standards for mentorship capability.",
     "melody_desc": "Melody supports Petra’s marketing operations, outreach, and international community engagement initiatives. With experience in marketing communications and strong ties to international school communities, she focuses on student outreach, campaign coordination, and helping Petra expand its global-minded educational network.",
+    "gia_desc": "Gia supports Petra’s marketing operations and outreach with a grounded, international perspective. As a Waseda University undergraduate who has spent most of her life in international environments, she understands the challenges students face when navigating English and academic transitions. She contributes to community engagement while also teaching conversational English, university essay writing, and social studies to junior high and high school students.",
     "final_title": "Ready to get started?",
     "final_cta": "Request Consultation"
   },
@@ -1542,9 +1543,21 @@
   "ecosystem": {
     "title": "The Petra Ecosystem",
     "subtitle": "An interconnected educational world designed for long-term growth, intellectual exploration, and global transition.",
-    "parent_toggle_label": "Perspective View",
+    "parent_toggle_label": "IMMERSIVE INTERACTIVE BIOSPHERE",
     "student_view": "Student Perspective",
-    "parent_view": "Parent Perspective"
+    "parent_view": "Parent Perspective",
+    "hero_subtitle": "A living map of our systems. Click elements of the tree to open active interactive simulators and experience Petra's methods.",
+    "growth_tree_title": "The Petra Growth Tree",
+    "growth_tree_desc": "The Petra Growth Tree is a visual map of how students grow with Petra Tutors. Each part of the tree represents a different area of learning — from academic foundations to confidence, writing, exams, and long-term goals. Explore the tree to see how Petra supports students step by step.",
+    "essay_disclosure_title": "About Student Work",
+    "essay_disclosure": "We may showcase selected student essays, writing assignments, or learning projects as examples of academic growth. Student work will only be shared with appropriate permission and privacy consideration. These examples help families understand how Petra supports writing, critical thinking, and long-term academic development.",
+    "node_keystone_name": "The Keystone",
+    "node_pathways_name": "Pathways",
+    "node_chart_name": "Learning Chart",
+    "node_library_name": "Library",
+    "node_flow_name": "Lesson Flow",
+    "node_network_name": "Support Network",
+    "node_manifesto_name": "Philosophy"
   },
   "faq": {
     "title": "Frequently Asked Questions",

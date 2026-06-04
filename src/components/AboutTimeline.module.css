@@ -1,6 +1,6 @@
 .timelineSection {
     padding: clamp(3.5rem, 6vh, 4.2rem) 0;
-    background-color: var(--c-surface);
+    background-color: var(--c-stone);
     position: relative;
     overflow: hidden;
 }
@@ -59,10 +59,9 @@
     top: 1.8rem;
     width: 16px;
     height: 16px;
-    border-radius: 50%;
-    background-color: var(--c-white);
-    border: 4px solid var(--c-accent);
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    background-color: var(--c-accent);
+    border: none;
     z-index: 3;
 }
 
@@ -70,25 +69,25 @@
     background: var(--c-white);
     padding: 1.75rem;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 18px rgba(48, 27, 71, 0.08);
+    border: 1px solid rgba(48, 27, 71, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 28px rgba(48, 27, 71, 0.12);
+    border-color: rgba(229, 184, 11, 0.3);
 }
 
 .year {
     display: inline-block;
     font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--c-accent);
+    font-weight: 700;
+    color: var(--c-navy);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.7rem;
-    background: rgba(212, 175, 55, 0.1);
+    background: rgba(229, 184, 11, 0.18);
     padding: 0.3rem 0.75rem;
     border-radius: 30px;
 }
