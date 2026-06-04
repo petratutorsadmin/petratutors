@@ -1,9 +1,18 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Layout from './components/Layout';
 import BoutiqueLoader from './components/BoutiqueLoader';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import Lenis from 'lenis';
+
+// Exploratory/marketing pages get slow dragging scroll.
+// Task-oriented pages (forms, pricing, FAQ) stay native speed.
+const SLOW_SCROLL_PATHS = new Set([
+  '/', '/home', '/about', '/team',
+  '/ecosystem', '/system', '/keystone',
+  '/ib', '/ielts', '/university', '/kids', '/foundation', '/business',
+]);
 
 // Dynamically import pages for code splitting
 const GatewayHome = lazy(() => import('./pages/GatewayHome'));
@@ -28,16 +37,40 @@ const Keystone = lazy(() => import('./pages/Keystone'));
 const ThePetraEcosystem = lazy(() => import('./pages/ThePetraEcosystem'));
 const TutorDivisions = lazy(() => import('./pages/TutorDivisions'));
 const TutorProgression = lazy(() => import('./pages/TutorProgression'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 
 import ScrollToTop from './components/ScrollToTop';
 import ExitIntentPopup from './components/ExitIntentPopup';
 
 function App() {
   const { i18n } = useTranslation();
+  const location = useLocation();
 
   useEffect(() => {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
+
+  useEffect(() => {
+    if (!SLOW_SCROLL_PATHS.has(location.pathname)) return;
+
+    const lenis = new Lenis({
+      duration: 1.4,
+      easing: (t) => 1 - Math.pow(1 - t, 4),
+      smoothWheel: true,
+    });
+
+    let rafId;
+    function raf(time) {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    }
+    rafId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      lenis.destroy();
+    };
+  }, [location.pathname]);
 
   return (
     <>
@@ -72,6 +105,7 @@ function App() {
             <Route path="ecosystem" element={<ThePetraEcosystem />} />
             <Route path="apply/divisions" element={<TutorDivisions />} />
             <Route path="apply/progression" element={<TutorProgression />} />
+            <Route path="privacy" element={<PrivacyPolicy />} />
           </Route>
         </Routes>
       </Suspense>

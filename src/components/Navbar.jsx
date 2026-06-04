@@ -6,36 +6,31 @@ import styles from './Navbar.module.css';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [showNav, setShowNav] = useState(true);
-    const lastScrollY = useRef(0);
+    const navbarRef = useRef(null);
     const { t, i18n } = useTranslation();
 
     useEffect(() => {
-        const handleScroll = () => {
-            if (typeof window !== 'undefined') {
-                const currentY = window.scrollY;
-                if (currentY > lastScrollY.current && currentY > 80 && !isOpen) {
-                    setShowNav(false);
-                } else if (currentY < lastScrollY.current || currentY <= 80) {
-                    setShowNav(true);
-                }
-                lastScrollY.current = currentY;
-            }
+        const update = () => {
+            const p = Math.min(window.scrollY / 180, 1);
+            const el = navbarRef.current;
+            if (!el) return;
+            el.style.background = `rgba(249, 246, 240, ${(p * 0.52).toFixed(3)})`;
+            el.style.backdropFilter = `blur(${(p * 14).toFixed(1)}px)`;
+            el.style.webkitBackdropFilter = `blur(${(p * 14).toFixed(1)}px)`;
+            el.style.boxShadow = p > 0.05
+                ? `0 4px 24px rgba(48,27,71,${(p * 0.10).toFixed(3)}), 0 1px 4px rgba(48,27,71,${(p * 0.06).toFixed(3)})`
+                : 'none';
+            el.style.borderColor = `rgba(255,255,255,${(p * 0.55).toFixed(3)})`;
         };
-
-        window.addEventListener('scroll', handleScroll, { passive: true });
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [isOpen]);
-
-    const toggleLanguage = () => {
-        const newLang = i18n.language === 'en' ? 'ja' : 'en';
-        i18n.changeLanguage(newLang);
-    };
+        update();
+        window.addEventListener('scroll', update, { passive: true });
+        return () => window.removeEventListener('scroll', update);
+    }, []);
 
     return (
-        <header className={`${styles.navbarWrapper} ${!showNav ? styles.navbarHidden : ''}`}>
-            <div className={`${styles.navbar} glass-panel`}>
-            <div className={`container ${styles.navContainer}`}>
+        <header className={styles.navbarWrapper}>
+            <div ref={navbarRef} className={styles.navbar}>
+            <div className={styles.navContainer}>
                 <Link to="/" className={styles.logo}>
                     <img src="/logo-optimized.webp" alt="Petra Tutors" width="32" height="32" className={styles.logoImage} />
                     <span>{t('nav.petra', 'Petra Tutors')}</span>
@@ -54,14 +49,14 @@ export default function Navbar() {
                     <div className={styles.langSwitcher}>
                         <Globe size={18} className={styles.globeIcon} />
                         <div className={styles.pill}>
-                            <button 
-                                onClick={() => i18n.changeLanguage('en')} 
+                            <button
+                                onClick={() => i18n.changeLanguage('en')}
                                 className={`${styles.langBtn} ${i18n.language === 'en' ? styles.activeLang : ''}`}
                             >
                                 EN
                             </button>
-                            <button 
-                                onClick={() => i18n.changeLanguage('ja')} 
+                            <button
+                                onClick={() => i18n.changeLanguage('ja')}
                                 className={`${styles.langBtn} ${i18n.language === 'ja' ? styles.activeLang : ''}`}
                             >
                                 JP
@@ -93,19 +88,19 @@ export default function Navbar() {
                             {t('nav.publication', 'The Keystone')}
                         </Link>
                     </div>
-                    
+
                     <div className={styles.mobileExtraSection}>
                         <div className={styles.mobileLangSection}>
                             <Globe size={20} />
                             <div className={styles.pill}>
-                                <button 
-                                    onClick={() => { i18n.changeLanguage('en'); setIsOpen(false); }} 
+                                <button
+                                    onClick={() => { i18n.changeLanguage('en'); setIsOpen(false); }}
                                     className={`${styles.langBtn} ${i18n.language === 'en' ? styles.activeLang : ''}`}
                                 >
                                     English (EN)
                                 </button>
-                                <button 
-                                    onClick={() => { i18n.changeLanguage('ja'); setIsOpen(false); }} 
+                                <button
+                                    onClick={() => { i18n.changeLanguage('ja'); setIsOpen(false); }}
                                     className={`${styles.langBtn} ${i18n.language === 'ja' ? styles.activeLang : ''}`}
                                 >
                                     日本語 (JP)

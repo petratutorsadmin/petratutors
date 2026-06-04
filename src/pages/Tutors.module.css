@@ -69,6 +69,50 @@
     overflow: hidden;
 }
 
+.andMoreCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    border: 1px dashed var(--c-border);
+    background: var(--c-sand);
+}
+
+.andMoreIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--c-navy);
+    color: var(--c-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.andMoreTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--c-navy);
+}
+
+.andMoreDesc {
+    color: var(--c-text-light);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.andMoreCta {
+    width: 100%;
+    margin-top: auto;
+}
+
 .tutorImage {
     aspect-ratio: 1 / 1;
     background-color: var(--c-stone);

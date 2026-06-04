@@ -17,6 +17,9 @@ export default function Footer() {
                     <p className={styles.brandText}>
                         {t('footer.tagline')}
                     </p>
+                    <p className={styles.screeningNote}>
+                        {t('footer.screening')}
+                    </p>
                     <div className={styles.brandDetails}>
                         <div className={styles.contactItem}>
                             <MapPin size={14} />
@@ -68,6 +71,7 @@ export default function Footer() {
                         <Mail size={16} />
                         <span>admin@petratutors.com</span>
                     </a>
+                    <p className={styles.responseTime}>{t('footer.response_time')}</p>
                     <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="Instagram">
                         <Instagram size={16} />
                         <span>@petratutors</span>
@@ -79,6 +83,8 @@ export default function Footer() {
                     <p>&copy; {new Date().getFullYear()} Petra Tutors. All rights reserved.</p>
                     <p className={styles.legalText}>
                         {t('footer.legal_info')}
+                        <span className={styles.legalSep}>·</span>
+                        <Link to="/privacy" className={styles.legalLink}>{t('footer.privacy')}</Link>
                     </p>
                 </div>
             </div>

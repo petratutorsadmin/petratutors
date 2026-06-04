@@ -157,17 +157,11 @@ export default function Tutors() {
                     ))}
                     
                     {/* "And More" Call to Action Card */}
-                    <div className={`card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${filteredTutors.length * 0.1}s`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '3rem 2rem', border: '1px dashed var(--c-border)', background: 'var(--c-sand)' }}>
-                        <div style={{ width: '48px', height: '48px', borderRadius: '50%', background: 'var(--c-navy)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.5rem', color: 'var(--c-white)' }}>
-                            <span style={{ fontSize: '1.5rem', fontWeight: '800', lineHeight: '1' }}>+</span>
-                        </div>
-                        <h3 className="text-h3" style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--c-navy)' }}>
-                            {t('tutors.and_more_title')}
-                        </h3>
-                        <p style={{ color: 'var(--c-text-light)', marginBottom: '2rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
-                            {t('tutors.and_more_desc')}
-                        </p>
-                        <Link to="/inquiry" className="btn btn-primary" style={{ width: '100%', marginTop: 'auto' }}>
+                    <div className={`card ${styles.andMoreCard} animate-on-scroll`} style={{ animationDelay: `${filteredTutors.length * 0.1}s` }}>
+                        <div className={styles.andMoreIcon}>+</div>
+                        <h3 className={styles.andMoreTitle}>{t('tutors.and_more_title')}</h3>
+                        <p className={styles.andMoreDesc}>{t('tutors.and_more_desc')}</p>
+                        <Link to="/inquiry" className={`btn btn-primary ${styles.andMoreCta}`}>
                             {t('tutors.and_more_cta')}
                         </Link>
                     </div>
