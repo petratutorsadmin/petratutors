@@ -24,7 +24,9 @@ const TUTORS_BASE = [
     { id: 'tutor-2', format: ['Online'], image: '/images/tutors/tutor-2.png' },
     { id: 'tutor-alice', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-alice.jpg' },
     { id: 'tutor-siya', format: ['Online'], image: '/images/tutors/tutor-siya.jpg' },
-    { id: 'tutor-dayun', format: ['Online'], image: '/images/tutors/tutor-dayun.jpg' }
+    { id: 'tutor-dayun', format: ['Online'], image: '/images/tutors/tutor-dayun.jpg' },
+    { id: 'tutor-haruka', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-haruka.png' },
+    { id: 'tutor-maya', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-maya.png' }
 ];
 
 export default function Tutors() {
