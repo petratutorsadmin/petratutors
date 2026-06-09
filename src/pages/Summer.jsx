@@ -7,8 +7,8 @@ import styles from './Summer.module.css';
 
 const CONTENT = {
     en: {
-        seoTitle: 'Summer Intensive 2026 | Petra Tutors',
-        seoDesc: 'July 21 – August 29, 2026. 5 programs, fully 1:1. From ¥14,000. Free trial lesson available.',
+        seoTitle: 'Summer Intensive 2026 | Petra Tutors 夏期講習',
+        seoDesc: 'Petra Tutors Summer Intensive 2026: July 21 – August 29. 5 programs, fully 1:1 individual tutoring. English, Eiken, IB, SAT. From ¥14,000. Free trial lesson available.',
         heroTitle: 'Summer Intensive',
         heroYear: '2026',
         heroSub: 'Online & In-Person Individual Tutoring',
@@ -169,8 +169,8 @@ const CONTENT = {
         formSent: 'Sent. We will be in touch shortly.',
     },
     ja: {
-        seoTitle: '夏期講習 2026 | Petra Tutors',
-        seoDesc: '2026年7月21日〜8月29日。5プログラム・完全1:1マンツーマン。¥14,000〜。無料体験レッスン実施中。',
+        seoTitle: 'Petra Tutors 夏期講習 2026 | 個別集中レッスン',
+        seoDesc: 'Petra Tutors（ペトラチューターズ）の夏期講習2026。7月21日〜8月29日。英語・英検・IB・SAT対応。完全1:1マンツーマン。¥14,000〜。無料体験レッスンあり。',
         heroTitle: '夏期講習',
         heroYear: '2026',
         heroSub: 'オンライン・対面対応の個別集中レッスン',
@@ -342,7 +342,35 @@ export default function Summer() {
 
     return (
         <>
-            <SEO title={c.seoTitle} description={c.seoDesc} path="/summer" />
+            <SEO
+                title={c.seoTitle}
+                description={c.seoDesc}
+                path="/summer"
+                keywords="Petra Tutors summer, Petra Tutors summer program, Petra Tutors summer intensive, Petra Tutors 夏期講習, ペトラチューターズ 夏期講習, ペトラ 夏, 夏期講習 個別指導, 夏期講習 英語, 夏期講習 英検, 夏期講習 IB, 夏期講習 オンライン, summer intensive Japan, summer tutoring Tokyo, summer English program Japan, Eiken summer prep, IB summer tutoring"
+                jsonLdExtra={{
+                    "@context": "https://schema.org",
+                    "@type": "Course",
+                    "name": "Petra Tutors Summer Intensive 2026 / 夏期講習 2026",
+                    "description": "Individual tutoring programs for summer 2026. English, Eiken, IB, SAT, and more. Online and in-person. July 21 – August 29.",
+                    "provider": {
+                        "@type": "EducationalOrganization",
+                        "name": "Petra Tutors",
+                        "url": "https://www.petratutors.com"
+                    },
+                    "offers": {
+                        "@type": "AggregateOffer",
+                        "priceCurrency": "JPY",
+                        "lowPrice": "14000",
+                        "highPrice": "60000",
+                        "offerCount": "5"
+                    },
+                    "startDate": "2026-07-21",
+                    "endDate": "2026-08-29",
+                    "url": "https://www.petratutors.com/summer",
+                    "inLanguage": ["en", "ja"],
+                    "educationalCredentialAwarded": "Certificate of Completion"
+                }}
+            />
             <div className={styles.page}>
 
                 {/* Hero */}
