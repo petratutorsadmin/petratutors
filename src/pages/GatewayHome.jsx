@@ -5,6 +5,11 @@ import SEO from '../components/SEO';
 import FAQ from '../components/FAQ';
 import styles from './GatewayHome.module.css';
 
+const SUMMER_COPY = {
+    en: { label: 'Summer Intensive 2026', sub: 'July 21 – Aug 29  ·  5 programs  ·  From ¥14,000', cta: 'View Programs' },
+    ja: { label: '夏期講習 2026', sub: '7/21〜8/29  ·  5プログラム  ·  ¥14,000〜', cta: 'プログラムを見る' },
+};
+
 // Routes for each choice - labels/subs come from locale
 const CHOICES = [
     { id: 'ielts', to: '/ielts', labelKey: 'gateway.choice_ielts_label', subKey: 'gateway.choice_ielts_sub' },
@@ -30,7 +35,8 @@ const TESTIMONIAL_KEYS = [
 ];
 
 export default function GatewayHome() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const sc = i18n.language === 'ja' ? SUMMER_COPY.ja : SUMMER_COPY.en;
 
     return (
         <div className={styles.page}>
@@ -100,6 +106,19 @@ export default function GatewayHome() {
                             </div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* ─── SUMMER BANNER ─── */}
+            <section className={styles.summerBanner}>
+                <div className={`container ${styles.summerBannerInner}`}>
+                    <div className={styles.summerBannerText}>
+                        <span className={styles.summerBannerLabel}>{sc.label}</span>
+                        <span className={styles.summerBannerSub}>{sc.sub}</span>
+                    </div>
+                    <Link to="/summer" className={styles.summerBannerCta}>
+                        {sc.cta} <ArrowRight size={15} />
+                    </Link>
                 </div>
             </section>
 

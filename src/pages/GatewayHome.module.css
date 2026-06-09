@@ -385,6 +385,63 @@
     border-radius: var(--radius-sm);
 }
 
+/* ── SUMMER BANNER ── */
+.summerBanner {
+    background: linear-gradient(90deg, rgba(201, 168, 76, 0.12) 0%, rgba(201, 168, 76, 0.05) 100%);
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    padding: 1.1rem 0;
+}
+
+.summerBannerInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.summerBannerText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.summerBannerLabel {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--c-gold-light);
+    letter-spacing: 0.01em;
+}
+
+.summerBannerSub {
+    font-size: 0.8rem;
+    color: var(--c-text-on-dark-light);
+    letter-spacing: 0.02em;
+}
+
+.summerBannerCta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--c-gold);
+    color: var(--c-deep);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 0.55rem 1.1rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    transition: background 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+}
+
+.summerBannerCta:hover {
+    background: var(--c-gold-light);
+}
+
 /* ── MOBILE ── */
 @media (max-width: 640px) {
     .hero { padding: 6rem 0 3rem; }

@@ -29,14 +29,12 @@ export default function SummerPopup() {
     const c = i18n.language === 'ja' ? COPY.ja : COPY.en;
 
     useEffect(() => {
-        if (sessionStorage.getItem('summer_popup_dismissed')) return;
         const timer = setTimeout(() => setVisible(true), 2000);
         return () => clearTimeout(timer);
     }, []);
 
     const handleClose = () => {
         setVisible(false);
-        sessionStorage.setItem('summer_popup_dismissed', 'true');
     };
 
     if (!visible) return null;
