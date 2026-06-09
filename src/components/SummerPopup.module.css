@@ -1,0 +1,121 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(12, 5, 22, 0.72);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.popup {
+    background: linear-gradient(160deg, var(--c-deep-mid) 0%, var(--c-deep) 100%);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    border-radius: 10px;
+    padding: 2.5rem 2.25rem 2rem;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.closeBtn {
+    position: absolute;
+    top: 0.9rem;
+    right: 0.9rem;
+    background: transparent;
+    border: none;
+    color: var(--c-text-on-dark-light);
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s;
+    line-height: 1;
+}
+
+.closeBtn:hover {
+    color: var(--c-text-on-dark);
+}
+
+.eyebrow {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--c-gold);
+    font-weight: 700;
+    margin: 0 0 1rem;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--c-white);
+    margin: 0 0 0.4rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+}
+
+.dates {
+    font-size: 0.8rem;
+    color: var(--c-gold-light);
+    font-weight: 600;
+    margin: 0 0 1.1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.desc {
+    font-size: 0.875rem;
+    color: var(--c-text-on-dark-light);
+    line-height: 1.65;
+    margin: 0 0 1.75rem;
+}
+
+.cta {
+    display: block;
+    background: var(--c-gold);
+    color: var(--c-deep);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.875rem 2rem;
+    border-radius: 6px;
+    transition: background 0.15s, opacity 0.15s;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.cta:hover {
+    background: var(--c-gold-light);
+}
+
+.dismiss {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--c-text-on-dark-light);
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0.7rem;
+    margin-top: 0.25rem;
+    transition: color 0.15s;
+}
+
+.dismiss:hover {
+    color: var(--c-text-on-dark);
+}

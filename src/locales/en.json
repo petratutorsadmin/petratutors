@@ -479,7 +479,8 @@
         ],
         "idealMatch": "IB students or those needing rapid improvement before major exams like TOEFL or SAT.",
         "successCase": "Has mentored a wide range of students from young learners to high schoolers, helping them reach key milestones through practice-focused lessons.",
-        "lessonStyle": "Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content."
+        "lessonStyle": "Step-by-step, practice-focused, and highly engaging/motivating, while ensuring students really understand the content.",
+        "role": "Associate Tutor"
       },
       "tutor-2": {
         "name": "Ronan Daly Inagaki",
@@ -505,7 +506,8 @@
         ],
         "idealMatch": "STEM students struggling with complex GCSE/A-Level concepts who value a clear, logical, and engineering-minded approach.",
         "successCase": "Helping several students transition from failing grades to passing A-Level Mathematics with a focus on problem-solving frameworks.",
-        "lessonStyle": "Logical and step-by-step, ensuring foundational understanding before moving to advanced applications."
+        "lessonStyle": "Logical and step-by-step, ensuring foundational understanding before moving to advanced applications.",
+        "role": "Associate Tutor"
       },
       "tutor-6": {
         "name": "Ulemj Batzorig",
@@ -536,7 +538,8 @@
         ],
         "idealMatch": "Younger learners or students with \"English anxiety\" who need a supportive environment to build base confidence and testing skills.",
         "successCase": "Increased a student's TOEIC score by 150 points while simultaneously improving their willingness to speak up in class.",
-        "lessonStyle": "Dynamic and communicative, using professional TESOL techniques to make learning engaging and low-stress."
+        "lessonStyle": "Dynamic and communicative, using professional TESOL techniques to make learning engaging and low-stress.",
+        "role": "Associate Tutor"
       },
       "tutor-hannah": {
         "name": "Hannah Tuffy",
@@ -567,7 +570,8 @@
         ],
         "idealMatch": "Students of all ages seeking a friendly, multicultural mentor to build confidence in English or Japanese.",
         "successCase": "Worked as a self-employed Japanese tutor since 2021, successfully using skill diagnosis and monthly learning plans to guide diverse learners.",
-        "lessonStyle": "Friendly and nurturing, utilizing custom modules and presentations designed around the student's monthly learning plan."
+        "lessonStyle": "Friendly and nurturing, utilizing custom modules and presentations designed around the student's monthly learning plan.",
+        "role": "Associate Tutor"
       },
       "tutor-sara": {
         "name": "Sara Jeshua",
@@ -599,7 +603,8 @@
         ],
         "idealMatch": "Young learners (preschool to junior high) or anyone needing highly adaptable, individualized test prep and English foundations.",
         "successCase": "Currently an English Teacher in a Language School for preschool to elementary students, and successfully taught IELTS online during high school.",
-        "lessonStyle": "Highly adaptable and driven by ongoing skill diagnosis, focusing on the student's unique strengths and weaknesses to build real-world confidence."
+        "lessonStyle": "Highly adaptable and driven by ongoing skill diagnosis, focusing on the student's unique strengths and weaknesses to build real-world confidence.",
+        "role": "Associate Tutor"
       },
       "tutor-cian": {
         "name": "Cian Alexander Forsyth",
@@ -627,7 +632,8 @@
         ],
         "idealMatch": "IB students looking for a relatable peer-mentor to help navigate the rigors of math, English, and essay writing.",
         "successCase": "Provided ongoing, comprehensive academic support to IB students, successfully guiding them through complex subjects like Mathematics and English.",
-        "lessonStyle": "Relatable and supportive, leveraging peer-level understanding to break down difficult IB concepts."
+        "lessonStyle": "Relatable and supportive, leveraging peer-level understanding to break down difficult IB concepts.",
+        "role": "Associate Tutor"
       },
       "tutor-toru": {
         "name": "Toru Hiiragi",
@@ -660,7 +666,8 @@
         ],
         "idealMatch": "Students looking for help with math, English, or German, or those navigating complex application processes for high school or university.",
         "successCase": "Successfully guided students through the process of entering Japanese high schools from abroad and applying to top-tier universities in Japan and the US.",
-        "lessonStyle": "Patient, encouraging, and highly adaptive to each student's individual learning style."
+        "lessonStyle": "Patient, encouraging, and highly adaptive to each student's individual learning style.",
+        "role": "Associate Tutor"
       },
       "tutor-maegan": {
         "name": "Maegan Norton",
@@ -687,7 +694,8 @@
         ],
         "idealMatch": "Science or Math students (Middle/High school) looking for someone who understands typical pitfalls and challenging concepts in the Japanese curriculum.",
         "successCase": "Successfully navigated competitive entrance exams for Hibiya High School and is currently majoring in Science and Engineering at Waseda.",
-        "lessonStyle": "Supportive and empathetic, leveraging her own experience with difficult exam preparation to help students overcome specific hurdles."
+        "lessonStyle": "Supportive and empathetic, leveraging her own experience with difficult exam preparation to help students overcome specific hurdles.",
+        "role": "Associate Tutor"
       },
       "tutor-michael": {
         "name": "Michael MacNamara",
@@ -717,7 +725,8 @@
         ],
         "idealMatch": "Economics students or those looking to sharpen their mathematical and analytical skills with a friendly, high-level tutor.",
         "successCase": "Has assisted students across various levels in improving their problem-solving and academic writing abilities.",
-        "lessonStyle": "Friendly, supportive, and focused on creating a comfortable environment for asking questions and learning."
+        "lessonStyle": "Friendly, supportive, and focused on creating a comfortable environment for asking questions and learning.",
+        "role": "Associate Tutor"
       },
       "tutor-hazel": {
         "name": "Hazel (Phu Thit Wai Si)",
@@ -748,7 +757,8 @@
         ],
         "idealMatch": "Students looking for conversational or academic English support, or those preparing for GCSEs with a supportive tutor who prioritizes a comfortable learning space.",
         "successCase": "Has successfully taught English conversation to adult learners in Japan and mentored students in History and Biology.",
-        "lessonStyle": "Diverse, global, and guided by a monthly learning plan. Focuses on creating a stress-free environment where students aren't afraid to make mistakes."
+        "lessonStyle": "Diverse, global, and guided by a monthly learning plan. Focuses on creating a stress-free environment where students aren't afraid to make mistakes.",
+        "role": "Associate Tutor"
       },
       "tutor-alice": {
         "name": "Alice Williams",
@@ -778,7 +788,8 @@
         ],
         "idealMatch": "Students seeking to improve their English fluency (especially British English) or those needing targeted help with GCSE/A-Levels, essays, and interviews.",
         "successCase": "Has strong classroom experience teaching English to primary school students at the British School in Tokyo.",
-        "lessonStyle": "Patient, friendly, and highly adaptable, prioritizing the student's comfort and enjoyment to build confidence in speaking."
+        "lessonStyle": "Patient, friendly, and highly adaptable, prioritizing the student's comfort and enjoyment to build confidence in speaking.",
+        "role": "Associate Tutor"
       },
       "tutor-melody": {
         "name": "Melody Naito",
@@ -808,7 +819,8 @@
         ],
         "idealMatch": "International school students, business professionals, and those preparing to study abroad who seek confidence in global communication environments.",
         "successCase": "Drawing from experience working with students and companies worldwide, my lessons combine advanced English communication, cross-cultural understanding, and real-world conversation strategies.",
-        "lessonStyle": "At Petra, I strongly align with our mentorship-oriented philosophy, emphasizing personalized guidance, human connection, and long-term growth rather than one-size-fits-all education."
+        "lessonStyle": "At Petra, I strongly align with our mentorship-oriented philosophy, emphasizing personalized guidance, human connection, and long-term growth rather than one-size-fits-all education.",
+        "role": "Associate Tutor"
       },
       "tutor-gia": {
         "name": "Giatri Maritza Drajat",
@@ -837,7 +849,8 @@
         ],
         "idealMatch": "Junior high and high school students looking for conversational English, essay writing support, or social studies tutoring in a highly supportive environment.",
         "successCase": "Draws on her extensive experience in international environments to help students overcome the specific challenges of learning English.",
-        "lessonStyle": "Highly supportive and flexible. I adapt my teaching style to different ages and levels to ensure students stay focused and reach their goals."
+        "lessonStyle": "Highly supportive and flexible. I adapt my teaching style to different ages and levels to ensure students stay focused and reach their goals.",
+        "role": "Associate Tutor"
       },
       "tutor-siya": {
         "name": "Siya Ahuja",
@@ -868,7 +881,8 @@
         ],
         "idealMatch": "Students of all ages, from preschoolers to high schoolers, who benefit from a structured, step-by-step approach to Math, Physics, or English.",
         "successCase": "Has over a year of experience tutoring Mathematics to MYP1 students at an International School, successfully managing both one-on-one sessions and classes of 10+ students.",
-        "lessonStyle": "Structured and adaptable. I provide custom worksheets suited to each student's individual level, address personal doubts, and use targeted homework to ensure readiness for the next topic."
+        "lessonStyle": "Structured and adaptable. I provide custom worksheets suited to each student's individual level, address personal doubts, and use targeted homework to ensure readiness for the next topic.",
+        "role": "Associate Tutor"
       },
       "tutor-dayun": {
         "name": "Dayun Suh",
@@ -897,7 +911,8 @@
         ],
         "idealMatch": "Preschool to junior high students who thrive in a supportive, friendly environment and need help with English, AP subjects, or interview prep.",
         "successCase": "Has developed strong foundational mentoring skills by regularly guiding and supporting her younger sister's academic progress.",
-        "lessonStyle": "Friendly and highly adaptable, focused on providing a comfortable space where younger students can build their confidence step by step."
+        "lessonStyle": "Friendly and highly adaptable, focused on providing a comfortable space where younger students can build their confidence step by step.",
+        "role": "Associate Tutor"
       },
       "tutor-haruka": {
         "name": "Haruka Maniwa",
@@ -919,15 +934,16 @@
           "Japanese",
           "French"
         ],
-        "intro": "I am an undergraduate student at Sophia University studying International Business and Economics. Having worked at Egcis for over a year teaching children aged 4–13, I bring real classroom experience and a genuine passion for education. I believe learning should be purposeful and connected — helping students not just succeed academically, but develop a real sense of why education matters.",
+        "intro": "I am an undergraduate student at Sophia University studying International Business and Economics. Having worked at Egcis for over a year teaching children aged 4–13, I bring real classroom experience and a genuine passion for education. I believe learning should be purposeful and connected, helping students not just succeed academically, but develop a real sense of why education matters.",
         "strengths": [
           "Essay Writing & Feedback",
           "Experienced with Young Learners",
           "Academic English"
         ],
-        "idealMatch": "Students from preschool through high school who want a motivated, experienced tutor for English skills or math — especially those looking to build academic confidence.",
-        "successCase": "Over a year of experience at Egcis working with children aged 4–13, including high school students for math — building strong, trusting relationships with each learner.",
-        "lessonStyle": "Supportive and purpose-driven, helping students connect with the \"why\" behind their studies to build lasting motivation and genuine understanding."
+        "idealMatch": "Students from preschool through high school who want a motivated, experienced tutor for English skills or math, especially those looking to build academic confidence.",
+        "successCase": "Over a year of experience at Egcis working with children aged 4–13, including high school students for math, building strong, trusting relationships with each learner.",
+        "lessonStyle": "Supportive and purpose-driven, helping students connect with the \"why\" behind their studies to build lasting motivation and genuine understanding.",
+        "role": "Associate Tutor"
       },
       "tutor-maya": {
         "name": "Maya Nara",
@@ -953,7 +969,8 @@
         ],
         "idealMatch": "Preschoolers, junior high, and high school students looking for a friendly, native English-speaking tutor to build real communication confidence.",
         "successCase": "Taught a preschool-age child (4–5 years old) for six months, developing engaging, age-appropriate lessons that made English fun and accessible.",
-        "lessonStyle": "Friendly and encouraging, with interactive student-centered lessons that keep learners motivated and excited about English."
+        "lessonStyle": "Friendly and encouraging, with interactive student-centered lessons that keep learners motivated and excited about English.",
+        "role": "Associate Tutor"
       }
     },
     "f_english": "English",

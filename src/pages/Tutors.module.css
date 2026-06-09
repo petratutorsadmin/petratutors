@@ -211,16 +211,24 @@
 }
 
 .roleBadge {
-    font-size: 0.75rem;
-    background-color: var(--c-accent);
-    color: var(--c-navy);
-    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+    background-color: transparent;
+    color: var(--c-text-light);
+    border: 1px solid var(--c-border);
+    padding: 0.15rem 0.45rem;
     border-radius: 4px;
     margin-left: 0.5rem;
     font-family: var(--font-sans);
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 0.03em;
     vertical-align: middle;
+}
+
+.roleBadgeFounder {
+    background-color: var(--c-accent);
+    color: var(--c-navy);
+    border-color: var(--c-accent);
 }
 
 .viewProfileBtn {

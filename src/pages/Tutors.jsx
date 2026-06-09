@@ -127,7 +127,7 @@ export default function Tutors() {
                                 <div className={styles.tutorHeader}>
                                     <h3 className="text-h3" style={{ fontSize: '1.5rem' }}>
                                         {tutor.name}
-                                        {tutor.role && <span className={styles.roleBadge}>{tutor.role}</span>}
+                                        {tutor.role && <span className={`${styles.roleBadge} ${tutor.role === 'Founder' || tutor.role === '創業者' ? styles.roleBadgeFounder : ''}`}>{tutor.role}</span>}
                                     </h3>
                                     <div className={styles.formatBadges}>
                                         {tutor.format.map(f => (

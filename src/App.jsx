@@ -38,9 +38,10 @@ const ThePetraEcosystem = lazy(() => import('./pages/ThePetraEcosystem'));
 const TutorDivisions = lazy(() => import('./pages/TutorDivisions'));
 const TutorProgression = lazy(() => import('./pages/TutorProgression'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const Summer = lazy(() => import('./pages/Summer'));
 
 import ScrollToTop from './components/ScrollToTop';
-import ExitIntentPopup from './components/ExitIntentPopup';
+import SummerPopup from './components/SummerPopup';
 
 function App() {
   const { i18n } = useTranslation();
@@ -76,7 +77,7 @@ function App() {
     <>
       <BoutiqueLoader />
       <ScrollToTop />
-      <ExitIntentPopup />
+      <SummerPopup />
       <Suspense fallback={<div style={{ minHeight: '100vh', backgroundColor: 'var(--c-sand)' }} />}>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -106,6 +107,7 @@ function App() {
             <Route path="apply/divisions" element={<TutorDivisions />} />
             <Route path="apply/progression" element={<TutorProgression />} />
             <Route path="privacy" element={<PrivacyPolicy />} />
+            <Route path="summer" element={<Summer />} />
           </Route>
         </Routes>
       </Suspense>
