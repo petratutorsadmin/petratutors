@@ -327,7 +327,7 @@ export default function Summer() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    access_key: 'YOUR_WEB3FORMS_KEY_HERE',
+                    access_key: 'ba24b4f1-ef91-4086-a582-bd56e703a316',
                     subject: `Summer 2026 Inquiry: ${formData.program}`,
                     name: formData.name,
                     email: formData.email,
