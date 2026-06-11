@@ -1204,7 +1204,8 @@
     "t_2_role": "Overseas Sales Manager",
     "final_eyebrow": "FREE TRIAL",
     "final_title": "Break the ceiling of your career.",
-    "final_sub": "Identify your professional roadblocks in a 30-minute free session. No admission fee. Immediate matching."
+    "final_sub": "Identify your professional roadblocks in a 30-minute free session. No admission fee. Immediate matching.",
+    "final_cta": "Book Free Trial"
   },
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
@@ -1561,7 +1562,18 @@
     "final_eyebrow": "FREE TRIAL",
     "final_title": "An early investment in long-term academic milestones.",
     "final_sub": "Assess your child's current academic status and find the optimal support plan.",
-    "final_cta": "Book Free Trial (30s)"
+    "final_cta": "Book Free Trial (30s)",
+    "t_1_quote": "My daughter was behind in English reading, and within two months she started finishing her reading assignments on her own. The weekly reports helped us stay informed as parents.",
+    "t_1_name": "M.O.",
+    "t_1_role": "Parent of IB PYP Student",
+    "t_2_quote": "We were worried about the transition to an international school. Petra helped our son build confidence in both English and his subject skills before the year even started.",
+    "t_2_name": "K.T.",
+    "t_2_role": "Parent of Key Stage 2 Student",
+    "pricing_title": "Pricing",
+    "pricing_amount": "¥3,500",
+    "pricing_per": "/ hr",
+    "pricing_note": "We'll recommend the right plan based on your child's level and goals.",
+    "pricing_detail": "View full pricing"
   },
   "exit": {
     "tag": "Limited Availability",

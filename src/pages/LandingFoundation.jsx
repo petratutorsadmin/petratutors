@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
@@ -208,13 +207,13 @@ const LandingFoundation = () => {
       <section className={styles.pricingSection}>
         <div className={styles.wrapper}>
           <div className={styles.pricingCard}>
-            <h2 className={styles.pricingTitle}>{t('pricing.note_title', '料金目安')}</h2>
+            <h2 className={styles.pricingTitle}>{t('landing_foundation.pricing_title')}</h2>
             <div className={styles.pricingAmount}>
-              ¥4,000<span className={styles.pricingPer}>〜 / 時間</span>
+              {t('landing_foundation.pricing_amount')}<span className={styles.pricingPer}>{t('landing_foundation.pricing_per')}</span>
             </div>
-            <p className={styles.pricingNote}>レベル・目標に応じて最適なプランをご提案します</p>
+            <p className={styles.pricingNote}>{t('landing_foundation.pricing_note')}</p>
             <Link to="/pricing" className={styles.secondaryCta} style={{ display: 'inline-block' }}>
-              料金の詳細を見る
+              {t('landing_foundation.pricing_detail')}
             </Link>
           </div>
         </div>
