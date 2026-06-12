@@ -1,15 +1,23 @@
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 export default function PrivacyPolicy() {
     const { i18n } = useTranslation();
     const isJa = i18n.language === 'ja';
 
     return (
-        <div className="section">
-            <div className="container" style={{ maxWidth: '740px' }}>
-                {isJa ? <JA /> : <EN />}
+        <>
+            <SEO
+                title="プライバシーポリシー | Petra Tutors"
+                description="Petra Tutors の個人情報取り扱い方針。"
+                path="/privacy"
+            />
+            <div className="section">
+                <div className="container" style={{ maxWidth: '740px' }}>
+                    {isJa ? <JA /> : <EN />}
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

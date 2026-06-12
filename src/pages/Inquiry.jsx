@@ -2,6 +2,7 @@ import { Send, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import styles from './Inquiry.module.css';
 
 export default function Inquiry() {
@@ -237,7 +238,13 @@ export default function Inquiry() {
     };
 
     return (
-        <div className="section container">
+        <>
+            <SEO
+                title="お問い合わせ・無料体験予約 | Petra Tutors"
+                description="無料体験レッスンのご予約・資料請求・お問い合わせはこちら。入会金なし、最短翌日マッチング。"
+                path="/inquiry"
+            />
+            <div className="section container">
             <div className={styles.layout}>
                 <div className={`${styles.infoCol} animate-on-scroll`}>
                     <h1 className={`text-h1 ${styles.pageTitle}`}>{t('inquiry.title')}</h1>
@@ -315,5 +322,6 @@ export default function Inquiry() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

@@ -76,10 +76,11 @@ export default function About() {
                 <div className="container">
                     <div className={styles.editorialSplit}>
                         <motion.div className={styles.imagePlaceholder} {...fadeInUp}>
-                            <img 
-                                src="/images/about/international-academic-mobility.jpg" 
-                                alt={t('about.stage2_title')} 
+                            <img
+                                src="/images/about/international-academic-mobility.jpg"
+                                alt={t('about.stage2_title')}
                                 className={styles.aboutImage}
+                                loading="lazy"
                             />
                         </motion.div>
                         <motion.div className={styles.contentBlock} {...fadeInUp} transition={{ delay: 0.2 }}>
@@ -106,10 +107,11 @@ export default function About() {
                             <p className={styles.pacingParagraph}>{t('about.stage3_p3')}</p>
                         </motion.div>
                         <motion.div className={styles.imagePlaceholder} {...fadeInUp} transition={{ delay: 0.2 }}>
-                            <img 
-                                src="/images/about/rigorous-academia-focus.jpg" 
-                                alt={t('about.stage3_title')} 
+                            <img
+                                src="/images/about/rigorous-academia-focus.jpg"
+                                alt={t('about.stage3_title')}
                                 className={styles.aboutImage}
+                                loading="lazy"
                             />
                         </motion.div>
                     </div>
@@ -162,10 +164,11 @@ export default function About() {
                 <div className="container">
                     <div className={styles.editorialSplit}>
                         <motion.div className={styles.imagePlaceholder} {...fadeInUp}>
-                            <img 
-                                src="/images/about/petra-mentorship-connection.jpg" 
-                                alt={t('about.stage4_title')} 
+                            <img
+                                src="/images/about/petra-mentorship-connection.jpg"
+                                alt={t('about.stage4_title')}
                                 className={styles.aboutImage}
+                                loading="lazy"
                             />
                         </motion.div>
                         <motion.div className={styles.contentBlock} {...fadeInUp} transition={{ delay: 0.2 }}>
@@ -183,10 +186,11 @@ export default function About() {
                 <div className="container">
                     <motion.h2 className={styles.taglineText} {...fadeInUp}>{t('about.stage4_tagline')}</motion.h2>
                     <motion.div className={styles.finalVisualPlaceholder} {...fadeInUp} transition={{ delay: 0.3 }}>
-                        <img 
-                            src="/images/about/petra-learning-space-landscape.jpg" 
-                            alt={t('about.stage4_tagline')} 
+                        <img
+                            src="/images/about/petra-learning-space-landscape.jpg"
+                            alt={t('about.stage4_tagline')}
                             className={styles.aboutImageWide}
+                            loading="lazy"
                         />
                     </motion.div>
                 </div>

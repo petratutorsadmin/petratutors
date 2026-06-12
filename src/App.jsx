@@ -11,7 +11,7 @@ import Lenis from 'lenis';
 const SLOW_SCROLL_PATHS = new Set([
   '/', '/home', '/about', '/team',
   '/ecosystem', '/system', '/keystone',
-  '/ib', '/ielts', '/university', '/kids', '/foundation', '/business',
+  '/ib', '/ielts', '/university', '/kids', '/foundation', '/business', '/english',
 ]);
 
 // Dynamically import pages for code splitting
@@ -21,6 +21,7 @@ const LandingIELTS = lazy(() => import('./pages/LandingIELTS'));
 const LandingUniversity = lazy(() => import('./pages/LandingUniversity'));
 const LandingKids = lazy(() => import('./pages/LandingKids'));
 const LandingFoundation = lazy(() => import('./pages/LandingFoundation'));
+const LandingEnglish = lazy(() => import('./pages/LandingEnglish'));
 const BusinessLanding = lazy(() => import('./pages/BusinessLanding'));
 
 const Home = lazy(() => import('./pages/Home'));
@@ -88,6 +89,7 @@ function App() {
             <Route path="foundation" element={<LandingFoundation />} />
             <Route path="university" element={<LandingUniversity />} />
             <Route path="kids" element={<LandingKids />} />
+            <Route path="english" element={<LandingEnglish />} />
             <Route path="business" element={<BusinessLanding />} />
 
             {/* ── Existing pages (retained) ── */}

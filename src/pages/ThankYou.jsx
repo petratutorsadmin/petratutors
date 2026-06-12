@@ -1,13 +1,20 @@
 import { CheckCircle, ArrowRight, Users, BookOpen } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import styles from './ThankYou.module.css';
 
 export default function ThankYou() {
     const { t } = useTranslation();
 
     return (
-        <div className={styles.page}>
+        <>
+            <SEO
+                title="ありがとうございます | Petra Tutors"
+                description="お問い合わせありがとうございます。担当者より2営業日以内にご連絡いたします。"
+                path="/thank-you"
+            />
+            <div className={styles.page}>
             <div className={`${styles.modal} animate-on-scroll`}>
                 <div className={styles.iconWrapper}>
                     <CheckCircle size={40} strokeWidth={2.5} />
@@ -37,5 +44,6 @@ export default function ThankYou() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

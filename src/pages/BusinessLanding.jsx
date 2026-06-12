@@ -1,7 +1,7 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
+import SEO from '../components/SEO';
 import styles from './BusinessLanding.module.css';
 
 const BusinessLanding = () => {
@@ -55,7 +55,14 @@ const BusinessLanding = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <>
+      <SEO
+        title="ビジネス英語 個別コーチング | 東京・全国オンライン | Petra Tutors"
+        description="会議・メール・プレゼン・商談対応のビジネス英語。実務直結の完全個別コーチングで、英語を仕事の武器に変える。東京対面・全国オンライン対応。"
+        path="/business"
+        keywords="ビジネス英語 個別指導, ビジネス英語 家庭教師, 英語 会議 対策, Business English Japan, business English tutor Tokyo, ビジネス英語 コーチング, 社会人 英語 個別指導"
+      />
+      <div className={styles.container}>
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -191,6 +198,7 @@ const BusinessLanding = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

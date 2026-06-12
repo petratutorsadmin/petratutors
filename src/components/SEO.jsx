@@ -33,11 +33,13 @@ export default function SEO({ title, description, name = 'Petra Tutors', type = 
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={name} />
+      <meta property="og:image" content="https://www.petratutors.com/og-image.png" />
 
       {/* Twitter tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="https://www.petratutors.com/og-image.png" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">

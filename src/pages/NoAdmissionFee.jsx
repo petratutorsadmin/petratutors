@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { XCircle, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import styles from './NoAdmissionFee.module.css';
 
 export default function NoAdmissionFee() {
@@ -8,6 +9,11 @@ export default function NoAdmissionFee() {
 
     return (
         <>
+            <SEO
+                title="入会金なし | Petra Tutors"
+                description="Petra Tutors は入会金・登録料が一切かかりません。まずは無料体験レッスンからお気軽にどうぞ。"
+                path="/no-admission-fee"
+            />
             <div className={`${styles.header} glass-panel animate-on-scroll`}>
                 <div className="container text-center">
                     <h1 className="text-h1" style={{ marginBottom: '1rem' }}>{t('no_fee.title')}</h1>

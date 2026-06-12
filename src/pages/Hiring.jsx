@@ -102,7 +102,7 @@ export default function Hiring() {
 
                     {/* Right Side: Google Form Iframe */}
                     <div className={`glass-card ${styles.iframeContainer} animate-on-scroll`} style={{ animationDelay: '0.2s' }}>
-                        <iframe 
+                        <iframe
                             src="https://docs.google.com/forms/d/e/1FAIpQLScJRwhDIO90013z6_dX9fOOVXay9V5iXdd_OrFHKp7CIEM_-g/viewform?embedded=true"
                             width="100%"
                             height="1500"
@@ -111,6 +111,7 @@ export default function Hiring() {
                             marginWidth="0"
                             style={{ border: 'none', maxWidth: '100%' }}
                             title="Petra Tutors Hiring Form"
+                            sandbox="allow-same-origin allow-forms allow-scripts allow-popups"
                         >
                             Loading…
                         </iframe>

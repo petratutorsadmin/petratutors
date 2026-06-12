@@ -21,8 +21,35 @@ const dist = resolve(__dirname, 'dist');
 // Google will pick up the client-updated English tags on return visits.
 const ROUTES = {
   '/': {
-    title: 'Petra Tutors | ペトラチューターズ — 帰国子女・海外進学・IELTS対策',
-    description: 'メンターと生徒の相性マッチと毎月の学習計画で最適な進捗をご提案。IELTS・IB・帰国子女・海外進学対応のプレミアム個別指導。入会金なし。',
+    title: 'Petra Tutors | 東京・全国オンライン対応の英語・IB・海外進学バイリンガル家庭教師',
+    description: '東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。',
+    keywords: '英語 家庭教師 東京, バイリンガル 家庭教師, 帰国子女 家庭教師, IB 家庭教師, IELTS 家庭教師, 海外進学 サポート, オンライン 家庭教師 東京, bilingual tutor Tokyo, private tutor Japan, international school tutor',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Petra Tutors',
+      alternateName: ['ペトラエデュケーション合同会社', 'Petra Education LLC'],
+      url: 'https://www.petratutors.com',
+      logo: 'https://www.petratutors.com/logo.png',
+      image: 'https://www.petratutors.com/og-image.png',
+      email: 'admin@petratutors.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Tokyo',
+        addressRegion: 'Tokyo',
+        addressCountry: 'JP',
+      },
+      areaServed: [
+        { '@type': 'Country', name: 'Japan' },
+        { '@type': 'City', name: 'Tokyo' },
+      ],
+      priceRange: '¥3,500〜',
+      description: '東京・全国オンライン対応のバイリンガル個別指導。英語・IB・IELTS・帰国子女・海外進学対応。',
+      sameAs: [
+        'https://www.instagram.com/petratutors',
+        'https://www.linkedin.com/company/petra-education-llc',
+      ],
+    },
   },
   '/summer': {
     title: 'Petra Tutors 夏期講習 2026 | 個別集中レッスン',
@@ -40,15 +67,20 @@ const ROUTES = {
       url: 'https://www.petratutors.com/summer',
     },
   },
+  '/english': {
+    title: '英語家庭教師・英会話個別指導 | 東京・全国オンライン | Petra Tutors',
+    description: '東京・全国オンライン対応。バイリンガル英語家庭教師が英会話・ライティング・IELTS・ビジネス英語を完全1:1でサポート。入会金なし、初回無料。',
+    keywords: '英語 家庭教師, 英語 家庭教師 東京, バイリンガル 家庭教師, 英会話 個別指導, 英語 個別指導 東京, private tutor Japan, private tutor Tokyo, English tutor Japan, bilingual tutor Tokyo, English tutoring Japan, 英語 家庭教師 オンライン',
+  },
   '/ielts': {
-    title: 'IELTS 対策・家庭教師 | Petra Tutors',
-    description: '完全 1:1 の IELTS 専門指導。スコアが伸び悩む原因を特定し、目標スコア達成への最短ルートを個別設計。入会金なし。',
-    keywords: 'IELTS 家庭教師, IELTS 対策, IELTS スコアアップ, IELTS 個別指導, Petra Tutors IELTS',
+    title: 'IELTS・英検・TOEIC 個別指導 | 東京・全国オンライン | Petra Tutors',
+    description: '東京・全国オンライン対応のIELTS・英検・TOEIC対策。スコアが伸び悩む原因を特定し、目標スコア達成への最短ルートを完全1:1で設計。入会金なし。',
+    keywords: 'IELTS 家庭教師, IELTS 対策 東京, IELTS スコアアップ, IELTS 個別指導, 英検 個別指導, TOEIC 家庭教師, IELTS tutor Tokyo, IELTS tutoring Japan, IELTS coach Japan',
   },
   '/ib': {
-    title: 'IB・インター校サポート | Petra Tutors',
-    description: 'IB DP・MYP・PYP に対応した完全個別指導。IA・EE・TOK・全科目をバイリンガルメンターがサポート。入会金なし。',
-    keywords: 'IB 塾, IB 家庭教師, IB DP サポート, インター校 塾, インター 家庭教師, Petra Tutors IB',
+    title: 'IB・インター校 個別指導 | IA・EE・TOK対応 | Petra Tutors',
+    description: '東京・全国オンライン対応のIB・インター校サポート。DP・MYP・PYPに対応。IA・EE・TOK・全科目をバイリンガルメンターが完全1:1で指導。入会金なし。',
+    keywords: 'IB 塾, IB 家庭教師, IB DP サポート, インター校 塾, インター 家庭教師 東京, IB tutor Tokyo, International Baccalaureate tutoring Japan, IB IA サポート, IB EE サポート',
   },
   '/university': {
     title: '海外大学・帰国子女入試サポート | Petra Tutors',
@@ -141,6 +173,8 @@ for (const [route, meta] of Object.entries(ROUTES)) {
     `  <meta name="twitter:card" content="summary_large_image" />`,
     `  <meta name="twitter:title" content="${meta.title}" />`,
     `  <meta name="twitter:description" content="${meta.description}" />`,
+    `  <meta property="og:image" content="https://www.petratutors.com/og-image.png" />`,
+    `  <meta name="twitter:image" content="https://www.petratutors.com/og-image.png" />`,
     `  <link rel="canonical" href="${canonicalUrl}" />`,
   ];
 

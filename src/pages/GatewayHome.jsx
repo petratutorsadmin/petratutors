@@ -40,10 +40,37 @@ export default function GatewayHome() {
 
     return (
         <div className={styles.page}>
-            <SEO 
-                title="Petra Tutors | ペトラチューターズ - 帰国子女・海外進学・IELTS対策"
-                description={t('gateway.hero_sub')}
+            <SEO
+                title="Petra Tutors | 東京・全国オンライン対応の英語・IB・海外進学バイリンガル家庭教師"
+                description="東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。"
                 path="/"
+                keywords="英語 家庭教師 東京, バイリンガル 家庭教師, 帰国子女 家庭教師, IB 家庭教師, IELTS 家庭教師, 海外進学 サポート, オンライン 家庭教師 東京, bilingual tutor Tokyo, private tutor Japan, international school tutor"
+                jsonLdExtra={{
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Petra Tutors",
+                    "alternateName": ["ペトラエデュケーション合同会社", "Petra Education LLC"],
+                    "url": "https://www.petratutors.com",
+                    "logo": "https://www.petratutors.com/logo.png",
+                    "image": "https://www.petratutors.com/og-image.png",
+                    "email": "admin@petratutors.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Tokyo",
+                        "addressRegion": "Tokyo",
+                        "addressCountry": "JP"
+                    },
+                    "areaServed": [
+                        { "@type": "Country", "name": "Japan" },
+                        { "@type": "City", "name": "Tokyo" }
+                    ],
+                    "priceRange": "¥3,500〜",
+                    "description": "東京・全国オンライン対応のバイリンガル個別指導。英語・IB・IELTS・帰国子女・海外進学対応。",
+                    "sameAs": [
+                        "https://www.instagram.com/petratutors",
+                        "https://www.linkedin.com/company/petra-education-llc"
+                    ]
+                }}
             />
 
             {/* ─── HERO ─── */}

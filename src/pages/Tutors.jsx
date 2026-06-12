@@ -180,7 +180,7 @@ export default function Tutors() {
                     {filteredTutors.map((tutor, idx) => (
                         <div key={tutor.id} className={`card ${styles.tutorCard} animate-on-scroll`} style={{ animationDelay: `${idx * 0.1}s` }}>
                             <div className={styles.tutorImage}>
-                                <img src={tutor.image} alt={tutor.name} className={styles.avatarImage} />
+                                <img src={tutor.image} alt={tutor.name} className={styles.avatarImage} loading="lazy" />
                             </div>
                             <div className={styles.tutorInfo}>
                                 <div className={styles.tutorHeader}>
@@ -239,7 +239,7 @@ export default function Tutors() {
 
                         <div className={styles.modalScroll}>
                             <div className={styles.modalHeader}>
-                                <img src={selectedTutor.image} alt={selectedTutor.name} className={styles.modalAvatarImage} />
+                                <img src={selectedTutor.image} alt={selectedTutor.name} className={styles.modalAvatarImage} loading="lazy" />
                                 <div>
                                     <h2 className="text-h2">
                                         {selectedTutor.name}

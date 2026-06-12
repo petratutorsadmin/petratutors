@@ -107,7 +107,7 @@ export default function Team() {
                         {LEADERSHIP.map((member, idx) => (
                             <div key={member.id} className={`${styles.founderCard} animate-on-scroll`} style={{ animationDelay: `${idx * 0.1}s` }}>
                                 <div className={styles.founderImageWrapper}>
-                                    <img src={member.image} alt={member.name} className={styles.founderImage} />
+                                    <img src={member.image} alt={member.name} className={styles.founderImage} loading="lazy" />
                                 </div>
                                 <div className={styles.founderContent}>
                                     <h3 className={styles.founderName}>{member.name}</h3>
@@ -127,7 +127,7 @@ export default function Team() {
                             <div key={member.id} className={`${styles.directorCard} animate-on-scroll`} style={{ animationDelay: `${0.2 + idx * 0.1}s` }}>
                                 <div className={styles.directorAvatarWrapper}>
                                     {member.image ? (
-                                        <img src={member.image} alt={member.name} className={styles.directorImage} style={{ objectPosition: member.objectPosition || 'center 20%' }} />
+                                        <img src={member.image} alt={member.name} className={styles.directorImage} style={{ objectPosition: member.objectPosition || 'center 20%' }} loading="lazy" />
                                     ) : (
                                         <div className={styles.avatarPlaceholder}>{member.initials}</div>
                                     )}

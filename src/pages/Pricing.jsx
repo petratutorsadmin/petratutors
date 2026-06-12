@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Check, Info, ArrowRight, ShieldCheck, Clock, Zap, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import styles from './Pricing.module.css';
 
 export default function Pricing() {
@@ -27,6 +28,11 @@ export default function Pricing() {
 
     return (
         <>
+            <SEO
+                title="料金プラン | Petra Tutors"
+                description="入会金なし・完全公開の料金体系。¥3,500〜の完全個別指導。追加費用なし。"
+                path="/pricing"
+            />
             {/* 1. HERO Section */}
             <div className={styles.header}>
                 <div className="container text-center animate-on-scroll">

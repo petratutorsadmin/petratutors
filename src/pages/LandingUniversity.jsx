@@ -1,7 +1,7 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Check, X, Zap } from 'lucide-react';
+import SEO from '../components/SEO';
 import styles from './LandingUniversity.module.css';
 
 const LandingUniversity = () => {
@@ -55,7 +55,14 @@ const LandingUniversity = () => {
   ];
 
   return (
-    <div className={styles.container}>
+    <>
+      <SEO
+        title="海外大学・帰国子女入試サポート | Petra Tutors"
+        description="海外大学への出願戦略・Personal Statement・面接対策から帰国子女入試まで。志望校合格に向けた完全個別コンサルティング。東京・全国オンライン対応。"
+        path="/university"
+        keywords="海外大学 塾, 帰国子女 大学受験, 帰国子女入試, Personal Statement 添削, 海外進学 サポート, university admissions Japan, study abroad Japan tutor, 帰国子女 家庭教師"
+      />
+      <div className={styles.container}>
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
@@ -204,6 +211,7 @@ const LandingUniversity = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

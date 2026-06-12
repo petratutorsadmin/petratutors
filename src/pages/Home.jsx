@@ -84,7 +84,7 @@ export default function Home() {
                             </p>
                         </div>
                         <div className={styles.aboutVisual}>
-                            <img src="/images/home/about.jpg" alt="Tutor and student" className={styles.aboutImage} />
+                            <img src="/images/home/about.jpg" alt="Tutor and student" className={styles.aboutImage} loading="lazy" />
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
@@ -57,10 +56,11 @@ const LandingIB = () => {
 
   return (
     <div className={styles.container}>
-      <SEO 
-        title={`${t('landing_ib.hero_title')} | Petra Tutors`}
-        description={t('landing_ib.hero_sub')}
+      <SEO
+        title="IB・インター校 個別指導 | IA・EE・TOK対応 | Petra Tutors"
+        description="東京・全国オンライン対応のIB・インター校サポート。DP・MYP・PYPに対応。IA・EE・TOK・全科目をバイリンガルメンターが完全1:1で指導。入会金なし。"
         path="/ib"
+        keywords="IB 塾, IB 家庭教師, IB DP サポート, インター校 塾, インター 家庭教師 東京, IB tutor Tokyo, International Baccalaureate tutoring Japan, IB IA サポート, IB EE サポート"
       />
       {/* Hero Section */}
       <section className={styles.hero}>
