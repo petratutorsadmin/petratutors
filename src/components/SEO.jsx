@@ -1,12 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
-const BASE_KEYWORDS = 'ペトラエデュケーション合同会社, ペトラエデュケーション, Petra Education LLC, Petra Tutors, Petra Education, International Tutoring, IB Tutoring, IELTS Coaching, Academic Mentorship, Top University Admissions, プレミアム家庭教師, 国際教育, 進学コンサルティング, オンライン家庭教師';
-
-export default function SEO({ title, description, name = 'Petra Tutors', type = 'website', path = '', keywords = '', jsonLdExtra = null }) {
+export default function SEO({ title, description, name = 'Petra Tutors', type = 'website', path = '', jsonLdExtra = null }) {
   const { t } = useTranslation();
   const url = `https://www.petratutors.com${path}`;
-  const allKeywords = keywords ? `${keywords}, ${BASE_KEYWORDS}` : BASE_KEYWORDS;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -24,7 +21,6 @@ export default function SEO({ title, description, name = 'Petra Tutors', type = 
       {/* Standard metadata tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={allKeywords} />
       <link rel="canonical" href={url} />
 
       {/* Open Graph tags for social media sharing */}
@@ -34,6 +30,8 @@ export default function SEO({ title, description, name = 'Petra Tutors', type = 
       <meta property="og:url" content={url} />
       <meta property="og:site_name" content={name} />
       <meta property="og:image" content="https://www.petratutors.com/og-image.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
 
       {/* Twitter tags */}
       <meta name="twitter:card" content="summary_large_image" />

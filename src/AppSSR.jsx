@@ -1,0 +1,63 @@
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+
+import GatewayHome from './pages/GatewayHome';
+import LandingIB from './pages/LandingIB';
+import LandingIELTS from './pages/LandingIELTS';
+import LandingUniversity from './pages/LandingUniversity';
+import LandingKids from './pages/LandingKids';
+import LandingFoundation from './pages/LandingFoundation';
+import LandingEnglish from './pages/LandingEnglish';
+import BusinessLanding from './pages/BusinessLanding';
+import Home from './pages/Home';
+import Tutors from './pages/Tutors';
+import Team from './pages/Team';
+import Pricing from './pages/Pricing';
+import Inquiry from './pages/Inquiry';
+import About from './pages/About';
+import NoAdmissionFee from './pages/NoAdmissionFee';
+import ThankYou from './pages/ThankYou';
+import Hiring from './pages/Hiring';
+import FAQPage from './pages/FAQPage';
+import Keystone from './pages/Keystone';
+import ThePetraEcosystem from './pages/ThePetraEcosystem';
+import TutorDivisions from './pages/TutorDivisions';
+import TutorProgression from './pages/TutorProgression';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Summer from './pages/Summer';
+import NotFound from './pages/NotFound';
+
+export default function AppSSR() {
+    return (
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<GatewayHome />} />
+                <Route path="ib" element={<LandingIB />} />
+                <Route path="ielts" element={<LandingIELTS />} />
+                <Route path="foundation" element={<LandingFoundation />} />
+                <Route path="university" element={<LandingUniversity />} />
+                <Route path="kids" element={<LandingKids />} />
+                <Route path="english" element={<LandingEnglish />} />
+                <Route path="business" element={<BusinessLanding />} />
+                <Route path="home" element={<Home />} />
+                <Route path="system" element={<ThePetraEcosystem />} />
+                <Route path="tutors" element={<Tutors />} />
+                <Route path="team" element={<Team />} />
+                <Route path="pricing" element={<Pricing />} />
+                <Route path="inquiry" element={<Inquiry />} />
+                <Route path="thank-you" element={<ThankYou />} />
+                <Route path="about" element={<About />} />
+                <Route path="no-admission-fee" element={<NoAdmissionFee />} />
+                <Route path="hiring" element={<Hiring />} />
+                <Route path="faq" element={<FAQPage />} />
+                <Route path="keystone" element={<Keystone />} />
+                <Route path="ecosystem" element={<ThePetraEcosystem />} />
+                <Route path="apply/divisions" element={<TutorDivisions />} />
+                <Route path="apply/progression" element={<TutorProgression />} />
+                <Route path="privacy" element={<PrivacyPolicy />} />
+                <Route path="summer" element={<Summer />} />
+                <Route path="*" element={<NotFound />} />
+            </Route>
+        </Routes>
+    );
+}

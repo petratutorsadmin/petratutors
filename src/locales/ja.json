@@ -188,7 +188,7 @@
     "address_label": "住所",
     "address": "〒168-0062 東京都杉並区方南1丁目46番17号 さくらスイート笹塚B棟105",
     "phone_label": "電話番号",
-    "phone": "080-3349-5897",
+    "phone": "080-7884-7224",
     "company_name": "ペトラエデュケーション合同会社",
     "legal_info": "運営：ペトラエデュケーション合同会社",
     "policy_no_fee": "入会金なし ポリシー",
@@ -1256,7 +1256,7 @@
   },
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
-    "hero_title": "あなたの目的に、\n最適な学びを。",
+    "hero_title": "英語・IB・帰国子女に強い\nバイリンガル家庭教師",
     "hero_sub": "メンターと生徒の相性マッチと毎月の学習計画で、最適な進捗をご提案します。",
     "choice_label": "あなたの目的を選択してください",
     "choice_ielts_label": "英検・IELTS・TOEICで結果を出したい",
@@ -1295,7 +1295,8 @@
     "final_title": "あなたの目標に向けた第一歩を",
     "final_sub": "入会金なし。構造化されたアカデミック・メンターシップ。",
     "final_cta": "無料相談を申し込む",
-    "final_line": "LINEで相談"
+    "final_line": "LINEで相談",
+    "testimonials_label": "受講生・保護者からの声"
   },
   "landing_ib": {
     "hero_eyebrow": "IB / AP / A-Level / SAT · ACT / Intl. School Support",

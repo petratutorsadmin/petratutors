@@ -9,21 +9,22 @@
  * dist/summer/index.html is served directly for /summer without any config changes.
  */
 
-import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'fs';
 import { resolve, join } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const dist = resolve(__dirname, 'dist');
+const distSSR = resolve(__dirname, 'dist-ssr');
 
 // ── Route definitions ──────────────────────────────────────────────────────
 // title / description are Japanese (primary audience).
 // Google will pick up the client-updated English tags on return visits.
+// robots: 'noindex, nofollow' prevents indexing of non-public pages.
 const ROUTES = {
   '/': {
-    title: 'Petra Tutors | 東京・全国オンライン対応の英語・IB・海外進学バイリンガル家庭教師',
+    title: '英語・IB・海外進学のバイリンガル家庭教師 | 東京・全国オンライン | Petra Tutors',
     description: '東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。',
-    keywords: '英語 家庭教師 東京, バイリンガル 家庭教師, 帰国子女 家庭教師, IB 家庭教師, IELTS 家庭教師, 海外進学 サポート, オンライン 家庭教師 東京, bilingual tutor Tokyo, private tutor Japan, international school tutor',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
@@ -33,10 +34,13 @@ const ROUTES = {
       logo: 'https://www.petratutors.com/logo.png',
       image: 'https://www.petratutors.com/og-image.png',
       email: 'admin@petratutors.com',
+      telephone: '+81-80-7884-7224',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Tokyo',
+        streetAddress: '方南1丁目46番17号 さくらスイート笹塚B棟105',
+        addressLocality: 'Suginami City',
         addressRegion: 'Tokyo',
+        postalCode: '168-0062',
         addressCountry: 'JP',
       },
       areaServed: [
@@ -51,10 +55,14 @@ const ROUTES = {
       ],
     },
   },
+  '/home': {
+    title: '英語・IB・海外進学のバイリンガル家庭教師 | 東京・全国オンライン | Petra Tutors',
+    description: '東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。',
+    robots: 'noindex, follow',
+  },
   '/summer': {
     title: 'Petra Tutors 夏期講習 2026 | 個別集中レッスン',
     description: 'Petra Tutors の夏期講習 2026。7月21日〜8月29日。英語・英検・IB・SAT 対応。完全 1:1 マンツーマン。¥14,000〜。無料体験レッスンあり。',
-    keywords: 'Petra Tutors summer, Petra Tutors summer intensive, Petra Tutors 夏期講習, ペトラチューターズ 夏期講習, 夏期講習 英語, 夏期講習 英検, 夏期講習 IB, 夏期講習 オンライン',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Course',
@@ -70,47 +78,38 @@ const ROUTES = {
   '/english': {
     title: '英語家庭教師・英会話個別指導 | 東京・全国オンライン | Petra Tutors',
     description: '東京・全国オンライン対応。バイリンガル英語家庭教師が英会話・ライティング・IELTS・ビジネス英語を完全1:1でサポート。入会金なし、初回無料。',
-    keywords: '英語 家庭教師, 英語 家庭教師 東京, バイリンガル 家庭教師, 英会話 個別指導, 英語 個別指導 東京, private tutor Japan, private tutor Tokyo, English tutor Japan, bilingual tutor Tokyo, English tutoring Japan, 英語 家庭教師 オンライン',
   },
   '/ielts': {
     title: 'IELTS・英検・TOEIC 個別指導 | 東京・全国オンライン | Petra Tutors',
     description: '東京・全国オンライン対応のIELTS・英検・TOEIC対策。スコアが伸び悩む原因を特定し、目標スコア達成への最短ルートを完全1:1で設計。入会金なし。',
-    keywords: 'IELTS 家庭教師, IELTS 対策 東京, IELTS スコアアップ, IELTS 個別指導, 英検 個別指導, TOEIC 家庭教師, IELTS tutor Tokyo, IELTS tutoring Japan, IELTS coach Japan',
   },
   '/ib': {
     title: 'IB・インター校 個別指導 | IA・EE・TOK対応 | Petra Tutors',
     description: '東京・全国オンライン対応のIB・インター校サポート。DP・MYP・PYPに対応。IA・EE・TOK・全科目をバイリンガルメンターが完全1:1で指導。入会金なし。',
-    keywords: 'IB 塾, IB 家庭教師, IB DP サポート, インター校 塾, インター 家庭教師 東京, IB tutor Tokyo, International Baccalaureate tutoring Japan, IB IA サポート, IB EE サポート',
   },
   '/university': {
     title: '海外大学・帰国子女入試サポート | Petra Tutors',
     description: '海外大学への出願戦略・Personal Statement・面接対策から帰国子女入試まで。志望校合格に向けた完全個別コンサルティング。',
-    keywords: '海外大学 塾, 帰国子女 大学受験, 帰国子女入試, Personal Statement 添削, 海外進学 サポート',
   },
   '/kids': {
     title: '子供英語・英会話 個別指導 | Petra Tutors',
     description: '楽しく英語の基礎を作る。英会話・読み書き・発音まで、お子様のペースに合わせた完全個別レッスン。入会金なし。',
-    keywords: '子供 英語 個別指導, 英会話 家庭教師, 子供 英語 オンライン, 小学生 英語 家庭教師',
   },
   '/foundation': {
     title: 'インター校・早期学習サポート | Petra Tutors',
     description: 'IB PYP・キーステージ・早期 MYP に対応。インター校の基礎学力を確実に定着させる完全個別指導。入会金なし。',
-    keywords: 'インター校 塾, IB PYP サポート, キーステージ 家庭教師, インター 家庭教師 東京',
   },
   '/business': {
     title: 'ビジネス英語 個別コーチング | Petra Tutors',
     description: '会議・メール・プレゼン・商談対応のビジネス英語。実務直結の完全個別コーチングで、英語を仕事の武器に変える。',
-    keywords: 'ビジネス英語 個別指導, ビジネス英語 家庭教師, 英語 会議 対策, Business English Japan',
   },
   '/tutors': {
     title: '講師一覧 | Petra Tutors',
     description: '東大・UCL・慶應など国内外トップ大学出身の講師陣。専門分野・指導スタイル・対応年齢を公開中。',
-    keywords: '家庭教師 一覧, Petra Tutors 講師, 帰国子女 家庭教師, 東大 家庭教師',
   },
   '/pricing': {
     title: '料金プラン | Petra Tutors',
     description: '入会金なし・完全公開の料金体系。¥3,500〜の完全個別指導。追加費用なし。',
-    keywords: '家庭教師 料金, IELTS 個別指導 料金, IB 塾 料金, 入会金なし 家庭教師',
   },
   '/about': {
     title: 'Petra Tutors について | ペトラチューターズ',
@@ -128,6 +127,11 @@ const ROUTES = {
     title: 'お問い合わせ・無料体験予約 | Petra Tutors',
     description: '無料体験レッスンのご予約・資料請求・お問い合わせはこちら。入会金なし、最短翌日マッチング。',
   },
+  '/thank-you': {
+    title: 'ありがとうございます | Petra Tutors',
+    description: 'お問い合わせありがとうございます。担当者より2営業日以内にご連絡いたします。',
+    robots: 'noindex, nofollow',
+  },
   '/no-admission-fee': {
     title: '入会金なし | Petra Tutors',
     description: 'Petra Tutors は入会金・登録料が一切かかりません。まずは無料体験レッスンからお気軽にどうぞ。',
@@ -142,25 +146,48 @@ const ROUTES = {
   },
   '/system': {
     title: 'The Petra Ecosystem | Petra Tutors',
-    description: 'How Petra Tutors works: tutor matching, monthly learning plans, and written feedback after every lesson.',
+    description: '長期的な成長、知的好奇心の探求、そしてグローバルな挑戦のために設計された、有機的につながる教育の世界。',
+  },
+  '/ecosystem': {
+    title: 'The Petra Ecosystem | Petra Tutors',
+    description: '長期的な成長、知的好奇心の探求、そしてグローバルな挑戦のために設計された、有機的につながる教育の世界。',
+    robots: 'noindex, follow',
   },
   '/privacy': {
     title: 'プライバシーポリシー | Petra Tutors',
     description: 'Petra Tutors の個人情報取り扱い方針。',
   },
+  '/apply/divisions': {
+    title: 'Tutor Portal | Petra Tutors',
+    description: 'Restricted access tutor portal.',
+    robots: 'noindex, nofollow',
+  },
+  '/apply/progression': {
+    title: 'Tutor Portal | Petra Tutors',
+    description: 'Restricted access tutor portal.',
+    robots: 'noindex, nofollow',
+  },
 };
 
-// ── Shared base keywords (appended to every page) ─────────────────────────
-const BASE_KEYWORDS =
-  'ペトラエデュケーション合同会社, ペトラエデュケーション, Petra Education LLC, Petra Tutors, ' +
-  'Petra Education, International Tutoring, IB Tutoring, IELTS Coaching, ' +
-  'プレミアム家庭教師, 国際教育, 進学コンサルティング, 帰国子女, オンライン家庭教師';
+// ── SSR render function (body content for non-JS crawlers) ────────────────
+let ssrRender = null;
+const ssrEntry = join(distSSR, 'entry-server.js');
+if (existsSync(ssrEntry)) {
+  try {
+    const mod = await import(ssrEntry);
+    ssrRender = mod.render;
+    console.log('SSR bundle loaded — body content will be pre-rendered.\n');
+  } catch (err) {
+    console.warn(`SSR bundle import failed (head-only pre-render): ${err.message}\n`);
+  }
+} else {
+  console.warn('dist-ssr/entry-server.js not found — head-only pre-render.\n');
+}
 
 // ── Build ──────────────────────────────────────────────────────────────────
 const template = readFileSync(join(dist, 'index.html'), 'utf-8');
 
 for (const [route, meta] of Object.entries(ROUTES)) {
-  const keywords = meta.keywords ? `${meta.keywords}, ${BASE_KEYWORDS}` : BASE_KEYWORDS;
   const canonicalUrl = `https://www.petratutors.com${route}`;
   const ogType = route === '/' ? 'website' : 'article';
 
@@ -174,9 +201,15 @@ for (const [route, meta] of Object.entries(ROUTES)) {
     `  <meta name="twitter:title" content="${meta.title}" />`,
     `  <meta name="twitter:description" content="${meta.description}" />`,
     `  <meta property="og:image" content="https://www.petratutors.com/og-image.png" />`,
+    `  <meta property="og:image:width" content="1200" />`,
+    `  <meta property="og:image:height" content="630" />`,
     `  <meta name="twitter:image" content="https://www.petratutors.com/og-image.png" />`,
-    `  <link rel="canonical" href="${canonicalUrl}" />`,
+    `  <link rel="canonical" href="${canonicalUrl}" data-rh="true" />`,
   ];
+
+  if (meta.robots) {
+    headTags.push(`  <meta name="robots" content="${meta.robots}" />`);
+  }
 
   if (meta.jsonLd) {
     headTags.push(
@@ -187,8 +220,17 @@ for (const [route, meta] of Object.entries(ROUTES)) {
   let html = template
     .replace(/<title>[^<]*<\/title>/, `<title>${meta.title}</title>`)
     .replace(/<meta name="description"[^>]*\/?>/, `<meta name="description" content="${meta.description}" />`)
-    .replace(/<meta name="keywords"[^>]*\/?>/, `<meta name="keywords" content="${keywords}" />`)
     .replace('</head>', `${headTags.join('\n')}\n</head>`);
+
+  // Inject SSR body content into the React root
+  if (ssrRender) {
+    try {
+      const { html: bodyHtml } = ssrRender(route);
+      html = html.replace('<div id="root"></div>', `<div id="root">${bodyHtml}</div>`);
+    } catch (err) {
+      console.warn(`  SSR render failed for ${route}: ${err.message}`);
+    }
+  }
 
   const routeSegment = route === '/' ? '' : route.replace(/^\//, '');
   const dir = routeSegment ? join(dist, routeSegment) : dist;
@@ -198,5 +240,8 @@ for (const [route, meta] of Object.entries(ROUTES)) {
 
   console.log(`  prerendered: ${route}`);
 }
+
+// Clean up SSR build artefacts
+if (existsSync(distSSR)) rmSync(distSSR, { recursive: true, force: true });
 
 console.log(`\nDone — ${Object.keys(ROUTES).length} routes pre-rendered.`);

@@ -40,6 +40,7 @@ const TutorDivisions = lazy(() => import('./pages/TutorDivisions'));
 const TutorProgression = lazy(() => import('./pages/TutorProgression'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const Summer = lazy(() => import('./pages/Summer'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 import ScrollToTop from './components/ScrollToTop';
 import SummerPopup from './components/SummerPopup';
@@ -110,6 +111,7 @@ function App() {
             <Route path="apply/progression" element={<TutorProgression />} />
             <Route path="privacy" element={<PrivacyPolicy />} />
             <Route path="summer" element={<Summer />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>

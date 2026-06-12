@@ -189,7 +189,7 @@
     "address_label": "Address",
     "address": "Sakura Suite Sasazuka, 1 Chome-46-17 Honan, Suginami City, Tokyo 168-0062",
     "phone_label": "Phone",
-    "phone": "080-3349-5897",
+    "phone": "080-7884-7224",
     "company_name": "Petra Education LLC",
     "legal_info": "Operated by Petra Education LLC",
     "policy_no_fee": "No Admission Fee Policy",
@@ -1256,7 +1256,7 @@
   },
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
-    "hero_title": "The right learning\nfor your goal.",
+    "hero_title": "Bilingual tutors for English,\nIB & international students",
     "hero_sub": "Find your perfect academic path through relatable mentors matched for student-tutor fit and monthly learning plans.",
     "choice_label": "What would you like to achieve?",
     "choice_ielts_label": "Get results in IELTS / Eiken / TOEIC",
@@ -1295,7 +1295,8 @@
     "final_title": "Begin your educational journey",
     "final_sub": "Bespoke academic mentorship for international pathways.",
     "final_cta": "Request Consultation",
-    "final_line": "Consult on LINE"
+    "final_line": "Consult on LINE",
+    "testimonials_label": "What families say"
   },
   "landing_ib": {
     "hero_eyebrow": "IB / AP / A-Level / SAT · ACT / Intl. School Support",

@@ -41,10 +41,9 @@ export default function GatewayHome() {
     return (
         <div className={styles.page}>
             <SEO
-                title="Petra Tutors | 東京・全国オンライン対応の英語・IB・海外進学バイリンガル家庭教師"
+                title="英語・IB・海外進学のバイリンガル家庭教師 | 東京・全国オンライン | Petra Tutors"
                 description="東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。"
                 path="/"
-                keywords="英語 家庭教師 東京, バイリンガル 家庭教師, 帰国子女 家庭教師, IB 家庭教師, IELTS 家庭教師, 海外進学 サポート, オンライン 家庭教師 東京, bilingual tutor Tokyo, private tutor Japan, international school tutor"
                 jsonLdExtra={{
                     "@context": "https://schema.org",
                     "@type": "LocalBusiness",
@@ -54,6 +53,7 @@ export default function GatewayHome() {
                     "logo": "https://www.petratutors.com/logo.png",
                     "image": "https://www.petratutors.com/og-image.png",
                     "email": "admin@petratutors.com",
+                    "telephone": "+81-80-7884-7224",
                     "address": {
                         "@type": "PostalAddress",
                         "addressLocality": "Tokyo",
@@ -82,7 +82,7 @@ export default function GatewayHome() {
                     <h1 className={styles.heroTitle}>{t('gateway.hero_title')}</h1>
 
                     {/* ── CHOICE BUTTONS ── */}
-                    <p className={styles.choiceLabel}>{t('gateway.choice_label')}</p>
+                    <h2 className={styles.choiceLabel}>{t('gateway.choice_label')}</h2>
                     <div className={styles.choiceGrid}>
                         {CHOICES.map((c, idx) => (
                             <Link
@@ -152,6 +152,7 @@ export default function GatewayHome() {
             {/* ─── TESTIMONIALS ─── */}
             <section className={styles.testimonials}>
                 <div className="container">
+                    <h2 className={styles.testimonialsLabel}>{t('gateway.testimonials_label')}</h2>
                     <div className={styles.testimonialsGrid}>
                         {TESTIMONIAL_KEYS.map((t_, i) => (
                             <div key={i} className={styles.testimonialCard}>
