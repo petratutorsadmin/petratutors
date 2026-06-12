@@ -55,6 +55,13 @@
 /* Reset & Global */
 html {
   scroll-behavior: smooth;
+  /* Match body so the overscroll/safe-area gutter never shows white */
+  background-color: var(--c-sand);
+}
+
+/* When mobile menu is open, the safe-area gutter should match the dark overlay */
+body.mobile-menu-open {
+  background-color: var(--c-deep);
 }
 
 * {

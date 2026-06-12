@@ -235,9 +235,9 @@
         color: var(--c-gold-light);
     }
 
-    /* Bottom: CTA + lang */
+    /* Bottom: CTA + lang — pad into the iOS safe-area so content clears the home bar */
     .mobileNavBottom {
-        padding: 1.25rem 1.5rem 2.5rem;
+        padding: 1.25rem 1.5rem calc(1.75rem + env(safe-area-inset-bottom, 0px));
         display: flex;
         flex-direction: column;
         align-items: center;
