@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Check, Calendar, Users, Star } from 'lucide-react';
+import { Check, Calendar, Users, Star, ChevronDown, ArrowUp } from 'lucide-react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import SEO from '../components/SEO';
+import SummerHero3D from '../components/SummerHero3D';
 import styles from './Summer.module.css';
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const CONTENT = {
     en: {
@@ -314,6 +320,61 @@ export default function Summer() {
     const [formData, setFormData] = useState({ name: '', email: '', program: '' });
     const [sent, setSent] = useState(false);
     const [submitting, setSubmitting] = useState(false);
+    const [expandedProgram, setExpandedProgram] = useState(null);
+    const containerRef = useRef();
+
+    useGSAP(() => {
+        // Hero Animations
+        const tl = gsap.timeline();
+        
+        tl.from(`.${styles.eyebrow}`, { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out', delay: 0.2 })
+          .from(`.${styles.heroTitle}`, { y: 40, opacity: 0, duration: 1, ease: 'power4.out' }, '-=0.6')
+          .from(`.${styles.heroSub}`, { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.8')
+          .from(`.${styles.heroDates}`, { scale: 0.9, opacity: 0, duration: 0.6, ease: 'back.out(1.5)' }, '-=0.6')
+          .from(`.${styles.statBox}`, { y: 30, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out' }, '-=0.4')
+          .from(`.${styles.heroCtas}`, { y: 20, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
+          .from(`.${styles.heroNote}`, { opacity: 0, duration: 1 }, '-=0.4');
+
+        // Scroll Animations: Strengths
+        gsap.from(`.${styles.strengthItem}`, {
+            scrollTrigger: {
+                trigger: `.${styles.strengthsSection}`,
+                start: 'top 80%',
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: 'power2.out'
+        });
+
+        // Scroll Animations: Programs
+        gsap.from(`.${styles.programCard}`, {
+            scrollTrigger: {
+                trigger: `.${styles.programsSection}`,
+                start: 'top 75%',
+            },
+            y: 50,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.15,
+            ease: 'power3.out'
+        });
+
+        // Scroll Animations: Pricing
+        gsap.from(`.${styles.pricingSection} .${styles.container} > *`, {
+            scrollTrigger: {
+                trigger: `.${styles.pricingSection}`,
+                start: 'top 80%',
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: 'power3.out'
+        });
+
+    }, { scope: containerRef });
 
     const pricingGroups = [];
     c.tableRows.forEach(row => {
@@ -376,10 +437,11 @@ export default function Summer() {
                     "educationalCredentialAwarded": "Certificate of Completion"
                 }}
             />
-            <div className={styles.page}>
+            <div className={styles.page} ref={containerRef}>
 
                 {/* Hero */}
                 <section className={styles.hero}>
+                    <SummerHero3D />
                     <div className={styles.heroInner}>
                         <p className={styles.eyebrow}>PETRA TUTORS</p>
                         <h1 className={styles.heroTitle}>
@@ -452,50 +514,65 @@ export default function Summer() {
                         </div>
 
                         <div className={styles.programGrid}>
-                            {c.programs.map((p) => (
-                                <div key={p.num} className={styles.programCard}>
-                                    <div className={styles.programTop}>
-                                        <span className={styles.programNum} style={{ color: p.color }}>{p.num}</span>
-                                        <div>
-                                            <h3 className={styles.programName}>{p.name}</h3>
-                                            <p className={styles.programNameSub}>{p.nameJa}</p>
+                            {c.programs.map((p) => {
+                                const isExpanded = expandedProgram === p.num;
+                                return (
+                                <div key={p.num} className={`${styles.programCard} ${isExpanded ? styles.programCardExpanded : ''}`}>
+                                    <button
+                                        className={styles.programAccordionToggle}
+                                        onClick={() => setExpandedProgram(isExpanded ? null : p.num)}
+                                        aria-expanded={isExpanded}
+                                    >
+                                        <div className={styles.programTop}>
+                                            <span className={styles.programNum} style={{ color: p.color }}>{p.num}</span>
+                                            <div className={styles.programTopText}>
+                                                <h3 className={styles.programName}>{p.name}</h3>
+                                                <span className={styles.programAccordionPrice}>{p.plans[0].total}〜</span>
+                                            </div>
+                                        </div>
+                                        <ChevronDown size={20} className={`${styles.accordionChevron} ${isExpanded ? styles.accordionChevronOpen : ''}`} />
+                                    </button>
+
+                                    {/* Always visible on desktop, toggled on mobile */}
+                                    <div className={styles.programCardBody}>
+                                        <p className={styles.programNameSub}>{p.nameJa}</p>
+                                        <p className={styles.programTarget}>
+                                            <Users size={14} style={{ verticalAlign: 'middle', marginRight: '0.3rem', opacity: 0.7 }} />
+                                            {p.target}
+                                        </p>
+
+                                        <ul className={styles.programBullets}>
+                                            {p.bullets.map((b, i) => (
+                                                <li key={i}>
+                                                    <span className={styles.bullet} style={{ background: p.color }} />
+                                                    {b}
+                                                </li>
+                                            ))}
+                                        </ul>
+
+                                        <div className={styles.programPlans}>
+                                            {p.plans.map((plan, i) => (
+                                                <div key={i} className={styles.planRow}>
+                                                    <span className={styles.planLabel}>{plan.label}</span>
+                                                    <div className={styles.planBottom}>
+                                                        <span className={styles.planPer}>{plan.per}</span>
+                                                        <span className={styles.planTotal} style={{ color: p.color }}>{plan.total}</span>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <blockquote className={styles.programMsg}>{p.msg}</blockquote>
+
+                                        <div className={styles.programPeriods}>
+                                            {p.periods.map((period, i) => (
+                                                <span key={i} className={styles.periodTag}>{period}</span>
+                                            ))}
                                         </div>
                                     </div>
-                                    <p className={styles.programTarget}>
-                                        <Users size={14} style={{ verticalAlign: 'middle', marginRight: '0.3rem', opacity: 0.7 }} />
-                                        {p.target}
-                                    </p>
-
-                                    <ul className={styles.programBullets}>
-                                        {p.bullets.map((b, i) => (
-                                            <li key={i}>
-                                                <span className={styles.bullet} style={{ background: p.color }} />
-                                                {b}
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    <div className={styles.programPlans}>
-                                        {p.plans.map((plan, i) => (
-                                            <div key={i} className={styles.planRow}>
-                                                <span className={styles.planLabel}>{plan.label}</span>
-                                                <div className={styles.planBottom}>
-                                                    <span className={styles.planPer}>{plan.per}</span>
-                                                    <span className={styles.planTotal} style={{ color: p.color }}>{plan.total}</span>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    <blockquote className={styles.programMsg}>{p.msg}</blockquote>
-
-                                    <div className={styles.programPeriods}>
-                                        {p.periods.map((period, i) => (
-                                            <span key={i} className={styles.periodTag}>{period}</span>
-                                        ))}
-                                    </div>
                                 </div>
-                            ))}
+                                );
+                            })}
                         </div>
                     </div>
                 </section>
@@ -629,6 +706,14 @@ export default function Summer() {
                         </div>
                     </div>
                 </section>
+
+                {/* Back to top */}
+                <div className={styles.backToTop}>
+                    <a href="#" className={styles.backToTopLink} onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+                        <ArrowUp size={16} />
+                        <span>Top</span>
+                    </a>
+                </div>
 
             </div>
         </>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Calendar } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -8,11 +8,24 @@ export default function FloatingCTA() {
     const { t } = useTranslation();
     const { pathname } = useLocation();
     const [hidden, setHidden] = useState(false);
+    const visibleSet = useRef(new Set());
+
+    const updateVisibility = useCallback(() => {
+        setHidden(visibleSet.current.size > 0);
+    }, []);
 
     useEffect(() => {
+        visibleSet.current.clear();
+
         const observer = new IntersectionObserver((entries) => {
-            const shouldHide = entries.some(entry => entry.isIntersecting);
-            setHidden(shouldHide);
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    visibleSet.current.add(entry.target);
+                } else {
+                    visibleSet.current.delete(entry.target);
+                }
+            });
+            updateVisibility();
         }, { rootMargin: '0px' });
 
         const observeTargets = () => {
@@ -26,8 +39,9 @@ export default function FloatingCTA() {
         return () => {
             observer.disconnect();
             clearTimeout(timeout);
+            visibleSet.current.clear();
         };
-    }, [pathname]);
+    }, [pathname, updateVisibility]);
 
     return (
         <Link

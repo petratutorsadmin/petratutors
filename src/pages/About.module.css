@@ -150,7 +150,7 @@
     flex-shrink: 0;
     width: 56px;
     height: 56px;
-    background-color: var(--c-sand);
+    background-color: transparent;
     color: var(--c-navy);
     border-radius: var(--radius-sm);
     display: flex;
@@ -192,9 +192,13 @@
     letter-spacing: 0.05em;
 }
 
-/* Dark Contrast Section */
+/* The Absence Section / Dark backgrounds */
 .darkSection {
     background-color: var(--c-navy);
+    color: var(--c-white);
+}
+
+.darkSection .stageTitle {
     color: var(--c-white);
 }
 

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import FAQ from '../components/FAQ';
+import Reveal from '../components/Reveal';
 import styles from './GatewayHome.module.css';
 
 const SUMMER_COPY = {
@@ -123,73 +124,81 @@ export default function GatewayHome() {
             </section>
 
             {/* ─── PROOF STATS ─── */}
-            <section className={styles.proofSection}>
-                <div className="container">
-                    <div className={styles.proofGrid}>
-                        {PROOF_KEYS.map((p, i) => (
-                            <div key={i} className={styles.proofStat}>
-                                <div className={styles.proofVal}>{t(`gateway.${p.val}`)}</div>
-                                <div className={styles.proofLabel}>{t(`gateway.${p.label}`)}</div>
-                            </div>
-                        ))}
+            <Reveal y={40} stagger={0.15}>
+                <section className={styles.proofSection}>
+                    <div className="container">
+                        <div className={styles.proofGrid}>
+                            {PROOF_KEYS.map((p, i) => (
+                                <div key={i} className={styles.proofStat}>
+                                    <div className={styles.proofVal}>{t(`gateway.${p.val}`)}</div>
+                                    <div className={styles.proofLabel}>{t(`gateway.${p.label}`)}</div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </Reveal>
 
             {/* ─── SUMMER BANNER ─── */}
-            <section className={styles.summerBanner}>
-                <div className={`container ${styles.summerBannerInner}`}>
-                    <div className={styles.summerBannerText}>
-                        <span className={styles.summerBannerLabel}>{sc.label}</span>
-                        <span className={styles.summerBannerSub}>{sc.sub}</span>
+            <Reveal y={40}>
+                <section className={styles.summerBanner}>
+                    <div className={`container ${styles.summerBannerInner}`}>
+                        <div className={styles.summerBannerText}>
+                            <span className={styles.summerBannerLabel}>{sc.label}</span>
+                            <span className={styles.summerBannerSub}>{sc.sub}</span>
+                        </div>
+                        <Link to="/summer" className={styles.summerBannerCta}>
+                            {sc.cta} <ArrowRight size={15} />
+                        </Link>
                     </div>
-                    <Link to="/summer" className={styles.summerBannerCta}>
-                        {sc.cta} <ArrowRight size={15} />
-                    </Link>
-                </div>
-            </section>
+                </section>
+            </Reveal>
 
             {/* ─── TESTIMONIALS ─── */}
-            <section className={styles.testimonials}>
-                <div className="container">
-                    <h2 className={styles.testimonialsLabel}>{t('gateway.testimonials_label')}</h2>
-                    <div className={styles.testimonialsGrid}>
-                        {TESTIMONIAL_KEYS.map((t_, i) => (
-                            <div key={i} className={styles.testimonialCard}>
-                                <p className={styles.testimonialQuote}>{t(`gateway.${t_.quote}`)}</p>
-                                <div className={styles.testimonialAuthor}>
-                                    <span className={styles.testimonialName}>{t(`gateway.${t_.name}`)}</span>
-                                    <span className={styles.testimonialRole}>{t(`gateway.${t_.role}`)}</span>
+            <Reveal y={50} stagger={0.1}>
+                <section className={styles.testimonials}>
+                    <div className="container">
+                        <h2 className={styles.testimonialsLabel}>{t('gateway.testimonials_label')}</h2>
+                        <div className={styles.testimonialsGrid}>
+                            {TESTIMONIAL_KEYS.map((t_, i) => (
+                                <div key={i} className={styles.testimonialCard}>
+                                    <p className={styles.testimonialQuote}>{t(`gateway.${t_.quote}`)}</p>
+                                    <div className={styles.testimonialAuthor}>
+                                        <span className={styles.testimonialName}>{t(`gateway.${t_.name}`)}</span>
+                                        <span className={styles.testimonialRole}>{t(`gateway.${t_.role}`)}</span>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </Reveal>
 
             {/* ─── FAQ ─── */}
             <FAQ theme="dark" />
 
             {/* ─── FINAL CTA ─── */}
-            <section className={styles.finalCta}>
-                <div className={`container ${styles.finalInner}`}>
-                    <h2 className={styles.finalTitle}>{t('gateway.final_title')}</h2>
-                    <p className={styles.finalSub}>{t('gateway.final_sub')}</p>
-                    <div className={styles.finalButtons}>
-                        <Link to="/inquiry" className={`btn btn-gold ${styles.finalBtn}`}>
-                            {t('gateway.final_cta')}
-                        </Link>
-                        <a
-                            href={t('nav.line_url')}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`btn btn-ghost-light ${styles.finalBtn}`}
-                        >
-                            {t('gateway.final_line')}
-                        </a>
+            <Reveal y={40}>
+                <section className={styles.finalCta}>
+                    <div className={`container ${styles.finalInner}`}>
+                        <h2 className={styles.finalTitle}>{t('gateway.final_title')}</h2>
+                        <p className={styles.finalSub}>{t('gateway.final_sub')}</p>
+                        <div className={styles.finalButtons}>
+                            <Link to="/inquiry" className={`btn btn-gold ${styles.finalBtn}`}>
+                                {t('gateway.final_cta')}
+                            </Link>
+                            <a
+                                href={t('nav.line_url')}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`btn btn-ghost-light ${styles.finalBtn}`}
+                            >
+                                {t('gateway.final_line')}
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </Reveal>
         </div>
     );
 }
