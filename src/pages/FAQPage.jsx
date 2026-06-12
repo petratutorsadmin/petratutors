@@ -7,7 +7,7 @@ export default function FAQPage() {
     const { t } = useTranslation();
 
     return (
-        <div className="page-fade-in" style={{ paddingTop: '80px', minHeight: '100vh', backgroundColor: 'var(--c-stone)' }}>
+        <div className="page-fade-in" style={{ paddingTop: '80px', minHeight: '100dvh', backgroundColor: 'var(--c-stone)' }}>
             <SEO 
                 title={`${t('nav.faq', 'FAQ')} | Petra Tutors`}
                 description={t('faq.title', 'Frequently Asked Questions')}

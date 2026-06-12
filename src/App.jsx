@@ -81,7 +81,7 @@ function App() {
       <BoutiqueLoader />
       <ScrollToTop />
       <SummerPopup />
-      <Suspense fallback={<div style={{ minHeight: '100vh', backgroundColor: 'var(--c-sand)' }} />}>
+      <Suspense fallback={<div style={{ minHeight: '100dvh', backgroundColor: 'var(--c-sand)' }} />}>
         <Routes>
           <Route path="/" element={<Layout />}>
             {/* ── New gateway & funnel pages ── */}

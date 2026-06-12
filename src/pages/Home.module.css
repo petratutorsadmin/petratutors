@@ -518,7 +518,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        min-height: calc(100vh - 80px); /* Fill screen minus header */
+        min-height: calc(100dvh - 80px);
         display: flex;
         align-items: center;
         padding: 0;

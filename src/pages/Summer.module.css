@@ -1,5 +1,5 @@
 .page {
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--c-deep);
   color: var(--c-text-on-dark);
   overflow-x: hidden;

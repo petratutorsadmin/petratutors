@@ -1,6 +1,6 @@
 /* Gate/Passcode Screen */
 .gateWrapper {
-  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@
   color: var(--c-navy);
   padding-top: var(--space-lg);
   padding-bottom: var(--space-2xl);
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .controlBar {

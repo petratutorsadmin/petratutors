@@ -48,7 +48,7 @@
       --shadow-lg: 0 8px 24px rgba(48, 27, 71, 0.05);
       --shadow-gold: none;
       --container-width: 1200px;
-      --hero-height-mobile: 65vh;
+      --hero-height-mobile: 65dvh;
     }
     html { scroll-behavior: smooth; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -130,7 +130,7 @@
     .glass-panel { background: var(--c-white); border-bottom: 1px solid var(--c-border); }
     .animate-on-scroll { opacity: 0; transform: translateY(5px); animation: fadeInUp 0.4s cubic-bezier(0.2, 0, 0, 1) forwards; }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-    #root { min-height: 100vh; display: flex; flex-direction: column; }
+    #root { min-height: 100dvh; display: flex; flex-direction: column; }
     main { flex: 1; }
     .text-h5 { font-size: 1.15rem; font-weight: 600; }
     .eyebrow { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-gold); }

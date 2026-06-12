@@ -1,5 +1,5 @@
 .container {
-  min-height: 100vh;
+  min-height: 100dvh;
   background-color: #1a0b2e; /* Deep midnight purple */
   color: #fff;
   font-family: 'Inter', sans-serif;
