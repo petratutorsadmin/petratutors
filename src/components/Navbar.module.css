@@ -90,6 +90,11 @@
     line-height: 1;
 }
 
+/* Hidden on desktop, shown + styled inside the mobile media query */
+.mobileNav {
+    display: none;
+}
+
 /* ── Desktop lang switcher ── */
 .langSwitcher {
     display: flex;
@@ -139,19 +144,26 @@
         position: relative !important;
     }
 
-    /* Full-screen overlay */
+    /* Full-screen overlay — must be a sibling (not child) of the backdrop-filter element,
+       otherwise backdrop-filter creates a containing block that clips position:fixed. */
     .mobileNav {
         display: flex !important;
         position: fixed;
-        inset: 0;
-        width: 100vw;
-        height: 100dvh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
         background-color: var(--c-deep);
         z-index: 1000;
         flex-direction: column;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.25s ease;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
     .mobileNavOpen {
