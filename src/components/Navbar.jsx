@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './Navbar.module.css';
 
-export default function Navbar() {
+export default function Navbar({ top = '12px' }) {
     const [isOpen, setIsOpen] = useState(false);
     const navbarRef = useRef(null);
     const { t, i18n } = useTranslation();
@@ -28,7 +28,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className={styles.navbarWrapper}>
+        <header className={styles.navbarWrapper} style={{ top }}>
             <div ref={navbarRef} className={styles.navbar}>
             <div className={styles.navContainer}>
                 <Link to="/" className={styles.logo}>
