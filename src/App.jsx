@@ -5,6 +5,8 @@ import BoutiqueLoader from './components/BoutiqueLoader';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import Lenis from 'lenis';
+// Static import — index route, must be in the main bundle so prerendered HTML hydrates immediately
+import GatewayHome from './pages/GatewayHome';
 
 // Exploratory/marketing pages get slow dragging scroll.
 // Task-oriented pages (forms, pricing, FAQ) stay native speed.
@@ -15,7 +17,6 @@ const SLOW_SCROLL_PATHS = new Set([
 ]);
 
 // Dynamically import pages for code splitting
-const GatewayHome = lazy(() => import('./pages/GatewayHome'));
 const LandingIB = lazy(() => import('./pages/LandingIB'));
 const LandingIELTS = lazy(() => import('./pages/LandingIELTS'));
 const LandingUniversity = lazy(() => import('./pages/LandingUniversity'));

@@ -13,7 +13,7 @@ export default function SEO({ title, description, name = 'Petra Tutors', type = 
     "legalName": "ペトラエデュケーション合同会社",
     "url": "https://www.petratutors.com",
     "logo": "https://www.petratutors.com/logo.png",
-    "description": t('seo.jsonld_desc', 'Petra Tutors is an online tutoring service specialising in IB, IELTS, and international university admissions.')
+    "description": description || t('seo.jsonld_desc', 'Petra Tutors is an online tutoring service specialising in IB, IELTS, and international university admissions.')
   };
 
   return (

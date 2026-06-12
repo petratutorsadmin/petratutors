@@ -6,19 +6,164 @@
   <link rel="icon" type="image/png" href="/logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>英語・IB・海外進学のバイリンガル家庭教師 | 東京・オンライン | Petra Tutors</title>
-  <!-- Noto Sans JP from Google Fonts (Japanese glyphs; latin fonts are self-hosted) -->
+
+  <!-- Global CSS inlined — eliminates render-blocking stylesheet request so prerendered HTML paints on first byte -->
+  <style>
+    :root {
+      --c-navy: #301B47;
+      --c-navy-light: #4A2B6A;
+      --c-sand: #F9F6F0;
+      --c-stone: #EFE8DD;
+      --c-white: #FFFFFF;
+      --c-text: #333333;
+      --c-text-light: #666666;
+      --c-border: #D1CDD1;
+      --c-accent: #E5B80B;
+      --c-deep: #120827;
+      --c-deep-mid: #1E0E3A;
+      --c-gold: #C9A84C;
+      --c-gold-light: #F0D080;
+      --c-gold-glow: rgba(201,168,76,0.18);
+      --c-cream: #FAF7F2;
+      --c-purple-mid: #2E1654;
+      --c-text-on-dark: rgba(255,255,255,0.88);
+      --c-text-on-dark-light: rgba(255,255,255,0.55);
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-brand: 'Lexend Peta', system-ui, sans-serif;
+      --space-xs: 0.5rem;
+      --space-sm: 0.75rem;
+      --space-md: 1.25rem;
+      --space-lg: 2rem;
+      --space-xl: 4.5rem;
+      --space-2xl: 7rem;
+      --radius-sm: 4px;
+      --radius-md: 6px;
+      --radius-lg: 8px;
+      --radius-xl: 8px;
+      --radius-pill: 9999px;
+      --shadow-sm: 0 1px 3px rgba(48, 27, 71, 0.05);
+      --shadow-md: 0 4px 12px rgba(48, 27, 71, 0.05);
+      --shadow-lg: 0 8px 24px rgba(48, 27, 71, 0.05);
+      --shadow-gold: none;
+      --container-width: 1200px;
+      --hero-height-mobile: 65vh;
+    }
+    html { scroll-behavior: smooth; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--c-sand);
+      color: var(--c-text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    html[lang="ja"] body {
+      font-family: 'Noto Sans JP', var(--font-sans);
+      line-height: 1.8;
+      font-feature-settings: "palt" 1;
+      letter-spacing: 0.03em;
+    }
+    html[lang="ja"] h1, html[lang="ja"] h2, html[lang="ja"] h3,
+    html[lang="ja"] h4, html[lang="ja"] h5, html[lang="ja"] h6,
+    html[lang="ja"] .text-h1, html[lang="ja"] .text-h2,
+    html[lang="ja"] .text-h3, html[lang="ja"] .text-h4,
+    html[lang="ja"] [class*="heroTagline"],
+    html[lang="ja"] [class*="Title"], html[lang="ja"] [class*="title"] {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", YuMincho, serif;
+      font-feature-settings: "palt" 1;
+      letter-spacing: 0.04em;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+      color: var(--c-navy);
+      font-weight: 500;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    a { color: inherit; text-decoration: none; }
+    img {
+      max-width: 100%; height: auto; display: block;
+      pointer-events: none; user-select: none;
+      -webkit-user-select: none; -webkit-user-drag: none;
+      -moz-user-select: none; -ms-user-select: none;
+    }
+    .text-h1 { font-size: 3.5rem; }
+    .text-h2 { font-size: 2.5rem; }
+    .text-h3 { font-size: 2rem; }
+    .text-h4 { font-size: 1.5rem; }
+    .text-large { font-size: 1.25rem; line-height: 1.7; }
+    .text-body { font-size: 1rem; }
+    .text-small { font-size: 0.875rem; }
+    @media (max-width: 768px) {
+      :root { --space-md: 1rem; --space-lg: 1.5rem; --space-xl: 2.5rem; }
+      .text-h1 { font-size: 2.25rem; }
+      .text-h2 { font-size: 1.75rem; }
+      .text-h3 { font-size: 1.35rem; }
+      .text-large { font-size: 1.1rem; }
+    }
+    .container { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 0 var(--space-md); }
+    .section { padding: clamp(3.5rem, 8vh, 6.5rem) 0; }
+    @media (max-width: 768px) {
+      .section { padding: clamp(2rem, 5vh, 4rem) 0; }
+      .container { padding: 0 1.5rem; }
+      .mobile-hide { display: none !important; }
+    }
+    .text-center { text-align: center; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.85rem 1.75rem; border-radius: var(--radius-sm);
+      font-family: var(--font-sans); font-weight: 500; font-size: 1.05rem;
+      cursor: pointer; transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+      border: none; text-decoration: none;
+    }
+    .btn-primary { background-color: var(--c-navy); color: var(--c-white); box-shadow: none; }
+    .btn-primary:hover { background-color: var(--c-navy-light); }
+    .btn-secondary { background-color: transparent; color: var(--c-text); border: 1px solid var(--c-border); }
+    .btn-secondary:hover { background-color: rgba(0,0,0,0.03); border-color: var(--c-text-light); }
+    .card { background: var(--c-white); border-radius: var(--radius-lg); padding: var(--space-md); border: 1px solid var(--c-border); box-shadow: var(--shadow-sm); transition: border-color 0.2s ease; }
+    .card:hover { border-color: rgba(48, 27, 71, 0.35); }
+    .glass-card { background: var(--c-white); border: 1px solid var(--c-border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: border-color 0.2s ease; }
+    .glass-card:hover { border-color: rgba(48, 27, 71, 0.35); }
+    .glass-panel { background: var(--c-white); border-bottom: 1px solid var(--c-border); }
+    .animate-on-scroll { opacity: 0; transform: translateY(5px); animation: fadeInUp 0.4s cubic-bezier(0.2, 0, 0, 1) forwards; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    #root { min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1; }
+    .text-h5 { font-size: 1.15rem; font-weight: 600; }
+    .eyebrow { font-family: var(--font-sans); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-gold); }
+    .btn-gold { background: linear-gradient(135deg, var(--c-gold) 0%, #E8C060 100%); color: var(--c-deep); font-weight: 700; letter-spacing: 0.02em; box-shadow: 0 4px 20px rgba(201,168,76,0.35); }
+    .btn-gold:hover { filter: brightness(1.06); box-shadow: 0 4px 18px rgba(201,168,76,0.45); }
+    .btn-line { background-color: #06C755; color: #fff; font-weight: 600; }
+    .btn-line:hover { background-color: #04A844; }
+    .btn-ghost-light { background: transparent; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.3); }
+    .btn-ghost-light:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.55); color: #fff; }
+    .dark-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); transition: all 0.3s ease; }
+    .dark-card:hover { background: rgba(255,255,255,0.1); border-color: var(--c-gold); }
+    .page-fade-in { opacity: 0; transform: translateY(12px); animation: pageFadeIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards; }
+    @keyframes pageFadeIn { to { opacity: 1; transform: translateY(0); } }
+  </style>
+
+  <!-- Noto Sans JP — print media trick loads it at low priority, won't block paint -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTJY2NGWQ6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
 
-    gtag('config', 'G-TTJY2NGWQ6');
+  <!-- Google Analytics deferred until after load — keeps mobile bandwidth free for JS/CSS bundles -->
+  <script>
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-TTJY2NGWQ6';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-TTJY2NGWQ6');
+    });
   </script>
 </head>
 
