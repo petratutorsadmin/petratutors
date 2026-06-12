@@ -342,8 +342,8 @@
     "cta": "講師を見る"
   },
   "team": {
-    "title": "チーム・運営体制",
-    "subtitle": "Petraの教育哲学と組織戦略を推進するリーダーシップチーム。",
+    "title": "チームメンバー",
+    "subtitle": "Petra Tutorsを支えるメンバーをご紹介します。",
     "role_yutaka": "共同創業者, CFO & COO",
     "role_riku": "共同創業者, CEO & CMO",
     "role_gc": "法務顧問",
@@ -700,7 +700,7 @@
       },
       "tutor-michael": {
         "name": "Michael MacNamara",
-        "university": "東京大学",
+        "university": "東京大学 PEAK（東アジア学）",
         "subjects": [
           "経済学",
           "数学",
@@ -763,7 +763,7 @@
       },
       "tutor-alice": {
         "name": "Alice Williams",
-        "university": "インテリアデザイン（ギャップイヤー）",
+        "university": "英国出身・東京在住",
         "subjects": [
           "英会話",
           "アカデミック英語",
@@ -1010,6 +1010,16 @@
       }
     },
     "f_english": "英語",
+    "f_preschool": "幼稚園・保育園",
+    "f_elementary": "小学生",
+    "f_juniorhigh": "中学生",
+    "f_highschool": "高校生",
+    "f_adults": "大学生・社会人",
+    "f_online": "オンライン",
+    "f_inperson": "対面",
+    "filter_subject": "科目",
+    "filter_age": "対象年齢",
+    "filter_format": "授業形式",
     "f_japanese": "日本語",
     "f_economics": "経済学",
     "f_ib": "IB",

@@ -25,6 +25,19 @@
     color: var(--c-navy);
 }
 
+.filterGroupLabel {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--c-text-light);
+    margin: 1.25rem 0 0.5rem;
+}
+
+.filterGroupLabel:first-of-type {
+    margin-top: 0;
+}
+
 .filterChips {
     display: flex;
     flex-direction: column;
@@ -182,6 +195,29 @@
     color: var(--c-accent);
     font-size: 0.9rem;
     font-weight: 500;
+}
+
+.linkedinLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--c-navy);
+    background: #E8F0FE;
+    border: 1px solid #C5D5F5;
+    text-decoration: none;
+    padding: 0.3rem 0.65rem;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.linkedinLink:hover {
+    background: #D2E3FC;
+    border-color: #A8C4F0;
 }
 
 .tutorMatch {

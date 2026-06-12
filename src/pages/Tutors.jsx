@@ -1,29 +1,29 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
-import { MapPin, Monitor, GraduationCap, X, SlidersHorizontal, Languages } from 'lucide-react';
+import { MapPin, Monitor, GraduationCap, X, SlidersHorizontal, Languages, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
 import styles from './Tutors.module.css';
 
 // New Dataset
 const TUTORS_BASE = [
-    { id: 'tutor-5', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-5.png' }, // Riku
-    { id: 'tutor-4', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-4.png' }, // Yutaka
-    { id: 'tutor-michael', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-michael.jpg' },
+    { id: 'tutor-5', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-5.png', linkedin: 'https://www.linkedin.com/in/rikuishida' }, // Riku
+    { id: 'tutor-4', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-4.png', linkedin: 'https://www.linkedin.com/in/ytakataka/' }, // Yutaka
+    { id: 'tutor-michael', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-michael.jpg', linkedin: 'https://www.linkedin.com/in/michael-macnamara-246a41258' },
     { id: 'tutor-gia', format: ['Online'], image: '/images/tutors/tutor-gia.jpg' },
     { id: 'tutor-maegan', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-maegan.jpg' },
     { id: 'tutor-tina', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-tina.jpg' },
     { id: 'tutor-hannah', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-hannah.jpg' },
-    { id: 'tutor-melody', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-melody.jpg' },
-    { id: 'tutor-cian', format: ['Online'], image: '/images/tutors/tutor-cian.jpg' },
-    { id: 'tutor-sara', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-sara.jpg' },
-    { id: 'tutor-toru', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-toru.jpg' },
-    { id: 'tutor-6', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-6.png' },
+    { id: 'tutor-melody', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-melody.jpg', linkedin: 'https://www.linkedin.com/in/melodynaito' },
+    { id: 'tutor-cian', format: ['Online'], image: '/images/tutors/tutor-cian.jpg', linkedin: 'https://www.linkedin.com/in/cian-forsyth' },
+    { id: 'tutor-sara', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-sara.jpg', linkedin: 'https://www.linkedin.com/in/sara-jeshua-55269b276' },
+    { id: 'tutor-toru', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-toru.jpg', linkedin: 'https://www.linkedin.com/in/toru-hiiragi' },
+    { id: 'tutor-6', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-6.png', linkedin: 'https://www.linkedin.com/in/ulemjbatzorig' },
     { id: 'tutor-hazel', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-hazel.jpg' },
-    { id: 'tutor-2', format: ['Online'], image: '/images/tutors/tutor-2.png' },
+    { id: 'tutor-2', format: ['Online'], image: '/images/tutors/tutor-2.png', linkedin: 'https://www.linkedin.com/in/ronan-daly-inagaki-a2032b231' },
     { id: 'tutor-alice', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-alice.jpg' },
-    { id: 'tutor-siya', format: ['Online'], image: '/images/tutors/tutor-siya.jpg' },
+    { id: 'tutor-siya', format: ['Online'], image: '/images/tutors/tutor-siya.jpg', linkedin: 'https://www.linkedin.com/in/siya-ahuja-371617210' },
     { id: 'tutor-dayun', format: ['Online'], image: '/images/tutors/tutor-dayun.jpg' },
     { id: 'tutor-haruka', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-haruka.png' },
     { id: 'tutor-maya', format: ['Online', 'In-Person'], image: '/images/tutors/tutor-maya.png' },
@@ -41,10 +41,24 @@ export default function Tutors() {
         { id: 'engineering', label: t('tutors.f_engineering', { defaultValue: 'Engineering' }) },
         { id: 'science', label: t('tutors.f_science', { defaultValue: 'Science' }) }
     ];
-    const [activeFilterId, setActiveFilterId] = useState('all');
-    const [selectedTutor, setSelectedTutor] = useState(null);
+    const ageFilters = [
+        { id: 'all', label: t('tutors.f_all') },
+        { id: 'preschool', label: t('tutors.f_preschool'), keywords: ['Preschool', '幼稚園', 'Pre-school', 'preschool'] },
+        { id: 'elementary', label: t('tutors.f_elementary'), keywords: ['Elementary', '小学', 'Primary', 'elementary'] },
+        { id: 'juniorhigh', label: t('tutors.f_juniorhigh'), keywords: ['Junior High', '中学', 'Middle School', 'junior high'] },
+        { id: 'highschool', label: t('tutors.f_highschool'), keywords: ['High School', '高校', 'high school'] },
+        { id: 'adults', label: t('tutors.f_adults'), keywords: ['Adult', '大学', '社会人', 'University', 'adult'] },
+    ];
+    const formatFilters = [
+        { id: 'all', label: t('tutors.f_all') },
+        { id: 'online', label: t('tutors.f_online'), value: 'Online' },
+        { id: 'inperson', label: t('tutors.f_inperson'), value: 'In-Person' },
+    ];
 
-    const isAll = activeFilterId === 'all';
+    const [activeFilterId, setActiveFilterId] = useState('all');
+    const [activeAgeFilterId, setActiveAgeFilterId] = useState('all');
+    const [activeFormatFilterId, setActiveFormatFilterId] = useState('all');
+    const [selectedTutor, setSelectedTutor] = useState(null);
 
     const TUTORS = TUTORS_BASE.map(base => {
         const profile = t(`tutors.profiles.${base.id}`, { returnObjects: true });
@@ -60,25 +74,41 @@ export default function Tutors() {
         };
     });
 
-    const filteredTutors = TUTORS.filter(tutor => {
-        if (isAll) return true;
-        const currentFilterObj = subjectsFilters.find(f => f.id === activeFilterId);
-        const matchString = currentFilterObj ? currentFilterObj.label : '';
+    const matchesSubject = (tutor, filterId) => {
+        if (filterId === 'all') return true;
+        const f = subjectsFilters.find(sf => sf.id === filterId);
+        if (!f) return true;
+        const matchString = f.label.toLowerCase();
         const subjects = tutor.subjects || [];
         const university = tutor.university || '';
-        return subjects.some(s => s.toLowerCase().includes(matchString.toLowerCase())) ||
-            university.toLowerCase().includes(matchString.toLowerCase());
-    });
+        return subjects.some(s => s.toLowerCase().includes(matchString)) ||
+            university.toLowerCase().includes(matchString);
+    };
+
+    const matchesAge = (tutor, filterId) => {
+        if (filterId === 'all') return true;
+        const f = ageFilters.find(af => af.id === filterId);
+        if (!f) return true;
+        const ages = (tutor.targetAges || []).join(' ').toLowerCase();
+        return f.keywords.some(kw => ages.includes(kw.toLowerCase()));
+    };
+
+    const matchesFormat = (tutor, filterId) => {
+        if (filterId === 'all') return true;
+        const f = formatFilters.find(ff => ff.id === filterId);
+        if (!f) return true;
+        return (tutor.format || []).includes(f.value);
+    };
+
+    const filteredTutors = TUTORS.filter(tutor =>
+        matchesSubject(tutor, activeFilterId) &&
+        matchesAge(tutor, activeAgeFilterId) &&
+        matchesFormat(tutor, activeFormatFilterId)
+    );
 
     const getFilterCount = (f) => {
         if (f.id === 'all') return TUTORS.length;
-        const matchString = f.label;
-        return TUTORS.filter(tutor => {
-            const subjects = tutor.subjects || [];
-            const university = tutor.university || '';
-            return subjects.some(s => s.toLowerCase().includes(matchString.toLowerCase())) ||
-                university.toLowerCase().includes(matchString.toLowerCase());
-        }).length;
+        return TUTORS.filter(tutor => matchesSubject(tutor, f.id)).length;
     };
 
     return (
@@ -104,6 +134,8 @@ export default function Tutors() {
                         <SlidersHorizontal size={20} />
                         <span className="text-h4">{t('tutors.filter')}</span>
                     </div>
+
+                    <p className={styles.filterGroupLabel}>{t('tutors.filter_subject')}</p>
                     <div className={styles.filterChips}>
                         {subjectsFilters.map(f => (
                             <button
@@ -112,6 +144,32 @@ export default function Tutors() {
                                 onClick={() => setActiveFilterId(f.id)}
                             >
                                 {f.label} <span style={{ opacity: 0.7, marginLeft: '0.25rem', fontSize: '0.9em' }}>({getFilterCount(f)})</span>
+                            </button>
+                        ))}
+                    </div>
+
+                    <p className={styles.filterGroupLabel}>{t('tutors.filter_age')}</p>
+                    <div className={styles.filterChips}>
+                        {ageFilters.map(f => (
+                            <button
+                                key={f.id}
+                                className={`${styles.filterChip} ${activeAgeFilterId === f.id ? styles.active : ''}`}
+                                onClick={() => setActiveAgeFilterId(f.id)}
+                            >
+                                {f.label}
+                            </button>
+                        ))}
+                    </div>
+
+                    <p className={styles.filterGroupLabel}>{t('tutors.filter_format')}</p>
+                    <div className={styles.filterChips}>
+                        {formatFilters.map(f => (
+                            <button
+                                key={f.id}
+                                className={`${styles.filterChip} ${activeFormatFilterId === f.id ? styles.active : ''}`}
+                                onClick={() => setActiveFormatFilterId(f.id)}
+                            >
+                                {f.label}
                             </button>
                         ))}
                     </div>
@@ -190,6 +248,16 @@ export default function Tutors() {
                                     <p className={styles.university} style={{ fontSize: '1.1rem', marginTop: '0.5rem' }}>
                                         <GraduationCap size={18} /> {selectedTutor.university}
                                     </p>
+                                    {selectedTutor.linkedin && (
+                                        <a
+                                            href={selectedTutor.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className={styles.linkedinLink}
+                                        >
+                                            <ExternalLink size={13} /> LinkedIn
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 

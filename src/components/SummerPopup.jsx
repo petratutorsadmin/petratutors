@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './SummerPopup.module.css';
@@ -23,15 +23,19 @@ const COPY = {
     },
 };
 
+const NO_POPUP_PATHS = new Set(['/team', '/about', '/hiring', '/privacy', '/thank-you', '/tutors']);
+
 export default function SummerPopup() {
     const { i18n } = useTranslation();
+    const { pathname } = useLocation();
     const [visible, setVisible] = useState(false);
     const c = i18n.language === 'ja' ? COPY.ja : COPY.en;
 
     useEffect(() => {
+        if (NO_POPUP_PATHS.has(pathname)) return;
         const timer = setTimeout(() => setVisible(true), 2000);
         return () => clearTimeout(timer);
-    }, []);
+    }, [pathname]);
 
     const handleClose = () => {
         setVisible(false);

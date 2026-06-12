@@ -343,8 +343,8 @@
     "cta": "View Our Tutors"
   },
   "team": {
-    "title": "Academic Leadership",
-    "subtitle": "Meet the team driving Petra's educational philosophy and institutional strategy.",
+    "title": "Our Team",
+    "subtitle": "The people behind Petra Tutors.",
     "role_yutaka": "Co-Founder, CFO, and COO",
     "role_riku": "Co-Founder, CEO, and CMO",
     "role_gc": "General Counsel",
@@ -701,7 +701,7 @@
       },
       "tutor-michael": {
         "name": "Michael MacNamara",
-        "university": "The University of Tokyo",
+        "university": "The University of Tokyo, PEAK (East Asian Studies)",
         "subjects": [
           "Economics",
           "Mathematics",
@@ -764,7 +764,7 @@
       },
       "tutor-alice": {
         "name": "Alice Williams",
-        "university": "Interior Design (Gap Year)",
+        "university": "UK-educated, Tokyo-based",
         "subjects": [
           "English Conversation",
           "Academic English",
@@ -1015,7 +1015,17 @@
     "f_economics": "Economics",
     "f_ib": "IB",
     "f_engineering": "Engineering",
-    "f_science": "Science"
+    "f_science": "Science",
+    "f_preschool": "Preschool",
+    "f_elementary": "Elementary",
+    "f_juniorhigh": "Junior High",
+    "f_highschool": "High School",
+    "f_adults": "Adults",
+    "f_online": "Online",
+    "f_inperson": "In-Person",
+    "filter_subject": "Subject",
+    "filter_age": "Age Group",
+    "filter_format": "Format"
   },
   "pricing": {
     "title": "Simple & Flexible Pricing",
