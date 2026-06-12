@@ -41,7 +41,7 @@ export default function GatewayHome() {
     return (
         <div className={styles.page}>
             <SEO
-                title="英語・IB・海外進学のバイリンガル家庭教師 | 東京・全国オンライン | Petra Tutors"
+                title="英語・IB・海外進学のバイリンガル家庭教師 | 東京・オンライン | Petra Tutors"
                 description="東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。"
                 path="/"
                 jsonLdExtra={{

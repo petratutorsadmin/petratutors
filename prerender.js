@@ -23,7 +23,7 @@ const distSSR = resolve(__dirname, 'dist-ssr');
 // robots: 'noindex, nofollow' prevents indexing of non-public pages.
 const ROUTES = {
   '/': {
-    title: '英語・IB・海外進学のバイリンガル家庭教師 | 東京・全国オンライン | Petra Tutors',
+    title: '英語・IB・海外進学のバイリンガル家庭教師 | 東京・オンライン | Petra Tutors',
     description: '東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。',
     jsonLd: {
       '@context': 'https://schema.org',
@@ -56,7 +56,7 @@ const ROUTES = {
     },
   },
   '/home': {
-    title: '英語・IB・海外進学のバイリンガル家庭教師 | 東京・全国オンライン | Petra Tutors',
+    title: '英語・IB・海外進学のバイリンガル家庭教師 | 東京・オンライン | Petra Tutors',
     description: '東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。',
     robots: 'noindex, follow',
   },
@@ -192,6 +192,7 @@ for (const [route, meta] of Object.entries(ROUTES)) {
   const ogType = route === '/' ? 'website' : 'article';
 
   const headTags = [
+    `  <meta name="description" content="${meta.description}" data-rh="true" />`,
     `  <meta property="og:title" content="${meta.title}" />`,
     `  <meta property="og:description" content="${meta.description}" />`,
     `  <meta property="og:url" content="${canonicalUrl}" />`,
@@ -219,7 +220,6 @@ for (const [route, meta] of Object.entries(ROUTES)) {
 
   let html = template
     .replace(/<title>[^<]*<\/title>/, `<title>${meta.title}</title>`)
-    .replace(/<meta name="description"[^>]*\/?>/, `<meta name="description" content="${meta.description}" />`)
     .replace('</head>', `${headTags.join('\n')}\n</head>`);
 
   // Inject SSR body content into the React root

@@ -7,10 +7,9 @@ export default function FloatingCTA() {
     const { t } = useTranslation();
 
     return (
-        <Link 
-            to="/inquiry" 
+        <Link
+            to="/inquiry"
             className={styles.floatingButton}
-            aria-label="Book Free Consultation"
         >
             <div className={styles.iconWrapper}>
                 <Calendar size={20} />

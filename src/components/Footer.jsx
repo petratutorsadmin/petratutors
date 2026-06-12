@@ -33,7 +33,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.linksCol}>
-                    <h4 className={styles.colTitle}>{t('footer.explore')}</h4>
+                    <h3 className={styles.colTitle}>{t('footer.explore')}</h3>
                     <Link to="/" className={styles.link}>{t('footer.home')}</Link>
                     <Link to="/about" className={styles.link}>{t('footer.about')}</Link>
                     <Link to="/tutors" className={styles.link}>{t('footer.tutors')}</Link>
@@ -50,7 +50,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.linksCol}>
-                    <h4 className={styles.colTitle}>{t('footer.services')}</h4>
+                    <h3 className={styles.colTitle}>{t('footer.services')}</h3>
                     <Link to="/ib" className={styles.link}>{t('footer.service_ib')}</Link>
                     <Link to="/ielts" className={styles.link}>{t('footer.service_ielts')}</Link>
                     <Link to="/university" className={styles.link}>{t('footer.service_university')}</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
                 </div>
 
                 <div className={styles.contactCol}>
-                    <h4 className={styles.colTitle}>{t('footer.contact')}</h4>
+                    <h3 className={styles.colTitle}>{t('footer.contact')}</h3>
                     <Link to="/inquiry" className={`${styles.link} ${styles.footerCtaBtn}`}>
                         {t('footer.inquiry', 'Book Free Trial')}
                     </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
                         <span>admin@petratutors.com</span>
                     </a>
                     <p className={styles.responseTime}>{t('footer.response_time')}</p>
-                    <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="Instagram">
+                    <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="@petratutors on Instagram">
                         <Instagram size={16} />
                         <span>@petratutors</span>
                     </a>
