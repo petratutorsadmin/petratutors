@@ -95,6 +95,12 @@
     display: none;
 }
 
+/* When mobile menu is open, this header must outstack the announcement bar (z-index:200)
+   and the floating CTA (z-index:1000) — everything underneath disappears behind the overlay */
+.navbarMenuOpen {
+    z-index: 9999 !important;
+}
+
 /* ── Desktop lang switcher ── */
 .langSwitcher {
     display: flex;
@@ -262,27 +268,29 @@
     .mobileLangRow {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.6rem;
     }
 
     .mobileLangBtn {
         background: none;
-        border: none;
-        color: rgba(255, 255, 255, 0.35);
-        font-size: 0.72rem;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.1em;
         cursor: pointer;
-        padding: 0.2rem 0.25rem;
-        transition: color 0.15s;
+        padding: 0.3rem 0.7rem;
+        border-radius: var(--radius-sm);
+        transition: color 0.15s, border-color 0.15s;
     }
 
     .mobileLangActive {
         color: var(--c-gold-light);
+        border-color: var(--c-gold-light);
     }
 
     .mobileLangDot {
-        color: rgba(255, 255, 255, 0.18);
+        color: rgba(255, 255, 255, 0.3);
         font-size: 0.9rem;
         line-height: 1;
         pointer-events: none;

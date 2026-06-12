@@ -27,8 +27,14 @@ export default function Navbar({ top = '12px' }) {
         return () => window.removeEventListener('scroll', update);
     }, []);
 
+    // Toggle body class so FloatingCTA and other fixed elements can hide via CSS
+    useEffect(() => {
+        document.body.classList.toggle('mobile-menu-open', isOpen);
+        return () => document.body.classList.remove('mobile-menu-open');
+    }, [isOpen]);
+
     return (
-        <header className={styles.navbarWrapper} style={{ top }}>
+        <header className={`${styles.navbarWrapper} ${isOpen ? styles.navbarMenuOpen : ''}`} style={{ top }}>
             {/* navbarRef gets backdrop-filter on scroll — mobile nav must live OUTSIDE it
                 so backdrop-filter doesn't create a containing block that clips position:fixed */}
             <div ref={navbarRef} className={styles.navbar}>

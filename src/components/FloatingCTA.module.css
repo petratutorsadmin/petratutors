@@ -41,3 +41,8 @@
         font-size: 0.85rem;
     }
 }
+
+/* Hide when the mobile menu is open */
+:global(body.mobile-menu-open) .floatingButton {
+    display: none;
+}
