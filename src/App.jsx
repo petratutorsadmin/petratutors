@@ -40,7 +40,7 @@ const ThePetraEcosystem = lazy(() => import('./pages/ThePetraEcosystem'));
 const TutorDivisions = lazy(() => import('./pages/TutorDivisions'));
 const TutorProgression = lazy(() => import('./pages/TutorProgression'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
-const Summer = lazy(() => import('./pages/Summer'));
+import Summer from './pages/Summer';
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 import ScrollToTop from './components/ScrollToTop';

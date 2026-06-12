@@ -23,7 +23,7 @@ const COPY = {
     },
 };
 
-const NO_POPUP_PATHS = new Set(['/team', '/about', '/hiring', '/privacy', '/thank-you', '/tutors']);
+const NO_POPUP_PATHS = new Set(['/team', '/about', '/hiring', '/privacy', '/thank-you', '/tutors', '/summer']);
 
 const DISMISSED_KEY = 'petra_summer_popup_dismissed';
 

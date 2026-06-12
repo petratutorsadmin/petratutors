@@ -3,10 +3,14 @@
   background-color: var(--c-deep);
   color: var(--c-text-on-dark);
   overflow-x: hidden;
+  --c-text-on-dark-light: rgba(255, 255, 255, 0.75);
 }
 
 .page h1, .page h2, .page h3 {
   color: #ffffff;
+  word-break: keep-all;
+  line-break: strict;
+  text-wrap: balance;
 }
 
 .container {
@@ -447,6 +451,81 @@
   background: rgba(201, 168, 76, 0.04);
 }
 
+.mobilePricingCards {
+  display: none;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.pricingCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.premiumPricingCard {
+  background: rgba(201, 168, 76, 0.04);
+  border-color: rgba(201, 168, 76, 0.2);
+}
+
+.pricingCardName {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.pricingCardPlans {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.pricingCardPlan {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.pricingCardBestFor {
+  font-size: 0.85rem;
+  color: var(--c-text-on-dark-light);
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.pricingCardPlanDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.pricingCardPlanInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.pricingCardSessions {
+  font-size: 0.85rem;
+  color: #ffffff;
+}
+
+.pricingCardPer {
+  font-size: 0.75rem;
+  color: var(--c-text-on-dark-light);
+  opacity: 0.8;
+}
+
+.pricingCardTotal {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--c-gold-light);
+}
+
 .pricingIntro {
   font-size: 0.95rem;
   color: var(--c-text-on-dark-light);
@@ -708,5 +787,11 @@
   .priceTable td {
     padding: 0.6rem 0.75rem;
     font-size: 0.82rem;
+  }
+  .tableWrap {
+    display: none;
+  }
+  .mobilePricingCards {
+    display: flex;
   }
 }

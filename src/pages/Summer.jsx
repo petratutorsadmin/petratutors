@@ -143,13 +143,11 @@ const CONTENT = {
         pricingHelp: 'Not sure which plan is right?',
         pricingHelpBody: 'The free trial lesson is there for exactly this reason. We assess your child\'s level, goals, and learning style, then suggest the plan that fits. We won\'t push a higher plan than needed.',
         scheduleTitle: 'Summer 2026 Schedule',
-        scheduleSub: 'July 21 – August 29 / 5 phases',
+        scheduleSub: 'July 21 – August 29 / 3 blocks',
         schedule: [
-            { phase: 'Enrollment open', period: 'Now – July 18', label: 'Free trials available', desc: 'Book a trial lesson or get in touch with any questions.', accent: '#94A3B8' },
             { phase: 'Early block', period: 'Tue Jul 21 – Fri Aug 1', label: 'All programs', desc: '12 days. Ideal for families who want to finish before summer travel.', accent: '#60A5FA' },
             { phase: 'Mid-break (flexible)', period: 'Sat Aug 2 – Sun Aug 17', label: 'International & Premium only', desc: 'Obon holidays and family trips. Flexible scheduling available.', accent: '#A78BFA' },
             { phase: 'Late block', period: 'Tue Aug 18 – Fri Aug 29', label: 'Eiken & Support especially recommended', desc: '12 days. Final push before Semester 2 and the autumn Eiken sitting.', accent: '#34D399' },
-            { phase: 'Ongoing', period: 'September onward', label: 'Monthly plan transition', desc: 'Summer students are invited to continue with a monthly tutoring plan.', accent: '#C9A84C' },
         ],
         ctaTitle: 'Apply for Summer 2026',
         ctaDesc: 'Tell us your name, email, and which program you are interested in. We will follow up within 24 hours with next steps.',
@@ -173,7 +171,7 @@ const CONTENT = {
         seoDesc: 'Petra Tutors（ペトラチューターズ）の夏期講習2026。7月21日〜8月29日。英語・英検・IB・SAT対応。完全1:1マンツーマン。¥14,000〜。無料体験レッスンあり。',
         heroTitle: '夏期講習',
         heroYear: '2026',
-        heroSub: 'オンライン・対面対応の個別集中レッスン',
+        heroSub: 'オンライン・対面対応 個別集中レッスン',
         heroDate: '2026年7月21日 – 8月29日',
         stat1Lbl: 'プログラム',
         stat2Lbl: '最低総額',
@@ -285,20 +283,18 @@ const CONTENT = {
         pricingHelp: 'どのプランが合うか分からない場合',
         pricingHelpBody: 'まずは無料体験レッスンで現在の理解度・目標・学習スタイルを確認し、お子様に合う回数や内容をご提案いたします。無理に高いプランをご案内するのではなく、必要な内容に合わせてご相談いたします。',
         scheduleTitle: '2026年夏 実施スケジュール',
-        scheduleSub: '7月21日 – 8月29日 / 5フェーズ',
+        scheduleSub: '7月21日 – 8月29日 / 3フェーズ',
         schedule: [
-            { phase: '告知・集客', period: '今すぐ〜7/18', label: '無料体験受付中', desc: '体験レッスン予約・お問い合わせ対応', accent: '#94A3B8' },
             { phase: '前期', period: '7/21（火）– 8/1（金）', label: '全プログラム対応', desc: '12日間。早め開始・旅行前に終わらせたい家庭に最適。', accent: '#60A5FA' },
             { phase: '中間（自由期間）', period: '8/2（土）– 8/17（日）', label: 'インター・プレミアムのみ推奨', desc: 'お盆・旅行が多い時期。フレキシブル対応。', accent: '#A78BFA' },
             { phase: '後期', period: '8/18（火）– 8/29（金）', label: '英検・サポート特に推奨', desc: '12日間。2学期直前・英検秋受験前の仕上げ。緊急性が最も高い。', accent: '#34D399' },
-            { phase: '継続転換', period: '9月〜', label: '月謝コースへ移行', desc: '夏期受講生への継続提案。成果報告面談。', accent: '#C9A84C' },
         ],
         ctaTitle: '夏期講習 2026 に申し込む',
         ctaDesc: 'お名前・メールアドレス・ご希望のプログラムをお送りください。24時間以内にご連絡いたします。',
         formName: 'お名前',
         formEmail: 'メールアドレス',
         formProgram: 'プログラム',
-        formProgramDefault: 'プログラムを選択してください',
+        formProgramDefault: 'プログラムを選択',
         formProgramOptions: [
             'ミニ英語集中コース',
             '英語・学習サポートコース',
@@ -318,6 +314,15 @@ export default function Summer() {
     const [formData, setFormData] = useState({ name: '', email: '', program: '' });
     const [sent, setSent] = useState(false);
     const [submitting, setSubmitting] = useState(false);
+
+    const pricingGroups = [];
+    c.tableRows.forEach(row => {
+        if (row.name) {
+            pricingGroups.push({ name: row.name, premium: row.premium, plans: [row] });
+        } else {
+            pricingGroups[pricingGroups.length - 1].plans.push(row);
+        }
+    });
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -405,7 +410,7 @@ export default function Summer() {
                             </div>
                         </div>
 
-                        <div className={styles.heroCtas}>
+                        <div id="hero-ctas" className={styles.heroCtas}>
                             <a href="#summer-form" className={styles.ctaPrimary}>{c.ctaPrimary}</a>
                             <a href="#summer-form" className={styles.ctaSecondary}>{c.ctaSecondary}</a>
                         </div>
@@ -517,6 +522,29 @@ export default function Summer() {
                                     ))}
                                 </tbody>
                             </table>
+                        </div>
+                        <div className={styles.mobilePricingCards}>
+                            {pricingGroups.map((group, i) => (
+                                <div key={i} className={`${styles.pricingCard} ${group.premium ? styles.premiumPricingCard : ''}`}>
+                                    <h3 className={styles.pricingCardName}>{group.name}</h3>
+                                    <div className={styles.pricingCardPlans}>
+                                        {group.plans.map((plan, j) => (
+                                            <div key={j} className={styles.pricingCardPlan}>
+                                                <div className={styles.pricingCardPlanTop}>
+                                                    <span className={styles.pricingCardBestFor}>{plan.bestFor}</span>
+                                                </div>
+                                                <div className={styles.pricingCardPlanDetails}>
+                                                    <div className={styles.pricingCardPlanInfo}>
+                                                        <span className={styles.pricingCardSessions}>{plan.sessions}</span>
+                                                        <span className={styles.pricingCardPer}>{plan.per}</span>
+                                                    </div>
+                                                    <span className={styles.pricingCardTotal}>{plan.total}</span>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                         <p className={styles.tableNote}>{c.tableNote}</p>
                         <p className={styles.tableOnlineNote}>{c.pricingOnline}</p>
