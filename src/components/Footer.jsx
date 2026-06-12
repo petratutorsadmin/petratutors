@@ -80,7 +80,7 @@ export default function Footer() {
             </div>
             <div className={styles.bottom}>
                 <div className="container">
-                    <p>&copy; {new Date().getFullYear()} Petra Tutors. All rights reserved.</p>
+                    <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Petra Tutors. All rights reserved.</p>
                     <p className={styles.legalText}>
                         {t('footer.legal_info')}
                         <span className={styles.legalSep}>·</span>

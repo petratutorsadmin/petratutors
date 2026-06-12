@@ -1,5 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
+import { Suspense } from 'react';
 import Layout from './components/Layout';
+import BoutiqueLoader from './components/BoutiqueLoader';
+import ScrollToTop from './components/ScrollToTop';
+import SummerPopup from './components/SummerPopup';
 
 import GatewayHome from './pages/GatewayHome';
 import LandingIB from './pages/LandingIB';
@@ -29,35 +33,42 @@ import NotFound from './pages/NotFound';
 
 export default function AppSSR() {
     return (
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<GatewayHome />} />
-                <Route path="ib" element={<LandingIB />} />
-                <Route path="ielts" element={<LandingIELTS />} />
-                <Route path="foundation" element={<LandingFoundation />} />
-                <Route path="university" element={<LandingUniversity />} />
-                <Route path="kids" element={<LandingKids />} />
-                <Route path="english" element={<LandingEnglish />} />
-                <Route path="business" element={<BusinessLanding />} />
-                <Route path="home" element={<Home />} />
-                <Route path="system" element={<ThePetraEcosystem />} />
-                <Route path="tutors" element={<Tutors />} />
-                <Route path="team" element={<Team />} />
-                <Route path="pricing" element={<Pricing />} />
-                <Route path="inquiry" element={<Inquiry />} />
-                <Route path="thank-you" element={<ThankYou />} />
-                <Route path="about" element={<About />} />
-                <Route path="no-admission-fee" element={<NoAdmissionFee />} />
-                <Route path="hiring" element={<Hiring />} />
-                <Route path="faq" element={<FAQPage />} />
-                <Route path="keystone" element={<Keystone />} />
-                <Route path="ecosystem" element={<ThePetraEcosystem />} />
-                <Route path="apply/divisions" element={<TutorDivisions />} />
-                <Route path="apply/progression" element={<TutorProgression />} />
-                <Route path="privacy" element={<PrivacyPolicy />} />
-                <Route path="summer" element={<Summer />} />
-                <Route path="*" element={<NotFound />} />
-            </Route>
-        </Routes>
+        <>
+            <BoutiqueLoader />
+            <ScrollToTop />
+            <SummerPopup />
+            <Suspense fallback={<div style={{ minHeight: '100vh', backgroundColor: 'var(--c-sand)' }} />}>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<GatewayHome />} />
+                        <Route path="ib" element={<LandingIB />} />
+                        <Route path="ielts" element={<LandingIELTS />} />
+                        <Route path="foundation" element={<LandingFoundation />} />
+                        <Route path="university" element={<LandingUniversity />} />
+                        <Route path="kids" element={<LandingKids />} />
+                        <Route path="english" element={<LandingEnglish />} />
+                        <Route path="business" element={<BusinessLanding />} />
+                        <Route path="home" element={<Home />} />
+                        <Route path="system" element={<ThePetraEcosystem />} />
+                        <Route path="tutors" element={<Tutors />} />
+                        <Route path="team" element={<Team />} />
+                        <Route path="pricing" element={<Pricing />} />
+                        <Route path="inquiry" element={<Inquiry />} />
+                        <Route path="thank-you" element={<ThankYou />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="no-admission-fee" element={<NoAdmissionFee />} />
+                        <Route path="hiring" element={<Hiring />} />
+                        <Route path="faq" element={<FAQPage />} />
+                        <Route path="keystone" element={<Keystone />} />
+                        <Route path="ecosystem" element={<ThePetraEcosystem />} />
+                        <Route path="apply/divisions" element={<TutorDivisions />} />
+                        <Route path="apply/progression" element={<TutorProgression />} />
+                        <Route path="privacy" element={<PrivacyPolicy />} />
+                        <Route path="summer" element={<Summer />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Route>
+                </Routes>
+            </Suspense>
+        </>
     );
 }

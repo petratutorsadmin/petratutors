@@ -4,13 +4,13 @@ import styles from './AnnouncementBar.module.css';
 
 const COPY = {
     en: {
-        text: 'Summer Intensive 2026 | Now Enrolling · July 21 – Aug 29 · From ¥14,000',
+        text: 'Summer Intensive 2026  ·  Now Enrolling  ·  July 21 – Aug 29  ·  From ¥14,000',
         textShort: 'Summer Intensive 2026 · Now Enrolling',
         cta: 'View Programs',
     },
     ja: {
-        text: '夏期講習 2026 受付中 · 7月21日〜8月29日 · ¥14,000〜',
-        textShort: '夏期講習 2026 受付中',
+        text: '夏期講習 2026  ·  受付中  ·  7月21日〜8月29日  ·  ¥14,000〜',
+        textShort: '夏期講習 2026  ·  受付中',
         cta: 'プログラムを見る',
     },
 };
@@ -28,6 +28,7 @@ export default function AnnouncementBar() {
         <div className={styles.bar}>
             <span className={styles.text}>{c.text}</span>
             <span className={styles.textShort}>{c.textShort}</span>
+            <span className={styles.dot} aria-hidden="true" />
             <Link to="/summer" className={styles.cta}>{c.cta}</Link>
         </div>
     );

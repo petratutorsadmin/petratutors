@@ -85,71 +85,156 @@
     border: none;
     color: var(--c-navy);
     cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
 }
 
+/* ── Mobile nav overlay ── */
 .mobileNav {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100vw;
-    height: 100vh;
-    background-color: var(--c-white);
+    height: 100dvh;
+    background-color: var(--c-deep);
     z-index: 1000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
-    overflow-y: auto;
+    transition: opacity 0.22s ease;
+    flex-direction: column;
 }
 
 .mobileNavOpen {
-    display: block;
     opacity: 1;
     pointer-events: auto;
 }
 
-.mobileNavContainer {
+/* Header row: logo + close */
+.mobileNavHeader {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    min-height: 100%;
-    padding: 2rem;
-    text-align: center;
+    justify-content: space-between;
+    padding: 1.1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 
+.mobileNavLogo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-brand);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+
+.mobileNavClose {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    padding: 0.25rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Link list */
 .mobileNavLinks {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
+    flex: 1;
+    padding: 0.5rem 0;
+    overflow-y: auto;
 }
 
 .mobileNavLink {
-    display: block;
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--c-navy);
-    padding: 0.5rem 0;
-    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.82);
+    padding: 1.05rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    letter-spacing: 0.01em;
+    transition: color 0.15s, background 0.15s;
+    text-decoration: none;
 }
 
 .mobileNavLink:active {
-    color: var(--c-accent);
+    color: var(--c-gold-light);
+    background: rgba(255, 255, 255, 0.04);
 }
 
-.mobileExtraSection {
-    width: 100%;
-    max-width: 320px;
+/* Footer: CTA + lang */
+.mobileNavFooter {
+    padding: 1.25rem 1.5rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .mobileNavCta {
-    margin-top: 1.5rem;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    display: block;
+    text-align: center;
+    background: var(--c-gold);
+    color: var(--c-deep);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: opacity 0.15s;
 }
 
+.mobileNavCta:active {
+    opacity: 0.85;
+}
+
+.mobileLangRow {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.mobileLangGlobe {
+    color: rgba(255, 255, 255, 0.35);
+    flex-shrink: 0;
+}
+
+.mobileLangPill {
+    display: flex;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-sm);
+    padding: 2px;
+    gap: 2px;
+}
+
+.mobileLangBtn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.65rem;
+    border-radius: calc(var(--radius-sm) - 1px);
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.mobileLangActive {
+    background: var(--c-gold);
+    color: var(--c-deep);
+}
+
+/* ── Desktop lang switcher ── */
 .langSwitcher {
     display: flex;
     align-items: center;
@@ -186,39 +271,19 @@
     color: var(--c-white);
 }
 
-.mobileLangSection {
-    padding: 1.5rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    border-bottom: 1px solid var(--c-border);
-}
-
-.mobileLangSection .pill {
-    padding: 4px;
-    width: 100%;
-}
-
-.mobileLangSection .langBtn {
-    flex: 1;
-    padding: 0.75rem;
-    font-size: 0.9rem;
-}
-
-
+/* ── Responsive show/hide ── */
 @media (max-width: 768px) {
     .desktopNav {
         display: none !important;
     }
 
     .mobileToggle {
-        display: block !important;
+        display: flex !important;
         z-index: 1100 !important;
         position: relative !important;
     }
 
     .mobileNav {
-        display: block !important;
-        background-color: var(--c-white) !important;
+        display: flex !important;
     }
 }

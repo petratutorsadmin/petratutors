@@ -9,6 +9,7 @@ import '@fontsource/inter/latin-400.css'
 import '@fontsource/inter/latin-500.css'
 import '@fontsource/inter/latin-600.css'
 import '@fontsource/lexend-peta/latin-400.css'
+import '@fontsource/noto-sans-jp/400.css'
 import './i18n'
 import { Analytics } from '@vercel/analytics/react'
 
