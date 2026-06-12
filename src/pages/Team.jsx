@@ -65,6 +65,15 @@ const DIRECTORS = [
         image: '/images/tutors/tutor-gia.jpg',
         objectPosition: 'center 20%',
         initials: 'GD'
+    },
+    {
+        id: 'yousef',
+        name: 'Yousef Saito Alkuwari',
+        roleKey: 'team.role_gc_intern',
+        descKey: 'team.yousef_desc',
+        image: '/images/tutors/tutor-yousef.png',
+        objectPosition: 'center 20%',
+        initials: 'YA'
     }
 ];
 

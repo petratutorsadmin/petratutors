@@ -351,6 +351,7 @@
     "role_her": "Director of External Communications",
     "role_hr": "Director of Human Resources",
     "role_marketing_intern": "Marketing Operations Intern",
+    "role_gc_intern": "Graphic Communication Design Intern",
     "yutaka_desc": "Co-founded Petra and leads operations, finance, and institutional growth. Oversees end-to-end business functions including revenue management, pricing strategy, and client lifecycle systems. Focused on evolving Petra from a tutor network into a structured, system-driven academic institution with measurable outcomes.",
     "riku_desc": "Co-founded Petra and leads the organisation as CEO and CMO. Oversees tutor recruitment from leading universities worldwide (including Keio, the University of Hong Kong, LSE, and Maastricht) and drives program design, student onboarding, and marketing strategy. Focused on building a globally connected academic network that places the right mentor with every student.",
     "mannat_desc": "Advises on corporate governance and international educational compliance, ensuring that Petra’s operational framework aligns with the highest global standards for academic institutions.",
@@ -358,6 +359,7 @@
     "shinto_desc": "Oversees talent acquisition and the professional development of our global mentor network, ensuring that every educator meets Petra's rigorous standards for mentorship capability.",
     "melody_desc": "Melody supports Petra’s marketing operations, outreach, and international community engagement initiatives. With experience in marketing communications and strong ties to international school communities, she focuses on student outreach, campaign coordination, and helping Petra expand its global-minded educational network.",
     "gia_desc": "Gia supports Petra’s marketing operations and outreach with a grounded, international perspective. As a Waseda University undergraduate who has spent most of her life in international environments, she understands the challenges students face when navigating English and academic transitions. She contributes to community engagement while also teaching conversational English, university essay writing, and social studies to junior high and high school students.",
+    "yousef_desc": "Yousef brings a distinctly international lens to Petra’s visual identity. Japanese-Bahraini and currently studying BA Graphic Communication Design at Central Saint Martins, he has six years of self-taught and Adobe-certified experience in After Effects and motion design. His practice explores the relationship between design, user experience, and broader cultural questions, bringing rigorous visual thinking to everything he touches.",
     "final_title": "Ready to get started?",
     "final_cta": "Request Consultation"
   },
@@ -970,6 +972,41 @@
         "idealMatch": "Preschoolers, junior high, and high school students looking for a friendly, native English-speaking tutor to build real communication confidence.",
         "successCase": "Taught a preschool-age child (4–5 years old) for six months, developing engaging, age-appropriate lessons that made English fun and accessible.",
         "lessonStyle": "Friendly and encouraging, with interactive student-centered lessons that keep learners motivated and excited about English.",
+        "role": "Associate Tutor"
+      },
+      "tutor-himiko": {
+        "name": "Himiko Koga",
+        "university": "Sophia University, Faculty of Liberal Arts",
+        "subjects": [
+          "English Conversation",
+          "Academic English",
+          "IB Math Analysis & Approaches",
+          "IB Japanese B",
+          "IB English A (Essay Writing)",
+          "IGCSE Sciences",
+          "IELTS / Eiken / TOEIC / TOEFL",
+          "University Preparation",
+          "Interview Preparation"
+        ],
+        "targetAges": [
+          "Preschool (age 4+)",
+          "Elementary school",
+          "Junior high",
+          "High school"
+        ],
+        "languages": [
+          "English",
+          "Japanese"
+        ],
+        "intro": "Hello! My name is Himiko and I am a tutor at Sophia University's Faculty of Liberal Arts, studying Anthropology and Sociology. I have two years of tutoring experience, having worked at Lykeio and EGCIS, teaching everything from conversational English to Grade 11 IB coursework, including IB Math and IGCSE Sciences. I tailor my lessons to each student's level and goals, and can teach in both English and Japanese.",
+        "strengths": [
+          "IB & IGCSE Specialist",
+          "Bilingual Instruction (EN/JA)",
+          "English Qualifications (IELTS, Eiken, TOEIC, TOEFL)"
+        ],
+        "idealMatch": "Students from preschool age through high school who need support with IB subjects, IGCSE Sciences, English qualifications, or university preparation. Particularly strong for bilingual learners.",
+        "successCase": "Taught a range of IB and IGCSE subjects over two years, from conversational English with younger students to Grade 11 IB Math and IGCSE Sciences, adapting instruction style and language to each student.",
+        "lessonStyle": "Patient and adaptive, delivering lessons in English or Japanese depending on the student's preference, with a focus on genuine understanding and building confidence for exams.",
         "role": "Associate Tutor"
       }
     },
