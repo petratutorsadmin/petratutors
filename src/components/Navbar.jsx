@@ -75,19 +75,18 @@ export default function Navbar({ top = '12px' }) {
                 </button>
             </div>
 
-            {/* Mobile Nav Overlay */}
+            {/* Mobile Nav Overlay — full screen */}
             <div className={`${styles.mobileNav} ${isOpen ? styles.mobileNavOpen : ''}`}>
-                <div className={styles.mobileNavHeader}>
-                    <Link to="/" className={styles.mobileNavLogo} onClick={() => setIsOpen(false)}>
-                        <img src="/logo-optimized.webp" alt="Petra Tutors" width="24" height="24" />
-                        <span>{t('nav.petra', 'Petra Tutors')}</span>
+                <div className={styles.mobileNavTop}>
+                    <Link to="/" className={styles.mobileNavBrand} onClick={() => setIsOpen(false)}>
+                        <img src="/logo-optimized.webp" alt="Petra Tutors" width="28" height="28" />
                     </Link>
                     <button className={styles.mobileNavClose} onClick={() => setIsOpen(false)} aria-label="Close menu">
-                        <X size={22} />
+                        <X size={20} />
                     </button>
                 </div>
 
-                <div className={styles.mobileNavLinks}>
+                <nav className={styles.mobileNavLinks}>
                     <Link to="/about" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.about')}</Link>
                     <Link to="/team" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.team')}</Link>
                     <Link to="/ecosystem" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.programs')}</Link>
@@ -96,24 +95,22 @@ export default function Navbar({ top = '12px' }) {
                     <Link to="/keystone" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>
                         {t('nav.publication', 'The Keystone')}
                     </Link>
-                </div>
+                </nav>
 
-                <div className={styles.mobileNavFooter}>
+                <div className={styles.mobileNavBottom}>
                     <Link to="/inquiry" className={styles.mobileNavCta} onClick={() => setIsOpen(false)}>
                         {t('nav.bookTrial', 'Book a Trial')}
                     </Link>
                     <div className={styles.mobileLangRow}>
-                        <Globe size={14} aria-hidden="true" className={styles.mobileLangGlobe} />
-                        <div className={styles.mobileLangPill}>
-                            <button
-                                onClick={() => { i18n.changeLanguage('en'); setIsOpen(false); }}
-                                className={`${styles.mobileLangBtn} ${i18n.language === 'en' ? styles.mobileLangActive : ''}`}
-                            >EN</button>
-                            <button
-                                onClick={() => { i18n.changeLanguage('ja'); setIsOpen(false); }}
-                                className={`${styles.mobileLangBtn} ${i18n.language === 'ja' ? styles.mobileLangActive : ''}`}
-                            >JP</button>
-                        </div>
+                        <button
+                            onClick={() => i18n.changeLanguage('en')}
+                            className={`${styles.mobileLangBtn} ${i18n.language === 'en' ? styles.mobileLangActive : ''}`}
+                        >EN</button>
+                        <span className={styles.mobileLangDot} aria-hidden="true">·</span>
+                        <button
+                            onClick={() => i18n.changeLanguage('ja')}
+                            className={`${styles.mobileLangBtn} ${i18n.language === 'ja' ? styles.mobileLangActive : ''}`}
+                        >JP</button>
                     </div>
                 </div>
             </div>

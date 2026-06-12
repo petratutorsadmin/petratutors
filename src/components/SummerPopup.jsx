@@ -25,6 +25,8 @@ const COPY = {
 
 const NO_POPUP_PATHS = new Set(['/team', '/about', '/hiring', '/privacy', '/thank-you', '/tutors']);
 
+const DISMISSED_KEY = 'petra_summer_popup_dismissed';
+
 export default function SummerPopup() {
     const { i18n } = useTranslation();
     const { pathname } = useLocation();
@@ -33,12 +35,14 @@ export default function SummerPopup() {
 
     useEffect(() => {
         if (NO_POPUP_PATHS.has(pathname)) return;
+        if (sessionStorage.getItem(DISMISSED_KEY)) return;
         const timer = setTimeout(() => setVisible(true), 2000);
         return () => clearTimeout(timer);
     }, [pathname]);
 
     const handleClose = () => {
         setVisible(false);
+        sessionStorage.setItem(DISMISSED_KEY, '1');
     };
 
     if (!visible) return null;
