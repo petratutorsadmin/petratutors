@@ -11,13 +11,16 @@ export default function Inquiry() {
     const [isSucceeded, setIsSucceeded] = useState(false);
     const [emailError, setEmailError] = useState(false);
     
-    // Initialize state from local storage if available
+    // Initialize state from local storage if available (guard for SSR)
     const [step, setStep] = useState(() => {
+        if (typeof window === 'undefined') return 1;
         const savedStep = localStorage.getItem('petra_inquiry_step');
         return savedStep ? parseInt(savedStep, 10) : 1;
     });
-    
+
     const [formData, setFormData] = useState(() => {
+        const defaults = { purpose: '', grade: '', frequency: '', name: '', email: '', subject: '', goal: '' };
+        if (typeof window === 'undefined') return defaults;
         const savedData = localStorage.getItem('petra_inquiry_data');
         if (savedData) {
             try {
@@ -26,15 +29,7 @@ export default function Inquiry() {
                 console.error("Failed to parse saved inquiry data");
             }
         }
-        return {
-            purpose: '',
-            grade: '',
-            frequency: '',
-            name: '',
-            email: '',
-            subject: '',
-            goal: ''
-        };
+        return defaults;
     });
 
     // Save to local storage whenever data or step changes
