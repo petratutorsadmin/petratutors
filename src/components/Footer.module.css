@@ -61,14 +61,24 @@
 .link {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.95rem;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    min-height: 36px;
+    padding: 0.1rem 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .link:hover {
     color: var(--c-white);
+}
+
+.link:focus-visible {
+    outline: 2px solid rgba(255,255,255,0.5);
+    outline-offset: 2px;
+    border-radius: 2px;
 }
 
 .social {
@@ -161,6 +171,40 @@
     .footerGrid {
         grid-template-columns: 1fr;
         gap: var(--space-lg);
+        padding-bottom: var(--space-lg);
+    }
+
+    .brandCol {
+        max-width: 100%;
+    }
+
+    .linksCol,
+    .contactCol {
+        gap: 0.25rem;
+    }
+
+    .link {
+        min-height: 44px;
+        font-size: 1rem;
+    }
+
+    .footerCtaBtn {
+        min-height: 48px;
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+
+    .lineBtn {
+        min-height: 44px;
+        padding: 0.6rem 1rem;
+    }
+
+    .bottom {
+        text-align: left;
+    }
+
+    .legalText {
+        justify-content: flex-start;
     }
 }
 

@@ -86,8 +86,25 @@
     border: none;
     color: var(--c-navy);
     cursor: pointer;
-    padding: 0.25rem;
+    padding: 0.5rem;
     line-height: 1;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.15s;
+}
+
+.mobileToggle:hover {
+    background-color: rgba(48, 27, 71, 0.06);
+}
+
+.mobileToggle:focus-visible {
+    outline: 3px solid var(--c-accent);
+    outline-offset: 2px;
 }
 
 /* Hidden on desktop, shown + styled inside the mobile media query */
@@ -199,10 +216,22 @@
         border: none;
         color: rgba(255, 255, 255, 0.55);
         cursor: pointer;
-        padding: 0.25rem;
+        padding: 0.5rem;
         line-height: 1;
         display: flex;
         align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        min-height: 44px;
+        border-radius: var(--radius-sm);
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        transition: color 0.15s;
+    }
+
+    .mobileNavClose:focus-visible {
+        outline: 2px solid rgba(255,255,255,0.5);
+        outline-offset: 2px;
     }
 
     /* Centered large serif links */
@@ -246,22 +275,32 @@
     }
 
     .mobileNavCta {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        background: var(--c-gold);
+        background: linear-gradient(135deg, var(--c-gold) 0%, #E8C060 100%);
         color: var(--c-deep);
-        font-size: 0.82rem;
+        font-size: 0.88rem;
         font-weight: 700;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        padding: 0.8rem 2.5rem;
+        letter-spacing: 0.04em;
+        padding: 0.9rem 2.5rem;
         border-radius: var(--radius-md);
         text-decoration: none;
-        transition: opacity 0.15s;
+        min-height: 48px;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        transition: filter 0.15s, transform 0.15s;
     }
 
     .mobileNavCta:active {
-        opacity: 0.85;
+        filter: brightness(0.96);
+        transform: scale(0.98);
+    }
+
+    .mobileNavCta:focus-visible {
+        outline: 3px solid var(--c-gold-light);
+        outline-offset: 3px;
     }
 
     /* EN · JP switcher */

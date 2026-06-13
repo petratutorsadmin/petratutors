@@ -73,7 +73,9 @@ export default function Navbar({ top = '12px' }) {
                     <button
                         className={styles.mobileToggle}
                         onClick={() => setIsOpen(!isOpen)}
-                        aria-label="Toggle menu"
+                        aria-label={isOpen ? 'メニューを閉じる' : 'メニューを開く'}
+                        aria-expanded={isOpen}
+                        aria-controls="mobile-nav-menu"
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -82,7 +84,11 @@ export default function Navbar({ top = '12px' }) {
 
             {/* Mobile Nav Overlay — sibling of navbarRef, not a child.
                 position:fixed here is relative to the viewport, not the blur container. */}
-            <div className={`${styles.mobileNav} ${isOpen ? styles.mobileNavOpen : ''}`}>
+            <div
+                id="mobile-nav-menu"
+                className={`${styles.mobileNav} ${isOpen ? styles.mobileNavOpen : ''}`}
+                aria-hidden={!isOpen}
+            >
                 <div className={styles.mobileNavTop}>
                     <Link to="/" className={styles.mobileNavBrand} onClick={() => setIsOpen(false)}>
                         <img src="/logo-optimized.webp" alt="Petra Tutors" width="28" height="28" />

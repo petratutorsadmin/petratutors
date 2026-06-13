@@ -19,10 +19,11 @@ export default function Home() {
                     <p className={`text-large ${styles.heroSubtitle}`}>
                         {t('home.hero_subtitle')}
                     </p>
-                    <div className={styles.heroCtas}>
+                    <div id="hero-ctas" className={styles.heroCtas}>
                         <Link to="/inquiry" className="btn btn-gold">{t('home.cta_primary')}</Link>
                         <Link to="/ecosystem" className="btn btn-secondary">{t('home.cta_secondary')}</Link>
                     </div>
+                    <p className={styles.heroTrust}>{t('home.hero_trust')}</p>
                     <div className={styles.heroContact}>
                         <a href="mailto:admin@petratutors.com" className={styles.heroContactLink}>
                             <Mail size={13} /> admin@petratutors.com
@@ -240,12 +241,12 @@ export default function Home() {
             <section className={styles.finalCta}>
                 <div className={`container text-center animate-on-scroll`}>
                     <h2 className="text-h2" style={{ marginBottom: 'var(--space-sm)' }}>{t('home.final_title')}</h2>
-                    <p className="text-large" style={{ marginBottom: 'var(--space-md)', color: 'rgba(255,255,255,0.9)', maxWidth: '600px', margin: '0 auto 2rem' }}>
+                    <p className="text-large" style={{ marginBottom: 'var(--space-md)', color: 'rgba(255,255,255,0.9)', maxWidth: '560px', margin: '0 auto 2rem' }}>
                         {t('home.final_desc')}
                     </p>
                     <div className={styles.finalCtas}>
-                        <Link to="/inquiry" className="btn btn-primary" style={{ backgroundColor: 'var(--c-sand)', color: 'var(--c-navy)' }}>{t('home.final_cta')}</Link>
-                        <a href="https://line.me" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
+                        <Link to="/inquiry" className="btn btn-gold">{t('home.final_cta')}</Link>
+                        <a href={t('nav.line_url')} target="_blank" rel="noopener noreferrer" className="btn btn-ghost-light">
                             {t('nav.line_cta')}
                         </a>
                     </div>

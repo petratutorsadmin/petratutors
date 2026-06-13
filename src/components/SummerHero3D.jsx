@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Environment, Float, MeshTransmissionMaterial, Sparkles } from '@react-three/drei';
-import { useLocation } from 'react-router-dom';
 import gsap from 'gsap';
 
 function AbstractShape({ isDarkRoute }) {
@@ -61,29 +60,37 @@ function AbstractShape({ isDarkRoute }) {
 
 export default function SummerHero3D() {
     const [mounted, setMounted] = useState(false);
+    const [canvasKey, setCanvasKey] = useState(0);
 
     useEffect(() => {
         setMounted(true);
     }, []);
-    
+
     if (!mounted) return null;
 
     return (
         <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
-            <Canvas 
+            <Canvas
+                key={canvasKey}
                 camera={{ position: [0, 0, 8], fov: 45 }}
-                dpr={[1, 1.5]} // Limit pixel ratio for performance
+                dpr={[1, 1.5]}
                 gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
+                onCreated={({ gl }) => {
+                    gl.domElement.addEventListener('webglcontextlost', (e) => {
+                        e.preventDefault();
+                        // Force remount after a short delay to get a fresh context
+                        setTimeout(() => setCanvasKey(k => k + 1), 300);
+                    });
+                }}
             >
                 <ambientLight intensity={0.5} />
                 <directionalLight position={[10, 10, 5]} intensity={1} color="#c9a84c" />
                 <directionalLight position={[-10, -10, -5]} intensity={0.5} color="#60A5FA" />
-                
+
                 <AbstractShape isDarkRoute={true} />
-                
-                {/* Subtle particles for atmosphere */}
+
                 <Sparkles count={50} scale={12} size={2} speed={0.4} opacity={0.3} color="#c9a84c" />
-                
+
                 <Environment preset="city" />
             </Canvas>
         </div>
