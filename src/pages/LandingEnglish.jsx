@@ -110,8 +110,8 @@ const LandingEnglish = () => {
     return (
         <div className={styles.container}>
             <SEO
-                title="英語家庭教師・英会話個別指導 | 東京・全国オンライン | Petra Tutors"
-                description="東京・全国オンライン対応。バイリンガル英語家庭教師が英会話・ライティング・IELTS・ビジネス英語を完全1:1でサポート。入会金なし、初回無料。"
+                title="English Tutor Tokyo | 英語家庭教師・英会話個別指導 | Petra Tutors"
+                description="Bilingual English tutoring in Tokyo & online Japan. Conversation, writing, IELTS & business English. 1:1 lessons. No enrollment fee. 英会話・英語個別指導。入会金なし。"
                 path="/english"
                 keywords="英語 家庭教師, 英語 家庭教師 東京, バイリンガル 家庭教師, 英会話 個別指導, 英語 個別指導 東京, private tutor Japan, private tutor Tokyo, English tutor Japan, bilingual tutor Tokyo, English tutoring Japan, 英語 家庭教師 オンライン"
             />

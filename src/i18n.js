@@ -13,12 +13,13 @@ i18n
             en: { translation: enTranslation },
             ja: { translation: jaTranslation }
         },
-        // Start with 'ja' to match the prerendered HTML, then LanguageDetector
-        // can switch after hydration via i18n.changeLanguage() if needed.
-        lng: 'ja',
         fallbackLng: 'ja',
         detection: {
-            order: [],
+            order: ['localStorage', 'navigator'],
+            caches: ['localStorage'],
+            lookupLocalStorage: 'i18nextLng',
+            // Only allow ja or en — anything else (e.g. "zh", "fr") falls back to ja
+            convertDetectedLanguage: (lng) => (lng.startsWith('en') ? 'en' : 'ja'),
         },
         interpolation: {
             escapeValue: false

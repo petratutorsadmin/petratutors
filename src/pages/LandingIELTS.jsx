@@ -57,8 +57,8 @@ const LandingIELTS = () => {
   return (
     <div className={styles.container}>
       <SEO
-        title="IELTS・英検・TOEIC 個別指導 | 東京・全国オンライン | Petra Tutors"
-        description="東京・全国オンライン対応のIELTS・英検・TOEIC対策。スコアが伸び悩む原因を特定し、目標スコア達成への最短ルートを完全1:1で設計。入会金なし。"
+        title="IELTS Tutor Tokyo | IELTS・英検・TOEIC 個別指導 | Petra Tutors"
+        description="Expert 1-on-1 IELTS tutoring in Tokyo & online Japan. Bilingual tutors, avg +1.0 band improvement. No enrollment fee. IELTS・英検・TOEIC対策。入会金なし。"
         path="/ielts"
         keywords="IELTS 家庭教師, IELTS 対策 東京, IELTS スコアアップ, IELTS 個別指導, 英検 個別指導, TOEIC 家庭教師, IELTS tutor Tokyo, IELTS tutoring Japan, IELTS coach Japan"
       />

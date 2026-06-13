@@ -57,8 +57,8 @@ const LandingIB = () => {
   return (
     <div className={styles.container}>
       <SEO
-        title="IB・インター校 個別指導 | IA・EE・TOK対応 | Petra Tutors"
-        description="東京・全国オンライン対応のIB・インター校サポート。DP・MYP・PYPに対応。IA・EE・TOK・全科目をバイリンガルメンターが完全1:1で指導。入会金なし。"
+        title="IB Tutor Tokyo | IB・インター校 個別指導 | Petra Tutors"
+        description="1-on-1 IB tutoring in Tokyo & online Japan. IA, EE, TOK & all subjects. Bilingual mentors. No enrollment fee. IB・インター校サポート。DP・MYP・PYP対応。"
         path="/ib"
         keywords="IB 塾, IB 家庭教師, IB DP サポート, インター校 塾, インター 家庭教師 東京, IB tutor Tokyo, International Baccalaureate tutoring Japan, IB IA サポート, IB EE サポート"
       />

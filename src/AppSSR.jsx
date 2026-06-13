@@ -12,6 +12,7 @@ import LandingUniversity from './pages/LandingUniversity';
 import LandingKids from './pages/LandingKids';
 import LandingFoundation from './pages/LandingFoundation';
 import LandingEnglish from './pages/LandingEnglish';
+import LandingEiken from './pages/LandingEiken';
 import BusinessLanding from './pages/BusinessLanding';
 import Home from './pages/Home';
 import Tutors from './pages/Tutors';
@@ -47,6 +48,7 @@ export default function AppSSR() {
                         <Route path="university" element={<LandingUniversity />} />
                         <Route path="kids" element={<LandingKids />} />
                         <Route path="english" element={<LandingEnglish />} />
+                        <Route path="eiken" element={<LandingEiken />} />
                         <Route path="business" element={<BusinessLanding />} />
                         <Route path="home" element={<Home />} />
                         <Route path="system" element={<ThePetraEcosystem />} />

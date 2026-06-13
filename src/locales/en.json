@@ -12,7 +12,10 @@
     "line_url": "https://lin.ee/rqf4A0D",
     "petra": "Petra Tutors",
     "publication": "The Keystone",
-    "ecosystem": "Ecosystem"
+    "ecosystem": "Ecosystem",
+    "services": "Services",
+    "eiken": "EIKEN Prep",
+    "summer": "Summer Intensive"
   },
   "divisions": {
     "portal_title": "Petra Tutor Portal",
@@ -204,7 +207,12 @@
     "service_ielts": "IELTS / Eiken Prep",
     "service_university": "Overseas University Admissions",
     "service_business": "Business English",
-    "service_kids": "Elementary / Foundation"
+    "service_kids": "Elementary / Foundation",
+    "service_english": "English Tutoring",
+    "service_foundation": "Foundation / PYP",
+    "service_summer": "Summer Intensive",
+    "service_eiken": "EIKEN Prep",
+    "linkedin_label": "Petra Tutors on LinkedIn"
   },
   "home": {
     "urgency_bar": "Consultation availability is limited to ensure mentor matching quality. Book a consultation now!",
@@ -214,8 +222,8 @@
     "cta_primary": "Book a Free Trial Lesson",
     "cta_secondary": "Find My Mentor Match",
     "scarcity_note": "Note: We maintain limited mentor availability to preserve lesson quality. Early consultation is recommended.",
-    "match_guarantee_title": "100% Match Guarantee",
-    "match_guarantee_body": "If you don't feel a perfect connection, we re-match you for free. We stand by our results.",
+    "match_guarantee_title": "Free Tutor Re-Match",
+    "match_guarantee_body": "If the first tutor match doesn't feel right, we find you a better fit at no extra cost.",
     "trust_stats_1": "Retention Rate",
     "trust_stats_2": "Avg. IELTS Improvement",
     "trust_stats_3_value": "Top Global Unis",
@@ -225,7 +233,7 @@
     "about_p2": "We understand exactly where you'll struggle with IB/AP, why IELTS scores plateau, and how to write winning essays. We don't just teach English; we provide strategic academic support.",
     "programs_title": "Specialized Support Areas",
     "prog_lang_title": "IELTS & Eiken Mastery",
-    "prog_lang_desc": "Strategic prep for rapid score growth. (Avg. +1.0 IELTS improvement)",
+    "prog_lang_desc": "Strategic prep for focused, measurable score growth.",
     "prog_lang_ex": "Exams: IELTS, TOEFL, Eiken (Grade 1 to Pre-2)",
     "prog_exam_title": "IB / AP / A-Level",
     "prog_exam_desc": "Internal assessments, tasks, and exam prep. Strategic support for GPA & final scores.",
@@ -235,7 +243,7 @@
     "prog_intl_ex": "Focus: Top universities in US, UK, Canada, Australia, Asia",
     "support_title": "Perfect for Students who...",
     "support_1": "Want to strengthen their learning in International Schools",
-    "support_2": "Need guaranteed IELTS/Eiken results",
+    "support_2": "Targeting IELTS/Eiken score improvement",
     "support_3": "Aim for top global universities",
     "support_4": "Want to maintain bilingual excellence as Returnees",
     "support_5": "Didn't see results at traditional cram schools",
@@ -1230,9 +1238,9 @@
     "r_1_val": "2-3",
     "r_1_label": "Months to see change",
     "r_1_note": "Increased meeting participation",
-    "r_2_val": "100%",
-    "r_2_label": "Practical usability",
-    "r_2_note": "Immediate results",
+    "r_2_val": "Real",
+    "r_2_label": "Workplace English",
+    "r_2_note": "Immediately applicable",
     "r_3_val": "1:1",
     "r_3_label": "Monthly Learning Plan",
     "r_3_note": "Your work is the curriculum",
@@ -1259,7 +1267,7 @@
   "gateway": {
     "hero_eyebrow": "Petra Tutors",
     "hero_title": "Bilingual tutors for English,\nIB & international students",
-    "hero_sub": "Find your perfect academic path through relatable mentors matched for student-tutor fit and monthly learning plans.",
+    "hero_sub": "Online nationwide · In-person in Sasazuka, Honancho & Suginami (Tokyo) · Free 30-min trial lesson",
     "choice_label": "What would you like to achieve?",
     "choice_ielts_label": "Get results in IELTS / Eiken / TOEIC",
     "choice_ielts_sub": "Fast-track your score",
@@ -1280,7 +1288,7 @@
     "trust_3": "Weekly progress tracking",
     "trust_4": "Free trial lesson",
     "proof_1_val": "95%",
-    "proof_1_label": "Student retention",
+    "proof_1_label": "Student continuation rate",
     "proof_2_val": "12+",
     "proof_2_label": "Curricula supported",
     "proof_3_val": "20+",
@@ -1308,7 +1316,7 @@
     "hero_line": "Consult on LINE",
     "trust_1": "No admission fee",
     "trust_2": "Free trial lesson",
-    "trust_3": "Match guarantee",
+    "trust_3": "Free re-match if needed",
     "pain_eyebrow": "STRUGGLING WITH GRADES?",
     "pain_title": "International curricula are too complex to navigate alone.",
     "pain_1": "Grades are flat or GPA needs clinical improvement",
@@ -1333,12 +1341,12 @@
     "results_eyebrow": "PROOF OF TRUST",
     "results_title": "Elite support for ambitious families",
     "r_1_val": "95%",
-    "r_1_label": "Retention rate",
+    "r_1_label": "Student continuation rate",
     "r_2_val": "1:1",
     "r_2_label": "Private Mentoring",
     "r_3_val": "Top-Tier",
     "r_3_label": "Elite Mentors",
-    "r_1_note": "Trusted by parents",
+    "r_1_note": "Trusted by families",
     "r_2_note": "Student chart tracking",
     "r_3_note": "IB/AP Grad tutors",
     "why_eyebrow": "WHY PETRA?",
@@ -1361,6 +1369,65 @@
     "final_sub": "Book a free 30-minute consultation and trial lesson to find the perfect mentor match. No admission fee. Match guarantee.",
     "final_cta": "Book Free Trial"
   },
+  "landing_eiken": {
+    "hero_eyebrow": "EIKEN PREP · 英検 · 1:1 · TOKYO & ONLINE",
+    "hero_title": "Pass your next EIKEN grade with a structured, 1-on-1 study plan.",
+    "hero_sub": "Online nationwide · In-person in Sasazuka, Honancho & Suginami (Tokyo) · Free 30-min trial",
+    "hero_cta": "Book Free Trial (30s)",
+    "hero_line": "Consult on LINE",
+    "trust_1": "No admission fee",
+    "trust_2": "Free trial lesson",
+    "trust_3": "Free re-match if needed",
+    "r_1_val": "Pre-2→1",
+    "r_1_label": "Grade coverage",
+    "r_1_note": "Pre-Secondary to Grade 1",
+    "r_2_val": "95%",
+    "r_2_label": "Student continuation rate",
+    "r_2_note": "Long-term learning that sticks",
+    "r_3_val": "1:1",
+    "r_3_label": "Private lessons",
+    "r_3_note": "Every lesson tailored to you",
+    "pain_eyebrow": "IS THIS YOU?",
+    "pain_title": "Most EIKEN struggles come down to a few fixable issues.",
+    "pain_1": "Unsure which grade to target or how to progress efficiently",
+    "pain_2": "Studying alone but test scores keep stalling",
+    "pain_3": "Weak in one section — reading, listening, or writing",
+    "pain_4": "No structured plan for the Secondary (interview) stage",
+    "pain_note": "EIKEN requires a grade-specific strategy. A generic study plan won't get you there. We find exactly what's holding you back and fix it.",
+    "solution_eyebrow": "THE PETRA APPROACH",
+    "solution_title": "Grade-targeted, skills-first EIKEN prep.",
+    "s_1_badge": "TARGETED",
+    "s_1_title": "Grade-Specific Strategy",
+    "s_1_desc": "We assess your current level and build a study plan targeted at your next EIKEN grade — Pre-2 through Grade 1.",
+    "s_2_badge": "COMPREHENSIVE",
+    "s_2_title": "All Four Skills Covered",
+    "s_2_desc": "Reading, listening, writing, and speaking practice with tutors who know EIKEN rubrics and scoring criteria.",
+    "s_3_badge": "BILINGUAL",
+    "s_3_title": "Japanese-Friendly Tutors",
+    "s_3_desc": "Our tutors explain grammar and strategy in Japanese when needed, so nothing gets lost in translation.",
+    "s_4_badge": "INTERVIEW",
+    "s_4_title": "Secondary (Interview) Prep",
+    "s_4_desc": "For Pre-1 and Grade 1, we include structured speaking practice aligned with the EIKEN Secondary interview format.",
+    "why_eyebrow": "WHY PETRA?",
+    "why_title": "More than flashcards and past papers.",
+    "why_sub": "Most EIKEN prep focuses on memorisation. We focus on understanding — and that's why our students actually pass.",
+    "why_1_title": "Tutors who have passed the test",
+    "why_1_desc": "All tutors hold IELTS 7.5+ or Eiken Grade 1. They know what the examiner is looking for at each grade.",
+    "why_2_title": "Monthly learning plan",
+    "why_2_desc": "After an initial diagnostic session, we build a structured monthly plan targeting your exact weak areas and timeline.",
+    "why_3_title": "No entrance fee. No pressure.",
+    "why_3_desc": "Try a free 30-minute trial and see how we approach your study plan before committing to anything.",
+    "t_1_quote": "I'd been stuck on Pre-1 for two years. Petra identified the gap in my approach within the first session.",
+    "t_1_name": "R.T.",
+    "t_1_role": "Working professional",
+    "t_2_quote": "The interview prep was so specific to EIKEN. I felt completely ready when I sat down for the Secondary.",
+    "t_2_name": "A.K.",
+    "t_2_role": "University student",
+    "final_eyebrow": "FREE TRIAL",
+    "final_title": "See the difference in your first session.",
+    "final_sub": "30-minute free trial lesson · Diagnostic assessment · No admission fee · Online or in-person in Tokyo",
+    "final_cta": "Book Free Trial in 30s"
+  },
   "landing_ielts": {
     "hero_eyebrow": "IELTS · EIKEN · TOEIC · TOEFL PREP",
     "hero_title": "Get results in IELTS, Eiken & TOEIC",
@@ -1369,7 +1436,7 @@
     "hero_line": "Consult on LINE",
     "trust_1": "No admission fee",
     "trust_2": "Free trial",
-    "trust_3": "Match guarantee",
+    "trust_3": "Free re-match if needed",
     "pain_eyebrow": "STUCK ON YOUR SCORE?",
     "pain_title": "There's a reason why you're not improving despite your efforts.",
     "pain_1": "Score isn't moving",
@@ -1393,9 +1460,9 @@
     "s_4_desc": "Not general English, but English for the test. We teach based on band scores and pass criteria.",
     "results_eyebrow": "PROVEN RESULTS",
     "results_title": "Petra's success in numbers",
-    "r_1_val": "+1.0",
-    "r_1_label": "Avg. IELTS Score Gain",
-    "r_1_note": "In 3-4 months",
+    "r_1_val": "Score",
+    "r_1_label": "Focused IELTS plans",
+    "r_1_note": "Tailored to your target band",
     "r_2_val": "95%",
     "r_2_label": "Retention Rate",
     "r_2_note": "Results you can feel",
@@ -1495,7 +1562,7 @@
     "hero_line": "Consult on LINE",
     "trust_1": "No admission fee",
     "trust_2": "Free trial lesson",
-    "trust_3": "Match guarantee",
+    "trust_3": "Free re-match if needed",
     "pain_eyebrow": "DOES ENGLISH FEEL IMPOSSIBLE?",
     "pain_title": "Breaking the cycle of frustration.",
     "pain_1": "I dislike English or feel overwhelmed by class",
@@ -1556,7 +1623,7 @@
     "hero_line": "Consult on LINE",
     "trust_1": "No admission fee",
     "trust_2": "Experienced mentors",
-    "trust_3": "Match guarantee",
+    "trust_3": "Free re-match if needed",
     "pain_eyebrow": "ADDRESSING PARENTS' CONCERNS",
     "pain_title": "Are you worried about your child's future in IB or advanced studies?",
     "pain_1": "Unsure if your child is truly keeping up",
@@ -1899,6 +1966,105 @@
         {
           "type": "p",
           "text": "We begin with a consultation to understand the student's academic needs, goals, learning style, and schedule. We then recommend the tutor who is the best fit for those requirements."
+        }
+      ]
+    },
+    "q15": {
+      "q": "Can we start with online lessons and switch to in-person later?",
+      "a": [
+        {
+          "type": "p",
+          "text": "Yes. You can start online and switch to in-person lessons in Tokyo at any time, or combine both formats depending on your schedule and preference."
+        }
+      ]
+    },
+    "q16": {
+      "q": "Can Petra Tutors help students who are reluctant or anxious about English?",
+      "a": [
+        {
+          "type": "p",
+          "text": "Absolutely. Many of our students start with low confidence or a dislike of English. Our tutors are trained to build a supportive, pressure-free environment. We focus on finding what works for each individual student before introducing structured study."
+        }
+      ]
+    },
+    "q17": {
+      "q": "Can parents receive lesson reports or progress updates?",
+      "a": [
+        {
+          "type": "p",
+          "text": "Yes. We encourage regular communication between tutors, students, and parents. After lessons, tutors provide feedback on what was covered and what to focus on next. Parents can request structured progress updates at any time."
+        }
+      ]
+    },
+    "q18": {
+      "q": "Can siblings or friends take lessons together?",
+      "a": [
+        {
+          "type": "p",
+          "text": "We offer small group lessons (mini-groups of 4 or more students) at a reduced rate per person. Siblings or friends at a similar level are welcome. Please contact us to discuss whether a group format suits your situation."
+        }
+      ]
+    },
+    "q19": {
+      "q": "What happens if the tutor is not a good match?",
+      "a": [
+        {
+          "type": "p",
+          "text": "If the match does not feel right, we will find you a replacement tutor at no extra cost. Tutor-student compatibility is important to us, and we take re-matching requests seriously. There is no penalty for requesting a change."
+        }
+      ]
+    },
+    "q20": {
+      "q": "Do tutors assign homework after each lesson?",
+      "a": [
+        {
+          "type": "p",
+          "text": "It depends on the student's goals and learning plan. For exam-focused students, targeted practice between lessons is usually recommended. For younger learners or those building general English skills, homework is lighter and adjusted to what feels manageable. Your tutor will discuss this with you from the start."
+        }
+      ]
+    },
+    "q21": {
+      "q": "How soon can we start?",
+      "a": [
+        {
+          "type": "p",
+          "text": "In most cases, we can match you with a tutor within a few days of your initial inquiry. After submitting a request, we will contact you to confirm details and schedule your first lesson or free trial."
+        }
+      ]
+    },
+    "q22": {
+      "q": "Can you help with international school homework and assignments?",
+      "a": [
+        {
+          "type": "p",
+          "text": "Yes. Our tutors regularly support students with IB assignments, Key Stage coursework, international school homework, and specific subject areas such as mathematics, science, humanities, and English essays."
+        }
+      ]
+    },
+    "q23": {
+      "q": "Is there an entrance fee or registration fee?",
+      "a": [
+        {
+          "type": "p",
+          "text": "No. Petra Tutors does not charge any entrance fee, registration fee, or hidden setup costs. You pay only for the lessons you take."
+        }
+      ]
+    },
+    "q24": {
+      "q": "How does payment work?",
+      "a": [
+        {
+          "type": "p",
+          "text": "Lesson fees are invoiced monthly. We accept bank transfer. Details will be confirmed after your tutor match is arranged. There are no long-term contracts — you can adjust or pause lessons as needed."
+        }
+      ]
+    },
+    "q25": {
+      "q": "What areas in Tokyo are available for in-person lessons?",
+      "a": [
+        {
+          "type": "p",
+          "text": "In-person lessons are available around Sasazuka, Honancho, Suginami-ku, Shibuya-ku, and nearby areas in central and west Tokyo. Online lessons are available nationwide across Japan."
         }
       ]
     }

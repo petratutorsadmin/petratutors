@@ -57,8 +57,8 @@ const BusinessLanding = () => {
   return (
     <>
       <SEO
-        title="ビジネス英語 個別コーチング | 東京・全国オンライン | Petra Tutors"
-        description="会議・メール・プレゼン・商談対応のビジネス英語。実務直結の完全個別コーチングで、英語を仕事の武器に変える。東京対面・全国オンライン対応。"
+        title="Business English Tutor Tokyo | ビジネス英語 個別コーチング | Petra Tutors"
+        description="1-on-1 business English coaching in Tokyo & online Japan. Meetings, presentations & emails. Results-driven. ビジネス英語個別コーチング。入会金なし。"
         path="/business"
         keywords="ビジネス英語 個別指導, ビジネス英語 家庭教師, 英語 会議 対策, Business English Japan, business English tutor Tokyo, ビジネス英語 コーチング, 社会人 英語 個別指導"
       />

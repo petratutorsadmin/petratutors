@@ -47,13 +47,12 @@ export default function Navbar({ top = '12px' }) {
                     {/* Desktop Nav */}
                     <nav className={styles.desktopNav}>
                         <Link to="/about" className={styles.navLink}>{t('nav.about')}</Link>
-                        <Link to="/team" className={styles.navLink}>{t('nav.team')}</Link>
-                        <Link to="/ecosystem" className={styles.navLink}>{t('nav.programs')}</Link>
                         <Link to="/tutors" className={styles.navLink}>{t('nav.tutors')}</Link>
                         <Link to="/pricing" className={styles.navLink}>{t('nav.pricing')}</Link>
-                        <Link to="/keystone" className={styles.navLink}>
-                            {t('nav.publication', 'The Keystone')}
-                        </Link>
+                        <Link to="/summer" className={styles.navLink}>{t('nav.summer', 'Summer')}</Link>
+                        <Link to="/faq" className={styles.navLink}>{t('nav.faq', 'FAQ')}</Link>
+                        <Link to="/ecosystem" className={styles.navLink}>{t('nav.programs')}</Link>
+                        <Link to="/keystone" className={styles.navLink}>{t('nav.publication', 'The Keystone')}</Link>
                         <div className={styles.langSwitcher}>
                             <Globe size={18} className={styles.globeIcon} aria-hidden="true" />
                             <div className={styles.pill}>

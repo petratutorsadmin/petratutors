@@ -57,8 +57,8 @@ const LandingUniversity = () => {
   return (
     <>
       <SEO
-        title="海外大学・帰国子女入試サポート | Petra Tutors"
-        description="海外大学への出願戦略・Personal Statement・面接対策から帰国子女入試まで。志望校合格に向けた完全個別コンサルティング。東京・全国オンライン対応。"
+        title="University Admissions Tutor Japan | 海外大学・帰国子女入試サポート | Petra Tutors"
+        description="Expert help with US/UK university applications from Japan. Personal Statement & interviews. Bilingual tutors. 海外大学受験・帰国子女入試サポート。東京・全国オンライン。"
         path="/university"
         keywords="海外大学 塾, 帰国子女 大学受験, 帰国子女入試, Personal Statement 添削, 海外進学 サポート, university admissions Japan, study abroad Japan tutor, 帰国子女 家庭教師"
       />

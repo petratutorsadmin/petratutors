@@ -49,7 +49,7 @@ export default function GatewayHome() {
                     "@context": "https://schema.org",
                     "@type": "LocalBusiness",
                     "name": "Petra Tutors",
-                    "alternateName": ["ペトラエデュケーション合同会社", "Petra Education LLC"],
+                    "alternateName": ["ペトラチューターズ", "ペトラ", "ペトラエデュケーション", "ペトラエデュケーション合同会社", "Petra Education", "Petra Education LLC", "Petra English", "Petra Tutoring", "Petra"],
                     "url": "https://www.petratutors.com",
                     "logo": "https://www.petratutors.com/logo.png",
                     "image": "https://www.petratutors.com/og-image.png",
@@ -63,7 +63,11 @@ export default function GatewayHome() {
                     },
                     "areaServed": [
                         { "@type": "Country", "name": "Japan" },
-                        { "@type": "City", "name": "Tokyo" }
+                        { "@type": "City", "name": "Tokyo" },
+                        { "@type": "AdministrativeArea", "name": "Suginami-ku" },
+                        { "@type": "Place", "name": "Sasazuka" },
+                        { "@type": "Place", "name": "Honancho" },
+                        { "@type": "AdministrativeArea", "name": "Shibuya-ku" }
                     ],
                     "priceRange": "¥3,500〜",
                     "description": "東京・全国オンライン対応のバイリンガル個別指導。英語・IB・IELTS・帰国子女・海外進学対応。",

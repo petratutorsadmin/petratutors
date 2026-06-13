@@ -1,0 +1,218 @@
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { Check, X, MapPin } from 'lucide-react';
+import SEO from '../components/SEO';
+import FAQ from '../components/FAQ';
+import styles from './LandingIELTS.module.css';
+
+const LandingEiken = () => {
+  const { t } = useTranslation();
+
+  const PAIN_POINTS = [
+    t('landing_eiken.pain_1'),
+    t('landing_eiken.pain_2'),
+    t('landing_eiken.pain_3'),
+    t('landing_eiken.pain_4'),
+  ];
+
+  const SOLUTIONS = [
+    { badge: t('landing_eiken.s_1_badge'), title: t('landing_eiken.s_1_title'), desc: t('landing_eiken.s_1_desc') },
+    { badge: t('landing_eiken.s_2_badge'), title: t('landing_eiken.s_2_title'), desc: t('landing_eiken.s_2_desc') },
+    { badge: t('landing_eiken.s_3_badge'), title: t('landing_eiken.s_3_title'), desc: t('landing_eiken.s_3_desc') },
+    { badge: t('landing_eiken.s_4_badge'), title: t('landing_eiken.s_4_title'), desc: t('landing_eiken.s_4_desc') },
+  ];
+
+  const RESULTS = [
+    { val: t('landing_eiken.r_1_val'), label: t('landing_eiken.r_1_label'), note: t('landing_eiken.r_1_note') },
+    { val: t('landing_eiken.r_2_val'), label: t('landing_eiken.r_2_label'), note: t('landing_eiken.r_2_note') },
+    { val: t('landing_eiken.r_3_val'), label: t('landing_eiken.r_3_label'), note: t('landing_eiken.r_3_note') },
+  ];
+
+  const TESTIMONIALS = [
+    { quote: t('landing_eiken.t_1_quote'), name: t('landing_eiken.t_1_name'), role: t('landing_eiken.t_1_role') },
+    { quote: t('landing_eiken.t_2_quote'), name: t('landing_eiken.t_2_name'), role: t('landing_eiken.t_2_role') },
+  ];
+
+  const WHY = [
+    { title: t('landing_eiken.why_1_title'), desc: t('landing_eiken.why_1_desc') },
+    { title: t('landing_eiken.why_2_title'), desc: t('landing_eiken.why_2_desc') },
+    { title: t('landing_eiken.why_3_title'), desc: t('landing_eiken.why_3_desc') },
+  ];
+
+  return (
+    <div className={styles.container}>
+      <SEO
+        title="EIKEN Prep in Sasazuka & Suginami | 英検対策 個別指導 | Petra Tutors"
+        description="1-on-1 EIKEN preparation in Sasazuka, Suginami & online across Japan. Bilingual tutors for Grades Pre-2 to Grade 1. Free trial lesson. No enrollment fee. 英検対策・個別指導。"
+        path="/eiken"
+        jsonLdExtra={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'EIKEN Preparation Tutoring',
+          alternateName: '英検対策個別指導',
+          description: '1-on-1 EIKEN preparation for Grades Pre-2 to Grade 1. Online nationwide and in-person in Sasazuka, Suginami, and Shibuya.',
+          provider: { '@type': 'EducationalOrganization', name: 'Petra Tutors', url: 'https://www.petratutors.com' },
+          areaServed: [
+            { '@type': 'City', name: 'Tokyo' },
+            { '@type': 'AdministrativeArea', name: 'Suginami-ku' },
+            { '@type': 'Place', name: 'Sasazuka' },
+            { '@type': 'Place', name: 'Honancho' },
+          ],
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'JPY',
+            price: '5000',
+            priceSpecification: { '@type': 'UnitPriceSpecification', price: '5000', priceCurrency: 'JPY', unitText: 'per 60-minute lesson' },
+          },
+        }}
+      />
+
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <div className={styles.heroContent}>
+          <span className={styles.eyebrow}>{t('landing_eiken.hero_eyebrow')}</span>
+          <h1 className={styles.title}>{t('landing_eiken.hero_title')}</h1>
+          <p className={styles.subtitle}>{t('landing_eiken.hero_sub')}</p>
+
+          <div className={styles.groupDiscountContainer}>
+            <span className={styles.groupDiscount}>
+              <MapPin size={14} /> 笹塚・方南町・杉並区で対面レッスン実施中
+            </span>
+          </div>
+
+          <div className={styles.ctaGroup}>
+            <Link to="/inquiry" className={styles.primaryCta}>
+              {t('landing_eiken.hero_cta')}
+            </Link>
+            <a href="https://lin.ee/rqf4A0D" className={styles.secondaryCta}>
+              {t('landing_eiken.hero_line')}
+            </a>
+          </div>
+
+          <div className={styles.trustPills}>
+            <div className={styles.pill}>
+              <Check className={styles.checkIcon} size={16} />
+              {t('landing_eiken.trust_1')}
+            </div>
+            <div className={styles.pill}>
+              <Check className={styles.checkIcon} size={16} />
+              {t('landing_eiken.trust_2')}
+            </div>
+            <div className={styles.pill}>
+              <Check className={styles.checkIcon} size={16} />
+              {t('landing_eiken.trust_3')}
+            </div>
+          </div>
+
+          {/* Results Strip */}
+          <div className={styles.heroResults}>
+            {RESULTS.map((res, i) => (
+              <div key={i} className={styles.heroResultItem}>
+                <span className={styles.resVal}>{res.val}</span>
+                <span className={styles.resLabel}>{res.label}</span>
+                <span className={styles.resNote}>{res.note}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pain Points */}
+      <section className={styles.painSection}>
+        <div className={styles.wrapper}>
+          <span className={styles.sectionEyebrow}>{t('landing_eiken.pain_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_eiken.pain_title')}</h2>
+
+          <div className={styles.painGrid}>
+            {PAIN_POINTS.map((point, i) => (
+              <div key={i} className={styles.painCard}>
+                <X className={styles.iconX} size={16} />
+                <p>{point}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.painInsight}>
+            <p>{t('landing_eiken.pain_note')}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution / Approach */}
+      <section className={styles.solutionSection}>
+        <div className={styles.wrapper}>
+          <span className={styles.sectionEyebrow}>{t('landing_eiken.solution_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_eiken.solution_title')}</h2>
+
+          <div className={styles.solutionGrid}>
+            {SOLUTIONS.map((s, i) => (
+              <div key={i} className={styles.solutionCard}>
+                <span className={styles.badge}>{s.badge}</span>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mid-Page CTA */}
+      <section style={{ padding: '5rem 0', textAlign: 'center', backgroundColor: 'rgba(212, 175, 55, 0.04)', borderTop: '1px solid rgba(212,175,55,0.1)', borderBottom: '1px solid rgba(212,175,55,0.1)' }}>
+        <div className={styles.wrapper}>
+          <h2 style={{ fontSize: '1.6rem', fontWeight: '700', marginBottom: '1rem', color: 'inherit' }}>
+            {t('landing.mid_cta_title')}
+          </h2>
+          <p style={{ marginBottom: '2rem', opacity: 0.8, fontSize: '0.95rem' }}>{t('landing.mid_cta_desc')}</p>
+          <Link to="/inquiry" className={styles.primaryCta} style={{ display: 'inline-block' }}>
+            {t('landing.mid_cta_btn')}
+          </Link>
+        </div>
+      </section>
+
+      {/* Why Petra */}
+      <section className={styles.whySection}>
+        <div className={styles.wrapper}>
+          <span className={styles.sectionEyebrow}>{t('landing_eiken.why_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_eiken.why_title')}</h2>
+          <p className={styles.whySub}>{t('landing_eiken.why_sub')}</p>
+
+          <div className={styles.whyGrid}>
+            {WHY.map((item, i) => (
+              <div key={i} className={styles.whyCard}>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Testimonial Strip */}
+          <div className={styles.testimonialStrip}>
+            {TESTIMONIALS.map((t_, i) => (
+              <div key={i} className={styles.testimonialItem}>
+                <p className={styles.quote}>"{t_.quote}"</p>
+                <p className={styles.author}>{t_.name} <span className={styles.role}>{t_.role}</span></p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <FAQ theme="dark" />
+
+      {/* Final CTA */}
+      <section className={styles.finalCtaSection}>
+        <div className={styles.wrapper}>
+          <span className={styles.sectionEyebrow}>{t('landing_eiken.final_eyebrow')}</span>
+          <h2 className={styles.sectionTitle}>{t('landing_eiken.final_title')}</h2>
+          <p className={styles.finalSub}>{t('landing_eiken.final_sub')}</p>
+          <Link to="/inquiry" className={styles.hugeCta}>
+            {t('landing_eiken.final_cta')}
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default LandingEiken;

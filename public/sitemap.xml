@@ -35,6 +35,12 @@
 
   <!-- ── 4. Specialty landing pages ── -->
   <url>
+    <loc>https://www.petratutors.com/eiken</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2026-06-13</lastmod>
+  </url>
+  <url>
     <loc>https://www.petratutors.com/english</loc>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>

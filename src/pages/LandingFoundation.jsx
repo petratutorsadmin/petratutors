@@ -64,8 +64,8 @@ const LandingFoundation = () => {
   return (
     <>
       <SEO
-        title="インター校・早期学習サポート | Petra Tutors"
-        description="IB PYP・キーステージ・早期 MYP に対応。インター校の基礎学力を確実に定着させる完全個別指導。入会金なし。東京対面・全国オンライン。"
+        title="International School Tutor Tokyo | インター校・早期学習サポート | Petra Tutors"
+        description="Foundation support for IB PYP, Key Stage & early MYP in Tokyo & online Japan. Bilingual tutors. インター校の基礎学力定着。入会金なし。東京対面・全国オンライン。"
         path="/foundation"
         keywords="インター校 塾, IB PYP サポート, キーステージ 家庭教師, インター 家庭教師 東京, international school tutor Japan, IB PYP tutor Tokyo, 小学生 インター 家庭教師"
       />

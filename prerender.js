@@ -24,12 +24,12 @@ const distSSR = resolve(__dirname, 'dist-ssr');
 const ROUTES = {
   '/': {
     title: '英語・IB・海外進学のバイリンガル家庭教師 | 東京・オンライン | Petra Tutors',
-    description: '東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。',
+    description: '東京・全国オンライン対応のバイリンガル個別指導。英語・IB・IELTS・英検・帰国子女・海外進学に強い完全1:1家庭教師。入会金なし。無料30分体験レッスンあり。笹塚・方南町・杉並区で対面対応。',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
       name: 'Petra Tutors',
-      alternateName: ['ペトラエデュケーション合同会社', 'Petra Education LLC'],
+      alternateName: ['ペトラチューターズ', 'ペトラ', 'ペトラエデュケーション', 'ペトラエデュケーション合同会社', 'Petra Education', 'Petra Education LLC', 'Petra English', 'Petra Tutoring', 'Petra'],
       url: 'https://www.petratutors.com',
       logo: 'https://www.petratutors.com/logo.png',
       image: 'https://www.petratutors.com/og-image.png',
@@ -46,9 +46,13 @@ const ROUTES = {
       areaServed: [
         { '@type': 'Country', name: 'Japan' },
         { '@type': 'City', name: 'Tokyo' },
+        { '@type': 'AdministrativeArea', name: 'Suginami-ku' },
+        { '@type': 'Place', name: 'Sasazuka' },
+        { '@type': 'Place', name: 'Honancho' },
+        { '@type': 'AdministrativeArea', name: 'Shibuya-ku' },
       ],
       priceRange: '¥3,500〜',
-      description: '東京・全国オンライン対応のバイリンガル個別指導。英語・IB・IELTS・帰国子女・海外進学対応。',
+      description: '東京・全国オンライン対応のバイリンガル個別指導。英語・IB・IELTS・英検・帰国子女・海外進学対応。笹塚・方南町・杉並区で対面指導。',
       sameAs: [
         'https://www.instagram.com/petratutors',
         'https://www.linkedin.com/company/petra-education-llc',
@@ -61,8 +65,8 @@ const ROUTES = {
     robots: 'noindex, follow',
   },
   '/summer': {
-    title: 'Petra Tutors 夏期講習 2026 | 個別集中レッスン',
-    description: 'Petra Tutors の夏期講習 2026。7月21日〜8月29日。英語・英検・IB・SAT 対応。完全 1:1 マンツーマン。¥14,000〜。無料体験レッスンあり。',
+    title: 'Summer Intensive 2026 | 夏期集中講習 Tokyo | Petra Tutors',
+    description: 'Petra Tutors 夏期講習 2026。7/21〜8/29。英語・英検・IB・SAT 対応の完全1:1個別指導。¥14,000〜。入会金なし。Bilingual summer tutoring in Tokyo & online. From ¥14,000.',
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'Course',
@@ -75,53 +79,57 @@ const ROUTES = {
       url: 'https://www.petratutors.com/summer',
     },
   },
+  '/eiken': {
+    title: 'EIKEN Prep in Sasazuka & Suginami | 英検対策 個別指導 | Petra Tutors',
+    description: '1-on-1 EIKEN prep in Sasazuka, Suginami & online. Bilingual tutors for Grades Pre-2 to Grade 1. Free trial. No enrollment fee. 英検対策・個別指導・入会金なし。',
+  },
   '/english': {
-    title: '英語家庭教師・英会話個別指導 | 東京・全国オンライン | Petra Tutors',
-    description: '東京・全国オンライン対応。バイリンガル英語家庭教師が英会話・ライティング・IELTS・ビジネス英語を完全1:1でサポート。入会金なし、初回無料。',
+    title: 'English Tutor Tokyo | 英語家庭教師・英会話個別指導 | Petra Tutors',
+    description: 'Bilingual English tutoring in Tokyo & online Japan. Conversation, writing, IELTS & business English. 1:1 lessons. No enrollment fee. 英会話・英語個別指導。入会金なし。',
   },
   '/ielts': {
-    title: 'IELTS・英検・TOEIC 個別指導 | 東京・全国オンライン | Petra Tutors',
-    description: '東京・全国オンライン対応のIELTS・英検・TOEIC対策。スコアが伸び悩む原因を特定し、目標スコア達成への最短ルートを完全1:1で設計。入会金なし。',
+    title: 'IELTS Tutor Tokyo | IELTS・英検・TOEIC 個別指導 | Petra Tutors',
+    description: 'Expert 1-on-1 IELTS tutoring in Tokyo & online Japan. Bilingual tutors, avg +1.0 band improvement. No enrollment fee. IELTS・英検・TOEIC対策。入会金なし。',
   },
   '/ib': {
-    title: 'IB・インター校 個別指導 | IA・EE・TOK対応 | Petra Tutors',
-    description: '東京・全国オンライン対応のIB・インター校サポート。DP・MYP・PYPに対応。IA・EE・TOK・全科目をバイリンガルメンターが完全1:1で指導。入会金なし。',
+    title: 'IB Tutor Tokyo | IB・インター校 個別指導 | Petra Tutors',
+    description: '1-on-1 IB tutoring in Tokyo & online Japan. IA, EE, TOK & all subjects. Bilingual mentors. No enrollment fee. IB・インター校サポート。DP・MYP・PYP対応。',
   },
   '/university': {
-    title: '海外大学・帰国子女入試サポート | Petra Tutors',
-    description: '海外大学への出願戦略・Personal Statement・面接対策から帰国子女入試まで。志望校合格に向けた完全個別コンサルティング。',
+    title: 'University Admissions Tutor Japan | 海外大学・帰国子女入試サポート | Petra Tutors',
+    description: 'Expert help with US/UK university applications from Japan. Personal Statement & interviews. Bilingual tutors. 海外大学受験・帰国子女入試サポート。東京・全国オンライン。',
   },
   '/kids': {
-    title: '子供英語・英会話 個別指導 | Petra Tutors',
-    description: '楽しく英語の基礎を作る。英会話・読み書き・発音まで、お子様のペースに合わせた完全個別レッスン。入会金なし。',
+    title: 'Kids English Tutor Tokyo | 子供英語・英会話 個別指導 | Petra Tutors',
+    description: 'Fun 1-on-1 English lessons for children in Tokyo & online Japan. Speaking, reading & writing. Bilingual tutors. No enrollment fee. 子供英語・英会話個別指導。入会金なし。',
   },
   '/foundation': {
-    title: 'インター校・早期学習サポート | Petra Tutors',
-    description: 'IB PYP・キーステージ・早期 MYP に対応。インター校の基礎学力を確実に定着させる完全個別指導。入会金なし。',
+    title: 'International School Tutor Tokyo | インター校・早期学習サポート | Petra Tutors',
+    description: 'Foundation support for IB PYP, Key Stage & early MYP in Tokyo & online Japan. Bilingual tutors. インター校の基礎学力定着。入会金なし。東京対面・全国オンライン。',
   },
   '/business': {
-    title: 'ビジネス英語 個別コーチング | Petra Tutors',
-    description: '会議・メール・プレゼン・商談対応のビジネス英語。実務直結の完全個別コーチングで、英語を仕事の武器に変える。',
+    title: 'Business English Tutor Tokyo | ビジネス英語 個別コーチング | Petra Tutors',
+    description: '1-on-1 business English coaching in Tokyo & online Japan. Meetings, presentations & emails. Results-driven. ビジネス英語個別コーチング。入会金なし。',
   },
   '/tutors': {
-    title: '講師一覧 | Petra Tutors',
-    description: '東大・UCL・慶應など国内外トップ大学出身の講師陣。専門分野・指導スタイル・対応年齢を公開中。',
+    title: 'Find a Bilingual Tutor | 講師一覧 | Petra Tutors',
+    description: 'Meet our bilingual tutors from UTokyo, UCL, Keio & top universities worldwide. Specialists in IB, IELTS, EIKEN & university admissions. 東大・UCL・慶應など出身の精鋭講師陣。',
   },
   '/pricing': {
-    title: '料金プラン | Petra Tutors',
-    description: '入会金なし・完全公開の料金体系。¥3,500〜の完全個別指導。追加費用なし。',
+    title: 'Tutoring Prices | 入会金なし 料金プラン | Petra Tutors',
+    description: '入会金なし・完全公開の料金体系。¥3,500〜の完全1:1個別指導。追加費用なし。No enrollment fee. Transparent pricing from ¥3,500. No hidden costs.',
   },
   '/about': {
-    title: 'Petra Tutors について | ペトラチューターズ',
-    description: 'Petra Tutors のミッション・ビジョン・創業背景。帰国子女・国際教育専門のプレミアム個別指導塾。',
+    title: 'About Petra Tutors | バイリンガル個別指導 | 東京・オンライン',
+    description: 'Petra Tutors のミッション・ビジョン・創業背景。帰国子女・国際教育・海外進学に特化したプレミアム個別指導。東京・全国オンライン対応。Premium bilingual tutoring in Tokyo & online.',
   },
   '/team': {
-    title: 'チーム紹介 | Petra Tutors',
-    description: 'Petra Tutors の創業者・チームメンバーをご紹介。国際教育への想いと専門性をお伝えします。',
+    title: 'Our Team | チーム紹介 | Petra Tutors',
+    description: 'Petra Tutors の創業者・チームメンバーをご紹介。国際教育への想いと専門性をお伝えします。Meet the founders and team behind Petra Tutors.',
   },
   '/faq': {
-    title: 'よくある質問 | Petra Tutors',
-    description: '料金・無料体験・マッチング・授業形式など、Petra Tutors に関するよくある質問と回答。',
+    title: 'FAQ | よくある質問 | Petra Tutors',
+    description: 'Petra Tutors に関するよくある質問と回答。料金・入会金・無料体験・マッチング・オンライン授業・講師変更など。Common questions about pricing, free trials, tutor matching, and online lessons.',
   },
   '/inquiry': {
     title: 'お問い合わせ・無料体験予約 | Petra Tutors',
@@ -133,12 +141,12 @@ const ROUTES = {
     robots: 'noindex, nofollow',
   },
   '/no-admission-fee': {
-    title: '入会金なし | Petra Tutors',
-    description: 'Petra Tutors は入会金・登録料が一切かかりません。まずは無料体験レッスンからお気軽にどうぞ。',
+    title: 'No Enrollment Fee | 入会金なし・追加費用なし | Petra Tutors',
+    description: 'Petra Tutors は入会金・登録料が一切かかりません。¥3,500〜の完全個別指導。追加費用なし、透明な料金体系。No enrollment fee, no hidden costs. Start with a free trial lesson.',
   },
   '/hiring': {
-    title: 'Join Petra Tutors | Tutor Applications',
-    description: 'We are looking for passionate tutors from top universities worldwide. Apply to join the Petra Tutors team.',
+    title: 'Join Petra Tutors | Tutor Applications | 講師募集',
+    description: 'We are looking for passionate bilingual tutors from top universities worldwide. Apply to join the Petra Tutors team. 東大・早慶・海外大出身の講師を募集中。',
   },
   '/keystone': {
     title: 'The Keystone | Petra Tutors',

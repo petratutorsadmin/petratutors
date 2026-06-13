@@ -13,7 +13,7 @@ export default function FAQ({ theme = 'light', standalone = false }) {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    const faqCount = 14;
+    const faqCount = 25;
     const faqs = Array.from({ length: faqCount }, (_, i) => ({
         question: t(`faq.q${i + 1}.q`),
         answer: t(`faq.q${i + 1}.a`, { returnObjects: true })
@@ -63,7 +63,10 @@ export default function FAQ({ theme = 'light', standalone = false }) {
         >
             <div className={`container ${styles.faqContainer} animate-on-scroll`}>
                 <div className={styles.faqHeader}>
-                    <h2 className={`text-h2 ${isDark ? styles.textDark : ''}`}>{t('faq.title', { defaultValue: 'Frequently Asked Questions' })}</h2>
+                    {standalone
+                        ? <h1 className={`text-h2 ${isDark ? styles.textDark : ''}`}>{t('faq.title', { defaultValue: 'Frequently Asked Questions' })}</h1>
+                        : <h2 className={`text-h2 ${isDark ? styles.textDark : ''}`}>{t('faq.title', { defaultValue: 'Frequently Asked Questions' })}</h2>
+                    }
                 </div>
                 <div className={styles.accordion}>
                     {faqs.map((faq, index) => {

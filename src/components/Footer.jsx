@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Instagram, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import styles from './Footer.module.css';
 
@@ -51,11 +51,15 @@ export default function Footer() {
 
                 <div className={styles.linksCol}>
                     <h3 className={styles.colTitle}>{t('footer.services')}</h3>
-                    <Link to="/ib" className={styles.link}>{t('footer.service_ib')}</Link>
-                    <Link to="/ielts" className={styles.link}>{t('footer.service_ielts')}</Link>
-                    <Link to="/university" className={styles.link}>{t('footer.service_university')}</Link>
-                    <Link to="/business" className={styles.link}>{t('footer.service_business')}</Link>
                     <Link to="/kids" className={styles.link}>{t('footer.service_kids')}</Link>
+                    <Link to="/eiken" className={styles.link}>{t('footer.service_eiken', 'EIKEN Prep')}</Link>
+                    <Link to="/ielts" className={styles.link}>{t('footer.service_ielts')}</Link>
+                    <Link to="/ib" className={styles.link}>{t('footer.service_ib')}</Link>
+                    <Link to="/university" className={styles.link}>{t('footer.service_university')}</Link>
+                    <Link to="/english" className={styles.link}>{t('footer.service_english', 'English Tutoring')}</Link>
+                    <Link to="/foundation" className={styles.link}>{t('footer.service_foundation', 'Foundation / PYP')}</Link>
+                    <Link to="/summer" className={styles.link}>{t('footer.service_summer', 'Summer Intensive')}</Link>
+                    <Link to="/business" className={styles.link}>{t('footer.service_business')}</Link>
                 </div>
 
                 <div className={styles.contactCol}>
@@ -73,8 +77,12 @@ export default function Footer() {
                     </a>
                     <p className={styles.responseTime}>{t('footer.response_time')}</p>
                     <a href="https://instagram.com/petratutors" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label="@petratutors on Instagram">
-                        <Instagram size={16} />
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
                         <span>@petratutors</span>
+                    </a>
+                    <a href="https://www.linkedin.com/company/petra-education-llc" target="_blank" rel="noopener noreferrer" className={styles.link} aria-label={t('footer.linkedin_label', 'Petra Tutors on LinkedIn')}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        <span>LinkedIn</span>
                     </a>
                 </div>
             </div>

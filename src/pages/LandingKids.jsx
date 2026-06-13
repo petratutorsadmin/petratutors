@@ -64,8 +64,8 @@ const LandingKids = () => {
   return (
     <>
       <SEO
-        title="子供英語・英会話 個別指導 | 東京・全国オンライン | Petra Tutors"
-        description="楽しく英語の基礎を作る。英会話・読み書き・発音まで、お子様のペースに合わせた完全個別レッスン。入会金なし。東京対面・全国オンライン対応。"
+        title="Kids English Tutor Tokyo | 子供英語・英会話 個別指導 | Petra Tutors"
+        description="Fun 1-on-1 English lessons for children in Tokyo & online Japan. Speaking, reading & writing. Bilingual tutors. No enrollment fee. 子供英語・英会話個別指導。入会金なし。"
         path="/kids"
         keywords="子供 英語 個別指導, 英会話 家庭教師, 子供 英語 オンライン, 小学生 英語 家庭教師, 幼児 英語, kids English tutor Japan, children English tutoring Tokyo"
       />
