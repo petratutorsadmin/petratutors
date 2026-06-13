@@ -6,6 +6,13 @@ import gsap from 'gsap';
 
 function AbstractShape({ isDarkRoute }) {
     const meshRef = useRef();
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     useFrame((state, delta) => {
         if (meshRef.current) {
@@ -28,7 +35,7 @@ function AbstractShape({ isDarkRoute }) {
 
     return (
         <Float speed={2} rotationIntensity={0.5} floatIntensity={1} floatingRange={[-0.2, 0.2]}>
-            <mesh ref={meshRef}>
+            <mesh ref={meshRef} scale={isMobile ? 0.6 : 1}>
                 <icosahedronGeometry args={[2.8, 0]} />
                 <MeshTransmissionMaterial 
                     backside
