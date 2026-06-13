@@ -1,19 +1,14 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Plane, FileText, RefreshCcw, ArrowRight } from 'lucide-react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import AboutTimeline from '../components/AboutTimeline';
 import styles from './About.module.css';
 
 export default function About() {
     const { t } = useTranslation();
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
 
     const fadeInUp = {
         initial: { opacity: 0, y: 30 },
@@ -140,7 +135,7 @@ export default function About() {
                             { key: 'bilingual', glyph: 'あ/A' },
                             { key: 'uni', glyph: <FileText size={24} strokeWidth={1.5} /> },
                             { key: 'system', glyph: <RefreshCcw size={24} strokeWidth={1.5} /> }
-                        ].map((item, idx) => (
+                        ].map((item) => (
                             <motion.div 
                                 key={item.key} 
                                 className={styles.identityItem}

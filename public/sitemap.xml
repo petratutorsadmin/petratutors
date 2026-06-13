@@ -108,7 +108,69 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- ── 6. Secondary pages ── -->
+  <!-- ── 6. New SEO landing pages ── -->
+  <url>
+    <loc>https://www.petratutors.com/eiken-pre2</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/eiken-interview</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/ielts-writing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/ib-ia-ee-tok</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/international-school-tutor</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/returnee-english</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/kids-english-primary</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/setagaya-english</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/shibuya-english</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/suginami-english</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+
+  <!-- ── 7. Secondary pages ── -->
   <url>
     <loc>https://www.petratutors.com/hiring</loc>
     <changefreq>monthly</changefreq>

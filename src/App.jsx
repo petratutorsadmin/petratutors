@@ -24,6 +24,16 @@ const LandingKids = lazy(() => import('./pages/LandingKids'));
 const LandingFoundation = lazy(() => import('./pages/LandingFoundation'));
 const LandingEnglish = lazy(() => import('./pages/LandingEnglish'));
 const LandingEiken = lazy(() => import('./pages/LandingEiken'));
+const LandingEikenPre2 = lazy(() => import('./pages/LandingEikenPre2'));
+const LandingEikenInterview = lazy(() => import('./pages/LandingEikenInterview'));
+const LandingIELTSWriting = lazy(() => import('./pages/LandingIELTSWriting'));
+const LandingIBExtended = lazy(() => import('./pages/LandingIBExtended'));
+const LandingIntlSchool = lazy(() => import('./pages/LandingIntlSchool'));
+const LandingReturnee = lazy(() => import('./pages/LandingReturnee'));
+const LandingKidsPrimary = lazy(() => import('./pages/LandingKidsPrimary'));
+const SetagayaEnglish = lazy(() => import('./pages/SetagayaEnglish'));
+const ShibuyaEnglish = lazy(() => import('./pages/ShibuyaEnglish'));
+const SuginaryEnglish = lazy(() => import('./pages/SuginaryEnglish'));
 const BusinessLanding = lazy(() => import('./pages/BusinessLanding'));
 
 const Home = lazy(() => import('./pages/Home'));
@@ -94,6 +104,16 @@ function App() {
             <Route path="kids" element={<LandingKids />} />
             <Route path="english" element={<LandingEnglish />} />
             <Route path="eiken" element={<LandingEiken />} />
+            <Route path="eiken-pre2" element={<LandingEikenPre2 />} />
+            <Route path="eiken-interview" element={<LandingEikenInterview />} />
+            <Route path="ielts-writing" element={<LandingIELTSWriting />} />
+            <Route path="ib-ia-ee-tok" element={<LandingIBExtended />} />
+            <Route path="international-school-tutor" element={<LandingIntlSchool />} />
+            <Route path="returnee-english" element={<LandingReturnee />} />
+            <Route path="kids-english-primary" element={<LandingKidsPrimary />} />
+            <Route path="setagaya-english" element={<SetagayaEnglish />} />
+            <Route path="shibuya-english" element={<ShibuyaEnglish />} />
+            <Route path="suginami-english" element={<SuginaryEnglish />} />
             <Route path="business" element={<BusinessLanding />} />
 
             {/* ── Existing pages (retained) ── */}

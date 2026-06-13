@@ -1,5 +1,6 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     LineChart,
@@ -26,7 +27,6 @@ import InteractiveSystemDemo from '../components/InteractiveSystemDemo';
 export default function ThePetraEcosystem() {
     const { t } = useTranslation();
     const [activeNode, setActiveNode] = useState('chart');
-    const [perspective, setPerspective] = useState('student'); // student vs parent
 
 
 

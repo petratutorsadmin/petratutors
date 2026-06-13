@@ -15,6 +15,7 @@ export default function TutorDivisions() {
   useEffect(() => {
     const auth = sessionStorage.getItem('tutor_access_authorized');
     if (auth === 'true') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsAuthorized(true);
     }
   }, []);

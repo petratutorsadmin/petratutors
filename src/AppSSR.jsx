@@ -13,6 +13,16 @@ import LandingKids from './pages/LandingKids';
 import LandingFoundation from './pages/LandingFoundation';
 import LandingEnglish from './pages/LandingEnglish';
 import LandingEiken from './pages/LandingEiken';
+import LandingEikenPre2 from './pages/LandingEikenPre2';
+import LandingEikenInterview from './pages/LandingEikenInterview';
+import LandingIELTSWriting from './pages/LandingIELTSWriting';
+import LandingIBExtended from './pages/LandingIBExtended';
+import LandingIntlSchool from './pages/LandingIntlSchool';
+import LandingReturnee from './pages/LandingReturnee';
+import LandingKidsPrimary from './pages/LandingKidsPrimary';
+import SetagayaEnglish from './pages/SetagayaEnglish';
+import ShibuyaEnglish from './pages/ShibuyaEnglish';
+import SuginaryEnglish from './pages/SuginaryEnglish';
 import BusinessLanding from './pages/BusinessLanding';
 import Home from './pages/Home';
 import Tutors from './pages/Tutors';
@@ -49,6 +59,16 @@ export default function AppSSR() {
                         <Route path="kids" element={<LandingKids />} />
                         <Route path="english" element={<LandingEnglish />} />
                         <Route path="eiken" element={<LandingEiken />} />
+                        <Route path="eiken-pre2" element={<LandingEikenPre2 />} />
+                        <Route path="eiken-interview" element={<LandingEikenInterview />} />
+                        <Route path="ielts-writing" element={<LandingIELTSWriting />} />
+                        <Route path="ib-ia-ee-tok" element={<LandingIBExtended />} />
+                        <Route path="international-school-tutor" element={<LandingIntlSchool />} />
+                        <Route path="returnee-english" element={<LandingReturnee />} />
+                        <Route path="kids-english-primary" element={<LandingKidsPrimary />} />
+                        <Route path="setagaya-english" element={<SetagayaEnglish />} />
+                        <Route path="shibuya-english" element={<ShibuyaEnglish />} />
+                        <Route path="suginami-english" element={<SuginaryEnglish />} />
                         <Route path="business" element={<BusinessLanding />} />
                         <Route path="home" element={<Home />} />
                         <Route path="system" element={<ThePetraEcosystem />} />

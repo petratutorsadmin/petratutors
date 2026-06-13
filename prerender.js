@@ -175,6 +175,46 @@ const ROUTES = {
     description: 'Restricted access tutor portal.',
     robots: 'noindex, nofollow',
   },
+  '/eiken-pre2': {
+    title: '英検準2級 個別指導 オンライン | 合格特化の1:1対策 | Petra Tutors',
+    description: '英検準2級に特化した完全1:1個別指導。語彙・リーディング・英作文（Eメール）・面接まで対応。オンライン全国対応。入会金なし。無料30分体験レッスンあり。',
+  },
+  '/eiken-interview': {
+    title: '英検2級 面接対策 オンライン | 個別指導で二次試験を突破 | Petra Tutors',
+    description: '英検2級の二次試験（スピーキング）に特化した個別指導。バイリンガル講師と模擬面接を繰り返し、本番で自信を持って話せるように仕上げます。オンライン全国対応。入会金なし。',
+  },
+  '/ielts-writing': {
+    title: 'IELTS Writing 個別指導 | Task 1・Task 2 バンドスコアアップ | Petra Tutors',
+    description: 'IELTSライティング（Task 1・Task 2）に特化した完全1:1個別指導。バイリンガル講師が毎回フルエッセイを添削。バンド6.0→7.0以上を目指す実践コース。オンライン全国対応。入会金なし。',
+  },
+  '/ib-ia-ee-tok': {
+    title: 'IB IA・EE・TOK 個別サポート 東京 | インター校生向け | Petra Tutors',
+    description: 'IB内部評価（IA）・課題論文（EE）・TOK（知識の理論）エッセイに特化した個別指導。東京・全国オンライン対応。IB DP経験のバイリンガル講師がRQ設定から最終提出まで伴走。入会金なし。',
+  },
+  '/international-school-tutor': {
+    title: 'インターナショナルスクール 家庭教師 東京 | IB・英語科目 個別指導 | Petra Tutors',
+    description: '東京のインターナショナルスクール生向けの家庭教師サービス。IB DP/MYP/PYP・英語で学ぶ数学・科学・英語科目を個別サポート。バイリンガル講師が全科目に対応。入会金なし。',
+  },
+  '/returnee-english': {
+    title: '帰国子女 英語 家庭教師 東京 | 英語力維持・帰国受験対策 | Petra Tutors',
+    description: '帰国子女の英語力維持・強化・帰国受験対策に特化した個別指導。海外在住経験のあるバイリンガル講師が担当。英語を忘れさせない継続学習プランを提案。東京・全国オンライン対応。入会金なし。',
+  },
+  '/kids-english-primary': {
+    title: '小学生 英語 苦手 個別指導 | 楽しく学べる1:1英語レッスン | Petra Tutors',
+    description: '英語が苦手な小学生向けの完全1:1個別指導。フォニックス・基礎英語・英会話を楽しく丁寧に指導。嫌いにならない学び方を優先。東京・全国オンライン対応。入会金なし。無料体験あり。',
+  },
+  '/setagaya-english': {
+    title: '世田谷区 英語家庭教師 | 英検・IELTS・IB対応 個別指導 | Petra Tutors',
+    description: '世田谷区の英語個別指導。英検・IELTS・IB・小学生英語まで対応のバイリンガル1:1家庭教師。入会金なし。オンラインまたは出張対応。無料30分体験レッスンあり。',
+  },
+  '/shibuya-english': {
+    title: '渋谷区 英語家庭教師 | 英検・IELTS・IB対応 個別指導 | Petra Tutors',
+    description: '渋谷区・代官山・恵比寿エリアの英語個別指導。英検・IELTS・IB対応のバイリンガル1:1家庭教師。入会金なし。オンライン対応。無料30分体験レッスンあり。',
+  },
+  '/suginami-english': {
+    title: '杉並区 英語家庭教師 | 笹塚・方南町 対面・オンライン個別指導 | Petra Tutors',
+    description: '杉並区・笹塚・方南町の英語個別指導。対面授業あり。英検・IELTS・IB・小学生英語対応のバイリンガル1:1家庭教師。入会金なし。無料30分体験レッスンあり。',
+  },
 };
 
 // ── SSR render function (body content for non-JS crawlers) ────────────────

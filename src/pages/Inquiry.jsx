@@ -1,6 +1,7 @@
 import { Send, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import styles from './Inquiry.module.css';
@@ -25,8 +26,8 @@ export default function Inquiry() {
         if (savedData) {
             try {
                 return JSON.parse(savedData);
-            } catch (e) {
-                console.error("Failed to parse saved inquiry data");
+            } catch (error) {
+                console.error("Failed to parse saved inquiry data", error);
             }
         }
         return defaults;
@@ -100,7 +101,6 @@ export default function Inquiry() {
         if (field !== 'goal') setStep(prev => prev + 1);
     };
 
-    const nextStep = () => setStep(prev => prev + 1);
     const prevStep = () => setStep(prev => prev - 1);
 
     const renderStep = () => {

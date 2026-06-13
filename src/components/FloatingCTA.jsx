@@ -15,14 +15,15 @@ export default function FloatingCTA() {
     }, []);
 
     useEffect(() => {
-        visibleSet.current.clear();
+        const currentVisibleSet = visibleSet.current;
+        currentVisibleSet.clear();
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    visibleSet.current.add(entry.target);
+                    currentVisibleSet.add(entry.target);
                 } else {
-                    visibleSet.current.delete(entry.target);
+                    currentVisibleSet.delete(entry.target);
                 }
             });
             updateVisibility();
@@ -39,7 +40,7 @@ export default function FloatingCTA() {
         return () => {
             observer.disconnect();
             clearTimeout(timeout);
-            visibleSet.current.clear();
+            currentVisibleSet.clear();
         };
     }, [pathname, updateVisibility]);
 

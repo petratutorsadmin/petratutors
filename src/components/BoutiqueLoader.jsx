@@ -4,11 +4,12 @@ import styles from './BoutiqueLoader.module.css';
 export default function BoutiqueLoader() {
   // Start as false so SSR and the initial hydration both render null.
   // useEffect only runs on the client, so the loader activates after
-  // React has successfully hydrated — no server/client mismatch.
+  // React has successfully hydrated - no server/client mismatch.
   const [shouldRender, setShouldRender] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setShouldRender(true);
     setIsVisible(true);
 

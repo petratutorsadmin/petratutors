@@ -35,7 +35,7 @@ export default function Navbar({ top = '12px' }) {
 
     return (
         <header className={`${styles.navbarWrapper} ${isOpen ? styles.navbarMenuOpen : ''}`} style={{ top }}>
-            {/* navbarRef gets backdrop-filter on scroll — mobile nav must live OUTSIDE it
+            {/* navbarRef gets backdrop-filter on scroll - mobile nav must live OUTSIDE it
                 so backdrop-filter doesn't create a containing block that clips position:fixed */}
             <div ref={navbarRef} className={styles.navbar}>
                 <div className={styles.navContainer}>
@@ -81,7 +81,7 @@ export default function Navbar({ top = '12px' }) {
                 </div>
             </div>
 
-            {/* Mobile Nav Overlay — sibling of navbarRef, not a child.
+            {/* Mobile Nav Overlay - sibling of navbarRef, not a child.
                 position:fixed here is relative to the viewport, not the blur container. */}
             <div
                 id="mobile-nav-menu"

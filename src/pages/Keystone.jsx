@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Globe, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+// eslint-disable-next-line no-unused-vars
 import { motion, useScroll, useSpring } from 'framer-motion';
 import SEO from '../components/SEO';
 import styles from './Keystone.module.css';
