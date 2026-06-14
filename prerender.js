@@ -161,6 +161,23 @@ const ROUTES = {
     description: '長期的な成長、知的好奇心の探求、そしてグローバルな挑戦のために設計された、有機的につながる教育の世界。',
     robots: 'noindex, follow',
   },
+  '/blog': {
+    title: 'Petra Insights | English, IB & IELTS Guides',
+    description: 'Expert guides on IELTS, IB, English tutoring, university admissions and kids English — by Petra Tutors, Tokyo.',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: 'Petra Insights',
+      description: 'Expert guides on IELTS, IB, English tutoring, university admissions and kids English.',
+      url: 'https://www.petratutors.com/blog',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Petra Tutors',
+        logo: { '@type': 'ImageObject', url: 'https://www.petratutors.com/logo.png' },
+      },
+      inLanguage: ['en', 'ja'],
+    },
+  },
   '/privacy': {
     title: 'プライバシーポリシー | Petra Tutors',
     description: 'Petra Tutors の個人情報取り扱い方針。',
@@ -216,6 +233,62 @@ const ROUTES = {
     description: '杉並区・笹塚・方南町の英語個別指導。対面授業あり。英検・IELTS・IB・小学生英語対応のバイリンガル1:1家庭教師。入会金なし。無料30分体験レッスンあり。',
   },
 };
+
+// ── Fetch published blog posts and add pre-render routes ──────────────────
+{
+  const token = process.env.VITE_AIRTABLE_TOKEN;
+  if (token) {
+    try {
+      const res = await fetch(
+        'https://api.airtable.com/v0/appAdxLhXqRtaq618/tbl7H4ONJWNAPqOP0?' +
+        'fields[]=Slug&fields[]=Title%20EN&fields[]=Excerpt%20EN' +
+        '&fields[]=Published%20At&fields[]=Author&fields[]=Category',
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      const { records } = await res.json();
+      let added = 0;
+      for (const { fields: f } of (records || [])) {
+        if (!f['Slug'] || !f['Title EN']) continue;
+        const slug = f['Slug'];
+        const postUrl = `https://www.petratutors.com/blog/${slug}`;
+        ROUTES[`/blog/${slug}`] = {
+          title: `${f['Title EN']} | Petra Insights`,
+          description: f['Excerpt EN'] || '',
+          jsonLd: {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: f['Title EN'],
+            description: f['Excerpt EN'] || '',
+            author: { '@type': 'Person', name: f['Author'] || 'Petra Tutors' },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Petra Tutors',
+              logo: { '@type': 'ImageObject', url: 'https://www.petratutors.com/logo.png' },
+            },
+            datePublished: f['Published At'],
+            url: postUrl,
+            mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+            articleSection: f['Category'],
+            breadcrumb: {
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.petratutors.com' },
+                { '@type': 'ListItem', position: 2, name: 'Petra Insights', item: 'https://www.petratutors.com/blog' },
+                { '@type': 'ListItem', position: 3, name: f['Title EN'], item: postUrl },
+              ],
+            },
+          },
+        };
+        added++;
+      }
+      console.log(`  Pre-rendering ${added} blog post(s) from Airtable.\n`);
+    } catch (err) {
+      console.warn(`  Blog post fetch failed (skipping post pre-render): ${err.message}\n`);
+    }
+  } else {
+    console.warn('  VITE_AIRTABLE_TOKEN not set — blog posts will not be pre-rendered.\n');
+  }
+}
 
 // ── SSR render function (body content for non-JS crawlers) ────────────────
 let ssrRender = null;

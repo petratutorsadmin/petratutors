@@ -14,6 +14,7 @@ const SLOW_SCROLL_PATHS = new Set([
   '/', '/home', '/about', '/team',
   '/ecosystem', '/system', '/keystone',
   '/ib', '/ielts', '/university', '/kids', '/foundation', '/business', '/english',
+  '/blog',
 ]);
 
 // Dynamically import pages for code splitting
@@ -53,6 +54,8 @@ const TutorProgression = lazy(() => import('./pages/TutorProgression'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 import Summer from './pages/Summer';
 const NotFound = lazy(() => import('./pages/NotFound'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 import ScrollToTop from './components/ScrollToTop';
 import SummerPopup from './components/SummerPopup';
@@ -134,6 +137,8 @@ function App() {
             <Route path="apply/progression" element={<TutorProgression />} />
             <Route path="privacy" element={<PrivacyPolicy />} />
             <Route path="summer" element={<Summer />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

@@ -45,10 +45,12 @@ export default function GatewayHome() {
                 title="英語・IB・海外進学のバイリンガル家庭教師 | 東京・オンライン | Petra Tutors"
                 description="東京・全国オンライン対応。英語・IB・IELTS・帰国子女・海外進学に強いバイリンガル個別指導。完全1:1、入会金なし。無料体験レッスンあり。"
                 path="/"
+                suppressDefaultJsonLd
                 jsonLdExtra={{
                     "@context": "https://schema.org",
-                    "@type": "LocalBusiness",
+                    "@type": ["LocalBusiness", "EducationalOrganization"],
                     "name": "Petra Tutors",
+                    "legalName": "ペトラエデュケーション合同会社",
                     "alternateName": ["ペトラチューターズ", "ペトラ", "ペトラエデュケーション", "ペトラエデュケーション合同会社", "Petra Education", "Petra Education LLC", "Petra English", "Petra Tutoring", "Petra"],
                     "url": "https://www.petratutors.com",
                     "logo": "https://www.petratutors.com/logo.png",

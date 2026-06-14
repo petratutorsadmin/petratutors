@@ -52,6 +52,7 @@ export default function Navbar({ top = '12px' }) {
                         <Link to="/summer" className={styles.navLink}>{t('nav.summer', 'Summer')}</Link>
                         <Link to="/faq" className={styles.navLink}>{t('nav.faq', 'FAQ')}</Link>
                         <Link to="/ecosystem" className={styles.navLink}>{t('nav.programs')}</Link>
+                        <Link to="/blog" className={styles.navLink}>{t('nav.insights', 'Insights')}</Link>
                         <Link to="/keystone" className={styles.navLink}>{t('nav.publication', 'The Keystone')}</Link>
                         <div className={styles.langSwitcher}>
                             <Globe size={18} className={styles.globeIcon} aria-hidden="true" />
@@ -103,6 +104,7 @@ export default function Navbar({ top = '12px' }) {
                     <Link to="/ecosystem" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.programs')}</Link>
                     <Link to="/tutors" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.tutors')}</Link>
                     <Link to="/pricing" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.pricing')}</Link>
+                    <Link to="/blog" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>{t('nav.insights', 'Insights')}</Link>
                     <Link to="/keystone" className={styles.mobileNavLink} onClick={() => setIsOpen(false)}>
                         {t('nav.publication', 'The Keystone')}
                     </Link>
