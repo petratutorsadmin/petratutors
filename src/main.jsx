@@ -12,6 +12,7 @@ import '@fontsource/lexend-peta/latin-400.css'
 import '@fontsource/noto-sans-jp/400.css'
 import './i18n'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 hydrateRoot(
   document.getElementById('root'),
@@ -22,5 +23,6 @@ hydrateRoot(
       </BrowserRouter>
     </HelmetProvider>
     <Analytics />
+    <SpeedInsights />
   </React.StrictMode>,
 )
