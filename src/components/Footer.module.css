@@ -169,13 +169,18 @@
 
 @media (max-width: 768px) {
     .footerGrid {
-        grid-template-columns: 1fr;
-        gap: var(--space-lg);
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md) var(--space-lg);
         padding-bottom: var(--space-lg);
     }
 
     .brandCol {
+        grid-column: 1 / -1;
         max-width: 100%;
+    }
+
+    .contactCol {
+        grid-column: 1 / -1;
     }
 
     .linksCol,
@@ -205,6 +210,17 @@
 
     .legalText {
         justify-content: flex-start;
+    }
+}
+
+@media (max-width: 360px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .brandCol,
+    .contactCol {
+        grid-column: auto;
     }
 }
 

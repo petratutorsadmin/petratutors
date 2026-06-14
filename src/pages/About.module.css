@@ -311,15 +311,15 @@
         grid-template-columns: 1fr;
         gap: var(--space-lg);
     }
-    
+
     .editorialSplit.reverse .imageWrapper {
         order: 2;
     }
-    
+
     .quoteText {
         font-size: 1.8rem;
     }
-    
+
     .taglineText {
         font-size: 2.2rem;
     }
@@ -337,13 +337,81 @@
         text-align: center;
         padding: var(--space-xl);
     }
-    
+
     .conversionTitle {
         font-size: 1.8rem;
     }
-    
+
     .trustBanner {
         flex-direction: column;
         gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 2.25rem 0 1.5rem;
+    }
+
+    .heroTagline {
+        font-size: clamp(1.9rem, 7.5vw, 2.4rem);
+        text-align: left;
+    }
+
+    .narrativeStage {
+        padding: 2rem 0;
+    }
+
+    .pullQuote {
+        padding: 2rem 0;
+    }
+
+    .designedSection {
+        padding: 2.5rem 0;
+    }
+
+    .designedHeader {
+        margin-bottom: 1.75rem;
+        text-align: left;
+    }
+
+    .identityGrid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+
+    .taglineSection {
+        padding: 2.5rem 0;
+    }
+
+    .taglineText {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .conversionSection {
+        padding: 2.5rem 0;
+    }
+
+    .conversionCard {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .conversionTitle {
+        font-size: 1.35rem;
+    }
+
+    .conversionDesc {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .quoteText {
+        font-size: 1.3rem;
+    }
+
+    .finalVisualPlaceholder {
+        margin-top: 1.75rem;
+        aspect-ratio: 4/3;
     }
 }

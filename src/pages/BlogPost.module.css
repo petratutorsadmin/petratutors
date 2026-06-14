@@ -452,4 +452,19 @@
   .articleWrapper {
     padding: 2.5rem 1.5rem 4rem;
   }
+
+  .cta {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .ctaBtn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+  }
+
+  .related {
+    padding: 3rem 1.5rem;
+  }
 }

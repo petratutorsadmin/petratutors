@@ -170,6 +170,38 @@
     <lastmod>2026-06-14</lastmod>
   </url>
 
+  <!-- ── 6. Blog / Insights ── -->
+  <url>
+    <loc>https://www.petratutors.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2026-06-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/blog/ielts-writing-task-2-band-7</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/blog/keep-kids-engaged-english-lessons</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/blog/ib-internal-assessment-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://www.petratutors.com/blog/university-personal-statement-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+
   <!-- ── 7. Secondary pages ── -->
   <url>
     <loc>https://www.petratutors.com/hiring</loc>

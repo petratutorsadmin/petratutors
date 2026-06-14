@@ -510,6 +510,37 @@
     line-height: 1.75;
 }
 
+@media (max-width: 768px) {
+    .painSection {
+        padding: 3rem 0;
+    }
+
+    .pricingSection {
+        padding: 3rem 0;
+    }
+
+    .approachSection {
+        padding: 3rem 0;
+    }
+
+    .trustSection {
+        padding: 3rem 0;
+    }
+
+    .darkSection {
+        padding: 3rem 0;
+    }
+
+    .finalCta {
+        padding: 3.5rem 0;
+    }
+
+    .trustBlock {
+        padding: 2rem 1.25rem;
+        border-radius: var(--radius-lg);
+    }
+}
+
 @media (max-width: 480px) {
     .heroTitle { font-size: 1.9rem; }
     .heroCtas { flex-direction: column; }

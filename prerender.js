@@ -9,7 +9,7 @@
  * dist/summer/index.html is served directly for /summer without any config changes.
  */
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync, appendFileSync } from 'fs';
 import { resolve, join } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -246,11 +246,17 @@ const ROUTES = {
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const { records } = await res.json();
+      // Collect new blog post URLs to inject into the sitemap
+      const newSitemapEntries = [];
       let added = 0;
       for (const { fields: f } of (records || [])) {
         if (!f['Slug'] || !f['Title EN']) continue;
         const slug = f['Slug'];
         const postUrl = `https://www.petratutors.com/blog/${slug}`;
+        const lastmod = f['Published At'] ? f['Published At'].slice(0, 10) : '2026-06-14';
+        newSitemapEntries.push(
+          `  <url>\n    <loc>${postUrl}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>0.75</priority>\n    <lastmod>${lastmod}</lastmod>\n  </url>`
+        );
         ROUTES[`/blog/${slug}`] = {
           title: `${f['Title EN']} | Petra Insights`,
           description: f['Excerpt EN'] || '',
@@ -280,6 +286,18 @@ const ROUTES = {
           },
         };
         added++;
+      }
+      // Inject blog post URLs into dist/sitemap.xml
+      const sitemapPath = join(dist, 'sitemap.xml');
+      if (existsSync(sitemapPath) && newSitemapEntries.length > 0) {
+        let sitemap = readFileSync(sitemapPath, 'utf-8');
+        // Only inject entries not already present
+        const toInject = newSitemapEntries.filter(e => !sitemap.includes(e.match(/<loc>(.*?)<\/loc>/)?.[1] ?? ''));
+        if (toInject.length > 0) {
+          sitemap = sitemap.replace('</urlset>', `${toInject.join('\n')}\n</urlset>`);
+          writeFileSync(sitemapPath, sitemap, 'utf-8');
+          console.log(`  Injected ${toInject.length} blog post URL(s) into sitemap.xml.\n`);
+        }
       }
       console.log(`  Pre-rendering ${added} blog post(s) from Airtable.\n`);
     } catch (err) {
